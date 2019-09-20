@@ -1,2 +1,0 @@
-# articlemag
-Theme Framework
