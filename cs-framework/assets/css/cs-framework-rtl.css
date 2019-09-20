@@ -1,0 +1,239 @@
+/**
+ *
+ * Articlemag Framework RTL Support
+ *
+ */
+.cs-option-framework {
+  margin: 20px 0 0 20px;
+}
+
+.cs-header .cs-save {
+  float: left;
+  direction: ltr;
+}
+
+.cs-footer {
+  text-align: left;
+}
+
+.cs-header h1,
+.cs-body,
+.cs-nav-wrap {
+  float: right;
+}
+
+.cs-nav-background,
+.cs-nav-wrap ul {
+  clear: right;
+}
+
+.cs-nav-wrap ul li a:before {
+  margin-left: 7px;
+  margin-right: 0;
+}
+
+.cs-sections .section-active a:after {
+  right: inherit;
+  left: 0;
+  border-right-color: transparent;
+  border-left-color: #fff;
+}
+
+/* Metabox RTL */
+.cs-metabox-framework {
+  margin: -6px -12px -12px -12px;
+}
+
+.cs-metabox-framework .cs-element-wrap {
+  padding: 20px;
+}
+
+.cs-metabox-framework .cs-element-wrap .cs-element-title h4 {
+  font-size: 13px;
+}
+
+.cs-framework-nav .cs-body .cs-content-wrap {
+  margin-left: 0;
+  margin-right: 180px;
+}
+
+#side-sortables .cs-element-fieldset {
+  float: right;
+}
+
+#save-ajax {
+  margin-left: 0;
+  margin-right: -150px;
+  left: inherit;
+  right: 50%;
+}
+
+@media only screen and (max-width: 959px) {
+  .cs-element-wrap .cs-element-fieldset {
+    margin-right: 0;
+  }
+}
+#widget-list div[id*="_cs_widget-__i__"] .widget-top:after {
+  right: inherit;
+  left: 3px;
+}
+
+#menu-to-edit .cs-mega-column, #menu-to-edit .cs-mega-menu {
+  float: right;
+  margin: 15px 0 15px 0;
+}
+
+.cs_field_number i {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.cs_field_on_off .cs-text-desc {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+#cs-reset-customize .cs-spinner {
+  margin: 0 0 0 5px;
+}
+
+#cs-reset-customize .status-scheme {
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.cs-custmize-title {
+  padding: 5px 20px 5px 0;
+}
+
+.cs_field .ui-helper-zfix {
+  left: inherit;
+  right: 0;
+}
+
+.cs_field .ui-widget-overlay {
+  left: inherit;
+  right: 0;
+}
+
+.cs_field_color_picker ul li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.cs_field_color_picker ul li .color-label {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.cs_field_color_picker .cs-alpha-slider {
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.cs_field_color_picker .cs-alpha-text {
+  right: inherit;
+  left: 10px;
+}
+
+.cs_field_background ul.field-background li {
+  margin-right: inherit;
+  margin-left: 7px;
+}
+
+.cs_field_background ul.field-background li li {
+  margin-right: 0;
+}
+
+.cs_field_dimensions .cs-dimensions li {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.cs_field_typography .cs-family .chosen-container {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.cs_field_typography li .cs-typography-title {
+  margin-right: 0;
+  margin-left: 5px;
+}
+
+.cs_field_group .cs-remove-group {
+  text-align: left;
+}
+
+.cs_field_group .ui-accordion .ui-accordion-icons {
+  padding-left: 0;
+  padding-right: 2.2em;
+}
+
+.cs_field_group .ui-accordion .ui-accordion-icons .ui-accordion-icons {
+  padding-left: 0;
+  padding-right: 2.2em;
+}
+
+.cs_field_group .ui-accordion .ui-accordion-header .ui-accordion-header-icon {
+  left: inherit;
+  right: .5em;
+}
+
+.cs_field_icon .icon-preview {
+  margin-right: 0;
+  margin-left: 3px;
+}
+
+.cs-element-wrap .cs-element-title {
+  float: right;
+}
+
+.cs-element-wrap .cs-element-fieldset {
+  margin-left: 0;
+  margin-right: 30%;
+}
+
+.cs-element-wrap .cs-element-horizontal li {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.cs-button-remove {
+  margin-left: 0 !important;
+  margin-right: 3px !important;
+}
+
+.gallery-settings .cs-settings .cs-label {
+  display: none;
+}
+
+#element-typography .cs-field-group:after {
+  right: inherit;
+  left: 10px;
+}
+
+.cs-spinner {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.cs-element-wrap .cs-element-fieldset .cs-text-desc,
+.cs-element-wrap .cs-element-title h4 small {
+  display: inline-block;
+}
+
+#element-backup textarea,
+#element-custom_css textarea {
+  direction: ltr;
+}
+
+.ui-dialog {
+  right: auto !important;
+}
+
+#shortcode-dialog #dialog-header-wrap .chosen-container {
+  margin-left: 0;
+  margin-right: -150px;
+  left: inherit;
+  right: 50%;
+}
