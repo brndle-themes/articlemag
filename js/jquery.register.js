@@ -1307,20 +1307,39 @@
 
     ARTICLEMAG.wooQuantityInput = function () {
 
-        $( '.product_quantity_minus' ).click( function () {
-            var qty = $( this ).next( 'input.qty' ).val();
-            qty = parseInt( qty );
-            if ( qty > 1 ) {
-                qty = qty - 1;
-                $( this ).next( 'input.qty' ).val( qty ).trigger( 'change' );
+        // WooCommerce quantity +/ - managed
+        $( document ).ready( function () {
+            QtyChngMinus();
+            QtyChngPlus();
+        } );
+
+        // Make the code work after executing AJAX.
+        $( document ).ajaxComplete( function () {
+            QtyChngMinus();
+        } );
+        $( document ).ajaxComplete( function () {
+            QtyChngPlus();
+        } );
+        function QtyChngMinus() {
+            $( document ).off( "click", ".product_quantity_minus" ).on( "click", ".product_quantity_minus", function () {
+
+                var qty = $( this ).next( 'input.qty' ).val();
+                qty = parseInt( qty );
+                if ( qty > 1 ) {
+                    qty = qty - 1;
+                    $( this ).next( 'input.qty' ).val( qty ).trigger( 'change' );
+                }
+            } );
+        }
+        function QtyChngPlus() {
+            $( document ).off( "click", ".product_quantity_plus" ).on( "click", ".product_quantity_plus", function () {
+                var qty = $( this ).prev( 'input.qty' ).val();
+                qty = parseInt( qty );
+                qty = qty + 1;
+                $( this ).prev( 'input.qty' ).val( qty ).trigger( 'change' );
             }
-        } );
-        $( '.product_quantity_plus' ).click( function () {
-            var qty = $( this ).prev( 'input.qty' ).val();
-            qty = parseInt( qty );
-            qty = qty + 1;
-            $( this ).prev( 'input.qty' ).val( qty ).trigger( 'change' );
-        } );
+            );
+        }
 
     };
 
