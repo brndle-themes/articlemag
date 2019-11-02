@@ -14,7 +14,7 @@ class CSFramework extends CSFramework_Abstract {
 	var $sections	 = array();
 	var $options		 = array();
 	var $menu_type	 = 'add_menu_page';
-	var $menu_title	 = 'Articlemag';
+	var $menu_title	 = 'ArticleMag';
 	var $menu_slug	 = 'articlemag';
 	var $ajax		 = false;
 	var $sticky		 = false;
@@ -243,7 +243,7 @@ class CSFramework extends CSFramework_Abstract {
 		// Header
 		// ------------------------------------------------------------------------------------
 		echo '<div class="cs-header' . $sticky_atts . '">';
-		echo '<h1>Articlemag <small>- Theme Options</small></h1>';
+		echo '<h1>ArticleMag <small>- Theme Options</small></h1>';
 		echo '<div class="cs-save">';
 		submit_button( 'Save', 'primary' . $ajax_atts, 'save', false );
 		echo '&nbsp;';

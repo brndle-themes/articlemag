@@ -358,7 +358,7 @@ $sections[ 'homepage' ] = array(
 			'type'		 => 'text',
 			'title'		 => 'Homepage Title',
 			'multilang'	 => true,
-			'default'	 => 'Articlemag Theme',
+			'default'	 => 'ArticleMag Theme',
 		),
 		array(
 			'id'		 => 'homepage_default_subtitle',
@@ -1339,7 +1339,7 @@ $updater	 = new EDD_Articlemag_Theme_Updater_Admin(
 // Config settings
 $config		 = array(
 	'remote_api_url' => 'https://brndle.com/', // Site where EDD is hosted
-	'item_name'		 => 'Articlemag', // Name of theme
+	'item_name'		 => 'ArticleMag', // Name of theme
 	'theme_slug'	 => 'articlemag', // Theme slug
 	'version'		 => THEME_VERSION, // The current version of this theme
 	'author'		 => 'brndleteam', // The author of this theme
