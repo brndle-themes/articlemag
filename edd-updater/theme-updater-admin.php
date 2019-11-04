@@ -165,10 +165,7 @@ class EDD_Articlemag_Theme_Updater_Admin {
 		if ( ! $license ) {
 			$message    = $strings['enter-key'];
 		} else {
-			// delete_transient( $this->theme_slug . '_license_message' );
-			//if ( ! get_transient( $this->theme_slug . '_license_message', false ) ) {
 			set_transient( $this->theme_slug . '_license_message', $this->check_license(), ( 60 * 60 * 24 ) );
-			//}
 			$message = get_transient( $this->theme_slug . '_license_message' );
 		}
 
