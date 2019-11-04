@@ -1536,6 +1536,31 @@
     $.ARTICLEMAGWP.shortcodeManager();
     $.ARTICLEMAGWP_frameworkWidgetTrigger();
 
+    $('#element-license_action').on('change', function() {
+      if( $(this).find("input[type='checkbox']").prop('checked') ) { 
+          var func = 'activate';
+      }  else {
+          var func = 'deactivate';
+      }
+      var license = $( '#element-articlemag_license input' ).val();
+      jQuery.ajax(
+        {
+          url: articlamag_params.ajaxurl,
+          type: 'post',
+          dataType: 'json',
+          data: {
+            'action'  : 'articlemag_license_action',
+            'license' : license,
+            'func'    : func,
+          },
+          complete: function( response ) {
+            //console.log( response.responseText );
+            $( '#save' ).click();
+          }
+        }
+      );
+    });
+
   });
 
 })( jQuery, window, document );

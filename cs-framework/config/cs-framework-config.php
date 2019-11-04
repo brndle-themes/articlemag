@@ -1386,6 +1386,12 @@ $sections[ 'license' ] = array(
 			'type'	 => 'text',
 			'title'	 => esc_html__( 'License', 'articlemag' ),
 			'desc'	 => $message
+		),
+		array(
+			'id'	 => 'license_action',
+			'type'	 => 'on_off',
+			'title'	 => esc_html__( 'Activate License', 'articlemag' ),
+			'dependency' => array( 'articlemag_license', '!=', '' ),
 		)
 	)
 );

@@ -52,7 +52,13 @@ class CSFramework_Enqueue_API extends CSFramework_Abstract {
     wp_enqueue_script( 'jquery-interdependencies', FRAMEWORK_ASSETS.'/js/jquery.interdependencies.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'chosen', FRAMEWORK_ASSETS.'/js/chosen.jquery.min.js', array('jquery'), '1.0.0', true );
     wp_enqueue_script( 'cs-framework', FRAMEWORK_ASSETS.'/js/cs-framework.js', array('jquery', 'jquery.store', 'chosen', 'jquery-interdependencies'), '1.0.0', true );
-
+    wp_localize_script(
+      'cs-framework',
+      'articlamag_params',
+      array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      )
+    );
 
     if( isset( $_GET['page'] ) && $_GET['page'] == 'articlemag' ) {
 

@@ -59,11 +59,22 @@ class EDD_Articlemag_Theme_Updater_Admin {
 		$this->strings = $strings;
 
 		add_action( 'init', array( $this, 'updater' ) );
+		add_action( 'wp_ajax_articlemag_license_action', array( $this, 'articlemag_license_action_ajax' ) );
 		//add_action( 'admin_init', array( $this, 'register_option' ) );
 		//add_action( 'admin_init', array( $this, 'license_action' ) );
 		//add_action( 'admin_menu', array( $this, 'license_menu' ) );
-		add_action( 'update_option_'.FRAMEWORK_OPTION_NAME, array( $this, 'activate_license' ), 10, 2 );
+		//add_action( 'update_option_'.FRAMEWORK_OPTION_NAME, array( $this, 'activate_license' ), 10, 2 );
 		add_filter( 'http_request_args', array( $this, 'disable_wporg_request' ), 5, 2 );
+
+	}
+
+	function articlemag_license_action_ajax() {
+		$license = $_POST['license'];
+		if ( 'activate' == $_POST['func'] ) {
+			$this->activate_license( $license );
+		} else if ( 'deactivate' == $_POST['func'] ) {
+			$this->deactivate_license( $license );
+		}
 
 	}
 
@@ -155,9 +166,9 @@ class EDD_Articlemag_Theme_Updater_Admin {
 			$message    = $strings['enter-key'];
 		} else {
 			// delete_transient( $this->theme_slug . '_license_message' );
-			if ( ! get_transient( $this->theme_slug . '_license_message', false ) ) {
-				set_transient( $this->theme_slug . '_license_message', $this->check_license(), ( 60 * 60 * 24 ) );
-			}
+			//if ( ! get_transient( $this->theme_slug . '_license_message', false ) ) {
+			set_transient( $this->theme_slug . '_license_message', $this->check_license(), ( 60 * 60 * 24 ) );
+			//}
 			$message = get_transient( $this->theme_slug . '_license_message' );
 		}
 
@@ -225,8 +236,8 @@ class EDD_Articlemag_Theme_Updater_Admin {
 	 *
 	 * @since 1.0.0
 	 */
-	function activate_license() {
-		$license = trim( cs_get_option( 'articlemag_license', '' ) );
+	function activate_license( $license ) {
+		//$license = trim( cs_get_option( 'articlemag_license', '' ) );
 
 		// Data to send in our API request.
 		$api_params = array(
@@ -237,6 +248,7 @@ class EDD_Articlemag_Theme_Updater_Admin {
 		);
 
 		$response = $this->get_api_response( $api_params );
+
 		// make sure the response came back okay
 		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
 
@@ -298,8 +310,8 @@ class EDD_Articlemag_Theme_Updater_Admin {
 					$base_url = $this->get_license_page_url();
 					$redirect = add_query_arg( array( 'sl_theme_activation' => 'false', 'message' => urlencode( $message ) ), $base_url );
 
-					wp_redirect( $redirect );
-					exit();
+					//wp_redirect( $redirect );
+					//exit();
 				}
 
 			}
@@ -312,7 +324,7 @@ class EDD_Articlemag_Theme_Updater_Admin {
 			delete_transient( $this->theme_slug . '_license_message' );
 		}
 
-		wp_redirect( $this->get_license_page_url() );
+		//wp_redirect( $this->get_license_page_url() );
 		exit();
 
 	}
@@ -322,11 +334,9 @@ class EDD_Articlemag_Theme_Updater_Admin {
 	 *
 	 * @since 1.0.0
 	 */
-	function deactivate_license() {
+	function deactivate_license( $license ) {
 
-		// Retrieve the license from the database.
-		$license = trim( cs_get_option( 'articlemag_license', '' ) );
-
+		// Retrieve the license from the database.		
 		// Data to send in our API request.
 		$api_params = array(
 			'edd_action' => 'deactivate_license',
@@ -336,7 +346,6 @@ class EDD_Articlemag_Theme_Updater_Admin {
 		);
 
 		$response = $this->get_api_response( $api_params );
-
 		// make sure the response came back okay
 		if ( is_wp_error( $response ) || 200 !== wp_remote_retrieve_response_code( $response ) ) {
 
@@ -362,11 +371,11 @@ class EDD_Articlemag_Theme_Updater_Admin {
 			$base_url = $this->get_license_page_url();
 			$redirect = add_query_arg( array( 'sl_theme_activation' => 'false', 'message' => urlencode( $message ) ), $base_url );
 
-			wp_redirect( $redirect );
+			//wp_redirect( $redirect );
 			exit();
 		}
 
-		wp_redirect( $this->get_license_page_url() );
+		//wp_redirect( $this->get_license_page_url() );
 		exit();
 
 	}
