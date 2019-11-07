@@ -356,7 +356,7 @@ $sections[ 'homepage' ] = array(
 			'type'		 => 'upload',
 			'title'		 => 'Homepage Cover',
 			'multilang'	 => true,
-			'default'	 => 'http://demos.brndle.com/articlemag/wp-content/uploads/2019/09/pexels-photo-2174656.jpg',
+			'default'	 => THEME_URI . '/images/default-image.jpg',
 		),
 		array(
 			'id'		 => 'homepage_title',
