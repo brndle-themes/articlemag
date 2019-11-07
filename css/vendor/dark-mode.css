@@ -39,3 +39,228 @@
 .cs-header-center .cs-mobile-toggle-track {
     right: 10px;
 }
+
+/**
+ * Dark Mode Style
+ */
+.dark-mode body,
+.dark-mode .cs-boxed-layout #main {
+    background-color: #10161d;
+    color: #999;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode legend {
+    color: #fff;
+}
+
+.dark-mode select,
+.dark-mode textarea,
+.dark-mode input[type="text"],
+.dark-mode input[type="password"],
+.dark-mode input[type="datetime"],
+.dark-mode input[type="datetime-local"],
+.dark-mode input[type="date"],
+.dark-mode input[type="month"],
+.dark-mode input[type="time"],
+.dark-mode input[type="week"],
+.dark-mode input[type="number"],
+.dark-mode input[type="email"],
+.dark-mode input[type="url"],
+.dark-mode input[type="search"],
+.dark-mode input[type="tel"],
+.dark-mode input[type="color"] {
+    background-color: #111111;
+    color: inherit;
+    border-color: #495061;
+}
+
+.dark-mode #masthead,
+.dark-mode #header-logo {
+    background-color: #10161d;
+}
+
+.dark-mode #site-header-shadow:after {
+    -webkit-box-shadow: 0 1px 4px rgb(0, 0, 0);
+    box-shadow: 0 1px 4px rgb(0, 0, 0);
+}
+
+.dark-mode .is-transparent #masthead {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode #top-bar {
+    border-color: #121212;
+}
+
+.dark-mode #copyright {
+    color: #fff;
+    background-color: #1c2939;
+}
+
+.dark-mode .cs-top-module,
+.dark-mode .page-pagination span,
+.dark-mode .page-pagination a,
+.dark-mode #colophon .articlemag_widget ul li,
+.dark-mode #colophon .articlemag_widget ul ul,
+.dark-mode .cs-module-woominicart ul li,
+.dark-mode .cs-module-woominicart .total,
+.dark-mode #site-nav ul li ul li .cs-link,
+.dark-mode .blog-default .hentry,
+.dark-mode .articlemag_widget ul li,
+.dark-mode .entry-author,
+.dark-mode .post-navigation,
+.dark-mode hr,
+.dark-mode .cs-header-left #masthead,
+.dark-mode .cs-header-left .cs-depth-0,
+.dark-mode .cs-header-center #masthead,
+.dark-mode .cs-header-center .cs-depth-0,
+.dark-mode .cs-tab .cs-tab-nav ul li.active a,
+.dark-mode .article-featured-slider,
+.dark-mode .blog-default .article-post,
+.dark-mode .comment-list .comment.even,
+.dark-mode .comment-list .comment {
+    border-color: #495061;
+}
+
+.dark-mode #page-header,
+.dark-mode .blog-default .article-post,
+.dark-mode #page-header .category-hero {
+    background-color: #1c2939;
+}
+
+.dark-mode #top-bar,
+.dark-mode #colophon {
+    background-color: #121212;
+}
+
+.dark-mode .page-pagination a {
+    background-color: #10161d;
+}
+
+.dark-mode .cs-tab.cs-tab-default .cs-tab-nav {
+    background-image: linear-gradient(to top, #10161d 0%, #10161d 8px);
+}
+
+.dark-mode .cs-tab.cs-tab-default .cs-tab-nav:before,
+.dark-mode .cs-tab.cs-tab-default .cs-tab-nav:after {
+    display: none;
+}
+
+.dark-mode .cs-tab .cs-tab-nav ul li.active a {
+    background-color: #10161d;
+}
+
+.dark-mode .cs-tab.cs-tab-default .cs-tab-nav {
+    -webkit-box-shadow: 0 -1px 0 #495061 inset;
+    box-shadow: 0 -1px 0 #495061 inset;
+}
+
+.dark-mode .cs-tab.cs-tab-default .cs-tab-nav li.active a {
+    border-bottom-color: transparent;
+}
+
+.dark-mode #site-logo h1 a,
+.dark-mode .entry-title a,
+.dark-mode .post-navigation a,
+.dark-mode #page-header .category-content .page-title,
+.dark-mode .single-post .entry-header .entry-title,
+.dark-mode .related-posts .related-title,
+.dark-mode .comment-author.vcard {
+    color: #fff;
+}
+
+.dark-mode a {
+    color: #dadde4;
+}
+
+.dark-mode #top-bar,
+.dark-mode .cs-top-module > a,
+.dark-mode .cs-top-module .cs-open-modal,
+.dark-mode #site-nav > ul > li > .cs-link,
+.dark-mode #site-nav ul li ul li .cs-link,
+.dark-mode .comment-meta a,
+.dark-mode .entry-tags a,
+.dark-mode .entry-meta a,
+.dark-mode .cs-modal-content-hover,
+.dark-mode .cs-modal-content,
+.dark-mode .articlemag_widget ul li a,
+.dark-mode .post-pagination a,
+.dark-mode .page-pagination a,
+.dark-mode #copyright a,
+.dark-mode .cs-tab .cs-tab-nav ul li:not(.active) a,
+.dark-mode #colophon,
+.dark-mode .article-post .article-cat a,
+.dark-mode #page-header .category-content,
+.dark-mode .single-post .entry-header .post-meta a,
+.dark-mode .single-post .entry-header .post-meta,
+.dark-mode .entry-author .author-meta ul.author-social a {
+    color: #999;
+}
+
+.dark-mode .share-content .sticky-icons:hover,
+.dark-mode .header-hero-content .hero-button:hover {
+    color: #000;
+}
+
+.dark-mode a:hover,
+.dark-mode .cs-top-module > a:hover,
+.dark-mode .cs-top-module .cs-open-modal:hover,
+.dark-mode #site-logo h1 a:hover,
+.dark-mode .entry-title a:hover,
+.dark-mode #site-nav > ul > li > .cs-link:hover,
+.dark-mode #site-nav .current-menu-ancestor > .cs-link,
+.dark-mode #site-nav .current-menu-item > .cs-link,
+.dark-mode #site-nav ul li ul li .cs-link:hover,
+.dark-mode .comment-meta a:hover,
+.dark-mode .entry-tags a:hover,
+.dark-mode .entry-meta a:hover,
+.dark-mode .articlemag_widget ul li a:hover,
+.dark-mode .post-navigation a:hover,
+.dark-mode .page-pagination a:hover,
+.dark-mode #copyright a:hover,
+.dark-mode .article-post .article-cat a:hover,
+.dark-mode .single-post .entry-header .post-meta a:hover,
+.dark-mode .entry-author .author-meta ul.author-social a:hover {
+    color: #fff;
+}
+
+.dark-mode .cs-modal-content-hover,
+.dark-mode .cs-modal-content,
+.dark-mode #site-nav ul li ul,
+.dark-mode #site-nav ul li ul li .cs-link {
+    background-color: #10161d;
+}
+
+.dark-mode .blog-masonry-border {
+    background-color: #1c2939;
+    border-color: #495061;
+}
+
+.dark-mode .select2-container--default .select2-selection--single {
+    background-color: #111111;
+    border-color: #495061;
+}
+
+.dark-mode .select2-container--default .select2-results__option[aria-selected=true],
+.dark-mode .select2-container--default .select2-results__option[data-selected=true] {
+    background-color: #111111;
+}
+
+.dark-mode .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: inherit;
+}
+
+.dark-mode .select2-dropdown {
+    background-color: #10161d;
+    border-color: #495061;
+}
+
+.dark-mode .select2-container--default .select2-search--dropdown .select2-search__field {
+    border-color: #495061;
+}

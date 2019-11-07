@@ -1189,7 +1189,8 @@ div.wp-caption.alignright .wp-caption-text {
 .cs-header-default #site-logo img {
     max-height: 100%;
 }
-.cs-header-default #site-nav > ul > li.cs-menu-search {
+.cs-header-default #site-nav > ul > li.cs-menu-search,
+.cs-header-default #site-nav > ul > li.cs-toggle-track {
     float: right;
 }
 [dir='rtl'] .cs-header-default #site-nav > ul > li.cs-menu-search {
