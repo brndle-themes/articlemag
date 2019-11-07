@@ -299,6 +299,11 @@ $sections[ 'header' ] = array(
 			'default'	 => 1
 		),
 		array(
+			'id'	 => 'dark_mode',
+			'type'	 => 'on_off',
+			'title'	 => 'Dark Mode',
+		),
+		array(
 			'id'		 => 'menu_down_icon',
 			'type'		 => 'on_off',
 			'title'		 => 'Show dropdown icon',
@@ -1388,11 +1393,11 @@ $sections[ 'license' ] = array(
 			'desc'	 => $message
 		),
 		array(
-			'id'	 => 'license_action',
-			'type'	 => 'on_off',			
-			'title'	 => esc_html__( 'Activate License', 'articlemag' ),
+			'id'		 => 'license_action',
+			'type'		 => 'on_off',
+			'title'		 => esc_html__( 'Activate License', 'articlemag' ),
 			'dependency' => array( 'articlemag_license', '!=', '' ),
-			'default' => 0,
+			'default'	 => 0,
 		)
 	)
 );

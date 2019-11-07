@@ -26,6 +26,11 @@
     <?php if ( is_search() || is_404() ) { echo '<meta name="robots" content="noindex, nofollow" />'; } ?>
     <?php if ( cs_multilang_value( cs_get_option( 'favicon' ) ) ) { echo '<link rel="shortcut icon" href="'. cs_multilang_value( cs_get_option( 'favicon' ) ) .'" />'; } ?>
     <?php wp_head(); ?>
+    <script>
+      if ( localStorage.getItem( 'dark_mode' ) == 'true' ) {
+        document.documentElement.classList.add( 'dark-mode' );
+      }
+    </script>
   </head>
   <body <?php body_class(); ?>>
 

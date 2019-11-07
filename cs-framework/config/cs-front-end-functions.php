@@ -991,9 +991,15 @@ if ( !function_exists( 'cs_mobile_icon' ) ) {
 	function cs_mobile_icon() {
 
 		$output	 = '<div id="cs-mobile-icon">';
-		$output	 .= ( is_front_page() || is_page() || is_single() ) ? '<strong class="hidden-xs">' . get_the_title() . '</strong>' : '';
+		$output	 .= ( is_front_page() || is_page() || is_single() ) ? '<strong class="hidden-xs hidden-sm">' . get_the_title() . '</strong>' : '';
 		$output	 .= '<span><i class="cs-one"></i><i class="cs-two"></i><i class="cs-three"></i></span>';
 		$output	 .= '</div>';
+
+		if ( cs_get_option( 'dark_mode' ) ) {
+			$output	 .= '<div class="cs-toggle-track cs-mobile-toggle-track">';
+			$output	 .= '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
+			$output	 .= '</div>';
+		}
 
 		return $output;
 	}

@@ -1355,6 +1355,15 @@
 
     };
 
+    ARTICLEMAG.darkMode = function () {
+
+        var html = $( "html" );
+        $( ".cs-toggle-track" ).on( "click", function () {
+            html.hasClass( "dark-mode" ) ? ( html.removeClass( "dark-mode" ), localStorage.setItem( "dark_mode", !1 ) ) : ( html.addClass( "dark-mode" ), localStorage.setItem( "dark_mode", !0 ) );
+        } );
+
+    };
+
     $( document ).ready( function () {
 
         ARTICLEMAG.staticVariables();
@@ -1396,6 +1405,7 @@
         ARTICLEMAG.wooQuantityInput();
         ARTICLEMAG.tableWrapper();
         ARTICLEMAG.iframeWrapper();
+        ARTICLEMAG.darkMode();
 
     } );
 
