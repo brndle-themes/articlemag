@@ -65,37 +65,10 @@ function articlemag_register_required_plugins() {
 			'required'	 => false,
 			'version'	 => '3.4',
 		),
-		// Revolution Slider
+		// WPForms
 		array(
-			'name'		 => 'Revolution Slider',
-			'slug'		 => 'revslider',
-			'source'	 => FRAMEWORK_PLUGIN_DIR . '/zip/revslider.zip',
-			'required'	 => false,
-			'version'	 => '5.4.8.3',
-		),
-		
-		// Post Types Order
-		array(
-			'name'		 => 'Post Types Order',
-			'slug'		 => 'post-types-order',
-			'required'	 => false,
-		),
-		// Regenerate Thumbnails
-		array(
-			'name'		 => 'Regenerate Thumbnails',
-			'slug'		 => 'regenerate-thumbnails',
-			'required'	 => false,
-		),
-		// Contact Form 7
-		array(
-			'name'		 => 'Contact Form 7',
-			'slug'		 => 'contact-form-7',
-			'required'	 => false,
-		),
-		// WooCommerce
-		array(
-			'name'		 => 'WooCommerce',
-			'slug'		 => 'woocommerce',
+			'name'		 => 'Contact Form by WPForms',
+			'slug'		 => 'wpforms-lite',
 			'required'	 => false,
 		),
 	);
