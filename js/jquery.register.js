@@ -1488,9 +1488,10 @@
                     placement: 'top',
                     boundary: document.getElementById( 'page-wrapper' ),
                     touch: false,
-                    interactive: true,
-                    theme: 'bbf'
-                } )
+                    //interactive: true,
+                    theme: 'bbf',
+                    animation: 'perspective'
+                } );
             } );
         } );
 
