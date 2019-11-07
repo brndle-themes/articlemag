@@ -1233,7 +1233,8 @@ div.wp-caption.alignright .wp-caption-text {
     margin-right: -1px;
 }*/
 .cs-header-left .cs-menu-cart,
-.cs-header-left .cs-menu-search {
+.cs-header-left .cs-menu-search,
+.cs-header-left .cs-toggle-track {
     float: right !important;
 }
 .cs-header-left .cs-menu-cart:last-child a,

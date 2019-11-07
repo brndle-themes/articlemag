@@ -208,6 +208,10 @@
     color: #000;
 }
 
+.dark-mode #site-nav .cs-module-search {
+    background-color: #111;
+}
+
 .dark-mode a:hover,
 .dark-mode .cs-top-module > a:hover,
 .dark-mode .cs-top-module .cs-open-modal:hover,
