@@ -216,6 +216,28 @@ function cs_get_custom_skin() {
     color: {$accent};
   }
 
+.dark-mode a:hover,
+.dark-mode .cs-top-module > a:hover,
+.dark-mode .cs-top-module .cs-open-modal:hover,
+.dark-mode #site-logo h1 a:hover,
+.dark-mode .entry-title a:hover,
+.dark-mode #site-nav > ul > li > .cs-link:hover,
+.dark-mode #site-nav .current-menu-ancestor > .cs-link,
+.dark-mode #site-nav .current-menu-item > .cs-link,
+.dark-mode #site-nav ul li ul li .cs-link:hover,
+.dark-mode .comment-meta a:hover,
+.dark-mode .entry-tags a:hover,
+.dark-mode .entry-meta a:hover,
+.dark-mode .articlemag_widget ul li a:hover,
+.dark-mode .post-navigation a:hover,
+.dark-mode .page-pagination a:hover,
+.dark-mode #copyright a:hover,
+.dark-mode .article-post .article-cat a:hover,
+.dark-mode .single-post .entry-header .post-meta a:hover,
+.dark-mode .entry-author .author-meta ul.author-social a:hover {
+    color: {$accent};
+}
+
   #cs-footer-block-before,
   #cs-footer-block-after,
   .bbp-pagination-links span.current,
@@ -743,6 +765,28 @@ CSS;
 a,
 .cs-accent-color {
   color: {$accent};
+}
+
+.dark-mode a:hover,
+.dark-mode .cs-top-module > a:hover,
+.dark-mode .cs-top-module .cs-open-modal:hover,
+.dark-mode #site-logo h1 a:hover,
+.dark-mode .entry-title a:hover,
+.dark-mode #site-nav > ul > li > .cs-link:hover,
+.dark-mode #site-nav .current-menu-ancestor > .cs-link,
+.dark-mode #site-nav .current-menu-item > .cs-link,
+.dark-mode #site-nav ul li ul li .cs-link:hover,
+.dark-mode .comment-meta a:hover,
+.dark-mode .entry-tags a:hover,
+.dark-mode .entry-meta a:hover,
+.dark-mode .articlemag_widget ul li a:hover,
+.dark-mode .post-navigation a:hover,
+.dark-mode .page-pagination a:hover,
+.dark-mode #copyright a:hover,
+.dark-mode .article-post .article-cat a:hover,
+.dark-mode .single-post .entry-header .post-meta a:hover,
+.dark-mode .entry-author .author-meta ul.author-social a:hover {
+    color: {$accent};
 }
 
 .bbp-pagination-links span.current,
