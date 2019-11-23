@@ -299,11 +299,6 @@ $sections[ 'header' ] = array(
 			'default'	 => 1
 		),
 		array(
-			'id'	 => 'dark_mode',
-			'type'	 => 'on_off',
-			'title'	 => 'Dark Mode',
-		),
-		array(
 			'id'		 => 'menu_down_icon',
 			'type'		 => 'on_off',
 			'title'		 => 'Show dropdown icon',
@@ -748,6 +743,11 @@ $sections[ 'skin' ] = array(
 			'type'		 => 'content',
 			'content'	 => '<div class="cs-alert cs-alert-success"><strong>"Build own skin"</strong>, Highly customizable method there is a lot of option in customize panel for your own skin. enjoy use them <strong>Appearance > <a href="' . admin_url( 'customize.php' ) . '">Customize</a></strong></div>',
 			'dependency' => array( 'skin', '==', 'custom' ),
+		),
+		array(
+			'id'	 => 'dark_mode',
+			'type'	 => 'on_off',
+			'title'	 => 'Dark Mode',
 		),
 		array(
 			'id'	 => 'cache_css',
