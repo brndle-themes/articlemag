@@ -37,6 +37,7 @@ add_action( 'tgmpa_register', 'articlemag_register_required_plugins' );
  * TGM_Plugin_Activation class constructor.
  */
 function articlemag_register_required_plugins() {
+	$remote_url = 'https://demos.wbcomdesigns.com/exporter/plugins';
 
 	/**
 	 * Array of plugin arrays. Required keys are name and slug.
@@ -53,17 +54,15 @@ function articlemag_register_required_plugins() {
 		array(
 			'name'		 => 'Elementor Element Pack',
 			'slug'		 => 'bdthemes-element-pack',
-			'source'	 => FRAMEWORK_PLUGIN_DIR . '/zip/bdthemes-element-pack.zip',
+			'source'	 => $remote_url . '/bdthemes-element-pack/4.0.1/bdthemes-element-pack.zip',
 			'required'	 => false,
-			'version'	 => '3.2.0',
+			'version'	 => '4.0.1',
 		),
 		// Page Loader
 		array(
-			'name'		 => 'Page Loader',
-			'slug'		 => 'pageloader-by-bonfire',
-			'source'	 => FRAMEWORK_PLUGIN_DIR . '/zip/pageloader-by-bonfire.zip',
+			'name'		 => 'LoftLoader',
+			'slug'		 => 'loftloader',
 			'required'	 => false,
-			'version'	 => '3.4',
 		),
 		// WPForms
 		array(
