@@ -2146,6 +2146,22 @@ class Merlin {
 
 			$this->logger->debug( __( 'The blog page was set', 'merlin-wp' ), array( 'blog_page_id' => $blogpage ) );
 		}
+
+		/*
+		 * Assign Import Menus
+		 */
+		// Set imported menus to registered theme locations
+		
+		$locations = get_theme_mod( 'nav_menu_locations' ); // registered menu locations in theme
+		$registered_menus = wp_get_nav_menus(); // registered menus				
+		// Assign Menu Name to Registered menus as array keys
+		foreach( $registered_menus as $menu ) {
+			
+			if ( $menu->slug == 'main-menu' && strtolower($menu->name) == strtolower('Main Menu') ) {
+				$locations['primary'] = $menu->term_id;				
+			}
+		}
+		set_theme_mod( 'nav_menu_locations', $locations ); // set menus to locations
 	}
 
 	/**
