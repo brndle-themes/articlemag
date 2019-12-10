@@ -118,3 +118,19 @@ function articlemag_remove_admin_init() {
 		} );
 	}
 }
+
+/* remove Admin init function on Theme Setup wizard start */
+add_action( 'admin_init', 'varuna_remove_admin_init', 0 );
+
+function varuna_remove_admin_init() {
+	if ( isset( $_GET[ 'page' ] ) && ( $_GET[ 'page' ] == 'varuna-sample-demo-import' || $_GET[ 'page' ] == 'tgmpa-install-plugins' ) ) {
+		remove_action( 'admin_init', 'is_admin_init' );
+		add_filter( 'woocommerce_enable_setup_wizard', function() {
+			return false;
+		} );
+		update_option( 'wpforms_activation_redirect', true );
+		if ( did_action( 'elementor/loaded' ) ) {
+			remove_action( 'admin_init', [ \Elementor\Plugin::$instance->admin, 'maybe_redirect_to_getting_started' ] );
+		}
+	}
+}
