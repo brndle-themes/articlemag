@@ -2,7 +2,7 @@
 Contributors: brndle
 Requires at least: WordPress 3.2
 Tested up to: 5.3
-Stable tag: 1.2
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, learndash
@@ -34,12 +34,16 @@ GNU General Public License for more details.
 
 == Changelog ==
 
-= 1.2 =
+= 1.3.0 =
+ * Fix: (#38) Fixed theme setup plugins installation error
+ * Released: 11 Dec, 2019
+ 
+= 1.2.0 =
 * Licence Fixes
 * Dark Color Scheme
 * Released: 20 Nov, 2019
 
-= 1.1 =
+= 1.1.0 =
 * Released: 19 Nov, 2019
 
 Initial release.
