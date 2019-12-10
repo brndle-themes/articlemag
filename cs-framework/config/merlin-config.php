@@ -111,19 +111,7 @@ add_filter( 'merlin_import_files', 'articlemag_import_files' );
 add_action( 'admin_init', 'articlemag_remove_admin_init', 0 );
 
 function articlemag_remove_admin_init() {
-	if ( isset( $_GET[ 'page' ] ) && $_GET[ 'page' ] == 'articlemag-sample-demo-import' ) {
-		remove_action( 'admin_init', 'is_admin_init' );
-		add_filter( 'woocommerce_enable_setup_wizard', function() {
-			return false;
-		} );
-	}
-}
-
-/* remove Admin init function on Theme Setup wizard start */
-add_action( 'admin_init', 'varuna_remove_admin_init', 0 );
-
-function varuna_remove_admin_init() {
-	if ( isset( $_GET[ 'page' ] ) && ( $_GET[ 'page' ] == 'varuna-sample-demo-import' || $_GET[ 'page' ] == 'tgmpa-install-plugins' ) ) {
+	if ( isset( $_GET[ 'page' ] ) && ( $_GET[ 'page' ] == 'articlemag-sample-demo-import' || $_GET[ 'page' ] == 'tgmpa-install-plugins' ) ) {
 		remove_action( 'admin_init', 'is_admin_init' );
 		add_filter( 'woocommerce_enable_setup_wizard', function() {
 			return false;
