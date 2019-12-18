@@ -2508,7 +2508,10 @@ div.wp-caption.alignright .wp-caption-text {
     transition: all .25s cubic-bezier(.02,.01,.47,1);
     border-radius: 10px;
 }
-
+.page-layout-right .featured_blog_posts_widget.article-featured-slider,
+.page-layout-left .featured_blog_posts_widget.article-featured-slider {
+    width: calc(100% - 40px);
+}
 .blog-default .article-post{
     width: calc(33.33333% - 40px);
     margin-left: 20px;
@@ -2524,6 +2527,10 @@ div.wp-caption.alignright .wp-caption-text {
     z-index: 1;
     transition: all .25s cubic-bezier(.02,.01,.47,1);
     padding-bottom: 0;
+}
+.page-layout-right.blog-default .article-post,
+.page-layout-left.blog-default .article-post{
+    width: calc(50% - 40px);
 }
 .article-featured-slider:hover,
 .blog-default .article-post-gird .article-post:hover{
@@ -3564,13 +3571,20 @@ div.wp-caption.alignright .wp-caption-text {
 
 .articlemag_widget {
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 35px;
     word-wrap: break-word;
+    padding: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.08);
+    border-radius: 5px;
 }
 .articlemag_widget .widget-title h4 {
     font-size: 16px;
     color: #293951;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 12px;
 }
 .articlemag_widget ul {
     margin: 0;
