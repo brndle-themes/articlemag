@@ -2567,6 +2567,9 @@ div.wp-caption.alignright .wp-caption-text {
     height: 220px;
     overflow: hidden;
 }
+.related-posts .article-card-img img {
+    width: 100%;
+}
 
 .article-post .article-card-link{
     position: absolute;
