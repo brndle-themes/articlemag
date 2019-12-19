@@ -7,7 +7,6 @@
  *
  */
 get_header();
-
 global $cs_has_section, $post;
 
 $cs_post_meta    = get_post_meta( $post->ID, '_custom_page_options', true );
@@ -24,7 +23,7 @@ if( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_
 
 } else {
 ?>
-<section class="main-content blog-default single-post">
+<section class="main-content blog-default single-post page-layout-<?php echo $cs_page_layout; ?>">
   <div class="container">
     <div class="row">
 
