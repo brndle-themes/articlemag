@@ -142,7 +142,7 @@ class EDD_Articlemag_Theme_Updater_Admin {
 		// 	array( $this, 'license_page' )
 		// );
 		// add_submenu_page(
-		// 	'varuna-settings',
+		// 	'articlemag-settings',
 		// 	$strings['theme-license'],
 		// 	$strings['theme-license'],
 		// 	'manage_options',

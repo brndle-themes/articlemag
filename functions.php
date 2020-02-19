@@ -11,6 +11,4 @@
  * @version 1.0.0
  *
  */
-locate_template( 'cs-framework/init.php', true );
-
-include( 'inc/shortcodes.php' );
+locate_template( 'inc/init.php', true );

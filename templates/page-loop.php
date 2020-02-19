@@ -24,9 +24,9 @@ $cs_blog_class     = ( $cs_blog_layout == 'grid' || $cs_blog_layout == 'masonry'
           <div class="article-post-gird">
 
           <?php
-          if ( is_home() ) {
-            echo do_shortcode( '[articlemag-featured-posts]' );
-          }
+            if (is_home() ) {
+              echo display_articlemag_featured_posts();
+            }
           ?>
           <?php if( $cs_blog_layout == 'masonry' || $cs_blog_layout == 'grid' ) { ?>
             <div class="isotope-container">
