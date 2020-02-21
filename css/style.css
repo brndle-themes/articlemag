@@ -2496,8 +2496,13 @@ div.wp-caption.alignright .wp-caption-text {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 20px;
-    margin: 0 -20px;
+/*    margin: 0 -20px;*/
 }
+
+.blog-layout-small .article-featured-slider{
+    width: 100%;
+}
+
 .article-featured-slider{
     width: calc(66.66667% - 40px);
     margin: 0 20px 40px 20px;
