@@ -147,6 +147,13 @@ if ( ! function_exists( 'cs_esc_number' ) ) {
  * @since 1.0.0
  * @version 1.0.0
  */
+ /**
+  *
+  * Option to Background
+  *
+  * @since 1.0.0
+  * @version 1.0.0
+  */
 if ( ! function_exists( 'cs_option2background' ) ) {
 	function cs_option2background( $post_meta = array() ) {
 
@@ -154,18 +161,16 @@ if ( ! function_exists( 'cs_option2background' ) ) {
 
 		if ( isset( $post_meta['background'] ) ) {
 
-
 			extract( $post_meta['background'] );
 
-			$image = $post_meta['background'][ 'background-image' ]['url'];
-			$repeat = $post_meta['background']['background-repeat'];
+			$image      = $post_meta['background']['background-image']['url'];
+			$repeat     = $post_meta['background']['background-repeat'];
 			$attachment = $post_meta['background']['background-attachment'];
-			$color = $post_meta['background']['background-color'];
-			$bg_size = $post_meta['background']['background-size'];
-			$position = $post_meta['background']['background-position'];			
+			$color      = $post_meta['background']['background-color'];
+			$bg_size    = $post_meta['background']['background-size'];
+			$position   = $post_meta['background']['background-position'];
 
-
-			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' :  $default_image ;
+			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' : $default_image;
 			$background_repeat     = ( ! empty( $image ) && ! empty( $repeat ) ) ? ' background-repeat: ' . $repeat . ';' : '';
 			$background_size       = ( ! empty( $image ) ) ? ' background-size: ' . $bg_size . ';' : '';
 			$background_position   = ( ! empty( $image ) && ! empty( $position ) ) ? ' background-position: ' . $position . ';' : '';
@@ -177,11 +182,11 @@ if ( ! function_exists( 'cs_option2background' ) ) {
 
 			$out .= ( ! empty( $background_style ) || ! empty( $background_color ) ) ? ' style="' . $background_style . $background_color . '"' : '';
 
-		}		
+			
+		}
 		return $out;
 	}
 }
-
 
 /**
  *
@@ -715,11 +720,11 @@ if ( ! function_exists( 'cs_enqueue_google_fonts' ) ) {
 		if ( empty( $typography ) ) {
 			return; }
 		foreach ( $typography as $font ) {
-			$subsets = $font['font']['subset'];
+			$subsets = ( isset( $font['font']['subset'] ) ) ? $font['font']['subset'] : '';
 			$subsets = ( ! empty( $subsets ) ) ? '&subset=' . $subsets : '';
 			if ( ! empty( $font['selector'] ) ) {
-				if ( cs_is_googe_font( $font['font']['font-family'] ) ) {
-					$family  = $font['font']['font-family'];
+				$family = ( isset( $font['font']['font-family'] ) ) ? $font['font']['font-family'] : '';
+				if ( cs_is_googe_font( $family ) ) {
 					$variant = ( $font['font']['font-weight'] != 'regular' ) ? $font['font']['font-weight'] : 400;
 					$embed_fonts[ $family ]['font-weight'][ $variant ] = $variant;
 				}
@@ -756,10 +761,10 @@ if ( ! function_exists( 'cs_get_typography' ) ) {
 				if ( ! empty( $font['selector'] ) ) {
 					$weight = ( $font['font']['font-weight'] != 'regular' ) ? cs_esc_string( $font['font']['font-weight'] ) : 400;
 					$style  = cs_esc_number( $font['font']['font-weight'] );
-					$style  = ( $style && $style != 'regular' ) ? $style : 'normal';					
-					$family = ( cs_is_googe_font( $font['font']['font-family'] ) ) ? '"' . $font['font']['font-family'] . '", Arial, sans-serif' : $font['font']['font-family'];					
+					$style  = ( $style && $style != 'regular' ) ? $style : 'normal';
+					$family = ( cs_is_googe_font( $font['font']['font-family'] ) ) ? '"' . $font['font']['font-family'] . '", Arial, sans-serif' : $font['font']['font-family'];
 
-					$output .= $font['selector'] . '{';					
+					$output .= $font['selector'] . '{';
 					$output .= ( ! empty( $family ) ) ? 'font-family: ' . $family . ';' : '';
 					$output .= ( ! empty( $font['font']['line-height'] ) ) ? 'line-height: ' . $font['font']['line-height'] . ';' : '';
 					$output .= ( ! empty( $font['font']['font-size'] ) ) ? 'font-size: ' . $font['font']['font-size'] . 'px;' : '';
@@ -834,7 +839,7 @@ if ( ! function_exists( 'cs_get_post_meta' ) ) {
 		$post_id = ( is_front_page() ) ? get_option( 'page_on_front' ) : $post_id;
 		$post_id = ( is_woocommerce_shop() ) ? wc_get_page_id( 'shop' ) : $post_id;
 		$post_id = ( ! is_tag() && ! is_archive() && ! is_search() && ! is_404() ) ? $post_id : false;
-		return ( ! empty( $post_id ) ) ? get_post_meta( $post_id, '_side_custom_page_options', true ) : null;
+		return ( ! empty( $post_id ) ) ? get_post_meta( $post_id, '_custom_page_options', true ) : null;
 	}
 }
 
@@ -1017,7 +1022,7 @@ if ( ! function_exists( 'cs_auto_post_excerpt' ) ) {
 		$shortcode_tags = $temporary;
 		$content        = do_shortcode( $content );
 
-		$limit   = cs_get_option( 'blog_excerpt_world_limit', 55 );
+		$limit   = cs_get_option( 'blog_excerpt_world_limit', 40 );
 		$content = str_replace( ']]>', ']]&gt;', $content );
 		$content = strip_tags( $content );
 		$words   = explode( ' ', $content, $limit + 1 );

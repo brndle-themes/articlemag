@@ -57,6 +57,9 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 							'no-padding'     => 'No Padding',
 							'custom-padding' => 'Custom Padding',
 						),
+						'default' => array(
+						    'custom-padding'  => 'lg-padding',
+						 ),
 					),
 					array(
 						'id'         => 'top',
