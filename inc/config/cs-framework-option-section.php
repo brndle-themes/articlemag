@@ -304,7 +304,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 					'id'    => 'dark_mode',
 					'type'  => 'switcher',
 					'title' => 'Dark Mode',
-					'default' => 0,
+					'default' => 1,
 				),
 				array(
 					'id'      => 'menu_down_icon',

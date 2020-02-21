@@ -132,7 +132,7 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 					),
 					array(
 						'id'         => 'overlay_color',
-						'type'       => 'color_picker',
+						'type'       => 'color',
 						'title'      => 'Overlay Color',
 						'dependency' => array( 'overlay', '==', 'true' ),
 					),

@@ -154,24 +154,34 @@ if ( ! function_exists( 'cs_option2background' ) ) {
 
 		if ( isset( $post_meta['background'] ) ) {
 
+
 			extract( $post_meta['background'] );
 
-			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' : '';
+			$image = $post_meta['background'][ 'background-image' ]['url'];
+			$repeat = $post_meta['background']['background-repeat'];
+			$attachment = $post_meta['background']['background-attachment'];
+			$color = $post_meta['background']['background-color'];
+			$bg_size = $post_meta['background']['background-size'];
+			$position = $post_meta['background']['background-position'];			
+
+
+			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' :  $default_image ;
 			$background_repeat     = ( ! empty( $image ) && ! empty( $repeat ) ) ? ' background-repeat: ' . $repeat . ';' : '';
+			$background_size       = ( ! empty( $image ) ) ? ' background-size: ' . $bg_size . ';' : '';
 			$background_position   = ( ! empty( $image ) && ! empty( $position ) ) ? ' background-position: ' . $position . ';' : '';
 			$background_attachment = ( ! empty( $attachment ) ) ? $attachment : '';
 			$background_attachment = ( ! empty( $post_meta['parallax'] ) ) ? 'fixed' : $background_attachment;
 			$background_attachment = ( ! empty( $image ) && $background_attachment ) ? ' background-attachment: ' . $background_attachment . ';' : '';
 			$background_color      = ( ! empty( $color ) ) ? ' background-color: ' . $color . ';' : '';
-			$background_style      = ( ! empty( $image ) ) ? $background_image . $background_repeat . $background_position . $background_attachment : '';
+			$background_style      = ( ! empty( $image ) ) ? $background_image . $background_repeat . $background_position . $background_attachment . $background_size : '';
 
 			$out .= ( ! empty( $background_style ) || ! empty( $background_color ) ) ? ' style="' . $background_style . $background_color . '"' : '';
 
-		}
-
+		}		
 		return $out;
 	}
 }
+
 
 /**
  *

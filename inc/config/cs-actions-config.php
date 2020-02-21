@@ -1026,3 +1026,11 @@ function display_articlemag_featured_posts() {
 	echo '</div><div class="clear"></div>';
 	return ob_get_clean();
 }
+
+
+
+
+
+
+
+
