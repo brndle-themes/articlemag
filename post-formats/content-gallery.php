@@ -23,12 +23,6 @@
     </header>
 
     <div class="post-content">
-      <div class="article-share">
-        <div class="share-content sticky">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" class="sticky-icons"><i class="fa fa-facebook"></i></a>
-          <a href="http://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank" class="sticky-icons"><i class="fa fa-twitter"></i></a>
-        </div>
-      </div>
       <?php echo cs_post_gallery( get_the_content() ); ?>
       <?php the_content(); ?>
     </div>
