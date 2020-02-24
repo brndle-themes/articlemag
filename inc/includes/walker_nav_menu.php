@@ -165,7 +165,7 @@ if ( !class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 			if ( cs_get_option( 'woo_menu_cart' ) && is_woocommerce_activated() ) {
 				$output	 .= '<li class="cs-depth-0 cs-menu-cart cart-widget-opener">';
-				$output	 .= '<a href="' . WC()->cart->get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
+				$output	 .= '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
 				$output	 .= '</li>';
 			}
 

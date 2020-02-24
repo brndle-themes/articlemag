@@ -71,7 +71,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'background_gradient'        => false,
 					'background_auto_attributes' => false,
 					'background_attachment'      => false,
-					'background_image_preview'   => false,
+					'background_image_preview'   => true,
 				),
 				array(
 					'id'      => 'top_bar_repeat',
@@ -194,7 +194,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'background_gradient'        => false,
 					'background_auto_attributes' => false,
 					'background_attachment'      => false,
-					'background_image_preview'   => false,
+					'background_image_preview'   => true,
 
 				),
 				array(
@@ -363,7 +363,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'background_gradient'        => false,
 						'background_auto_attributes' => false,
 						'background_attachment'      => false,
-						'background_image_preview'   => false,
+						'background_image_preview'   => true,
 					),
 					array(
 						'id'      => 'page_header_repeat',
@@ -472,7 +472,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'background_gradient'        => false,
 						'background_auto_attributes' => false,
 						'background_attachment'      => false,
-						'background_image_preview'   => false,
+						'background_image_preview'   => true,
 					),
 					array(
 						'id'      => 'footer_repeat',
@@ -577,7 +577,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'background_gradient'        => false,
 						'background_auto_attributes' => false,
 						'background_attachment'      => false,
-						'background_image_preview'   => false,
+						'background_image_preview'   => true,
 					),
 					array(
 						'id'      => 'footer_ba_repeat',
@@ -683,7 +683,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'background_gradient'        => false,
 						'background_auto_attributes' => false,
 						'background_attachment'      => false,
-						'background_image_preview'   => false,
+						'background_image_preview'   => true,
 					),
 					array(
 						'id'      => 'copyright_repeat',

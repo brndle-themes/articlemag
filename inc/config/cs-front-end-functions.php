@@ -199,7 +199,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 					// ----------------------------------------------
 					case 'woocount':
 						if ( is_woocommerce_activated() ) {
-							$out .= '<a href="' . WC()->cart->get_cart_url() . '"><i class="fa fa-shopping-cart"></i><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
+							$out .= '<a href="' . wc_get_cart_url() . '"><i class="fa fa-shopping-cart"></i><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
 						}
 
 						break;
@@ -208,7 +208,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 					// ----------------------------------------------
 					case 'wooprice':
 						if ( is_woocommerce_activated() ) {
-							$out .= '<a href="' . WC()->cart->get_cart_url() . '"><i class="cs-in fa fa-shopping-cart"></i><span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', WC()->cart->cart_contents_count, 'woothemes' ), WC()->cart->cart_contents_count ) . WC()->cart->get_cart_total() . '</span></a>';
+							$out .= '<a href="' . wc_get_cart_url() . '"><i class="cs-in fa fa-shopping-cart"></i><span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', WC()->cart->cart_contents_count, 'woothemes' ), WC()->cart->cart_contents_count ) . WC()->cart->get_cart_total() . '</span></a>';
 						}
 
 						break;

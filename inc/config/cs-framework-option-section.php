@@ -440,7 +440,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 					'title'      => 'Blog Sidebar Widget',
 					'options'    => cs_wp_registered_sidebars(),
 					'dependency' => array( 'blog_sidebar', 'any', 'right,left' ),
-					'default'    => 'Select a sidebar (default primary)',
+					'placeholder' => 'Select a sidebar (default primary)',
 				),
 				array(
 					'id'      => 'blog_image_size',
