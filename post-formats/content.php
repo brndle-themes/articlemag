@@ -41,7 +41,7 @@
 			</div>
 			<?php
 			$featured_post = get_post_meta( get_the_ID(), 'meta-checkbox', true );
-			if ( $featured_post == 'yes' ) {
+			 if ( $featured_post == 1 ) {
 				?>
 				<a href="<?php the_permalink(); ?>" class="article-card-featured tippy-js" data-tippy-content="Featured"><i class="fas fa-star"></i></a>
 			<?php } ?> 

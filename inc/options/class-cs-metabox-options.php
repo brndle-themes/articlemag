@@ -99,7 +99,7 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 					array(
 						'title'              => 'Featured Post',
 						'post_type'          => 'post',
-						'data_type'          => 'serialize',
+						'data_type'          => 'unserialize',
 						'context'            => 'side',
 						'priority'           => 'default',
 						'exclude_post_types' => array(),
@@ -177,7 +177,7 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 							array(								
 								'fields' => array(
 									array(
-										'id'         => 'featured_post',
+										'id'         => $this->side_featured_prefix,
 										'type'       => 'checkbox',
 										'label'   => 'Featured this post ',
 										'default' => false,

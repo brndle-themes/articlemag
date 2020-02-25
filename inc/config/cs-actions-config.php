@@ -967,9 +967,10 @@ function display_articlemag_featured_posts() {
 			'posts_per_page' => $atts['limit'],
 			'post_type'		 => 'post',
 			'meta_key'       => 'meta-checkbox',
-            'meta_value'     => 'yes'
+            'meta_value'     => 1
 		);
         $all_posts =  new WP_Query( $args );
+        
         if ( ! $all_posts->have_posts() ) {
         	$args = array(
 				'posts_per_page' => $atts['limit'],
@@ -1144,6 +1145,7 @@ function edit_category_thumbnail_fields( $term ) {
 				<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'fashionbuzz' ); ?></button>
 				<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'fashionbuzz' ); ?></button>
 			</div>
+			<p class="description">Upload Image Min. Size 1280X600</p>
 			<script type="text/javascript">
 
 	            // Only show the "remove image" button when needed
