@@ -25,8 +25,13 @@ if( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_
 } else {
 ?>
 <section class="main-content blog-default single-post">
+
+  <?php get_template_part( 'templates/page-header' ); ?>
+  <?php cs_post_thumbnail();?>
+  
+
   <div class="container">
-    <div class="row">
+    <div class="row signle-post-content">
 
       <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 

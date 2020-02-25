@@ -398,7 +398,7 @@ if ( ! function_exists( 'cs_wpseo_metabox_prio' ) ) {
 if ( ! function_exists( 'cs_admin_post_thumbnail_html' ) ) {
 	function cs_admin_post_thumbnail_html( $content, $post_id ) {
 
-		$value = get_post_meta( get_the_ID(), '_side_custom_page_options', true );
+		$value = get_post_meta( get_the_ID(), '_custom_page_options', true );
 		$value = ( ! empty( $value['hide_featured_image'] ) ) ? 1 : 0;
 
 		$content .= '<label>';

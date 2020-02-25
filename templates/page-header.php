@@ -23,6 +23,7 @@ if( ! empty( $cs_post_meta['disable_header'] ) && empty( $cs_post_meta['force_sh
 
 // header classes
 $cs_classes         = ( ! empty( $cs_post_meta['background'] ) || ! empty( $cs_post_meta['video'] ) ) ? 'cs-section cs-parallax' : '';
+$cs_classes        .= ( ! empty( $cs_post_meta['header_transparent'] ) || ! empty( $cs_post_meta['fluid'] ) ) ? ' page-header_meta' : '';
 $cs_classes        .= ( ! empty( $cs_post_meta['cover'] ) ) ? ' cs-section-cover-bg' : '';
 $cs_classes        .= ( ! empty( $cs_post_meta['parallax'] ) ) ? ' parallax' : '';
 $cs_classes        .= ( ! empty( $cs_post_meta['position'] ) && $cs_post_meta['position'] == 'all' ) ? ' text-center' : '';

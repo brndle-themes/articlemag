@@ -2806,6 +2806,12 @@ div.wp-caption.alignright .wp-caption-text {
  * 14. BLOG SINGLE PAGE
  * ========================================
  */
+.single  #page-header{
+    display: none;
+}
+.single  #page-header.page-header_meta{
+    display: block;
+}
 .single-post .hentry {
     padding-bottom: 0;
     border: none;
@@ -2830,9 +2836,35 @@ div.wp-caption.alignright .wp-caption-text {
     max-width: 100vw;
 }
 
+.single-post .entry-image{
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    position: relative;
+    min-height: 500px;
+    background-color: #0a0a0a;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-left: calc(-100vw / 2 + 100% / 2);
+    margin-right: calc(-100vw / 2 + 100% / 2);
+    max-width: 100vw;
+}
+
 .cs-boxed-layout .single-post-image{
     margin:0px;
 }
+
+.single-post .entry-image{
+    margin-bottom: 0px;
+}
+.signle-post-content{
+    margin-top: 50px;
+}
+
 .single-post .post-image{
     position: absolute;
     top: 0;

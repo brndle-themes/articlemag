@@ -531,12 +531,13 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 
 			if ( cs_get_option( 'blog_single_image_show' ) ) {
 
-				$post_meta = get_post_meta( get_the_ID(), '_side_custom_page_options', true );
-
-				if ( empty( $post_meta['hide_featured_image'] ) ) {
-					echo '<div class="entry-image">';
-					the_post_thumbnail( cs_get_option( 'blog_single_image_size' ) );
-					echo '</div><!-- entry-image -->';
+				$post_meta = get_post_meta( get_the_ID(), '_custom_page_options', true );
+				if( has_post_thumbnail() ){
+					if ( empty( $post_meta['hide_featured_image'] ) ) {
+						echo '<div class="entry-image">';
+						the_post_thumbnail( cs_get_option( 'large' ) );
+						echo '</div><!-- entry-image -->';
+					}
 				}
 			}
 		} else {
@@ -570,7 +571,7 @@ if ( ! function_exists( 'cs_page_featured_image' ) ) {
 			return;
 		}
 
-		$post_meta = get_post_meta( get_the_ID(), '_side_custom_page_options', true );
+		$post_meta = get_post_meta( get_the_ID(), '_custom_page_options', true );
 
 		if ( ! empty( $post_meta['hide_featured_image'] ) ) {
 			return;
