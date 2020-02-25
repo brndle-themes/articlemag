@@ -9,7 +9,7 @@
 get_header(); ?>
 
 <section id="page-header">
-  <div class="category-hero"></div>
+  <div class="category-hero" ></div>
   <div class="container">
     <div class="row">
       <div class="col-md-12 md-padding">

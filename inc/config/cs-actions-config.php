@@ -1030,7 +1030,251 @@ function display_articlemag_featured_posts() {
 
 
 
+/* * **************************************************** */
 
+/**
+ * Category thumbnail fields.
+ */
+function add_category_thumbnail_field() {
+	?>
+	<div class="form-field term-thumbnail-wrap">
+		<label><?php esc_html_e( 'Thumbnail', 'fashionbuzz' ); ?></label>
+		<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>" width="60px" height="60px" /></div>
+		<div style="line-height: 60px;">
+			<input type="hidden" id="category_thumbnail_id" name="category_thumbnail_id" />
+			<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'fashionbuzz' ); ?></button>
+			<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'fashionbuzz' ); ?></button>
+		</div>
+		<script type="text/javascript">
+
+	        // Only show the "remove image" button when needed
+	        if ( !jQuery( '#category_thumbnail_id' ).val() ) {
+	            jQuery( '.remove_image_button' ).hide();
+	        }
+
+	        // Uploading files
+	        var file_frame;
+
+	        jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
+
+	            event.preventDefault();
+
+	            // If the media frame already exists, reopen it.
+	            if ( file_frame ) {
+	                file_frame.open();
+	                return;
+	            }
+
+	            // Create the media frame.
+	            file_frame = wp.media.frames.downloadable_file = wp.media( {
+	                title: '<?php esc_html_e( 'Choose an image', 'fashionbuzz' ); ?>',
+	                button: {
+	                    text: '<?php esc_html_e( 'Use image', 'fashionbuzz' ); ?>'
+	                },
+	                multiple: false
+	            } );
+
+	            // When an image is selected, run a callback.
+	            file_frame.on( 'select', function () {
+	                var attachment = file_frame.state().get( 'selection' ).first().toJSON();
+	                var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
+
+	                jQuery( '#category_thumbnail_id' ).val( attachment.id );
+	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
+	                jQuery( '.remove_image_button' ).show();
+	            } );
+
+	            // Finally, open the modal.
+	            file_frame.open();
+	        } );
+
+	        jQuery( document ).on( 'click', '.remove_image_button', function () {
+	            jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
+	            jQuery( '#category_thumbnail_id' ).val( '' );
+	            jQuery( '.remove_image_button' ).hide();
+	            return false;
+	        } );
+
+	        jQuery( document ).ajaxComplete( function ( event, request, options ) {
+	            if ( request && 4 === request.readyState && 200 === request.status
+	                && options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {
+
+	                var res = wpAjax.parseAjaxResponse( request.responseXML, 'ajax-response' );
+	                if ( !res || res.errors ) {
+	                    return;
+	                }
+	                // Clear Thumbnail fields on submit
+	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
+	                jQuery( '#category_thumbnail_id' ).val( '' );
+	                jQuery( '.remove_image_button' ).hide();
+	                // Clear Display type field on submit
+	                jQuery( '#display_type' ).val( '' );
+	                return;
+	            }
+	        } );
+
+		</script>
+		<div class="clear"></div>
+	</div>
+	<?php
+}
+//Category Image Field.
+add_action( 'category_add_form_fields', 'add_category_thumbnail_field' );
+
+/**
+ * Edit category thumbnail field.
+ *
+ * @param mixed $term Term (category) being edited.
+ */
+function edit_category_thumbnail_fields( $term ) {
+	$thumbnail_id = absint( get_term_meta( $term->term_id, 'category_thumbnail_id', true ) );
+
+	if ( $thumbnail_id ) {
+		$image = wp_get_attachment_thumb_url( $thumbnail_id );
+	} else {
+		$image = get_template_directory_uri().'/images/no-pictures/no-image-picture.png';
+	}
+	?>
+	<tr class="form-field term-thumbnail-wrap">
+		<th scope="row" valign="top"><label><?php esc_html_e( 'Thumbnail', 'fashionbuzz' ); ?></label></th>
+		<td>
+			<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( $image ); ?>" width="60px" height="60px" /></div>
+			<div style="line-height: 60px;">
+				<input type="hidden" id="category_thumbnail_id" name="category_thumbnail_id" value="<?php echo esc_attr( $thumbnail_id ); ?>" />
+				<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'fashionbuzz' ); ?></button>
+				<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'fashionbuzz' ); ?></button>
+			</div>
+			<script type="text/javascript">
+
+	            // Only show the "remove image" button when needed
+	            if ( '0' === jQuery( '#category_thumbnail_id' ).val() ) {
+	                jQuery( '.remove_image_button' ).hide();
+	            }
+
+	            // Uploading files
+	            var file_frame;
+
+	            jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
+
+	                event.preventDefault();
+
+	                // If the media frame already exists, reopen it.
+	                if ( file_frame ) {
+	                    file_frame.open();
+	                    return;
+	                }
+
+	                // Create the media frame.
+	                file_frame = wp.media.frames.downloadable_file = wp.media( {
+	                    title: '<?php esc_html_e( 'Choose an image', 'fashionbuzz' ); ?>',
+	                    button: {
+	                        text: '<?php esc_html_e( 'Use image', 'fashionbuzz' ); ?>'
+	                    },
+	                    multiple: false
+	                } );
+
+	                // When an image is selected, run a callback.
+	                file_frame.on( 'select', function () {
+	                    var attachment = file_frame.state().get( 'selection' ).first().toJSON();
+	                    var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
+
+	                    jQuery( '#category_thumbnail_id' ).val( attachment.id );
+	                    jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
+	                    jQuery( '.remove_image_button' ).show();
+	                } );
+
+	                // Finally, open the modal.
+	                file_frame.open();
+	            } );
+
+	            jQuery( document ).on( 'click', '.remove_image_button', function () {
+	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
+	                jQuery( '#category_thumbnail_id' ).val( '' );
+	                jQuery( '.remove_image_button' ).hide();
+	                return false;
+	            } );
+
+			</script>
+			<div class="clear"></div>
+		</td>
+	</tr>
+	<?php
+}
+
+add_action( 'category_edit_form_fields', 'edit_category_thumbnail_fields', 10 );
+
+/**
+ * Save category fields
+ *
+ * @param mixed  $term_id Term ID being saved.
+ * @param mixed  $tt_id Term taxonomy ID.
+ * @param string $taxonomy Taxonomy slug.
+ */
+function save_category_thumbnail_fields( $term_id, $tt_id = '', $taxonomy = '' ) {
+	if ( isset( $_POST[ 'category_thumbnail_id' ] ) && 'category' === $taxonomy ) {
+		update_term_meta( $term_id, 'category_thumbnail_id', absint( $_POST[ 'category_thumbnail_id' ] ) );
+	}
+}
+
+add_action( 'edit_term', 'save_category_thumbnail_fields', 10, 3 );
+add_action( 'created_term', 'save_category_thumbnail_fields', 10, 3 );
+
+/**
+ * Thumbnail column added to category admin.
+ *
+ * @param mixed $columns Columns array.
+ * @return array
+ */
+function category_thumbnail_columns( $columns ) {
+	$new_columns = array();
+
+	if ( isset( $columns[ 'cb' ] ) ) {
+		$new_columns[ 'cb' ] = $columns[ 'cb' ];
+		unset( $columns[ 'cb' ] );
+	}
+
+	$new_columns[ 'thumb' ] = __( 'Image', 'fashionbuzz' );
+
+	$columns			 = array_merge( $new_columns, $columns );
+	$columns[ 'handle' ] = '';
+
+	return $columns;
+}
+
+add_filter( 'manage_edit-category_columns', 'category_thumbnail_columns' );
+
+/**
+ * Thumbnail column value added to category admin.
+ *
+ * @param string $columns Column HTML output.
+ * @param string $column Column name.
+ * @param int    $id Product ID.
+ *
+ * @return string
+ */
+function category_thumbnail_column( $columns, $column, $id ) {
+	if ( 'thumb' === $column ) {
+
+		$thumbnail_id = get_term_meta( $id, 'category_thumbnail_id', true );
+
+		if ( $thumbnail_id ) {
+			$image = wp_get_attachment_thumb_url( $thumbnail_id );
+		} else {
+			$image = get_template_directory_uri().'/images/no-pictures/no-image-picture.png';
+		}
+
+		// Prevent esc_url from breaking spaces in urls for image embeds. Ref: https://core.trac.wordpress.org/ticket/23605 .
+		$image	 = str_replace( ' ', '%20', $image );
+		$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'fashionbuzz' ) . '" class="wp-post-image" height="48" width="48" />';
+	}
+	if ( 'handle' === $column ) {
+		$columns .= '<input type="hidden" name="term_id" value="' . esc_attr( $id ) . '" />';
+	}
+	return $columns;
+}
+
+add_filter( 'manage_category_custom_column', 'category_thumbnail_column', 10, 3 );
+//add_action( 'event_category_edit_form_fields', 'category_thumbnail_column', 10 );
 
 
 
