@@ -846,143 +846,94 @@
   // ======================================================
   // ARTICLEMAGWP ICON SELECTOR
   // ======================================================
-  $.fn.ARTICLEMAGWP_icon = function() {
+ $.fn.ARTICLEMAGWP_icon = function() {
+    return this.each(function() {
 
-    var _iconDialog   = $('#icon-dialog'),
-        _iconOverlay  = $('#icon-overlay'),
-        _iconInsert   = _iconDialog.find('#icon-insert'),
-        _iconLoad     = _iconDialog.find('#icon-load'),
-        _iconSearch   = _iconDialog.find('#icon-search'),
-        _iconSelected = false,
-        _iconsLoaded  = false,
-        _iconRemove,
-        _iconParent,
-        _iconValue,
-        _iconDialogHeight,
-        _iconPreview;
+      var $this = $(this);
 
-    $(document.body).on('click', '.icon-add', function( e ){
 
-      e.preventDefault();
+      $this.on('click', '.icon-add', function(e) {
 
-      // set vars
-      _iconDialogHeight = ( $(window).height() <= 700 ) ? 500 : 700;
-      _iconParent       = $(this).parent();
-      _iconPreview      = _iconParent.find('.icon-preview');
-      _iconRemove       = _iconParent.find('.icon-remove');
-      _iconValue        = _iconParent.find('.icon-value');
+        e.preventDefault();
 
-      _iconDialog.dialog({
-        dialogClass: 'wp-dialog cs-icon-dialog',
-        width: 1000,
-        height: _iconDialogHeight,
-        closeOnEscape: true,
-        create: function(){
-          $('.ui-dialog-titlebar-close').addClass('ui-button');
-        },
-        open: function() {
-          _iconLoad.height( parseInt( _iconDialogHeight - 210 ) );
-          _iconOverlay.show();
-        },
-        close: function() {
-          _iconOverlay.hide();
-        },
-        resize: function( event, ui ) {
-          _iconLoad.height( parseInt( ui.size.height - 210 ) );
-        }
-      });
+        var $button = $(this);
+        var _iconsLoaded = false;
+        var $modal = $('#csf-modal-icon');
 
-      if( _iconsLoaded === false ){
+        $modal.show();
+        if (_iconsLoaded === false) {
 
-        $.ajax({
-          type  : 'POST',
-          url   : ajaxurl,
-          data  : { action: 'cs-icons' },
-          success : function( data ) {
+          $modal.find('.csf-modal-loading').show();
 
-            _iconLoad.html( data );
-            _iconLoad.find('a').each( function(){
-              var _this = $(this),
-                  _data = _this.data('ro-icon');
+          $.ajax({
+            type: 'POST',
+            url: ajaxurl,
+            data: {
+              action: 'csf-get-icons',
+              nonce: $button.data('nonce')
+            },
+            success: function(response) {
 
-              _this.click( function( e ){
+              $modal.find('.csf-modal-loading').hide();
+
+              var $load = $modal.find('.csf-modal-load').html(response.data.content);
+
+              $load.on('click', 'a', function(e) {
+
                 e.preventDefault();
-                if( _this.is('.active-icon') ){
-                  _this.removeClass('active-icon');
-                  _iconSelected = false;
-                }else{
-                  _this.addClass('active-icon').siblings().removeClass('active-icon');
-                  _iconSelected = _data;
-                }
+
+                var icon = $(this).data('csf-icon');
+
+                $this.find('i').removeAttr('class').addClass(icon);
+                $this.find('input').val(icon).trigger('change');
+                $this.find('.csf-icon-preview').removeClass('hidden');
+                $this.find('.icon-remove').removeClass('hidden');
+
+                $modal.hide();
 
               });
-            });
-            _iconsLoaded = true;
 
-          }
-        });
+              $modal.on('change keyup', '.csf-icon-search', function() {
 
-      }
+                var value = $(this).val(),
+                  $icons = $load.find('a');
 
+                $icons.each(function() {
 
-      _iconSearch.keyup( function(){
-        var input = $(this),
-            val   = input.val(),
-            list  = _iconLoad.find('a');
+                  var $elem = $(this);
 
-        list.each(function() {
-          var _this = $(this);
+                  if ($elem.data('csf-icon').search(new RegExp(value, 'i')) < 0) {
+                    $elem.hide();
+                  } else {
+                    $elem.show();
+                  }
 
-          if ( _this.data('ro-icon').search( new RegExp(val, "i") ) < 0 ) {
-            _this.hide();
-          } else {
-            _this.show();
-          }
+                });
 
-        });
-      });
+              });
 
-
-      _iconInsert.click( function( e ) {
-        e.preventDefault();
-        if ( _iconSelected !== false ){
-
-          // preview
-          _iconPreview.removeClass('hidden');
-          _iconPreview.find('span').removeAttr('class').addClass( _iconSelected.substr( 0,2 ) + ' ' + _iconSelected );
-
-          // value
-          _iconValue.val( _iconSelected ).trigger('keyup');
-
-          // remove icon class
-          _iconRemove.removeClass('hidden');
-
-          // close dialog
-          _iconDialog.dialog( 'close' );
+              $modal.on('click', '.csf-modal-close, .csf-modal-overlay', function() {
+                $modal.hide();
+              });
+            },
+            error: function(response) {
+              $modal.find('.csf-modal-loading').hide();
+              $modal.find('.csf-modal-load').html(response.error);
+              $modal.on('click', function() {
+                $modal.hide();
+              });
+            }
+          });
         }
       });
 
-
-
+      $this.on('click', '.icon-remove', function(e) {
+        e.preventDefault();
+        $this.find('.csf-icon-preview').addClass('hidden');
+        $this.find('input').val('').trigger('change');
+        $(this).addClass('hidden');
+      });
     });
-
-    // clear
-    $(document.body).on('click', '.icon-remove', function(e){
-      e.preventDefault();
-      var _remove = $(this),
-        _parent = _remove.parent();
-
-      _parent.find('.icon-preview').addClass('hidden');
-      _parent.find('.icon-value').val('');
-      _remove.addClass('hidden');
-    });
-
-    _iconOverlay.click( function( e ) {
-      e.preventDefault();
-      _iconOverlay.hide();
-      _iconDialog.dialog( 'close' );
-    });
-
   };
   // ======================================================
 

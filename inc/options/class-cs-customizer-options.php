@@ -89,20 +89,20 @@ if ( ! class_exists( 'Articlemag_Customizer_Options' ) ) {
 				}
 			}
 		}
-		/**
-		 *
-		 * Reset Customize Settings
-		 *
-		 * @since 1.0.0
-		 * @version 1.0.0
-		 */
-		public function reset() {
-			delete_option( CUSTOMIZE_OPTION_NAME );
-			update_option( CACHED_OPTION_NAME, false );
-			die();
-				}
-			}
+/**
+ *
+ * Reset Customize Settings
+ *
+ * @since 1.0.0
+ * @version 1.0.0
+ */
+public function reset() {
+	delete_option( CUSTOMIZE_OPTION_NAME );
+	update_option( CACHED_OPTION_NAME, false );
+	die();
 		}
+	}
+}
 
 /**
  * Main instance of Articlemag_Customizer_Options.

@@ -43,26 +43,12 @@ function articlemag_register_required_plugins() {
 	 * Array of plugin arrays. Required keys are name and slug.
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
-	$plugins = array(
-		// Elementor Page Builder
-		array(
-			'name'		 => 'Elementor Page Builder',
-			'slug'		 => 'elementor',
-			'required'	 => false,
-		),		
+	$plugins = array(	
 		// Page Loader
 		array(
 			'name'		 => 'LoftLoader',
 			'slug'		 => 'loftloader',
 			'required'	 => false,
-		),
-		// Revolution Slider
-		array(
-			'name'		 => 'Revolution Slider',
-			'slug'		 => 'revslider',
-			'source'	 => $remote_url . '/revslider/6.1.2/revslider.zip',
-			'required'	 => false,
-			'version'	 => '6.1.2',
 		),
 		// Post Types Order
 		array(
@@ -76,18 +62,7 @@ function articlemag_register_required_plugins() {
 			'slug'		 => 'regenerate-thumbnails',
 			'required'	 => false,
 		),
-		// WPForms
-		array(
-			'name'		 => 'Contact Form by WPForms',
-			'slug'		 => 'wpforms-lite',
-			'required'	 => false,
-		),
-		// WooCommerce
-		array(
-			'name'		 => 'WooCommerce',
-			'slug'		 => 'woocommerce',
-			'required'	 => false,
-		),
+		
 	);
 
 	/**

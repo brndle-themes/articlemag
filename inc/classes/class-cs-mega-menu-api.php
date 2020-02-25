@@ -54,18 +54,21 @@ class CSFramework_Mega_Menu_API {
 
   <div class="field-icon description description-wide">
 		<?php
+		$icon   = ( ! empty( $item->icon ) ) ? $item->icon : '';
+		$nonce  = wp_create_nonce( 'csf_icon_nonce' );
 		$hidden = ( empty( $item->icon ) ) ? ' hidden' : '';
-		$icon   = ( ! empty( $item->icon ) ) ? ' class="' . cs_icon_class( $item->icon ) . '"' : '';
+
 		?>
-	<div class="cs_field cs_field_icon">
+		<div class="cs_field cs_field_icon">
 	  <div class="cs-icon-select">
-		<span class="icon-preview<?php echo $hidden; ?>"><span<?php echo $icon; ?>></span></span>
-		<button class="button button-primary icon-add">Add Icon</button>
-		<button class="button cs-button-remove icon-remove<?php echo $hidden; ?>">Remove Icon</button>
-		<input type="hidden" name="menu-item-icon[<?php echo $item_id; ?>]" value="<?php echo $item->icon; ?>" class="widefat code edit-menu-item-icon icon-value"/>
-	  </div>
+			<span class="csf-icon-preview<?php echo $hidden; ?>"><i class="<?php echo $icon; ?>"></i></span>
+			<a href="javascript:void(0)" class="button button-primary icon-add" data-nonce="<?php echo $nonce; ?>">Add Icon</a>
+			<a href="javascript:void(0)" class="button csf-warning-primary icon-remove<?php echo $hidden; ?>">Remove Icon</a>
+			<input type="hidden" name="menu-item-icon[<?php echo $item_id; ?>]" value="<?php echo $item->icon; ?>" class="widefat code edit-menu-item-icon icon-value"/>
+		</div>
 	</div>
-  </div>
+</div>
+
 
   <div class="cs-mega-menu">
 

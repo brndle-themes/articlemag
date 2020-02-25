@@ -25,7 +25,7 @@ class Merlin_CSFramework_Importer {
 		}
 
 		ob_start();
-			self::format_results_for_log( $results );
+		//self::format_results_for_log( $results );
 		$message = ob_get_clean();
 
 		Merlin_Logger::get_instance()->debug( $message );
@@ -42,12 +42,14 @@ class Merlin_CSFramework_Importer {
 	private static function import_csframework( $data_file ) {
 		// Get widgets data from file.
 		$data = self::process_import_file( $data_file );
+		
+		$decode_string = json_decode( $data, true );
+		
+		//$data = $decode_string[ FRAMEWORK_OPTION_NAME ];
 
-		$decode_string = cs_decode_string( $data );
-
-		$data = $decode_string[ FRAMEWORK_OPTION_NAME ];
-
-		update_option( FRAMEWORK_OPTION_NAME, $decode_string[ FRAMEWORK_OPTION_NAME ] );
+		if ( is_array( $decode_string ) ) {
+			update_option( FRAMEWORK_OPTION_NAME, $decode_string );
+		}		
 
 		// Return from this function if there was an error.
 		if ( is_wp_error( $data ) ) {

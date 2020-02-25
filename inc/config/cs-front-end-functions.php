@@ -10,7 +10,7 @@ if ( ! function_exists( 'cs_top_bar' ) ) {
 
 	function cs_top_bar() {
 
-		$options = cs_get_post_meta();
+		$options = cs_get_post_meta( '_custom_page_options' );
 
 		$out = '';
 
@@ -1360,7 +1360,7 @@ if ( ! function_exists( 'cs_header_before' ) ) {
 			return;
 		}
 
-		$post_meta = get_post_meta( $post_id, '_side_custom_page_options', true );
+		$post_meta = get_post_meta( $post_id, '_custom_page_options', true );
 		return ( ! empty( $post_meta['header_before'] ) ) ? '<div id="header-before">' . do_shortcode( cs_multilang_value( $post_meta['header_before'] ) ) . '</div>' : '';
 	}
 }

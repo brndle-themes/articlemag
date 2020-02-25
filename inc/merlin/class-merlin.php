@@ -305,7 +305,7 @@ class Merlin {
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
 		add_action( 'admin_init', array( $this, 'admin_page' ), 30, 0 );
 		add_action( 'admin_init', array( $this, 'ignore' ), 5 );
-		add_action( 'admin_footer', array( $this, 'svg_sprite' ) );
+		add_action( 'merline_admin_footer', array( $this, 'svg_sprite' ) );
 		add_filter( 'tgmpa_load', array( $this, 'load_tgmpa' ), 10, 1 );
 		add_action( 'wp_ajax_merlin_content', array( $this, '_ajax_content' ), 10, 0 );
 		add_action( 'wp_ajax_merlin_get_total_content_import_items', array( $this, '_ajax_get_total_content_import_items' ), 10, 0 );
@@ -571,7 +571,7 @@ class Merlin {
 	protected function footer() {
 		?>
 		</body>
-		<?php do_action( 'admin_footer' ); ?>
+		<?php do_action( 'merline_admin_footer' ); ?>
 		<?php do_action( 'admin_print_footer_scripts' ); ?>
 		</html>
 		<?php
@@ -1607,7 +1607,6 @@ class Merlin {
 			 *
 			 * @link https://developer.wordpress.org/themes/basics/theme-functions/
 			 */
-
 			/*
 			 * If your child theme has more than one .css file (eg. ie.css, style.css, main.css) then
 			 * you will have to make sure to maintain all of the parent theme dependencies.
@@ -1626,7 +1625,6 @@ class Merlin {
 			        wp_get_theme()->get('Version')
 			    );
 			}
-
 			add_action(  'wp_enqueue_scripts', '{$slug_no_hyphens}_child_enqueue_styles' );\n
 		";
 

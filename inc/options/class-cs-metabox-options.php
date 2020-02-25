@@ -161,11 +161,12 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 										),
 									),
 									array(
-										'id'             => 'sidebar_widget',
-										'type'           => 'select',
-										'options'        => array_reverse( $sidebar_widgets ),
-										'default_option' => 'Choose a custom sidebar',
-										'dependency'     => array( 'page_sidebars', 'any', 'right,left' ),
+										'id'          => 'sidebar_widget',
+										'type'        => 'select',
+										'options'     => array_reverse( $sidebar_widgets ),
+										'default'     => 'sidebar-1',
+										'placeholder' => 'Choose a custom sidebar',
+										'dependency'  => array( 'page_sidebars', 'any', 'right,left' ),
 									),
 								),
 
