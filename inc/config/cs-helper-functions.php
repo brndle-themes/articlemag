@@ -743,6 +743,7 @@ if ( ! function_exists( 'cs_enqueue_google_fonts' ) ) {
 	}
 }
 
+
 /**
  *
  * Typography
@@ -759,17 +760,23 @@ if ( ! function_exists( 'cs_get_typography' ) ) {
 			foreach ( $typography as $font ) {
 
 				if ( ! empty( $font['selector'] ) ) {
-					$weight = ( $font['font']['font-weight'] != 'regular' ) ? cs_esc_string( $font['font']['font-weight'] ) : 400;
+					$weight = ( $font['font']['font-weight'] != 'regular' ) ? esc_attr( $font['font']['font-weight'] ) : 400;
 					$style  = cs_esc_number( $font['font']['font-weight'] );
 					$style  = ( $style && $style != 'regular' ) ? $style : 'normal';
+					$transform = ( $font['font']['text-transform'] != 'none' ) ? esc_attr( $font['font']['text-transform'] ) :'';
+					$letter = ( $font['font']['letter-spacing'] != '0.5' ) ? esc_attr( $font['font']['letter-spacing'] ) :'';
+					$aligment = ( $font['font']['text-align'] != 'left' ) ? esc_attr( $font['font']['text-align'] ) :'';
 					$family = ( cs_is_googe_font( $font['font']['font-family'] ) ) ? '"' . $font['font']['font-family'] . '", Arial, sans-serif' : $font['font']['font-family'];
 
-					$output .= $font['selector'] . '{';
+					$output .= $font['selector'] . '{';					
 					$output .= ( ! empty( $family ) ) ? 'font-family: ' . $family . ';' : '';
 					$output .= ( ! empty( $font['font']['line-height'] ) ) ? 'line-height: ' . $font['font']['line-height'] . ';' : '';
 					$output .= ( ! empty( $font['font']['font-size'] ) ) ? 'font-size: ' . $font['font']['font-size'] . 'px;' : '';
 					$output .= 'font-style: ' . $style . ';';
 					$output .= ( ! empty( $weight ) ) ? 'font-weight: ' . $weight . ';' : '';
+					$output .= ( ! empty( $transform ) ) ? 'text-transform: ' . $transform . ';' : '';
+					$output .= ( ! empty( $letter ) ) ? 'letter-spacing: ' . $letter . ';' : '';
+					$output .= ( ! empty( $aligment ) ) ? 'text-align: ' . $aligment . ';' : '';
 					$output .= ( ! empty( $font['css'] ) ) ? $font['css'] : '';
 					$output .= '}';
 
@@ -781,7 +788,6 @@ if ( ! function_exists( 'cs_get_typography' ) ) {
 
 	}
 }
-
 
 
 
