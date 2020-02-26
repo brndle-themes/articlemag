@@ -805,7 +805,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 								'font-family'  => 'Source Sans Pro',
 								'font-weight'  => '400',
 								'font-size'    => 16,
-								'line-height'  => 1.65,
+								'line-height'  => 20,
 								'subset'       => 'latin',
 								'color'        => false,
 								'word_spacing' => true,
@@ -814,7 +814,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 						),
 						array(
 							'title'    => 'Menu Typography',
-							'selector' => '#site-nav .cs-link',
+							'selector' => '#site-nav > ul > li > .cs-link',
 							'font'     => array(
 								'font-family' => 'Source Sans Pro',
 								'font-weight' => '400',
