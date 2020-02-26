@@ -985,9 +985,19 @@ function display_articlemag_featured_posts() {
         if ( $all_posts->have_posts() ): while( $all_posts->have_posts() ): $all_posts->the_post(); ?>
         <div> 
           <article class="article-featured-slider-sec">
-            <div class="article-featured-img">
-              <div class="featured-article" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')"></div>
+          	<?php 
+				if( has_post_thumbnail() ){ ?>
+					<div class="article-featured-img">
+	              <div class="featured-article" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')"></div>
+	            </div> 
+			<?php
+				}else{
+					?>
+					<div class="article-featured-img">
+              <div class="featured-article" style="background: url('<?php echo THEME_URI . '/images/no-pictures/no-standard-picture.png' ?>)"></div>
             </div> 
+			<?php }	?>
+            
             <div class="article-featured-info">
 				<div class="article-avatar"> 
 					<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="tippy-js" data-tippy-content="<?php echo esc_html( 'Posted by', 'articlemag' ) . ' ' . get_the_author(); ?>">

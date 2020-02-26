@@ -386,6 +386,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 					'id'	 => 'homepage_action_button_link',
 					'type'	 => 'text',
 					'title'	 => 'Action Button Link',
+					'default'	 => '#',
 				),
 			)
 		);

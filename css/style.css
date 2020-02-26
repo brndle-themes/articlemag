@@ -2651,6 +2651,8 @@ div.wp-caption.alignright .wp-caption-text {
  */
 .blog-layout-medium  .hentry {
     margin-bottom: 50px;
+    float: left;
+    width: 100%;
 }
 
 .blog-layout-medium .entry-header {
@@ -2673,6 +2675,8 @@ div.wp-caption.alignright .wp-caption-text {
 
 .blog-layout-small  .hentry {
     margin-bottom: 50px;
+    float: left;
+    width: 100%;
 }
 
 /*
