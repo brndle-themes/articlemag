@@ -181,7 +181,9 @@ if ( ! function_exists( 'cs_excerpt_read_more_link' ) ) {
  */
 if ( ! function_exists( 'cs_auto_excerpt_read_more_link' ) ) {
 	function cs_auto_excerpt_read_more_link( $content ) {
-		if ( cs_get_option( 'blog_auto_excerpt', true ) === true && get_post_type() == 'post' && ! is_feed() && ! is_single() && ! is_search() && ! strpos( $content, 'cs-btn' ) ) {
+
+		if ( cs_get_option( 'blog_auto_excerpt' ) == 1 && get_post_type() == 'post' && ! is_feed() && ! is_single() && ! is_search() && ! strpos( $content, 'cs-btn' ) ) {
+			
 			$content = cs_auto_post_excerpt( $content, 10 );
 		}
 		return $content;

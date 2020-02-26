@@ -471,9 +471,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 					'id'         => 'blog_excerpt_world_limit',
 					'type'       => 'text',
 					'title'      => 'Blog Excerpt Word Limit',
-					'attributes' => array(
-						'placeholder' => 55,
-					),
+					'default'    => '40',
 					'dependency' => array( 'blog_auto_excerpt', '==', 'true' ),
 				),
 				array(
@@ -805,7 +803,7 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 								'font-family'  => 'Source Sans Pro',
 								'font-weight'  => '400',
 								'font-size'    => 16,
-								'line-height'  => 20,
+								'line-height'  => 24,
 								'subset'       => 'latin',
 								'color'        => false,
 								'word_spacing' => true,

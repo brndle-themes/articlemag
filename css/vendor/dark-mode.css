@@ -171,7 +171,8 @@
 .dark-mode #page-header .category-content .page-title,
 .dark-mode .single-post .entry-header .entry-title,
 .dark-mode .related-posts .related-title,
-.dark-mode .comment-author.vcard {
+.dark-mode .comment-author.vcard,
+.dark-mode .articlemag_widget .widget-title h4 {
     color: #fff;
 }
 

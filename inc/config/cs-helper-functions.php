@@ -1013,7 +1013,8 @@ if ( ! function_exists( 'cs_auto_post_excerpt' ) ) {
 		$shortcode_tags = $temporary;
 		$content        = do_shortcode( $content );
 
-		$limit   = cs_get_option( 'blog_excerpt_world_limit', 40 );
+		$limit   = cs_get_option( 'blog_excerpt_world_limit', 40 );	
+
 		$content = str_replace( ']]>', ']]&gt;', $content );
 		$content = strip_tags( $content );
 		$words   = explode( ' ', $content, $limit + 1 );
