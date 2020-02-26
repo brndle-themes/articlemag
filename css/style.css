@@ -3044,6 +3044,12 @@ div.wp-caption.alignright .wp-caption-text {
     font-size: 1.5rem;
     margin: 0 0 40px;
 }
+
+.related-posts .article-post .article-card-img img{
+    width: 100%;
+    height:auto;
+}
+
 /*.related-posts ul {
     padding: 0;
     margin: 0;
