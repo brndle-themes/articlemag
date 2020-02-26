@@ -23,7 +23,7 @@ if ( !class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 		function start_lvl( &$output, $depth = 0, $args = array() ) {
 
-			$style	 = ( $this->is_custom_width ) ? ' style="width: ' . $this->is_custom_width . 'px"' : '';
+			$style   = ( $this->is_custom_width ) ? ' style="width: ' . $this->is_custom_width . 'px;"' : '';
 			$indent	 = str_repeat( "\t", $depth );
 			$output	 .= "\n$indent<ul class=\"sub-menu\"" . $style . ">\n";
 		}

@@ -149,7 +149,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 					// ----------------------------------------------
 					case 'wplogin':
 						if ( is_user_logged_in() ) {
-							$out .= '<a href="' . wp_logout_url() . '"><i class="cs-in fa fa-power-off"></i>' . __( 'Log Out' ) . '</a>';
+							$out .= '<a href="' . wp_logout_url() . '"><i class="cs-in fa fa-power-off"></i>' . __( 'Log Out', 'articlemag' ) . '</a>';
 						} else {
 							$login_form = wp_login_form(
 								array(
@@ -159,7 +159,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 							);
 							$login_form = str_replace( 'button-primary', cs_get_button_class( array( 'size' => 'xxs' ) ), $login_form );
 							$out       .= '<div class="cs-top-modal">';
-							$out       .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-user"></i>' . __( 'Log In' ) . '</a>';
+							$out       .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-user"></i>' . __( 'Log In', 'articlemag' ) . '</a>';
 							$out       .= '<div class="cs-modal-content cs-login-form">';
 							$out       .= $login_form;
 							$out       .= '</div>';

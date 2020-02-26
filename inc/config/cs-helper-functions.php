@@ -917,18 +917,6 @@ if ( ! function_exists( 'cs_encode_string' ) ) {
 	}
 }
 
-/**
- *
- * Decode String
- *
- * @since 1.0.0
- * @version 1.0.0
- */
-if ( ! function_exists( 'cs_decode_string' ) ) {
-	function cs_decode_string( $string ) {
-		return unserialize( gzuncompress( stripslashes( base64_decode( rtrim( strtr( $string, '-_', '+/' ), '=' ) ) ) ) );
-	}
-}
 
 /**
  *
