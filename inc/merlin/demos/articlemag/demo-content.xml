@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/5.2.3" created="2019-09-13 09:38" -->
+	<!-- generator="WordPress/5.3.2" created="2020-02-27 13:21" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -28,8 +28,8 @@
 <channel>
 	<title>Articlemag</title>
 	<link>http://demos.brndle.com/articlemag</link>
-	<description>Just another WordPress site</description>
-	<pubDate>Fri, 13 Sep 2019 09:38:35 +0000</pubDate>
+	<description></description>
+	<pubDate>Thu, 27 Feb 2020 13:21:49 +0000</pubDate>
 	<language>en</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://demos.brndle.com/articlemag</wp:base_site_url>
@@ -2851,7 +2851,7 @@
 			<wp:term><wp:term_id>516</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[main-menu]]></wp:term_slug><wp:term_name><![CDATA[Main Menu]]></wp:term_name>
 </wp:term>
 
-	<generator>https://wordpress.org/?v=5.2.3</generator>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
 
 		<item>
 		<title>01</title>
@@ -3899,6 +3899,34 @@
 		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:1000;s:4:"file";s:26:"2018/01/43641489_067_b.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"43641489_067_b-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"43641489_067_b-300x300.jpg";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:26:"43641489_067_b-768x768.jpg";s:5:"width";i:768;s:6:"height";i:768;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:comment>
+			<wp:comment_id>116</wp:comment_id>
+			<wp:comment_author><![CDATA[Look At Here Now]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[camilla_ahrens@freenet.de]]></wp:comment_author_email>
+			<wp:comment_author_url>http://duchove.com</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[172.69.34.199]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2019-12-04 10:22:33]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2019-12-04 10:22:33]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Articlemag http://walibola.co]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[0]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
+			<wp:comment_id>117</wp:comment_id>
+			<wp:comment_author><![CDATA[Denwah]]></wp:comment_author>
+			<wp:comment_author_email><![CDATA[timfla53@aol.com]]></wp:comment_author_email>
+			<wp:comment_author_url>http://propecia1000.com/</wp:comment_author_url>
+			<wp:comment_author_IP><![CDATA[5.188.210.61]]></wp:comment_author_IP>
+			<wp:comment_date><![CDATA[2020-02-01 12:40:35]]></wp:comment_date>
+			<wp:comment_date_gmt><![CDATA[2020-02-01 12:40:35]]></wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[<a href="http://ventolin2020.com/" rel="nofollow">can you buy ventolin over the counter australia</a> <a href="http://allopurinolzyl.com/" rel="nofollow">medicine allopurinol tablets</a> <a href="http://fluoxetinetb.com/" rel="nofollow">fluoxetine 20</a> <a href="http://propecia1000.com/" rel="nofollow">cheap generic propecia online</a> <a href="http://colchicine365.com/" rel="nofollow">colchicine 0.6 mg</a>]]></wp:comment_content>
+			<wp:comment_approved><![CDATA[0]]></wp:comment_approved>
+			<wp:comment_type><![CDATA[]]></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+							</wp:comment>
+					<wp:comment>
 			<wp:comment_id>97</wp:comment_id>
 			<wp:comment_author><![CDATA[barbie dreamhouse adventures]]></wp:comment_author>
 			<wp:comment_author_email><![CDATA[gracegiuseppe@ecodark.com]]></wp:comment_author_email>
@@ -7422,411 +7450,6 @@ Welcome, Dr. Flanders sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
 														</item>
-					<item>
-		<title>Stunning Ideas for Your Interior Design</title>
-		<link>http://demos.brndle.com/articlemag/stunning-ideas-for-your-interior-design__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 11:47:37 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5348</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>Noster expetenda suavitate visima asto, an <strong>nemore iracundia</strong> pro. At paulo salutandi sedos. Erum quilis inani virtute, adum has explicari evertitur signiferumque. Nec ne tibique molestie pertinax, agam maiorum ei his, has eruditi <a href="http://3styler.net/themes/dreamla/main/stunning-ideas-for-your-interior-design/#">om</a>i<a href="http://3styler.net/themes/dreamla/main/stunning-ideas-for-your-interior-design/#">ttantur</a> an.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Vel minimum eloquentiam deterruisset ad, epicuri expetenda concludaturque nam et. Sed te affert voluptatibus, vis ut aliquando deterruisset, at his minimum adipiscing. Ea quis verear eam.&nbsp;<em>Graeci conclusionemque per cu</em>, conceptam adolescens ea mel, adipisci instructior no mei. Est an possim molestie iudicabit, nam an zril expetendis.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>Duis voluptatum est ex. Id vis consequat consetetur dissentiet, ceteros commune perpetua mei et. Simul viderer facilisis cu usu. Legimus tractatos splendide ei nec, cu ferri adversarium his, ne nam cibo movet viris. At nec propriae theophrastus, diam philosophia ad has, ipsum eirmod constituto ex quo. Electram suavitate ullamcorper ea pri.</p></blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:heading {"level":3} -->
-<h3>Brute similique an ius platonem mediocrem mea ei.</h3>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Assum imperdiet intellegat at per. Ius at illum delectus. Mea admodum nostrum mentitum ne. Possim maiorum assueverit ex mea, cu dicam cotidieque nam. Has in minimum deterruisset. Aliquam appellantur philosophia pro ut. Eam tota error eu. Cu imperdiet deterruisset duo, falli impetus te has. Ius et graecis mediocrem, te nec corpora invidunt accusata, in assum choro delicata qui.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Suas graecis concludaturque an duo, per odio singulis ea. Nec ea dicam ridens. Noster voluptaria intellegebat mel et, duis vocibus quaerendum pro an, pertinax imperdiet definitionem vel ea. Scribentur omittantur ne vim, no qui rebum efficiantur, doctus fabulas ut pri. Ex pertinax periculis mnesarchum quo, usu vero essent ut.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":4} -->
-<h4>At nec ancillae iudicabit, tota duo ei facete accusam.</h4>
-<!-- /wp:heading -->
-
-<!-- wp:list -->
-<ul><li>Vidit mentitum vis in.</li><li>Mix ea viderer sanctus indoctum.</li><li>Probo omnes fuisset ius an.</li><li>Id eripuit veritus ius, et sit veri.</li><li>Possit theo phrastus.</li></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>Ludico ornatus volutpat duo id, utinam adipiscing sit ei. Vix audiam impetus percipitur ut, vix dicant phaedrum ut.Ut omittam senserit dissentias est, option partiendo eu per, atomorum electram in sit. Et tractatos voluptaria instructior sea, ei vix wisi zril. Sed doctus accusata ex, no porro facete usu. Vocent phaedrum scripserit cu vix, ex tota meis eum.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5348</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 11:47:37]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 11:47:37]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[stunning-ideas-for-your-interior-design__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="design"><![CDATA[Design]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[stunning-ideas-for-your-interior-design]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>Top Places You Should Visit Right Now</title>
-		<link>http://demos.brndle.com/articlemag/top-places-you-should-visit-right-now__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 11:49:15 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5350</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:gallery {"ids":[5345]} -->
-<ul class="wp-block-gallery columns-1 is-cropped"><li class="blocks-gallery-item"><figure><img src="http://demos.brndle.com/articlemag/wp-content/uploads/2019/09/imageone-1024x683.jpg" alt="" data-id="5345" data-link="http://demos.brndle.com/articlemag/stunning-ideas-for-your-interior-design/imageone/" class="wp-image-5345"/></figure></li></ul>
-<!-- /wp:gallery -->
-
-<!-- wp:paragraph -->
-<p><strong>Rotation</strong> diceret, nam qualisque intellegam et. In eam elit nihil omnium, nam erant tincidunt te. Ex pro tollit quodsi volutpat sit tractatos suscipiantur in. No ius nulla moderatius. Ne quod autem ancillae pri, quo id vitae ceteros torquatos. Vel saepe gloriatur accommodare in, sit an vide definitiones, ius meis meliore recteque te.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Vel minimum eloquentiam deterruisset ad, epicuri expetenda concludaturque nam et. Sed te affert voluptatibus, vis ut aliquando deterruisset, at his minimum adipiscing. Ea quis verear eam. Graeci conclusionemque per cu, conceptam adolescens ea mel, adipisci instructior no mei. Est an possim molestie iudicabit, nam an zril expetendis.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>Duis voluptatum est ex. Id vis consequat consetetur dissentiet, ceteros commune perpetua mei et. Simul viderer facilisis cu usu. Legimus tractatos splendide ei nec, cu ferri adversarium his, ne nam cibo movet viris. At nec propriae theophrastus, diam philosophia ad has, ipsum eirmod constituto ex quo. Electram suavitate ullamcorper ea pri.</p></blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:heading {"level":4} -->
-<h4>Brute similique an ius platonem mediocrem mea ei.</h4>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Assum imperdiet intellegat at per. Ius at illum delectus. Mea admodum nostrum mentitum ne. Possim maiorum assueverit ex mea, cu dicam cotidieque nam. Has in minimum deterruisset. Aliquam appellantur philosophia pro ut. Eam tota error eu. Cu imperdiet deterruisset duo, falli impetus te has. Ius et graecis mediocrem, te nec corpora invidunt accusata, in assum choro delicata qui.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Suas graecis concludaturque an duo, per odio singulis ea.&nbsp;<em>Nec ea dicam ridens</em>. Noster voluptaria intellegebat mel et, duis vocibus quaerendum pro an, pertinax imperdiet definitionem vel ea. Scribentur omittantur ne vim, no qui rebum efficiantur, doctus fabulas ut pri. Ex pertinax periculis mnesarchum quo, usu vero essent ut.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":4} -->
-<h4>At nec ancillae iudicabit, tota duo ei facete accusam.</h4>
-<!-- /wp:heading -->
-
-<!-- wp:list -->
-<ul><li>Vidit mentitum vis in.</li><li>Mix ea viderer sanctus indoctum.</li><li>Probo omnes fuisset ius an.</li><li>Id eripuit veritus ius, et sit veri.</li><li>Possit theo phrastus.</li></ul>
-<!-- /wp:list -->
-
-<!-- wp:paragraph -->
-<p>Ludico ornatus volutpat duo id, utinam adipiscing sit ei. Vix audiam impetus percipitur ut, vix dicant phaedrum ut.Ut omittam senserit dissentias est, option partiendo eu per, atomorum electram in sit. Et tractatos voluptaria instructior sea, ei vix wisi zril. Sed doctus accusata ex, no porro facete usu. Vocent phaedrum scripserit cu vix, ex tota meis eum.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5350</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 11:49:15]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 11:49:15]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[top-places-you-should-visit-right-now__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[top-places-you-should-visit-right-now]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>How blue light impacts sleep</title>
-		<link>http://demos.brndle.com/articlemag/how-blue-light-impacts-sleep__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:19:31 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5352</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5352</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:19:31]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:19:31]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[how-blue-light-impacts-sleep__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[how-blue-light-impacts-sleep]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>The day I knew my relationship was over</title>
-		<link>http://demos.brndle.com/articlemag/the-day-i-knew-my-relationship-was-over__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:19:52 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5354</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5354</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:19:52]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:19:52]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[the-day-i-knew-my-relationship-was-over__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[the-day-i-knew-my-relationship-was-over]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>Women’s rights from the start</title>
-		<link>http://demos.brndle.com/articlemag/womens-rights-from-the-start__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:20:08 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5356</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5356</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:20:08]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:20:08]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[womens-rights-from-the-start__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[womens-rights-from-the-start]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>New app helps you with your photos</title>
-		<link>http://demos.brndle.com/articlemag/new-app-helps-you-with-your-photos__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:20:21 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5358</guid>
-		<description></description>
-		<content:encoded><![CDATA[<!-- wp:paragraph -->
-<p><strong>Lorem ipsum</strong>&nbsp;is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it's not genuine, correct, or comprehensible Latin anymore. While&nbsp;<strong>lorem ipsum</strong>'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero's text doesn't contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>In a professional context it often happens that private or corporate clients corder a publication to be made and presented with the actual content still not being ready. Think of a news blog that's filled with content hourly on the day of going live. However, reviewers tend to be distracted by comprehensible content, say, a random text copied from a newspaper or the internet. The are likely to focus on the text, disregarding the layout and its elements. Besides, random text risks to be unintendedly humorous or offensive, an unacceptable risk in corporate environments.&nbsp;<strong>Lorem ipsum</strong>&nbsp;and its many variants have been employed since the early 1960ies, and quite likely since the sixteenth century.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading -->
-<h2><a>Lorem Ipsum: common examples</a></h2>
-<!-- /wp:heading -->
-
-<!-- wp:image {"id":5345,"align":"left","width":192,"height":128} -->
-<div class="wp-block-image"><figure class="alignleft is-resized"><img src="http://demos.brndle.com/articlemag/wp-content/uploads/2019/09/imageone-1024x683.jpg" alt="" class="wp-image-5345" width="192" height="128"/></figure></div>
-<!-- /wp:image -->
-
-<!-- wp:paragraph -->
-<p>Most of its text is made up from sections 1.10.32–3 of Cicero's De finibus bonorum et malorum (On the Boundaries of Goods and Evils; finibus may also be translated as purposes). Neque porro quisquam est qui do<strong>lorem ipsum</strong>&nbsp;quia&nbsp;<strong>dolor sit amet, consectetur, adipisci</strong>&nbsp;v<strong>elit</strong>&nbsp;is the first known version ("Neither is there anyone who loves grief itself since it is grief and thus wants to obtain it"). It was found by Richard McClintock, a philologist, director of publications at Hampden-Sydney College in Virginia; he searched for citings of consectetur in classical Latin literature, a term of remarkably low frequency in that literary corpus.</p>
-<!-- /wp:paragraph -->]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5358</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:20:21]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:20:21]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[new-app-helps-you-with-your-photos__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[new-app-helps-you-with-your-photos]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>Breath of Fresh Air in the Morning</title>
-		<link>http://demos.brndle.com/articlemag/breath-of-fresh-air-in-the-morning__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:22:12 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5361</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5361</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:22:12]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:22:12]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[breath-of-fresh-air-in-the-morning__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[breath-of-fresh-air-in-the-morning]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>Backstage at the Vicky’s Secret Fashion Show</title>
-		<link>http://demos.brndle.com/articlemag/backstage-at-the-vickys-secret-fashion-show__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:22:27 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5363</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5363</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:22:27]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:22:27]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[backstage-at-the-vickys-secret-fashion-show__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[backstage-at-the-vickys-secret-fashion-show]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>Your Dreams Were Your Ticket Out of Here</title>
-		<link>http://demos.brndle.com/articlemag/your-dreams-were-your-ticket-out-of-here__trashed/</link>
-		<pubDate>Sat, 07 Sep 2019 12:22:42 +0000</pubDate>
-		<dc:creator><![CDATA[vapvarun]]></dc:creator>
-		<guid isPermaLink="false">http://demos.brndle.com/articlemag/?p=5365</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5365</wp:post_id>
-		<wp:post_date><![CDATA[2019-09-07 12:22:42]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-09-07 12:22:42]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[your-dreams-were-your-ticket-out-of-here__trashed]]></wp:post_name>
-		<wp:status><![CDATA[trash]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="category" nicename="blog"><![CDATA[Blog]]></category>
-						<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_status]]></wp:meta_key>
-		<wp:meta_value><![CDATA[publish]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_trash_meta_time]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1567862995]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_desired_post_slug]]></wp:meta_key>
-		<wp:meta_value><![CDATA[your-dreams-were-your-ticket-out-of-here]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
 				</channel>
 </rss>
 	

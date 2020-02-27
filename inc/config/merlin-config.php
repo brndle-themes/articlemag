@@ -110,7 +110,7 @@ function articlemag_import_files() {
 			'import_redux'                 => array(),
 			'import_preview_image_url'     => 'https://www.example.com/merlin/preview_import_image1.jpg',
 			'import_notice'                => __( 'A special note for this import.', 'articlemag' ),
-			'preview_url'                  => 'https://www.example.com/my-demo-1',
+			'preview_url'                  => 'https://demos.brndle.com/articlemag/',
 		),
 	);
 }

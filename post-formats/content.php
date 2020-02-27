@@ -12,9 +12,6 @@
 <?php if ( is_single() && 'post' == get_post_type() ) :
 ?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
-		<!-- <div class="single-post-image">
-			<div class="post-image" style="background: url('<?php // echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')"></div>
-		</div> -->
 		<header class="entry-header">
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<div class="post-meta">

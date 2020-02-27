@@ -826,7 +826,6 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 								'font-family' => 'Source Sans Pro',
 								'font-weight' => '400',
 								'font-size'   => 16,
-								'line-height' => 1,
 							),
 						),
 						array(
