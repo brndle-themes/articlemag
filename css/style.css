@@ -4404,7 +4404,10 @@ div.wp-caption.alignright .wp-caption-text {
         height: 450px;
         min-height: auto;
     }
-
+    .single-post .entry-image{
+        height: auto;
+        min-height: inherit;
+    }
 
 }
 
