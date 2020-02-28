@@ -175,7 +175,7 @@ CSF::createWidget(
 				'id'      => 'flickr_id',
 				'type'    => 'text',
 				'title'   => 'Flickr User ID',
-				'default' => '52617155',
+				'default' => '17423713@N03',
 				'desc'    => 'Find your Flickr ID <a href="http://idgettr.com/" target="_blank">idGettr</a>',
 			),
 			array(
