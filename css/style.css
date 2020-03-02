@@ -3282,13 +3282,15 @@ div.wp-caption.alignright .wp-caption-text {
     position: relative;
 }
 
-.comment-list .comment.even{
+.comment-list .comment.even,
+.comment-list .comment.odd{
     padding: 25px;
     border-radius: 5px;
     border: 1px solid #f0f8ff;
     transition: all .25s cubic-bezier(.02,.01,.47,1);
 }
-.comment-list .comment.even:before{
+.comment-list .comment.even:before,
+.comment-list .comment.odd:before{
     content: "";
     position: absolute;
     top: 0px;
@@ -3300,10 +3302,12 @@ div.wp-caption.alignright .wp-caption-text {
     box-shadow: 0 10px 10px rgba(0,0,0,.08), 0 0 0 transparent;
     transition: all .25s cubic-bezier(.02,.01,.47,1);
 }
-.comment-list .comment.even:hover{
+.comment-list .comment.even:hover,
+.comment-list .comment.odd:hover{
     transform: translateY(-5px);
 }
-.comment-list .comment.even:hover:before{
+.comment-list .comment.even:hover:before,
+.comment-list .comment.odd:hover:before{
     -o-box-shadow: 0 4px 60px 0 rgba(0,0,0,.2),0 0 0 transparent;
     box-shadow: 0 4px 60px 0 rgba(0,0,0,.2), 0 0 0 transparent;
 }
