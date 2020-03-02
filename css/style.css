@@ -3316,6 +3316,11 @@ div.wp-caption.alignright .wp-caption-text {
     margin: 24px 0 24px 24px;
     list-style-type: none;
 }
+
+.comment-list .children li:before{
+    box-shadow: none !important;
+}
+
 .comment-list .avatar {
     overflow: hidden;
     position: absolute;
@@ -3333,6 +3338,8 @@ div.wp-caption.alignright .wp-caption-text {
 }
 .comment-list .comment-respond {
     margin-left: 70px;
+    position: relative;
+    z-index: 1;
 }
 .comment-list .pingback {
     margin: 10px 0;
