@@ -795,6 +795,8 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 						),
 					),
 					'button_title' => 'Add New Typography',
+					'min'		   => '10',
+					'max'		   => '10',
 					'default'      => array(
 						array(
 							'title'    => 'Body Typography',

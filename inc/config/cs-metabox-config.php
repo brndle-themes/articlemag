@@ -80,10 +80,11 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 						'type'           => 'select',
 						'title'          => 'Center Title',
 						'options'        => array(
+							'default' => 'Choose a position',
 							'title' => 'Center Title',
 							'all'   => 'Center All',
 						),
-						'default_option' => 'Choose a position',
+						'default' => 'default',
 					),
 				),
 			),

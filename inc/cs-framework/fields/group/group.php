@@ -121,7 +121,9 @@ if( ! class_exists( 'CSF_Field_group' ) ) {
         echo '<div class="csf-cloneable-alert csf-cloneable-max">'. esc_html__( 'You can not add more than', 'csf' ) .' '. $args['max'] .'</div>';
         echo '<div class="csf-cloneable-alert csf-cloneable-min">'. esc_html__( 'You can not remove less than', 'csf' ) .' '. $args['min'] .'</div>';
 
-        echo '<a href="#" class="button button-primary csf-cloneable-add">'. $args['button_title'] .'</a>';
+        if ( ($num != $args['max']) || $args['max'] == 0 ) {
+          echo '<a href="#" class="button button-primary csf-cloneable-add">'. $args['button_title'] .'</a>';
+        }
 
         echo $this->field_after();
 

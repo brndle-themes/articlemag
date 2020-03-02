@@ -148,9 +148,10 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'default' => '#555555',
 
 				),
-				'top_bar_link_hover' => array(
-					'title'   => 'Link Hover Color',
-					'type'    => 'color',
+				array(
+					'id'	  => 'top_bar_link_hover',
+					'title'	  => 'Link Hover Color',
+					'type'	  => 'color',
 					'default' => '#e9425d',
 				),
 				array(
@@ -181,7 +182,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 			'fields'   => array(
 				array(
 					'id'                         => 'header_image',
-					'transport'                  => 'postMessage',
+					//'transport'                  => 'postMessage',
 					'title'                      => 'Background Image',
 					'type'                       => 'background',
 					'background_color'           => false,
@@ -200,7 +201,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'        => 'header_repeat',
 					'title'     => 'Background Repeat',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'select',
 					'options'   => array(
 						''          => 'repeat',
@@ -213,7 +214,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'        => 'header_position',
 					'title'     => 'Background Position',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'select',
 					'options'   => array(
 						''          => 'Left Top',
@@ -230,7 +231,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'        => 'header_attachment',
 					'title'     => 'Background Attachment',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'select',
 					'options'   => array(
 						''      => 'scroll',
@@ -251,7 +252,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'        => 'header_bg',
 					'title'     => 'Background Color',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'color',
 					'default'   => '#ffffff',
 
@@ -259,14 +260,14 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'        => 'header_border',
 					'title'     => 'Border Color',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'color',
 					'default'   => 'rgba(255, 255, 255, 0.1)',
 				),
 				array(
 					'id'        => 'header_link',
 					'title'     => 'Link Color',
-					'transport' => 'postMessage',
+					//'transport' => 'postMessage',
 					'type'      => 'color',
 					'default'   => '#555555',
 				),
