@@ -2356,6 +2356,13 @@
                 }, 1000);
               });
 
+                /*License Key activate or deactivate then refresh page */
+                if ( typeof(response.page_reload) !== 'undefined'  ) {         
+                  setTimeout(function(){
+                     location.reload(); 
+                  }, 500);
+                }
+
             })
             .fail( function( response ) {
               alert( response.error );

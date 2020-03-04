@@ -168,13 +168,16 @@
 .dark-mode #site-logo h1 a,
 .dark-mode .entry-title a,
 .dark-mode .post-navigation a,
-.dark-mode #page-header .category-content .page-title,
 .dark-mode .single-post .entry-header .entry-title,
 .dark-mode .related-posts .related-title,
 .dark-mode .comment-author.vcard,
 .dark-mode .articlemag_widget .widget-title h4 {
     color: #fff;
 }
+.dark-mode #page-header .category-content .page-title{
+    color: #333;
+}
+
 
 .dark-mode a {
     color: #dadde4;
