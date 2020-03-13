@@ -1,8 +1,8 @@
 === ArticleMag ===
 Contributors: brndle
 Requires at least: WordPress 3.2
-Tested up to: 5.3
-Stable tag: 1.3.0
+Tested up to: 5.3.2
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, learndash
@@ -33,6 +33,30 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.4.0 =
+* Fix: Fixed nav Menu Location Issue and Fixed License Key Issues
+* Fix: CS bugs fixes updated
+* Fix: (#60) Managed Ul for childern comments
+* Fix: (#59) Tooltip not working fixed
+* Fix: Demo importer files updated and flickr id change
+* Fix: (#57) Fixed limit
+* Fix: typography theme options fixed
+* Fix: Single post in images width fixed
+* Fix: Default Image issue fixed
+* Fix: Theme checker files update
+* Fix: CS Framework files update
+* Fix: (#43) Featured Post Meta box Fixed
+* Fix: (#47) Category Post Header Images
+* Fix:(#47) Category Post Header Images
+* Fix:(#47) Category Post Header Images
+* Fix: (#52), (#53) Single post option and featured image section updated
+* Fix:(#47) Category Post Header Images
+* Fix: Reset customizer option issue fixed
+* Fix: (#50) Own Skin in custom background image uploaded issue fixed
+* Fix: (#48) Siddebar meta box issue fixed and (#49) socialshare remove
+* Fix: #44 post content with sidebar not proper space fixed
+* Fix: #46 Post and page Option background fixed
 
 = 1.3.0 =
  * Fix: (#38) Fixed theme setup plugins installation error
