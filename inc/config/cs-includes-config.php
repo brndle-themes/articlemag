@@ -53,6 +53,13 @@ if ( is_plugin_active( 'sfwd-lms/sfwd_lms.php' ) ) {
 locate_template( 'inc/plugins/tgm-plugin-activation/tgm-articlemag-plugins.php', true );
 
 //
+// BuddyPress Integration
+// ----------------------------------------------------------------------------------------------------
+if ( class_exists( 'BuddyPress' ) ) {
+	locate_template( 'inc/plugins/buddypress/buddypress-config.php', true );
+}
+
+//
 // Articlemag Theme Check
 // ----------------------------------------------------------------------------------------------------
 //$purchase_code = cs_get_option( 'purchase_code' );

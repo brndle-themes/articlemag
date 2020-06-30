@@ -51,7 +51,7 @@ if ( version_compare( WOOCOMMERCE_VERSION, "2.1" ) >= 0 ) {
 if ( !function_exists( 'cs_woocommerce_style' ) ) {
 
 	function cs_woocommerce_style() {
-		wp_enqueue_style( 'cs-woocommerce', THEME_URI . '/css/vendor/woocommerce.css', array(), time() );
+		wp_enqueue_style( 'cs-woocommerce', THEME_URI . '/css/woocommerce.min.css', array(), time() );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'cs_woocommerce_style' );

@@ -1363,6 +1363,28 @@
         } );
 
     };
+    
+    ARTICLEMAG.buddyfitVids = function () {
+
+        var doFitVids = function () {
+            setTimeout( function () {
+                $( 'iframe[src*="youtube"], iframe[src*="vimeo"]' ).parent().fitVids();
+            }, 300 );
+        };
+        doFitVids();
+        $( document ).ajaxComplete( doFitVids );
+
+        var doFitVidsOnLazyLoad = function ( event, data ) {
+            if ( typeof data !== 'undefined' && typeof data.element !== 'undefined' ) {
+                //load iframe in correct dimension
+                if ( data.element.getAttribute( 'data-lazy-type' ) == 'iframe' ) {
+                    doFitVids();
+                }
+            }
+        };
+        $( document ).on( 'bp_nouveau_lazy_load', doFitVidsOnLazyLoad );
+
+    };
 
     $( document ).ready( function () {
 
@@ -1406,6 +1428,7 @@
         ARTICLEMAG.tableWrapper();
         ARTICLEMAG.iframeWrapper();
         ARTICLEMAG.darkMode();
+        ARTICLEMAG.buddyfitVids();
 
     } );
 

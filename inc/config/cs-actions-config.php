@@ -1049,12 +1049,12 @@ function display_articlemag_featured_posts() {
 function add_category_thumbnail_field() {
 	?>
 	<div class="form-field term-thumbnail-wrap">
-		<label><?php esc_html_e( 'Thumbnail', 'fashionbuzz' ); ?></label>
+		<label><?php esc_html_e( 'Thumbnail', 'articlemag' ); ?></label>
 		<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>" width="60px" height="60px" /></div>
 		<div style="line-height: 60px;">
 			<input type="hidden" id="category_thumbnail_id" name="category_thumbnail_id" />
-			<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'fashionbuzz' ); ?></button>
-			<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'fashionbuzz' ); ?></button>
+			<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'articlemag' ); ?></button>
+			<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'articlemag' ); ?></button>
 		</div>
 		<script type="text/javascript">
 
@@ -1078,9 +1078,9 @@ function add_category_thumbnail_field() {
 
 	            // Create the media frame.
 	            file_frame = wp.media.frames.downloadable_file = wp.media( {
-	                title: '<?php esc_html_e( 'Choose an image', 'fashionbuzz' ); ?>',
+	                title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
 	                button: {
-	                    text: '<?php esc_html_e( 'Use image', 'fashionbuzz' ); ?>'
+	                    text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
 	                },
 	                multiple: false
 	            } );
@@ -1147,13 +1147,13 @@ function edit_category_thumbnail_fields( $term ) {
 	}
 	?>
 	<tr class="form-field term-thumbnail-wrap">
-		<th scope="row" valign="top"><label><?php esc_html_e( 'Thumbnail', 'fashionbuzz' ); ?></label></th>
+		<th scope="row" valign="top"><label><?php esc_html_e( 'Thumbnail', 'articlemag' ); ?></label></th>
 		<td>
 			<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( $image ); ?>" width="60px" height="60px" /></div>
 			<div style="line-height: 60px;">
 				<input type="hidden" id="category_thumbnail_id" name="category_thumbnail_id" value="<?php echo esc_attr( $thumbnail_id ); ?>" />
-				<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'fashionbuzz' ); ?></button>
-				<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'fashionbuzz' ); ?></button>
+				<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'articlemag' ); ?></button>
+				<button type="button" class="remove_image_button button"><?php esc_html_e( 'Remove image', 'articlemag' ); ?></button>
 			</div>
 			<p class="description">Upload Image Min. Size 1280X600</p>
 			<script type="text/javascript">
@@ -1178,9 +1178,9 @@ function edit_category_thumbnail_fields( $term ) {
 
 	                // Create the media frame.
 	                file_frame = wp.media.frames.downloadable_file = wp.media( {
-	                    title: '<?php esc_html_e( 'Choose an image', 'fashionbuzz' ); ?>',
+	                    title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
 	                    button: {
-	                        text: '<?php esc_html_e( 'Use image', 'fashionbuzz' ); ?>'
+	                        text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
 	                    },
 	                    multiple: false
 	                } );
@@ -1245,7 +1245,7 @@ function category_thumbnail_columns( $columns ) {
 		unset( $columns[ 'cb' ] );
 	}
 
-	$new_columns[ 'thumb' ] = __( 'Image', 'fashionbuzz' );
+	$new_columns[ 'thumb' ] = __( 'Image', 'articlemag' );
 
 	$columns			 = array_merge( $new_columns, $columns );
 	$columns[ 'handle' ] = '';
@@ -1277,7 +1277,7 @@ function category_thumbnail_column( $columns, $column, $id ) {
 
 		// Prevent esc_url from breaking spaces in urls for image embeds. Ref: https://core.trac.wordpress.org/ticket/23605 .
 		$image	 = str_replace( ' ', '%20', $image );
-		$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'fashionbuzz' ) . '" class="wp-post-image" height="48" width="48" />';
+		$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'articlemag' ) . '" class="wp-post-image" height="48" width="48" />';
 	}
 	if ( 'handle' === $column ) {
 		$columns .= '<input type="hidden" name="term_id" value="' . esc_attr( $id ) . '" />';

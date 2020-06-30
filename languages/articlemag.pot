@@ -1,0 +1,2481 @@
+# <!=Copyright (C) 2020
+# This file is distributed under the same license as the  package.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-30 07:16:12+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Articlemag\n"
+"Language-Team: Articlemag\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: 404.php:17
+msgid "404"
+msgstr ""
+
+#: 404.php:18
+msgid "Not Found!"
+msgstr ""
+
+#: 404.php:22
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: 404.php:28
+msgid "Return Back"
+msgstr ""
+
+#: archive.php:22
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:24
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:26
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:28
+msgid "Archives"
+msgstr ""
+
+#: bbpress/form-search.php:13 header.php:55
+#: inc/config/cs-front-end-functions.php:143
+msgid "Search"
+msgstr ""
+
+#: buddypress/groups/groups-loop.php:53
+#: buddypress/groups/single/cover-image-header.php:36
+#. translators: %s = last activity timestamp (e.g. "active 1 hour ago")
+msgid "active %s"
+msgstr ""
+
+#: buddypress/members/single/groups/invites.php:10
+msgid "Group Invites"
+msgstr ""
+
+#: buddypress/members/single/groups/invites.php:41
+#. translators: %s = number of members
+msgid "%s member"
+msgid_plural "%s members"
+msgstr[0] ""
+msgstr[1] ""
+
+#: category.php:24 tag.php:19
+msgid "%s"
+msgstr ""
+
+#: comments.php:20
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:34
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:35
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:41
+msgid "Comments are closed."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:229 inc/merlin/class-merlin.php:1883
+msgid "Error"
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:257
+#: edd-updater/theme-updater-admin.php:304
+#: edd-updater/theme-updater-admin.php:356 inc/merlin/class-merlin.php:1505
+#: inc/merlin/class-merlin.php:1546
+msgid "An error occurred, please try again."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:271 inc/merlin/class-merlin.php:1518
+#. translators: Expiration date
+msgid "Your license key expired on %s."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:278 inc/merlin/class-merlin.php:1524
+msgid "Your license key has been disabled."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:283
+msgid "Invalid license."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:289 inc/merlin/class-merlin.php:1533
+msgid "Your license is not active for this URL."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:294 inc/merlin/class-merlin.php:1538
+#. translators: EDD Item Name
+msgid "This appears to be an invalid license key for %s."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:299 inc/merlin/class-merlin.php:1542
+msgid "Your license key has reached its activation limit."
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:327
+msgid "Activate License Key"
+msgstr ""
+
+#: edd-updater/theme-updater-admin.php:380
+msgid "Deactivate License Key."
+msgstr ""
+
+#: edd-updater/theme-updater.php:27
+msgid "Theme License"
+msgstr ""
+
+#: edd-updater/theme-updater.php:28
+msgid "Enter your theme license key."
+msgstr ""
+
+#: edd-updater/theme-updater.php:29
+#: inc/config/cs-framework-option-section.php:1344
+msgid "License Key"
+msgstr ""
+
+#: edd-updater/theme-updater.php:30
+#: inc/config/cs-framework-option-section.php:1345
+msgid "License Action"
+msgstr ""
+
+#: edd-updater/theme-updater.php:31
+#: inc/config/cs-framework-option-section.php:1346
+msgid "Deactivate License"
+msgstr ""
+
+#: edd-updater/theme-updater.php:32
+#: inc/config/cs-framework-option-section.php:1347
+#: inc/config/cs-framework-option-section.php:1384
+msgid "Activate License"
+msgstr ""
+
+#: edd-updater/theme-updater.php:33 edd-updater/theme-updater.php:46
+#: inc/config/cs-framework-option-section.php:1348
+#: inc/config/cs-framework-option-section.php:1361
+msgid "License status is unknown."
+msgstr ""
+
+#: edd-updater/theme-updater.php:34
+#: inc/config/cs-framework-option-section.php:1349
+msgid "Renew?"
+msgstr ""
+
+#: edd-updater/theme-updater.php:35
+#: inc/config/cs-framework-option-section.php:1350
+msgid "unlimited"
+msgstr ""
+
+#: edd-updater/theme-updater.php:36
+#: inc/config/cs-framework-option-section.php:1351
+msgid "License key is active."
+msgstr ""
+
+#: edd-updater/theme-updater.php:37
+#: inc/config/cs-framework-option-section.php:1352
+msgid "Expires %s."
+msgstr ""
+
+#: edd-updater/theme-updater.php:38
+#: inc/config/cs-framework-option-section.php:1353
+msgid "Lifetime License."
+msgstr ""
+
+#: edd-updater/theme-updater.php:39
+#: inc/config/cs-framework-option-section.php:1354
+msgid "You have %1$s / %2$s sites activated."
+msgstr ""
+
+#: edd-updater/theme-updater.php:40
+#: inc/config/cs-framework-option-section.php:1355
+msgid "License key expired %s."
+msgstr ""
+
+#: edd-updater/theme-updater.php:41
+#: inc/config/cs-framework-option-section.php:1356
+msgid "License key has expired."
+msgstr ""
+
+#: edd-updater/theme-updater.php:42
+#: inc/config/cs-framework-option-section.php:1357
+msgid "License keys do not match."
+msgstr ""
+
+#: edd-updater/theme-updater.php:43
+#: inc/config/cs-framework-option-section.php:1358
+msgid "License is inactive."
+msgstr ""
+
+#: edd-updater/theme-updater.php:44
+#: inc/config/cs-framework-option-section.php:1359
+msgid "License key is disabled."
+msgstr ""
+
+#: edd-updater/theme-updater.php:45
+#: inc/config/cs-framework-option-section.php:1360
+msgid "Site is inactive."
+msgstr ""
+
+#: edd-updater/theme-updater.php:47
+#: inc/config/cs-framework-option-section.php:1362
+msgid ""
+"Updating this theme will lose any customizations you have made. 'Cancel' to "
+"stop, 'OK' to update."
+msgstr ""
+
+#: edd-updater/theme-updater.php:48
+#: inc/config/cs-framework-option-section.php:1363
+msgid ""
+"<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
+"class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
+"href=\"%5$s\"%6$s>update now</a>."
+msgstr ""
+
+#: inc/config/cs-actions-config.php:662 inc/config/cs-actions-config.php:688
+msgid "Send"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1012
+msgid "Featured"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1014
+msgid "Recent"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1052 inc/config/cs-actions-config.php:1150
+#: inc/config/cs-actions-config.php:1280
+msgid "Thumbnail"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1056 inc/config/cs-actions-config.php:1155
+msgid "Upload/Add image"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1057 inc/config/cs-actions-config.php:1156
+msgid "Remove image"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1081 inc/config/cs-actions-config.php:1181
+msgid "Choose an image"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1083 inc/config/cs-actions-config.php:1183
+msgid "Use image"
+msgstr ""
+
+#: inc/config/cs-actions-config.php:1248
+msgid "Image"
+msgstr ""
+
+#: inc/config/cs-enqueue-config.php:36
+msgid "Already loved!"
+msgstr ""
+
+#: inc/config/cs-enqueue-config.php:37
+msgid "Error!"
+msgstr ""
+
+#: inc/config/cs-filters-config.php:169 inc/config/cs-helper-functions.php:1027
+#: templates/page-blog-masonry.php:65 templates/page-blog-medium.php:65
+#: templates/page-blog-small.php:71
+msgid "Read More"
+msgstr ""
+
+#: inc/config/cs-framework-option-section.php:1342
+msgid "Articlemag - License"
+msgstr ""
+
+#: inc/config/cs-framework-option-section.php:1343
+msgid "Enter your license key."
+msgstr ""
+
+#: inc/config/cs-framework-option-section.php:1372
+#: inc/config/cs-framework-option-section.php:1378
+#: inc/merlin/class-merlin.php:737
+msgid "License"
+msgstr ""
+
+#: inc/config/cs-framework-option-section.php:1373
+msgid "Articlemag Theme License!"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:152
+msgid "Log Out"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:162
+msgid "Log In"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:177
+msgid "My Account Page"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:179
+msgid "Logout"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:184
+msgid "Login"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:188
+msgid "Register"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:189
+msgid "Lost your password?"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:211
+#: inc/plugins/woocommerce/woocommerce-config.php:16
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/config/cs-front-end-functions.php:227
+msgid "Cart"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:438
+msgid "Sticky"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:465
+msgid "Leave a comment"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:465
+msgid "1 Comment"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:465
+msgid "% Comments"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:479
+msgid "Edit"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:502
+msgid "Previous Post"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:503
+msgid "Next Post"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:636
+msgid "Load More"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:677
+#: inc/config/cs-front-end-functions.php:720
+msgid "Previous"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:678
+#: inc/config/cs-front-end-functions.php:719 inc/config/merlin-config.php:45
+msgid "Next"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:712
+msgid "Pages"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:884
+msgid ""
+"You can edit your menu content on the Menus screen in the Appearance "
+"section."
+msgstr ""
+
+#: inc/config/merlin-config.php:37
+msgid "Theme Setup"
+msgstr ""
+
+#: inc/config/merlin-config.php:40
+#. translators: 1: Title Tag 2: Theme Name 3: Closing Title Tag
+msgid "%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s"
+msgstr ""
+
+#: inc/config/merlin-config.php:41
+msgid "Return to the dashboard"
+msgstr ""
+
+#: inc/config/merlin-config.php:42
+msgid "Disable this wizard"
+msgstr ""
+
+#: inc/config/merlin-config.php:44
+msgid "Skip"
+msgstr ""
+
+#: inc/config/merlin-config.php:46
+msgid "Start"
+msgstr ""
+
+#: inc/config/merlin-config.php:47
+#: inc/cs-framework/classes/comment-metabox.class.php:209
+#: inc/cs-framework/classes/metabox.class.php:274
+msgid "Cancel"
+msgstr ""
+
+#: inc/config/merlin-config.php:48 inc/config/merlin-config.php:49
+#: inc/config/merlin-config.php:50
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: inc/config/merlin-config.php:51 inc/cs-framework/fields/backup/backup.php:26
+msgid "Import"
+msgstr ""
+
+#: inc/config/merlin-config.php:52
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: inc/config/merlin-config.php:53
+msgid "Later"
+msgstr ""
+
+#: inc/config/merlin-config.php:56
+#. translators: Theme Name
+msgid "Activate %s"
+msgstr ""
+
+#: inc/config/merlin-config.php:58
+#. translators: Theme Name
+msgid "%s is Activated"
+msgstr ""
+
+#: inc/config/merlin-config.php:60
+#. translators: Theme Name
+msgid "Enter your license key to enable remote updates and theme support."
+msgstr ""
+
+#: inc/config/merlin-config.php:61
+msgid "License key"
+msgstr ""
+
+#: inc/config/merlin-config.php:62
+msgid "The theme is already registered, so you can go to the next step!"
+msgstr ""
+
+#: inc/config/merlin-config.php:63
+msgid "Your theme is activated! Remote updates and theme support are enabled."
+msgstr ""
+
+#: inc/config/merlin-config.php:64
+msgid "Need help?"
+msgstr ""
+
+#: inc/config/merlin-config.php:67
+#. translators: Theme Name
+msgid "Welcome to %s"
+msgstr ""
+
+#: inc/config/merlin-config.php:68
+msgid "Hi. Welcome back"
+msgstr ""
+
+#: inc/config/merlin-config.php:69
+msgid ""
+"This wizard will set up your theme, install plugins, and import content. It "
+"is optional & should take only a few minutes."
+msgstr ""
+
+#: inc/config/merlin-config.php:70
+msgid ""
+"You may have already run this theme setup wizard. If you would like to "
+"proceed anyway, click on the \"Start\" button below."
+msgstr ""
+
+#: inc/config/merlin-config.php:72
+msgid "Install Child Theme"
+msgstr ""
+
+#: inc/config/merlin-config.php:73
+msgid "You're good to go!"
+msgstr ""
+
+#: inc/config/merlin-config.php:74
+msgid "Let's build & activate a child theme so you may easily make theme changes."
+msgstr ""
+
+#: inc/config/merlin-config.php:75
+msgid ""
+"Your child theme has already been installed and is now activated, if it "
+"wasn't already."
+msgstr ""
+
+#: inc/config/merlin-config.php:76
+msgid "Learn about child themes"
+msgstr ""
+
+#: inc/config/merlin-config.php:77
+msgid "Awesome. Your child theme has already been installed and is now activated."
+msgstr ""
+
+#: inc/config/merlin-config.php:78
+msgid "Awesome. Your child theme has been created and is now activated."
+msgstr ""
+
+#: inc/config/merlin-config.php:80
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/config/merlin-config.php:81
+msgid "You're up to speed!"
+msgstr ""
+
+#: inc/config/merlin-config.php:82
+msgid "Let's install some essential WordPress plugins to get your site up to speed."
+msgstr ""
+
+#: inc/config/merlin-config.php:83
+msgid ""
+"The required WordPress plugins are all installed and up to date. Press "
+"\"Next\" to continue the setup wizard."
+msgstr ""
+
+#: inc/config/merlin-config.php:84 inc/config/merlin-config.php:88
+msgid "Advanced"
+msgstr ""
+
+#: inc/config/merlin-config.php:86
+msgid "Import Content"
+msgstr ""
+
+#: inc/config/merlin-config.php:87
+msgid ""
+"Let's import content to your website, to help you get familiar with the "
+"theme."
+msgstr ""
+
+#: inc/config/merlin-config.php:90
+msgid "All done. Have fun!"
+msgstr ""
+
+#: inc/config/merlin-config.php:93
+#. translators: Theme Author
+msgid "Your theme has been all set up. Enjoy your new theme by %s."
+msgstr ""
+
+#: inc/config/merlin-config.php:94
+msgid "Extras"
+msgstr ""
+
+#: inc/config/merlin-config.php:95
+msgid "View your website"
+msgstr ""
+
+#: inc/config/merlin-config.php:96
+msgid "Explore WordPress"
+msgstr ""
+
+#: inc/config/merlin-config.php:97
+msgid "Get Theme Support"
+msgstr ""
+
+#: inc/config/merlin-config.php:98
+msgid "Start Customizing"
+msgstr ""
+
+#: inc/config/merlin-config.php:112
+msgid "A special note for this import."
+msgstr ""
+
+#: inc/cs-framework/classes/comment-metabox.class.php:190
+#: inc/cs-framework/classes/metabox.class.php:255
+#: inc/cs-framework/classes/options.class.php:650
+msgid "No option provided by developer."
+msgstr ""
+
+#: inc/cs-framework/classes/comment-metabox.class.php:208
+#: inc/cs-framework/classes/metabox.class.php:273
+msgid "Restore"
+msgstr ""
+
+#: inc/cs-framework/classes/comment-metabox.class.php:209
+#: inc/cs-framework/classes/metabox.class.php:274
+msgid "update post for restore "
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:238
+msgid "Error while saving."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:285
+msgid "Success. Imported backup options."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:295
+msgid "Default options restored."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:309
+msgid "Default options restored for only this section."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:367
+msgid "Settings saved."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:548
+msgid "Settings have changed, you should save them!"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:550
+msgid "show all options"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:552
+msgid "Search option(s)"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:555
+#: inc/cs-framework/classes/options.class.php:674
+msgid "Save"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:555
+#: inc/cs-framework/classes/options.class.php:674
+msgid "Saving..."
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:556
+#: inc/cs-framework/classes/options.class.php:675
+msgid "Reset Section"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:556
+#: inc/cs-framework/classes/options.class.php:675
+msgid "Are you sure to reset this section options?"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:557
+#: inc/cs-framework/classes/options.class.php:676
+#: inc/cs-framework/fields/backup/backup.php:34
+msgid "Reset All"
+msgstr ""
+
+#: inc/cs-framework/classes/options.class.php:557
+#: inc/cs-framework/classes/options.class.php:676
+msgid "Are you sure to reset all options?"
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:429
+msgid "Are you sure?"
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:430
+msgid "Restoring options."
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:431
+msgid "Importing options."
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:434
+msgid "Please enter %s or more characters"
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:435
+msgid "Searching..."
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:436
+msgid "No results match"
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:507
+msgid "Ooops! This field type (%s) can not be used here, yet."
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:570
+msgid "This field class is not available!"
+msgstr ""
+
+#: inc/cs-framework/classes/setup.class.php:574
+msgid "This type is not found!"
+msgstr ""
+
+#: inc/cs-framework/classes/shortcoder.class.php:242
+msgid "Add one more"
+msgstr ""
+
+#: inc/cs-framework/classes/shortcoder.class.php:279
+#: inc/cs-framework/functions/actions.php:43
+#: inc/cs-framework/functions/actions.php:103
+#: inc/cs-framework/functions/actions.php:125
+#: inc/cs-framework/functions/actions.php:160
+msgid "Error: Nonce verification has failed. Please try again."
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:35
+msgid "No background selected"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:66
+#: inc/cs-framework/fields/date/date.php:31
+msgid "From"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:84
+#: inc/cs-framework/fields/date/date.php:32
+msgid "To"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:102
+msgid "Direction"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:108
+msgid "Gradient Direction"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:109
+msgid "&#8659; top to bottom"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:110
+msgid "&#8658; left to right"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:111
+msgid "&#8664; corner top to right"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:112
+msgid "&#8665; corner top to left"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:155
+msgid "Background Position"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:156
+msgid "Left Top"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:157
+msgid "Left Center"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:158
+msgid "Left Bottom"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:159
+msgid "Center Top"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:160
+msgid "Center Center"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:161
+msgid "Center Bottom"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:162
+msgid "Right Top"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:163
+msgid "Right Center"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:164
+msgid "Right Bottom"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:178
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:179
+msgid "Repeat"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:180
+msgid "No Repeat"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:181
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:182
+msgid "Repeat Vertically"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:196
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:197
+msgid "Scroll"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:198
+msgid "Fixed"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:212
+msgid "Background Size"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:213
+msgid "Cover"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:214
+msgid "Contain"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:228
+msgid "Background Origin"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:229
+#: inc/cs-framework/fields/background/background.php:247
+msgid "Padding Box"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:230
+#: inc/cs-framework/fields/background/background.php:246
+msgid "Border Box"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:231
+#: inc/cs-framework/fields/background/background.php:248
+msgid "Content Box"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:245
+msgid "Background Clip"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:262
+msgid "Background Blend Mode"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:263
+#: inc/cs-framework/fields/link_color/link_color.php:36
+#: inc/cs-framework/fields/typography/typography.php:173
+msgid "Normal"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:264
+msgid "Multiply"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:265
+msgid "Screen"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:266
+msgid "Overlay"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:267
+msgid "Darken"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:268
+msgid "Lighten"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:269
+msgid "Color Dodge"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:270
+msgid "Saturation"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:271
+msgid "Color"
+msgstr ""
+
+#: inc/cs-framework/fields/background/background.php:272
+msgid "Luminosity"
+msgstr ""
+
+#: inc/cs-framework/fields/backup/backup.php:27
+msgid "copy-paste your backup string here"
+msgstr ""
+
+#: inc/cs-framework/fields/backup/backup.php:31
+msgid "Export and Download Backup"
+msgstr ""
+
+#: inc/cs-framework/fields/backup/backup.php:35
+msgid "Please be sure for reset all of options."
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:25
+#: inc/cs-framework/fields/spacing/spacing.php:25
+msgid "top"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:26
+#: inc/cs-framework/fields/spacing/spacing.php:26
+msgid "right"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:27
+#: inc/cs-framework/fields/spacing/spacing.php:27
+msgid "bottom"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:28
+#: inc/cs-framework/fields/spacing/spacing.php:28
+msgid "left"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:29
+#: inc/cs-framework/fields/spacing/spacing.php:29
+msgid "all"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:51
+#: inc/cs-framework/fields/typography/typography.php:201
+msgid "Solid"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:52
+#: inc/cs-framework/fields/typography/typography.php:204
+msgid "Dashed"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:53
+#: inc/cs-framework/fields/typography/typography.php:203
+msgid "Dotted"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:54
+#: inc/cs-framework/fields/typography/typography.php:202
+msgid "Double"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:55
+msgid "Inset"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:56
+msgid "Outset"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:57
+msgid "Groove"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:58
+msgid "ridge"
+msgstr ""
+
+#: inc/cs-framework/fields/border/border.php:59
+#: inc/cs-framework/fields/typography/typography.php:186
+#: inc/cs-framework/fields/typography/typography.php:200
+msgid "None"
+msgstr ""
+
+#: inc/cs-framework/fields/checkbox/checkbox.php:65
+#: inc/cs-framework/fields/radio/radio.php:62
+#: inc/cs-framework/fields/select/select.php:112
+msgid "No data provided for this option type."
+msgstr ""
+
+#: inc/cs-framework/fields/dimensions/dimensions.php:22
+msgid "width"
+msgstr ""
+
+#: inc/cs-framework/fields/dimensions/dimensions.php:23
+msgid "height"
+msgstr ""
+
+#: inc/cs-framework/fields/gallery/gallery.php:20
+msgid "Add Gallery"
+msgstr ""
+
+#: inc/cs-framework/fields/gallery/gallery.php:21
+msgid "Edit Gallery"
+msgstr ""
+
+#: inc/cs-framework/fields/gallery/gallery.php:22
+msgid "Clear"
+msgstr ""
+
+#: inc/cs-framework/fields/group/group.php:23
+msgid "Add New"
+msgstr ""
+
+#: inc/cs-framework/fields/group/group.php:35
+#: inc/cs-framework/fields/repeater/repeater.php:30
+msgid "Error: Nested field id can not be same with another nested field id."
+msgstr ""
+
+#: inc/cs-framework/fields/group/group.php:46
+#: inc/cs-framework/fields/group/group.php:86
+#: inc/cs-framework/fields/repeater/repeater.php:51
+#: inc/cs-framework/fields/repeater/repeater.php:82
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: inc/cs-framework/fields/group/group.php:121
+#: inc/cs-framework/fields/repeater/repeater.php:96
+msgid "You can not add more than"
+msgstr ""
+
+#: inc/cs-framework/fields/group/group.php:122
+#: inc/cs-framework/fields/repeater/repeater.php:97
+msgid "You can not remove less than"
+msgstr ""
+
+#: inc/cs-framework/fields/icon/icon.php:20
+#: inc/cs-framework/functions/actions.php:184
+msgid "Add Icon"
+msgstr ""
+
+#: inc/cs-framework/fields/icon/icon.php:21
+msgid "Remove Icon"
+msgstr ""
+
+#: inc/cs-framework/fields/link_color/link_color.php:37
+msgid "Hover"
+msgstr ""
+
+#: inc/cs-framework/fields/link_color/link_color.php:38
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: inc/cs-framework/fields/link_color/link_color.php:39
+msgid "Visited"
+msgstr ""
+
+#: inc/cs-framework/fields/link_color/link_color.php:40
+msgid "Focus"
+msgstr ""
+
+#: inc/cs-framework/fields/map/map.php:23
+msgid "Search your address..."
+msgstr ""
+
+#: inc/cs-framework/fields/map/map.php:24
+msgid "Latitude"
+msgstr ""
+
+#: inc/cs-framework/fields/map/map.php:25
+msgid "Longitude"
+msgstr ""
+
+#: inc/cs-framework/fields/media/media.php:23
+#: inc/cs-framework/fields/upload/upload.php:21
+msgid "Upload"
+msgstr ""
+
+#: inc/cs-framework/fields/media/media.php:24
+#: inc/cs-framework/fields/upload/upload.php:22
+msgid "Remove"
+msgstr ""
+
+#: inc/cs-framework/fields/media/media.php:57
+msgid "No media selected"
+msgstr ""
+
+#: inc/cs-framework/fields/sorter/sorter.php:21
+msgid "Enabled"
+msgstr ""
+
+#: inc/cs-framework/fields/sorter/sorter.php:22
+msgid "Disabled"
+msgstr ""
+
+#: inc/cs-framework/fields/switcher/switcher.php:20
+msgid "On"
+msgstr ""
+
+#: inc/cs-framework/fields/switcher/switcher.php:21
+msgid "Off"
+msgstr ""
+
+#: inc/cs-framework/fields/textarea/textarea.php:37
+msgid "Add Shortcode"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:83
+msgid "Font Family"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:84
+msgid "Select a font"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:92
+msgid "Backup Font Family"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:106
+#: inc/cs-framework/fields/typography/typography.php:119
+#: inc/cs-framework/fields/typography/typography.php:132
+#: inc/cs-framework/fields/typography/typography.php:147
+#: inc/cs-framework/fields/typography/typography.php:163
+#: inc/cs-framework/fields/typography/typography.php:176
+#: inc/cs-framework/fields/typography/typography.php:190
+#: inc/cs-framework/fields/typography/typography.php:208
+msgid "Default"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:117
+msgid "Font Style"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:131
+#: inc/cs-framework/fields/typography/typography.php:132
+msgid "Load Extra Styles"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:145
+msgid "Subset"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:155
+msgid "Text Align"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:157
+msgid "Inherit"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:158
+msgid "Left"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:159
+msgid "Center"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:160
+msgid "Right"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:161
+msgid "Justify"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:162
+msgid "Initial"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:171
+msgid "Font Variant"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:174
+msgid "Small Caps"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:175
+msgid "All Small Caps"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:184
+msgid "Text Transform"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:187
+msgid "Capitalize"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:188
+msgid "Uppercase"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:189
+msgid "Lowercase"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:198
+msgid "Text Decoration"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:205
+msgid "Wavy"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:206
+msgid "Overline"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:207
+msgid "Line-through"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:220
+msgid "Font Size"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:232
+msgid "Line Height"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:244
+msgid "Letter Spacing"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:256
+msgid "Word Spacing"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:271
+msgid "Font Color"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:282
+msgid "Custom Style"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:349
+msgid "Custom Web Fonts"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:355
+msgid "Safe Web Fonts"
+msgstr ""
+
+#: inc/cs-framework/fields/typography/typography.php:375
+msgid "Google Web Fonts"
+msgstr ""
+
+#: inc/cs-framework/functions/actions.php:35
+msgid "No data provided by developer"
+msgstr ""
+
+#: inc/cs-framework/functions/actions.php:156
+msgid "You do not have required permissions to access."
+msgstr ""
+
+#: inc/cs-framework/functions/actions.php:188
+msgid "Search a Icon..."
+msgstr ""
+
+#: inc/cs-framework/functions/validate.php:14
+#: inc/cs-framework/functions/validate.php:86
+msgid "Please write a valid email address!"
+msgstr ""
+
+#: inc/cs-framework/functions/validate.php:32
+#: inc/cs-framework/functions/validate.php:106
+msgid "Please write a numeric data!"
+msgstr ""
+
+#: inc/cs-framework/functions/validate.php:50
+#: inc/cs-framework/functions/validate.php:126
+msgid "Error! This field is required!"
+msgstr ""
+
+#: inc/cs-framework/functions/validate.php:68
+#: inc/cs-framework/functions/validate.php:146
+msgid "Please write a valid url!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:460
+msgid "Something went wrong. Please refresh the page and try again!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:610
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:615
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:724
+msgid "Welcome"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:731
+msgid "Child"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:745
+msgid "Plugins"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:753 inc/merlin/class-merlin.php:2000
+msgid "Content"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:759
+msgid "Ready"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:864
+msgid "The welcome step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:958
+msgid "The license activation step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1028
+msgid "The child theme installation step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1115
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1116
+msgid "req"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1156
+msgid "The plugin installation step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1202
+msgid "Select Demo"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1240
+msgid "The content import step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1320
+msgid "The final step has been displayed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1397
+msgid "The existing child theme was activated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1415
+msgid "The newly generated child theme was activated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1437
+msgid "Yikes! The theme activation failed. Please try again or contact support."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1446
+msgid "Please add your license key before attempting to activate one."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1459
+msgid "The license activation was performed with the following results"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1528
+msgid ""
+"This appears to be an invalid license key. Please try again or contact "
+"support."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1634
+msgid "The child theme functions.php content was generated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1665
+msgid "The child theme style.css content was generated"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1699
+msgid ""
+"The child theme screenshot was copied to the child theme, with the "
+"following result"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1701
+msgid "The child theme screenshot was not generated, because of these results"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1730
+msgid "Activating"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1746
+msgid "Updating"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1762 inc/merlin/class-merlin.php:1778
+#: inc/merlin/class-merlin.php:2003 inc/merlin/class-merlin.php:2016
+#: inc/merlin/class-merlin.php:2029 inc/merlin/class-merlin.php:2042
+#: inc/merlin/class-merlin.php:2055 inc/merlin/class-merlin.php:2068
+#: inc/merlin/class-merlin.php:2081 inc/merlin/class-merlin.php:2124
+msgid "Installing"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1770
+msgid "A plugin with the following data will be processed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1782
+msgid "A plugin with the following data was processed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1791 inc/merlin/class-merlin.php:2004
+#: inc/merlin/class-merlin.php:2017 inc/merlin/class-merlin.php:2030
+#: inc/merlin/class-merlin.php:2043 inc/merlin/class-merlin.php:2056
+#: inc/merlin/class-merlin.php:2069 inc/merlin/class-merlin.php:2082
+msgid "Success"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1814
+msgid "The content importer AJAX call failed to start, because of incorrect data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1819
+msgid "Invalid content!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1830
+msgid "The content import AJAX call will be executed with this import data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1872
+msgid "The content import AJAX call failed with this passed data"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1897
+msgid ""
+"The content importer AJAX call for retrieving total content import items "
+"failed to start, because of incorrect data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:1902
+msgid "Invalid data!"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2001
+msgid "Demo content data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2002 inc/merlin/class-merlin.php:2015
+#: inc/merlin/class-merlin.php:2028 inc/merlin/class-merlin.php:2041
+#: inc/merlin/class-merlin.php:2054 inc/merlin/class-merlin.php:2067
+#: inc/merlin/class-merlin.php:2080
+msgid "Pending"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2013
+msgid "Widgets"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2014
+msgid "Sample widgets data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2026
+msgid "Revolution Slider"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2027
+msgid "Sample Revolution sliders data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2039
+msgid "CSFramework"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2040
+msgid "Sample csframework data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2052
+msgid "Options"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2053
+msgid "Sample theme options data."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2065
+msgid "Redux Options"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2066
+msgid "Redux framework options."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2078
+msgid "After import setup"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2079
+msgid "After import setup."
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2108
+msgid "The revolution slider import was executed"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2145
+msgid "The home page was set"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2155
+msgid "The blog page was set"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2186
+msgid "The Hello world post status was set to draft"
+msgstr ""
+
+#: inc/merlin/class-merlin.php:2210
+msgid ""
+"This predefined demo import does not have the name parameter: "
+"import_file_name"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-csframework-importer.php:74
+msgid "Error: CSFramework import file could not be found."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-csframework-importer.php:85
+msgid "Error: CSFramework import file does not have any content in it."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:30
+msgid "The customizer import has finished successfully"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:57
+msgid "Error: The customizer import file is missing! File path: %s"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:70
+msgid ""
+"Error: The customizer import file does not have any content in it. Please "
+"make sure to use the correct customizer import file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:80
+msgid ""
+"Error: The customizer import file is not in a correct format. Please make "
+"sure to use the correct customizer import file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-customizer-importer.php:86
+msgid ""
+"Error: The customizer import file is not suitable for current theme. You "
+"can only import customizer settings for the same theme or a child theme."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:49
+msgid "The file was not able to save to disk, while trying to download it"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:66
+msgid "Missing URL for downloading a file!"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-downloader.php:84
+msgid ""
+"An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: %5$s - "
+"%6$s."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-redux-importer.php:32
+msgid "The Redux Framework data was imported"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:72
+msgid "Error: Widget import file could not be found."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:83
+msgid "Error: Widget import file does not have any content in it."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:105
+msgid "Error: Widget import data could not be read. Please try a different file."
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:144
+msgid "Sidebar does not exist in theme (moving widget to Inactive)"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:165
+msgid "Site does not support widget"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:198
+msgid "Widget already exists"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:256
+msgid "Imported"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:260
+msgid "Imported to Inactive"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:266
+msgid "No Title"
+msgstr ""
+
+#: inc/merlin/includes/class-merlin-widget-importer.php:328
+msgid "No results for widget import!"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/Importer.php:55
+msgid ""
+"The XMLReader class is missing! Please install the XMLReader PHP extension "
+"on your server"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/Importer.php:68
+msgid "Could not open the XML file for parsing!"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/Importer.php:248
+msgid "Content import start error: "
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/Importer.php:280
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:173
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:291
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:364
+msgid ""
+"This WXR file (version %s) is newer than the importer (version %s) and may "
+"not be supported. Please consider updating."
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/Importer.php:504
+msgid "New AJAX call!"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:135
+msgid "Could not open the file for parsing"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:514
+#: inc/plugins/wordpress-importer/wordpress-importer.php:135
+msgid "The file does not exist, please try again."
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:577
+msgid "Invalid author mapping"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:678
+msgid "Cannot import auto-draft posts"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:770
+msgid "Failed to import \"%s\": Invalid post type %s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:780
+msgid "%s \"%s\" already exists."
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:858
+msgid "Skipping attachment \"%s\", fetching attachments disabled, "
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:872
+msgid "Failed to import \"%s\" (%s)"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:904
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1822
+msgid "Imported \"%s\" (%s)"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:909
+msgid "Post %d remapped to %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:949
+msgid "Failed to import term: %s - %s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1094
+#: inc/plugins/wordpress-importer/wordpress-importer.php:866
+msgid "Invalid file type"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1593
+msgid "Failed to import user \"%s\""
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1614
+msgid "Imported user \"%s\""
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1618
+msgid "User %d remapped to %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1783
+#: inc/plugins/wordpress-importer/wordpress-importer.php:511
+#: inc/plugins/wordpress-importer/wordpress-importer.php:652
+msgid "Failed to import %s %s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1827
+msgid "Term %d remapped to %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1886
+msgid "Failed to add metakey: %s, metavalue: %s to term_id: %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1895
+msgid "Meta for term_id %d : %s => %s ; successfully added!"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1947
+msgid "Remote server returned %1$d %2$s for %3$s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1969
+#: inc/plugins/wordpress-importer/wordpress-importer.php:928
+msgid "Zero size file downloaded"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:1975
+#: inc/plugins/wordpress-importer/wordpress-importer.php:934
+msgid "Remote file is too large, limit is %s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2000
+msgid "Running post-processing for post %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2013
+msgid "Could not find the post parent for \"%s\" (post #%d)"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2018
+msgid "Post %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2032
+msgid "Could not find the author for \"%s\" (post #%d)"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2037
+msgid "Post %d was imported with author \"%s\", but could not be found"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2063
+msgid "Post %d was marked for post-processing, but none was required."
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2074
+msgid "Could not update \"%s\" (post #%d) with mapped data"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2119
+msgid "Could not find the menu object for \"%s\" (post #%d)"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2124
+msgid ""
+"Post %d was imported with object \"%d\" of type \"%s\", but could not be "
+"found"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2146
+msgid "Could not find the comment parent for comment #%d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2150
+msgid "Comment %d was imported with parent %d, but could not be found"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2164
+msgid "Could not find the author for comment #%d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2168
+msgid "Comment %d was imported with author %d, but could not be found"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2185
+msgid "Could not update comment #%d with mapped data"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2216
+msgid "Faulty term_id provided in terms-to-be-remapped array %s"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2226
+msgid "No taxonomy provided in terms-to-be-remapped array for term #%d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2236
+msgid "No parent_slug identified in remapping-array for term: %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2244
+msgid "The term(%d)\"s parent_slug (%s) is not found in the remapping-array."
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2258
+msgid "No data returned by get_term_by for term_id #%d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2277
+msgid "Could not update \"%s\" (term #%d) with mapped data"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2287
+msgid "Term %d was successfully updated with parent %d"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2322
+msgid "Starting remapping of featured images"
+msgstr ""
+
+#: inc/merlin/vendor/proteusthemes/wp-content-importer-v2/src/WXRImporter.php:2331
+msgid "Remapping featured image ID %d to new ID %d for post ID %d"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:337
+#. translators: %s: plugin name.
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:339
+#. translators: %s: plugin name.
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:377
+#. translators: 1: plugin name(s).
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:382
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:387
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:393
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:920
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2626
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3673
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:394
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:395
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3045
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+#. translators: 1: plugin name.
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:399
+#. translators: 1: plugin name.
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:401
+#. translators: 1: dashboard link.
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:725
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1027
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1030
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1030
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2075
+#. translators: %s: version number
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2485
+#. translators: 1: number of plugins.
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2489
+#. translators: 1: number of plugins.
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2493
+#. translators: 1: number of plugins.
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2626
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2696
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2701
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2707
+#. translators: %2$s: plugin name in screen reader markup
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2777
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3001
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3027
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3591
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3594
+#. translators: 1: plugin name, 2: error message.
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3596
+#. translators: 1: plugin name.
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take "
+"a while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+#. translators: 1: plugin name.
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3610
+msgid "Show Details"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3610
+msgid "Hide Details"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3605
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3610
+#. translators: 1: plugin name.
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3613
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/plugins/woocommerce/woocommerce-config.php:205
+msgid "Out of stock"
+msgstr ""
+
+#: inc/plugins/woocommerce/woocommerce-config.php:233
+msgid "Order Again"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/parsers.php:42
+#: inc/plugins/wordpress-importer/parsers.php:72
+#: inc/plugins/wordpress-importer/parsers.php:80
+msgid "There was an error when reading this WXR file"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/parsers.php:43
+msgid ""
+"Details are shown above. The importer will now try again with a different "
+"parser..."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/parsers.php:84
+#: inc/plugins/wordpress-importer/parsers.php:89
+#: inc/plugins/wordpress-importer/parsers.php:279
+#: inc/plugins/wordpress-importer/parsers.php:468
+msgid "This does not appear to be a WXR file, missing/invalid WXR version number"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:134
+#: inc/plugins/wordpress-importer/wordpress-importer.php:143
+#: inc/plugins/wordpress-importer/wordpress-importer.php:194
+#: inc/plugins/wordpress-importer/wordpress-importer.php:198
+#: inc/plugins/wordpress-importer/wordpress-importer.php:207
+msgid "Sorry, there has been an error."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:178
+msgid "All done."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:178
+msgid "Have fun!"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:179
+msgid "Remember to update the passwords and roles of imported users."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:199
+msgid ""
+"The export file could not be found at <code>%s</code>. It is likely that "
+"this was caused by a permissions problem."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:215
+msgid ""
+"This WXR file (version %s) may not be supported by this version of the "
+"importer. Please consider updating."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:240
+msgid ""
+"Failed to import author %s. Their posts will be attributed to the current "
+"user."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:266
+msgid "Assign Authors"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:267
+msgid ""
+"To make it easier for you to edit and save the imported content, you may "
+"want to reassign the author of the imported item to an existing user of "
+"this site. For example, you may want to import all the entries as "
+"<code>admin</code>s entries."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:269
+msgid ""
+"If a new user is created by WordPress, a new password will be randomly "
+"generated and the new user&#8217;s role will be set as %s. Manually "
+"changing the new user&#8217;s details will be necessary."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:279
+msgid "Import Attachments"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:282
+msgid "Download and import file attachments"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:286
+msgid "Submit"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:299
+msgid "Import author:"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:310
+msgid "or create new user with login name:"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:313
+msgid "as a new user:"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:321
+msgid "assign posts to an existing user:"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:323
+msgid "or assign posts to an existing user:"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:324
+msgid "- Select -"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:374
+msgid ""
+"Failed to create new user for %s. Their posts will be attributed to the "
+"current user."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:425
+msgid "Failed to import category %s"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:465
+msgid "Failed to import post tag %s"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:537
+msgid "Failed to import &#8220;%s&#8221;: Invalid post type %s"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:559
+msgid "%s &#8220;%s&#8221; already exists."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:618
+msgid "Failed to import %s &#8220;%s&#8221;"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:783
+msgid "Menu item skipped due to missing menu slug"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:790
+msgid "Menu item skipped due to invalid menu slug: %s"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:853
+msgid "Fetching attachments is not enabled"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:910
+msgid "Remote server did not respond"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:916
+msgid "Remote server returned error response %1$d %2$s"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:923
+msgid "Remote file is incorrect size"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:1033
+msgid "Import WordPress"
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:1040
+msgid ""
+"A new version of this importer is available. Please update to version %s to "
+"ensure compatibility with newer export files."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:1055
+msgid ""
+"Howdy! Upload your WordPress eXtended RSS (WXR) file and we&#8217;ll import "
+"the posts, pages, comments, custom fields, categories, and tags into this "
+"site."
+msgstr ""
+
+#: inc/plugins/wordpress-importer/wordpress-importer.php:1056
+msgid "Choose a WXR (.xml) file to upload, then click Upload file and import."
+msgstr ""
+
+#: post-formats/content-none.php:12
+msgid ""
+"It seems we can not find what you are looking for. Perhaps searching can "
+"help."
+msgstr ""
+
+#: search.php:19
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:13
+msgid "Type to search"
+msgstr ""
+
+#: templates/page-maintenance.php:29
+msgid "MAINTENANCE MODE!"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:27
+#. translators: %s: Quantity.
+msgid "%s quantity"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:33
+msgid "Quantity"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full-width, no sidebar"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Blank - No Header, No Footer"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full 100% width, without container"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Left Sidebar"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "One-Page Template"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1214
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3041
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2435
+#. translators: 1: install status, 2: update status
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2481
+#. translators: 1: number of plugins.
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2575
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: inc/plugins/woocommerce/woocommerce-config.php:251
+msgctxt "placeholder"
+msgid "Search Products&hellip;"
+msgstr ""
+
+#: woocommerce/global/quantity-input.php:44
+msgctxt "Product quantity input tooltip"
+msgid "Qty"
+msgstr ""

@@ -27,6 +27,7 @@ function cs_wp_enqueue_scripts() {
 	wp_enqueue_script( 'index-all', THEME_URI . '/js/index.all.min.js', array( 'jquery' ), null, false );
 	wp_enqueue_script( 'popper', THEME_URI . '/js/popper.min.js', array( 'jquery' ), null, false );
 	wp_enqueue_script( 'modernizr', THEME_URI . '/js/modernizr.min.js', array(), null, false );
+        wp_enqueue_script( 'cs-fitvids', THEME_URI . '/js/vendor/jquery-fitvids.js', array( 'jquery' ), '2.0.0', true );
 	wp_enqueue_script( 'cs-jquery-plugins', THEME_URI . '/js/jquery.plugins.min.js', array( 'jquery' ), null, true );
 	wp_enqueue_script( 'cs-jquery-register', THEME_URI . '/js/jquery.register.js', array( 'jquery' ), time(), true );
 
@@ -68,13 +69,31 @@ function cs_wp_enqueue_styles() {
 	wp_enqueue_style( 'cs-royalslider' );
 
 	wp_enqueue_style( 'cs-font-awesome', THEME_URI . '/css/vendor/font-awesome.css', array(), null );
-	wp_enqueue_style( 'cs-fancybox', THEME_URI . '/css/vendor/fancybox.css', array(), null );
-	wp_enqueue_style( 'cs-animations', THEME_URI . '/css/vendor/animations.css', array(), null );
-	wp_enqueue_style( 'cs-shortcodes', THEME_URI . '/css/vendor/shortcodes.css', array(), null );
+	
 	wp_enqueue_style( 'cs-slick', THEME_URI . '/css/vendor/slick.css', array(), null );
-	wp_enqueue_style( 'cs-grid', THEME_URI . '/css/vendor/' . $cs_grid . '.css', array(), null );
-	wp_enqueue_style( 'cs-style', THEME_URI . '/css/style.css', array(), time() );
-	wp_enqueue_style( 'cs-gutenberg', THEME_URI . '/css/vendor/gutenberg.css', array(), time() );
+	
+        // Theme CSS
+	wp_enqueue_style( 'cs-theme', THEME_URI . '/css/theme.min.css', array(), time() );
+
+	// BuddySress
+	if ( class_exists( 'buddypress' ) && (!is_plugin_active( 'youzer/youzer.php' )) ) {
+		wp_enqueue_style( 'cs-buddypress', THEME_URI . '/css/cs-buddypress.min.css', array(), time() );
+	}
+        
+        // youzer
+        if( is_plugin_active( 'youzer/youzer.php' ) ) {
+            wp_enqueue_style( 'cs-youzer', THEME_URI . '/css/cs-youzer.min.css', array(), time() );
+        }
+        
+        // BB Platform
+	if ( is_plugin_active( 'buddyboss-platform/bp-loader.php' ) ) {
+		wp_enqueue_style( 'cs-bb-platform', THEME_URI . '/css/bb-platform.min.css', array(), time() );
+	}
+        
+        // Forums
+	if ( class_exists( 'bbPress' ) ) {
+		wp_enqueue_style( 'cs-bbpress', THEME_URI . '/css/bbpress.min.css', array(), null );
+	}
 
 	// Dark Mode
 	if ( cs_get_option( 'dark_mode' ) ) {

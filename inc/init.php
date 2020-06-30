@@ -64,3 +64,7 @@ require_once get_parent_theme_file_path( '/inc/options/class-cs-widget-options.p
 require_once get_parent_theme_file_path( '/inc/merlin/vendor/autoload.php' );
 require_once get_parent_theme_file_path( '/inc/merlin/class-merlin.php' );
 require_once get_parent_theme_file_path( '/inc/config/merlin-config.php' );
+
+if ( class_exists( 'BuddyPress' ) ) {
+	require get_template_directory() . '/inc/widgets/bp-profile-completion-widget.php';
+}

@@ -23,11 +23,12 @@ module.exports = function ( grunt ) {
                     style: 'expanded'
                 },
                 files: {
-//                    'css/theme.min.css': 'css/sass/theme.scss',
-//                    'css/bbpress.min.css': 'css/sass/bbpress.scss',
-//                    'css/woocommerce.min.css': 'css/sass/woocommerce.scss',
-//                    'css/bbdirectories.min.css': 'css/sass/buddypress.scss',
-//                    'css/bb-platform.min.css': 'css/sass/bb-platform.scss'
+                    'css/theme.min.css': 'css/sass/theme.scss',
+                    'css/bbpress.min.css': 'css/sass/bbpress.scss',
+                    'css/woocommerce.min.css': 'css/sass/woocommerce.scss',
+                    'css/cs-buddypress.min.css': 'css/sass/buddypress.scss',
+                    'css/bb-platform.min.css': 'css/sass/bb-platform.scss',
+                    'css/cs-youzer.min.css': 'css/sass/youzer.scss',
                 }
             }
         },
