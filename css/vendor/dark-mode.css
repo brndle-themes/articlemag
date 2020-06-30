@@ -272,3 +272,46 @@
 .dark-mode .select2-container--default .select2-search--dropdown .select2-search__field {
     border-color: #495061;
 }
+
+/*===================================
+            Buddypress
+===================================*/
+
+/*====================
+    Activity page
+=====================*/ 
+
+.dark-mode .activity-update-form,
+.dark-mode .activity-list.bp-list .activity-item,
+.dark-mode .item-header-cover-image-wrapper,
+.dark-mode #buddypress.buddypress-wrap #item-body:not(#group-create-body){
+     background: #1c2939;
+     border-color: #495061;
+}
+.dark-mode .activity-update-form #whats-new-avatar,
+.dark-mode .medium-editor-element,
+.dark-mode .activity-card-head,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action,
+.dark-mode .buddypress-wrap form.bp-dir-search-form{
+    border-color: #495061;
+}
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button{
+    background: #495061 !important;
+    border-color: #495061 !important;
+    color: #dadde4 !important;
+}
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover{
+    color: #ffffff !important;
+    border-color: #495061 !important;
+}
+.dark-mode #buddypress #dir-activity-search{
+    background: #1c2939;
+}
+
+/*====================
+    Member page
+=====================*/ 
+
+.dark-mode #buddypress div#item-header-cover-image h2{
+    color: #fff;
+}
