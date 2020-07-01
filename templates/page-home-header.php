@@ -7,7 +7,7 @@ $homepage_action_link = cs_get_option( 'homepage_action_button_link' );
 $is_dynamic_cover     = cs_get_option( 'set_homepage_cover' );
 $post_count           = ! empty( cs_get_option( 'post_count' ) ) ? cs_get_option( 'post_count' ) : 5;
 $post_category        = cs_get_option( 'set_post_categories' );
-$post_category        = isset( $post_category ) ? $post_category : array();
+$post_category    	  = ! empty( $post_category ) ? $post_category : array();
 
 $post_category_list = implode( ', ', $post_category );
 
