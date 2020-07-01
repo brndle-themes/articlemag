@@ -277,41 +277,113 @@
             Buddypress
 ===================================*/
 
-/*====================
-    Activity page
-=====================*/ 
-
 .dark-mode .activity-update-form,
 .dark-mode .activity-list.bp-list .activity-item,
 .dark-mode .item-header-cover-image-wrapper,
-.dark-mode #buddypress.buddypress-wrap #item-body:not(#group-create-body){
-     background: #1c2939;
-     border-color: #495061;
+.dark-mode #buddypress.buddypress-wrap #item-body:not(#group-create-body),
+.dark-mode .bp-list > li .list-wrap,
+.dark-mode .groups-header .desc-wrap,
+.dark-mode .buddypress-wrap .bp-feedback,
+.dark-mode .activity-update-form #whats-new-textarea textarea,
+.dark-mode #item-body #group-invites-container .bp-invites-content .item-list > li,
+.dark-mode #buddypress p.warning,
+.dark-mode .buddypress-wrap .profile.edit .editfield,
+.dark-mode div.mce-panel,
+.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button,
+.dark-mode body.buddypress #buddypress.buddypress-wrap .standard-form .wp-editor-container button,
+.dark-mode body.buddypress #buddypress.buddypress-wrap .standard-form .wp-editor-container input[type=button],
+.dark-mode .bp-nouveau .bupr-row,
+.dark-mode .multi-review,
+.dark-mode .bp-member-add-form textarea{
+    background: #1c2939;
+    border-color: #495061;
+}
+.dark-mode .bp-nouveau .bupr-row,
+.dark-mode .multi-review{
+    border: 1px solid #495061;
+}
+.dark-mode #buddypress p.warning,
+.dark-mode body.bp-nouveau.media #buddypress #item-header-cover-image .user-nicename,
+.dark-mode #buddypress div#item-header-cover-image h2 a,
+.dark-mode #buddypress div#item-header-cover-image h2{
+    color: #fff;
+}
+.dark-mode .mce-toolbar .mce-ico{
+    color: #999;
 }
 .dark-mode .activity-update-form #whats-new-avatar,
 .dark-mode .medium-editor-element,
 .dark-mode .activity-card-head,
-.dark-mode .activity-list .activity-item .bp-generic-meta.action,
-.dark-mode .buddypress-wrap form.bp-dir-search-form{
+.dark-mode .activity-list .activity-item .action,
+.dark-mode .buddypress-wrap form.bp-dir-search-form,
+.dark-mode .buddypress-wrap .select-wrap,
+.dark-mode #buddypress #whats-new-options,
+.dark-mode .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links),
+.dark-mode .buddypress-wrap form[data-bp-search].bp-invites-search-form,
+.dark-mode .buddypress-wrap ul.subnav,
+.dark-mode #drag-drop-area,
+.dark-mode .buddypress-wrap .standard-form .wp-editor-container,
+.dark-mode .bp-avatar-nav ul.avatar-nav-items li.current,
+.dark-mode .bp-avatar-nav ul,
+.dark-mode .drag-drop #drag-drop-area{
     border-color: #495061;
 }
-.dark-mode .activity-list .activity-item .bp-generic-meta.action .button{
+.dark-mode .activity-list .activity-item .activity-meta.action .button{
     background: #495061 !important;
     border-color: #495061 !important;
     color: #dadde4 !important;
 }
-.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover{
+.dark-mode .activity-list .activity-item .activity-meta.action .button:hover{
     color: #ffffff !important;
     border-color: #495061 !important;
 }
-.dark-mode #buddypress #dir-activity-search{
-    background: #1c2939;
+.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button{
+    color: #dadde4;
 }
-
-/*====================
-    Member page
-=====================*/ 
-
-.dark-mode #buddypress div#item-header-cover-image h2{
+.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button:hover{
     color: #fff;
 }
+
+.dark-mode #buddypress #dir-activity-search,
+.dark-mode #buddypress #dir-groups-search,
+.dark-mode body #buddypress select,
+.dark-mode .buddypress-wrap form.bp-dir-search-form,
+.dark-mode .buddypress-wrap .select-wrap,
+.dark-mode body #buddypress input[type=search],
+.dark-mode .buddypress-wrap form.bp-invites-search-form,
+.dark-mode .buddypress-wrap .standard-form .description,
+.dark-mode .rtmedia-uploader .drag-drop{
+    background-color: #1c2939;
+}
+
+
+.dark-mode #buddypress div#item-header-cover-image h2,
+.dark-mode .buddypress-wrap .grid-filters a.active{
+    color: #fff;
+}
+
+.dark-mode .buddypress-wrap .standard-form .groups-members-search input[type=search],
+.dark-mode .buddypress-wrap .standard-form .groups-members-search input[type=text],
+.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=search],
+.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=text],
+.dark-mode .buddypress-wrap .standard-form input[type=color],
+.dark-mode .buddypress-wrap .standard-form input[type=date],
+.dark-mode .buddypress-wrap .standard-form input[type=datetime-local],
+.dark-mode .buddypress-wrap .standard-form input[type=datetime],
+.dark-mode .buddypress-wrap .standard-form input[type=email],
+.dark-mode .buddypress-wrap .standard-form input[type=month],
+.dark-mode .buddypress-wrap .standard-form input[type=number],
+.dark-mode .buddypress-wrap .standard-form input[type=password],
+.dark-mode .buddypress-wrap .standard-form input[type=range],
+.dark-mode .buddypress-wrap .standard-form input[type=search],
+.dark-mode .buddypress-wrap .standard-form input[type=tel],
+.dark-mode .buddypress-wrap .standard-form input[type=text],
+.dark-mode .buddypress-wrap .standard-form input[type=time],
+.dark-mode .buddypress-wrap .standard-form input[type=url],
+.dark-mode .buddypress-wrap .standard-form input[type=week], 
+.dark-mode .buddypress-wrap .standard-form select,
+.buddypress-wrap .standard-form textarea{
+    background: #1c2939;
+    border-color: #495061; 
+}
+
