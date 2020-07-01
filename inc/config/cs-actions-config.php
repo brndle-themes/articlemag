@@ -56,6 +56,11 @@ if ( ! function_exists( 'cs_after_setup_theme' ) ) {
 
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
+
+		if ( function_exists( 'add_image_size' ) ) {
+			add_image_size( 'articlemag-featured-large', 1200, 675 );
+			add_image_size( 'articlemag-thumb', 600, 300 );
+		}
 	}
 
 	add_action( 'after_setup_theme', 'cs_after_setup_theme' );
@@ -342,31 +347,31 @@ if ( ! function_exists( 'brndle_profile_fields' ) ) {
 				<tr>
 					<th><label for="dropdown">Facebook</label></th>
 					<td>
-						<input type="text" class="regular-text" name="facebook" value="<?php echo !empty( $social_url['facebook'] ) ? esc_attr( $social_url['facebook'] ) : ''; ?>" id="facebook" />
+						<input type="text" class="regular-text" name="facebook" value="<?php echo ! empty( $social_url['facebook'] ) ? esc_attr( $social_url['facebook'] ) : ''; ?>" id="facebook" />
 					</td>
 				</tr>
 				<tr>
 					 <th><label for="dropdown">Twitter</label></th>
 					<td>
-						<input type="text" class="regular-text" name="twitter" value="<?php echo !empty( $social_url['twitter'] ) ? esc_attr( $social_url['twitter'] ) : ''; ?>" id="twitter" />
+						<input type="text" class="regular-text" name="twitter" value="<?php echo ! empty( $social_url['twitter'] ) ? esc_attr( $social_url['twitter'] ) : ''; ?>" id="twitter" />
 					</td>
 				</tr>
 				<tr>
 					<th><label for="dropdown">Linkedin</label></th>
 					<td>
-						<input type="text" class="regular-text" name="linkedin" value="<?php echo !empty( $social_url['linkedin'] ) ? esc_attr( $social_url['linkedin'] ) : ''; ?>" id="linkedin" />
+						<input type="text" class="regular-text" name="linkedin" value="<?php echo ! empty( $social_url['linkedin'] ) ? esc_attr( $social_url['linkedin'] ) : ''; ?>" id="linkedin" />
 					</td>
 				</tr>
 				<tr>
 					<th><label for="dropdown">Instagram</label></th>
 					<td>
-						<input type="text" class="regular-text" name="instagram" value="<?php echo !empty( $social_url['instagram'] ) ? esc_attr( $social_url['instagram'] ) : ''; ?>" id="instagram" />
+						<input type="text" class="regular-text" name="instagram" value="<?php echo ! empty( $social_url['instagram'] ) ? esc_attr( $social_url['instagram'] ) : ''; ?>" id="instagram" />
 					</td>
 				</tr>
 				<tr>
 					<th><label for="dropdown">Youtube</label></th>
 					<td>
-						<input type="text" class="regular-text" name="youtube" value="<?php echo !empty( $social_url['youtube'] ) ? esc_attr( $social_url['youtube'] ) : ''; ?>" id="youtube" />
+						<input type="text" class="regular-text" name="youtube" value="<?php echo ! empty( $social_url['youtube'] ) ? esc_attr( $social_url['youtube'] ) : ''; ?>" id="youtube" />
 					</td>
 				</tr>
 		</table>
@@ -518,17 +523,18 @@ if ( ! function_exists( 'cs_post_format_content_after' ) ) {
 							break;
 					}
 
-					$args[ 'post__not_in' ] = array( $post->ID );
+					$args['post__not_in'] = array( $post->ID );
 
 					$q = new WP_Query( $args );
 
 					if ( $q->have_posts() && $operation === true ) {
 
-						$related_class = (!empty( $single_thumb ) ) ? ' related-posts-thumbnail' : '';
+						$related_class = ( ! empty( $single_thumb ) ) ? ' related-posts-thumbnail' : '';
 
 						echo '<div class="related-posts' . $related_class . '"><h2 class="related-title">' . cs_multilang_value( $title ) . '</h2><div class="article-post-gird ">';
 
-						while ( $q->have_posts() ) : $q->the_post();
+						while ( $q->have_posts() ) :
+							$q->the_post();
 							setup_postdata( $post );
 
 							$featured_post = get_post_meta( get_the_ID(), 'meta-checkbox', true );
@@ -536,18 +542,18 @@ if ( ! function_exists( 'cs_post_format_content_after' ) ) {
 								$cs_featured = ' cs-featured';
 							}
 
-							if ( !empty( $single_thumb ) ) {
+							if ( ! empty( $single_thumb ) ) {
 
-								$image	 = wp_get_attachment_image_src( get_post_thumbnail_id(), $single_thumb_size );
-								$image	 = (!empty( $image ) ) ? '<img src="' . $image[ 0 ] . '" alt="' . get_the_title() . '" />' : '<img src="' . THEME_URI . '/images/no-pictures/no-standard-picture.png" alt="No Picture" />';
+								$image = wp_get_attachment_image_src( get_post_thumbnail_id(), $single_thumb_size );
+								$image = ( ! empty( $image ) ) ? '<img src="' . $image[0] . '" alt="' . get_the_title() . '" />' : '<img src="' . THEME_URI . '/images/no-pictures/no-standard-picture.png" alt="No Picture" />';
 
 								echo '<article class="article-post' . $cs_featured . '">
 										<div class="article-card-img">
 											<a href="' . esc_url( get_permalink() ) . '">' . $image . '</a>
 											<a href="' . esc_url( get_permalink() ) . '" class="article-card-link"></a>
 										</div>
-										<div class="article-avatar"><a href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ), get_the_author_meta( "user_nicename" ) ) ) . '" class="tippy-js" data-tippy-content="
-											' . esc_html( "Posted by", "articlemag" ) . ' ' . get_the_author() . '">' . get_avatar( get_the_author_meta( "ID" ) ) . '</a></div>
+										<div class="article-avatar"><a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ) . '" class="tippy-js" data-tippy-content="
+											' . esc_html( 'Posted by', 'articlemag' ) . ' ' . get_the_author() . '">' . get_avatar( get_the_author_meta( 'ID' ) ) . '</a></div>
 										<a href="' . esc_url( get_permalink() ) . '" class="article-card-featured tippy-js" data-tippy-content="Featured"><i class="fas fa-star"></i></a><div class="article-card-info">';
 										echo '<div class="article-cat">' . the_category( ' ' ) . '</div>';
 										echo '<a href="' . esc_url( get_permalink() ) . '">' . '<header class="entry-header"><h2 class="entry-title">' . get_the_title() . '</h2><div class="entry-meta">' . esc_html( get_the_date() ) . '</div></header></a>
@@ -570,7 +576,8 @@ if ( ! function_exists( 'cs_post_format_content_after' ) ) {
 					wp_reset_query();
 
 				endif;
-				?><!-- entry-recents -->
+				?>
+				<!-- entry-recents -->
 
 			</footer><!-- /entry-footer -->
 			<?php
@@ -599,11 +606,11 @@ if ( ! function_exists( 'cs_post_author_box' ) ) {
 
 
 			<div class="author-content">
-      			<div class="author-content-inner">
-		      		<div class="author_hero"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 100, '', esc_html( get_the_author_meta( 'display_name' ) ) ); ?></div>
-		      		<h1 class="author-title" itemprop="name"><?php the_author(); ?></h1>
-		      		<p class="author-description" itemprop="description"><?php the_author_meta( 'description' ); ?></p>
-		      		<div class="author-meta">
+				  <div class="author-content-inner">
+					  <div class="author_hero"><?php echo get_avatar( get_the_author_meta( 'user_email' ), 100, '', esc_html( get_the_author_meta( 'display_name' ) ) ); ?></div>
+					  <h1 class="author-title" itemprop="name"><?php the_author(); ?></h1>
+					  <p class="author-description" itemprop="description"><?php the_author_meta( 'description' ); ?></p>
+					  <div class="author-meta">
 						<ul class="author-social">
 							<?php if ( is_array( $social_urls ) && ! empty( $social_urls ) ) : ?>
 								<?php if ( ! empty( $social_urls['facebook'] ) ) : ?>
@@ -623,11 +630,11 @@ if ( ! function_exists( 'cs_post_author_box' ) ) {
 							<?php endif; ?>
 							<?php endif; ?>
 						</ul>
-						<span class="post-count"><?php echo ''. count_user_posts( get_the_author_meta('ID') ). ' Post' ; ?></span>
+						<span class="post-count"><?php echo '' . count_user_posts( get_the_author_meta( 'ID' ) ) . ' Post'; ?></span>
 					</div>
-      		
-	      		</div>
-      		</div>
+			
+				  </div>
+			  </div>
 
 			<?php
 		}
@@ -956,52 +963,56 @@ function display_articlemag_featured_posts() {
 	global $wp_query, $paged, $post;
 
 	echo '<div class="featured_blog_posts_widget article-featured-slider">';
-	$tmp_query	 = $wp_query;
+	$tmp_query = $wp_query;
 	ob_start();
 	?>
 	<div class="article-slider">
-            
-      <?php
-      	$is_featured_exists = false;
-        $args = array(
+			
+	  <?php
+		$is_featured_exists = false;
+		$args               = array(
 			'posts_per_page' => $atts['limit'],
-			'post_type'		 => 'post',
+			'post_type'      => 'post',
 			'meta_key'       => 'meta-checkbox',
-            'meta_value'     => 1
+			'meta_value'     => 1,
 		);
-        $all_posts =  new WP_Query( $args );
-        
-        if ( ! $all_posts->have_posts() ) {
-        	$args = array(
-				'posts_per_page' => $atts['limit'],
-				'post_type'		 => 'post',
-			);
-            $all_posts =  new WP_Query( $args );
-            $is_featured_exists = false;
-        } else {
-        	$is_featured_exists = true;
-        }
+		$all_posts          = new WP_Query( $args );
 
-        if ( $all_posts->have_posts() ): while( $all_posts->have_posts() ): $all_posts->the_post(); ?>
-        <div> 
-          <article class="article-featured-slider-sec">
-          	<?php 
-				if( has_post_thumbnail() ){ ?>
-					<div class="article-featured-img">
-	              <div class="featured-article" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')"></div>
-	            </div> 
-			<?php
-				}else{
+		if ( ! $all_posts->have_posts() ) {
+			$args               = array(
+				'posts_per_page' => $atts['limit'],
+				'post_type'      => 'post',
+			);
+			$all_posts          = new WP_Query( $args );
+			$is_featured_exists = false;
+		} else {
+			$is_featured_exists = true;
+		}
+
+		if ( $all_posts->have_posts() ) :
+			while ( $all_posts->have_posts() ) :
+				$all_posts->the_post();
+				?>
+		<div> 
+		  <article class="article-featured-slider-sec">
+				<?php
+				if ( has_post_thumbnail() ) {
 					?>
 					<div class="article-featured-img">
-              <div class="featured-article" style="background: url('<?php echo THEME_URI . '/images/no-pictures/no-standard-picture.png' ?>)"></div>
-            </div> 
-			<?php }	?>
-            
-            <div class="article-featured-info">
+				  <div class="featured-article" style="background: url('<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full' ); ?>')"></div>
+				</div> 
+					<?php
+				} else {
+					?>
+					<div class="article-featured-img">
+			  <div class="featured-article" style="background: url('<?php echo THEME_URI . '/images/no-pictures/no-standard-picture.png'; ?>)"></div>
+			</div> 
+			<?php } ?>
+			
+			<div class="article-featured-info">
 				<div class="article-avatar"> 
 					<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="tippy-js" data-tippy-content="<?php echo esc_html( 'Posted by', 'articlemag' ) . ' ' . get_the_author(); ?>">
-					    <?php echo get_avatar( get_the_author_meta( 'ID' )); ?>  
+						<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>  
 					</a>
 				</div>
 				<div class="article-cat"><?php the_category( ' ' ); ?></div>
@@ -1015,22 +1026,22 @@ function display_articlemag_featured_posts() {
 					<?php } ?>
 					</span>
 				</a>
-            </div>
-            <a href="<?php echo get_the_permalink(); ?>" class="article-featured-content">
-                <h2><?php the_title(); ?></h2>
-                <div class="entry-meta">
-                    <?php the_modified_date(); ?>
-                </div>
-            </a>
-          </article> 
-        </div>
-      <?php 
-        endwhile; else:
-        endif;
-      ?>
-       
-    </div>
-    <?php
+			</div>
+			<a href="<?php echo get_the_permalink(); ?>" class="article-featured-content">
+				<h2><?php the_title(); ?></h2>
+				<div class="entry-meta">
+					<?php the_modified_date(); ?>
+				</div>
+			</a>
+		  </article> 
+		</div>
+							<?php
+		endwhile; else :
+		endif;
+		?>
+		
+	</div>
+	<?php
 	wp_reset_query();
 	wp_reset_postdata();
 	$wp_query = $tmp_query;
@@ -1041,7 +1052,7 @@ function display_articlemag_featured_posts() {
 
 
 
-/* * **************************************************** */
+
 
 /**
  * Category thumbnail fields.
@@ -1050,7 +1061,7 @@ function add_category_thumbnail_field() {
 	?>
 	<div class="form-field term-thumbnail-wrap">
 		<label><?php esc_html_e( 'Thumbnail', 'articlemag' ); ?></label>
-		<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>" width="60px" height="60px" /></div>
+		<div id="category_thumbnail" style="float: left; margin-right: 10px;"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/no-pictures/no-image-picture.png' ); ?>" width="60px" height="60px" /></div>
 		<div style="line-height: 60px;">
 			<input type="hidden" id="category_thumbnail_id" name="category_thumbnail_id" />
 			<button type="button" class="upload_image_button button"><?php esc_html_e( 'Upload/Add image', 'articlemag' ); ?></button>
@@ -1058,78 +1069,78 @@ function add_category_thumbnail_field() {
 		</div>
 		<script type="text/javascript">
 
-	        // Only show the "remove image" button when needed
-	        if ( !jQuery( '#category_thumbnail_id' ).val() ) {
-	            jQuery( '.remove_image_button' ).hide();
-	        }
+			// Only show the "remove image" button when needed
+			if ( !jQuery( '#category_thumbnail_id' ).val() ) {
+				jQuery( '.remove_image_button' ).hide();
+			}
 
-	        // Uploading files
-	        var file_frame;
+			// Uploading files
+			var file_frame;
 
-	        jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
+			jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
 
-	            event.preventDefault();
+				event.preventDefault();
 
-	            // If the media frame already exists, reopen it.
-	            if ( file_frame ) {
-	                file_frame.open();
-	                return;
-	            }
+				// If the media frame already exists, reopen it.
+				if ( file_frame ) {
+					file_frame.open();
+					return;
+				}
 
-	            // Create the media frame.
-	            file_frame = wp.media.frames.downloadable_file = wp.media( {
-	                title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
-	                button: {
-	                    text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
-	                },
-	                multiple: false
-	            } );
+				// Create the media frame.
+				file_frame = wp.media.frames.downloadable_file = wp.media( {
+					title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
+					button: {
+						text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
+					},
+					multiple: false
+				} );
 
-	            // When an image is selected, run a callback.
-	            file_frame.on( 'select', function () {
-	                var attachment = file_frame.state().get( 'selection' ).first().toJSON();
-	                var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
+				// When an image is selected, run a callback.
+				file_frame.on( 'select', function () {
+					var attachment = file_frame.state().get( 'selection' ).first().toJSON();
+					var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
 
-	                jQuery( '#category_thumbnail_id' ).val( attachment.id );
-	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
-	                jQuery( '.remove_image_button' ).show();
-	            } );
+					jQuery( '#category_thumbnail_id' ).val( attachment.id );
+					jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
+					jQuery( '.remove_image_button' ).show();
+				} );
 
-	            // Finally, open the modal.
-	            file_frame.open();
-	        } );
+				// Finally, open the modal.
+				file_frame.open();
+			} );
 
-	        jQuery( document ).on( 'click', '.remove_image_button', function () {
-	            jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
-	            jQuery( '#category_thumbnail_id' ).val( '' );
-	            jQuery( '.remove_image_button' ).hide();
-	            return false;
-	        } );
+			jQuery( document ).on( 'click', '.remove_image_button', function () {
+				jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri() . '/images/no-pictures/no-image-picture.png' ); ?>' );
+				jQuery( '#category_thumbnail_id' ).val( '' );
+				jQuery( '.remove_image_button' ).hide();
+				return false;
+			} );
 
-	        jQuery( document ).ajaxComplete( function ( event, request, options ) {
-	            if ( request && 4 === request.readyState && 200 === request.status
-	                && options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {
+			jQuery( document ).ajaxComplete( function ( event, request, options ) {
+				if ( request && 4 === request.readyState && 200 === request.status
+					&& options.data && 0 <= options.data.indexOf( 'action=add-tag' ) ) {
 
-	                var res = wpAjax.parseAjaxResponse( request.responseXML, 'ajax-response' );
-	                if ( !res || res.errors ) {
-	                    return;
-	                }
-	                // Clear Thumbnail fields on submit
-	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
-	                jQuery( '#category_thumbnail_id' ).val( '' );
-	                jQuery( '.remove_image_button' ).hide();
-	                // Clear Display type field on submit
-	                jQuery( '#display_type' ).val( '' );
-	                return;
-	            }
-	        } );
+					var res = wpAjax.parseAjaxResponse( request.responseXML, 'ajax-response' );
+					if ( !res || res.errors ) {
+						return;
+					}
+					// Clear Thumbnail fields on submit
+					jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri() . '/images/no-pictures/no-image-picture.png' ); ?>' );
+					jQuery( '#category_thumbnail_id' ).val( '' );
+					jQuery( '.remove_image_button' ).hide();
+					// Clear Display type field on submit
+					jQuery( '#display_type' ).val( '' );
+					return;
+				}
+			} );
 
 		</script>
 		<div class="clear"></div>
 	</div>
 	<?php
 }
-//Category Image Field.
+// Category Image Field.
 add_action( 'category_add_form_fields', 'add_category_thumbnail_field' );
 
 /**
@@ -1143,7 +1154,7 @@ function edit_category_thumbnail_fields( $term ) {
 	if ( $thumbnail_id ) {
 		$image = wp_get_attachment_thumb_url( $thumbnail_id );
 	} else {
-		$image = get_template_directory_uri().'/images/no-pictures/no-image-picture.png';
+		$image = get_template_directory_uri() . '/images/no-pictures/no-image-picture.png';
 	}
 	?>
 	<tr class="form-field term-thumbnail-wrap">
@@ -1158,53 +1169,53 @@ function edit_category_thumbnail_fields( $term ) {
 			<p class="description">Upload Image Min. Size 1280X600</p>
 			<script type="text/javascript">
 
-	            // Only show the "remove image" button when needed
-	            if ( '0' === jQuery( '#category_thumbnail_id' ).val() ) {
-	                jQuery( '.remove_image_button' ).hide();
-	            }
+				// Only show the "remove image" button when needed
+				if ( '0' === jQuery( '#category_thumbnail_id' ).val() ) {
+					jQuery( '.remove_image_button' ).hide();
+				}
 
-	            // Uploading files
-	            var file_frame;
+				// Uploading files
+				var file_frame;
 
-	            jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
+				jQuery( document ).on( 'click', '.upload_image_button', function ( event ) {
 
-	                event.preventDefault();
+					event.preventDefault();
 
-	                // If the media frame already exists, reopen it.
-	                if ( file_frame ) {
-	                    file_frame.open();
-	                    return;
-	                }
+					// If the media frame already exists, reopen it.
+					if ( file_frame ) {
+						file_frame.open();
+						return;
+					}
 
-	                // Create the media frame.
-	                file_frame = wp.media.frames.downloadable_file = wp.media( {
-	                    title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
-	                    button: {
-	                        text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
-	                    },
-	                    multiple: false
-	                } );
+					// Create the media frame.
+					file_frame = wp.media.frames.downloadable_file = wp.media( {
+						title: '<?php esc_html_e( 'Choose an image', 'articlemag' ); ?>',
+						button: {
+							text: '<?php esc_html_e( 'Use image', 'articlemag' ); ?>'
+						},
+						multiple: false
+					} );
 
-	                // When an image is selected, run a callback.
-	                file_frame.on( 'select', function () {
-	                    var attachment = file_frame.state().get( 'selection' ).first().toJSON();
-	                    var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
+					// When an image is selected, run a callback.
+					file_frame.on( 'select', function () {
+						var attachment = file_frame.state().get( 'selection' ).first().toJSON();
+						var attachment_thumbnail = attachment.sizes.thumbnail || attachment.sizes.full;
 
-	                    jQuery( '#category_thumbnail_id' ).val( attachment.id );
-	                    jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
-	                    jQuery( '.remove_image_button' ).show();
-	                } );
+						jQuery( '#category_thumbnail_id' ).val( attachment.id );
+						jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', attachment_thumbnail.url );
+						jQuery( '.remove_image_button' ).show();
+					} );
 
-	                // Finally, open the modal.
-	                file_frame.open();
-	            } );
+					// Finally, open the modal.
+					file_frame.open();
+				} );
 
-	            jQuery( document ).on( 'click', '.remove_image_button', function () {
-	                jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri().'/images/no-pictures/no-image-picture.png'); ?>' );
-	                jQuery( '#category_thumbnail_id' ).val( '' );
-	                jQuery( '.remove_image_button' ).hide();
-	                return false;
-	            } );
+				jQuery( document ).on( 'click', '.remove_image_button', function () {
+					jQuery( '#category_thumbnail' ).find( 'img' ).attr( 'src', '<?php echo esc_js( get_template_directory_uri() . '/images/no-pictures/no-image-picture.png' ); ?>' );
+					jQuery( '#category_thumbnail_id' ).val( '' );
+					jQuery( '.remove_image_button' ).hide();
+					return false;
+				} );
 
 			</script>
 			<div class="clear"></div>
@@ -1223,8 +1234,8 @@ add_action( 'category_edit_form_fields', 'edit_category_thumbnail_fields', 10 );
  * @param string $taxonomy Taxonomy slug.
  */
 function save_category_thumbnail_fields( $term_id, $tt_id = '', $taxonomy = '' ) {
-	if ( isset( $_POST[ 'category_thumbnail_id' ] ) && 'category' === $taxonomy ) {
-		update_term_meta( $term_id, 'category_thumbnail_id', absint( $_POST[ 'category_thumbnail_id' ] ) );
+	if ( isset( $_POST['category_thumbnail_id'] ) && 'category' === $taxonomy ) {
+		update_term_meta( $term_id, 'category_thumbnail_id', absint( $_POST['category_thumbnail_id'] ) );
 	}
 }
 
@@ -1240,15 +1251,15 @@ add_action( 'created_term', 'save_category_thumbnail_fields', 10, 3 );
 function category_thumbnail_columns( $columns ) {
 	$new_columns = array();
 
-	if ( isset( $columns[ 'cb' ] ) ) {
-		$new_columns[ 'cb' ] = $columns[ 'cb' ];
-		unset( $columns[ 'cb' ] );
+	if ( isset( $columns['cb'] ) ) {
+		$new_columns['cb'] = $columns['cb'];
+		unset( $columns['cb'] );
 	}
 
-	$new_columns[ 'thumb' ] = __( 'Image', 'articlemag' );
+	$new_columns['thumb'] = __( 'Image', 'articlemag' );
 
-	$columns			 = array_merge( $new_columns, $columns );
-	$columns[ 'handle' ] = '';
+	$columns           = array_merge( $new_columns, $columns );
+	$columns['handle'] = '';
 
 	return $columns;
 }
@@ -1272,11 +1283,11 @@ function category_thumbnail_column( $columns, $column, $id ) {
 		if ( $thumbnail_id ) {
 			$image = wp_get_attachment_thumb_url( $thumbnail_id );
 		} else {
-			$image = get_template_directory_uri().'/images/no-pictures/no-image-picture.png';
+			$image = get_template_directory_uri() . '/images/no-pictures/no-image-picture.png';
 		}
 
 		// Prevent esc_url from breaking spaces in urls for image embeds. Ref: https://core.trac.wordpress.org/ticket/23605 .
-		$image	 = str_replace( ' ', '%20', $image );
+		$image    = str_replace( ' ', '%20', $image );
 		$columns .= '<img src="' . esc_url( $image ) . '" alt="' . esc_attr__( 'Thumbnail', 'articlemag' ) . '" class="wp-post-image" height="48" width="48" />';
 	}
 	if ( 'handle' === $column ) {
@@ -1286,7 +1297,7 @@ function category_thumbnail_column( $columns, $column, $id ) {
 }
 
 add_filter( 'manage_category_custom_column', 'category_thumbnail_column', 10, 3 );
-//add_action( 'event_category_edit_form_fields', 'category_thumbnail_column', 10 );
+// add_action( 'event_category_edit_form_fields', 'category_thumbnail_column', 10 );
 
 
 

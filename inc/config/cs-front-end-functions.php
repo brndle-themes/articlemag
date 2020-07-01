@@ -529,25 +529,24 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 
 		if ( is_singular() ) {
 
-			if ( cs_get_option( 'blog_single_image_show' ) ) {
-
+			if ( cs_get_option( 'blog_single_image_show' ) ) {				
 				$post_meta = get_post_meta( get_the_ID(), '_custom_page_options', true );
-				if( has_post_thumbnail() ){
+				if ( has_post_thumbnail() ) {
 					if ( empty( $post_meta['hide_featured_image'] ) ) {
 						echo '<div class="entry-image">';
-						the_post_thumbnail( cs_get_option( 'large' ) );
+						the_post_thumbnail( 'articlemag-featured-large' );
 						echo '</div><!-- entry-image -->';
 					}
 				}
 			}
 		} else {
-			$img_src = get_template_directory_uri().'/images/no-pictures/no-image-picture.png';
+			$img_src = get_template_directory_uri() . '/images/no-pictures/no-image-picture.png';
 			echo '<div class="entry-image">';
 			echo '<a href="' . $link . '" class="post-thumbnail">';
-			if( has_post_thumbnail() ){
+			if ( has_post_thumbnail() ) {
 					the_post_thumbnail( $size );
-			}else{
-				echo '<img src="'.$img_src.'" id="contextual" class="contextual" alt="" />';
+			} else {
+				echo '<img src="' . $img_src . '" id="contextual" class="contextual" alt="" />';
 			}
 			echo '<span class="entry-image-overlay"></span>';
 			echo '</a>';
