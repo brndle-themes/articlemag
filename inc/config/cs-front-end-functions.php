@@ -526,7 +526,7 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 
 		$size = ( empty( $cs_blog_image_size ) ) ? cs_get_option( 'blog_image_size' ) : $cs_blog_image_size;
 		$link = ( empty( $link ) ) ? get_permalink() : $link;
-
+		
 		if ( is_singular() ) {
 
 			if ( cs_get_option( 'blog_single_image_show' ) ) {				
@@ -534,7 +534,7 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 				if ( has_post_thumbnail() ) {
 					if ( empty( $post_meta['hide_featured_image'] ) ) {
 						echo '<div class="entry-image">';
-						the_post_thumbnail( 'articlemag-featured-large' );
+						the_post_thumbnail( $size );
 						echo '</div><!-- entry-image -->';
 					}
 				}

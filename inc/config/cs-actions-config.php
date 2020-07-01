@@ -56,9 +56,8 @@ if ( ! function_exists( 'cs_after_setup_theme' ) ) {
 
 		// Add support for full and wide align images.
 		add_theme_support( 'align-wide' );
-
 		if ( function_exists( 'add_image_size' ) ) {
-			add_image_size( 'articlemag-featured-large', 1200, 675 );
+			add_image_size( 'articlemag-featured-large', 1920, 600 );
 			add_image_size( 'articlemag-thumb', 600, 300 );
 		}
 	}
