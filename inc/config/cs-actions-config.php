@@ -536,6 +536,7 @@ if ( ! function_exists( 'cs_post_format_content_after' ) ) {
 							$q->the_post();
 							setup_postdata( $post );
 
+							$cs_featured   = '';
 							$featured_post = get_post_meta( get_the_ID(), 'meta-checkbox', true );
 							if ( $featured_post == 'yes' ) {
 								$cs_featured = ' cs-featured';
