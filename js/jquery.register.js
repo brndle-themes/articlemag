@@ -1409,6 +1409,12 @@
             });
 
     };
+    
+    ARTICLEMAG.mobileUserNav = function () {
+        $( '#cs-mobile-userbar' ).on( "click", function () {
+            $( '#cs-mobile-userbar #bp-userbar' ).toggleClass( "active" );
+        } );
+    };
 
     $( document ).ready( function () {
 
@@ -1454,6 +1460,7 @@
         ARTICLEMAG.darkMode();
         ARTICLEMAG.buddyfitVids();
         ARTICLEMAG.postSlider();
+        ARTICLEMAG.mobileUserNav();
 
     } );
 

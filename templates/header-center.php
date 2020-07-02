@@ -9,7 +9,7 @@
         <?php echo cs_site_menu(); ?><!-- /site-nav -->
       </div>
     </div>
-
+    <?php echo cs_get_bp_userbar() ?><!-- /user-nav -->
     <?php echo cs_mobile_icon(); ?><!-- /mobile-icon -->
 
   <div id="site-header-shadow"></div>

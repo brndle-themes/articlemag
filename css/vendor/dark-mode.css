@@ -408,8 +408,17 @@
 .dark-mode .buddypress-wrap .standard-form input[type=url],
 .dark-mode .buddypress-wrap .standard-form input[type=week], 
 .dark-mode .buddypress-wrap .standard-form select,
-.buddypress-wrap .standard-form textarea{
+.dark-mode .buddypress-wrap .standard-form textarea{
     background: #1c2939;
     border-color: #495061; 
 }
 
+/*=================
+
+Youzer
+
+==================*/
+
+.dark-mode .yz-page{
+    background: #10161d;
+}

@@ -5,6 +5,7 @@
         <div id="header-logo-wrap">
           <?php echo cs_site_logo(); ?><!-- /site-logo -->
           <?php if ( is_active_sidebar('cs-logo-right') ) { ?><div id="site-logo-right"><div id="site-logo-right-content"><?php dynamic_sidebar( 'cs-logo-right' )?></div></div><!-- /site-logo-right --><?php } ?>
+          <?php echo cs_get_bp_userbar() ?><!-- /user-nav -->
           <?php echo cs_mobile_icon(); ?><!-- /mobile-icon -->
         </div>
       </div>

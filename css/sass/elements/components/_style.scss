@@ -2944,9 +2944,10 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .single-post .entry-image{
-    min-height: 500px;
+    min-height: 600px;
     position: relative;
     max-height: 600px;
+    overflow: hidden;
 }
 
 .single-post .entry-image img{
