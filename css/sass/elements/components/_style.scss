@@ -1886,6 +1886,9 @@ div.wp-caption.alignright .wp-caption-text {
     font-size: 3.25rem;
     margin-bottom: 10px;
 }
+.hero-post-slider .header-post-title a:hover{
+    text-decoration: none;
+}
 .hero-post-slider .slick-arrow {
     position: absolute;
     right: 40px;
@@ -4736,6 +4739,11 @@ div.wp-caption.alignright .wp-caption-text {
     border-radius: 100%;
 }
 
+.cs-user-link img{
+    width: 45px;
+    height: 45px;
+}
+
 .cs-bp-user-menu.sfHover #bp-userbar {
     display: block;
 }
@@ -4767,7 +4775,7 @@ ul#bp-userbar li:first-child a {
 ul#bp-userbar li a {
     display: block;
     position: relative;
-    padding: 12px;
+    padding: 8px 12px;
     color: #333;
     background-color: #fff;
     border-top: 1px solid #eeeeee;
@@ -4860,7 +4868,7 @@ ul#bp-userbar li a:hover {
 }
 
 #site-nav .cs-notification .sub-menu {
-    width: 350px;
+    width: 300px;
     margin: 0;
     padding: 0;
     right: 0;
