@@ -524,7 +524,7 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 
 		global $cs_blog_image_size;
 
-		$size = ( empty( $cs_blog_image_size ) ) ? cs_get_option( 'blog_image_size' ) : $cs_blog_image_size;
+		$size = ( empty( $cs_blog_image_size ) ) ? cs_get_option( 'blog_single_image_size' ) : $cs_blog_image_size;
 		$link = ( empty( $link ) ) ? get_permalink() : $link;
 		
 		if ( is_singular() ) {
