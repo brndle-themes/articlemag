@@ -294,10 +294,24 @@
 .dark-mode body.buddypress #buddypress.buddypress-wrap .standard-form .wp-editor-container input[type=button],
 .dark-mode .bp-nouveau .bupr-row,
 .dark-mode .multi-review,
-.dark-mode .bp-member-add-form textarea{
+.dark-mode .bp-member-add-form textarea,
+.dark-mode #group-invites-container,
+.dark-mode .groups-manage-members-list ul li:nth-child(even),
+.dark-mode .groups-manage-members-list ul li,
+.dark-mode #group-create-body,
+.dark-mode .buddypress .bp-invites-content ul.item-list > li{
     background: #1c2939;
     border-color: #495061;
 }
+.dark-mode .groups-manage-members-list ul li{
+    border-color: #495061 !important;
+}
+.dark-mode .buddypress-wrap .bp-subnavs li.current a,
+.dark-mode .buddypress-wrap .bp-subnavs li.selected a,
+.dark-mode .buddypress-wrap .bp-subnavs li.selected a:hover{
+    background: #1c2939;
+}
+
 .dark-mode .bp-nouveau .bupr-row,
 .dark-mode .multi-review{
     border: 1px solid #495061;
@@ -325,15 +339,20 @@
 .dark-mode .buddypress-wrap .standard-form .wp-editor-container,
 .dark-mode .bp-avatar-nav ul.avatar-nav-items li.current,
 .dark-mode .bp-avatar-nav ul,
-.dark-mode .drag-drop #drag-drop-area{
+.dark-mode .drag-drop #drag-drop-area,
+.dark-mode .bb-groups-invites-left,
+.dark-mode .bb-panel-head,
+.dark-mode .bb-groups-invites-right-bottom{
     border-color: #495061;
 }
-.dark-mode .activity-list .activity-item .activity-meta.action .button{
+.dark-mode .activity-list .activity-item .activity-meta.action .button,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button{
     background: #495061 !important;
     border-color: #495061 !important;
     color: #dadde4 !important;
 }
-.dark-mode .activity-list .activity-item .activity-meta.action .button:hover{
+.dark-mode .activity-list .activity-item .activity-meta.action .button:hover,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover{
     color: #ffffff !important;
     border-color: #495061 !important;
 }
@@ -352,10 +371,17 @@
 .dark-mode body #buddypress input[type=search],
 .dark-mode .buddypress-wrap form.bp-invites-search-form,
 .dark-mode .buddypress-wrap .standard-form .description,
-.dark-mode .rtmedia-uploader .drag-drop{
+.dark-mode .rtmedia-uploader .drag-drop,
+.dark-mode .groups-manage-members-list .section-title,
+.dark-mode #group-create-tabs li,
+.dark-mode .buddypress-wrap .standard-form input:focus,
+.dark-mode .buddypress-wrap .standard-form select:focus,
+.dark-mode .buddypress-wrap .standard-form textarea:focus{
     background-color: #1c2939;
 }
-
+.dark-mode #group-create-tabs li.current{
+    border-bottom: 0;
+}
 
 .dark-mode #buddypress div#item-header-cover-image h2,
 .dark-mode .buddypress-wrap .grid-filters a.active{
