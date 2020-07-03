@@ -380,7 +380,14 @@ if ( ! function_exists( 'articlemag_option_sections' ) ) {
 					'empty_message' => __( 'Please create category first.', 'articlemag' ),
 					'dependency'    => array( 'set_homepage_cover', '==', 'true' ),
 				),
-
+				array(
+					'id'      => 'hero_slider_image_size',
+					'type'    => 'select',
+					'title'   => 'Header Slider Image Size',
+					'options' => cs_get_image_sizes( true, false ),
+					'default' => 'articlemag-featured-large',
+					'dependency'    => array( 'set_homepage_cover', '==', 'true' ),
+				),
 				array(
 					'id'         => 'homepage_cover',
 					'type'       => 'upload',

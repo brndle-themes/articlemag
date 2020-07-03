@@ -20,3 +20,5 @@ wp-content/plugins/hello.php
 /nbproject/private/
 .DS_Store
 node_modules
+nbproject
+.sass-cache

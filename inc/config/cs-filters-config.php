@@ -183,7 +183,7 @@ if ( ! function_exists( 'cs_auto_excerpt_read_more_link' ) ) {
 	function cs_auto_excerpt_read_more_link( $content ) {
 
 		if ( cs_get_option( 'blog_auto_excerpt' ) == 1 && get_post_type() == 'post' && ! is_feed() && ! is_single() && ! is_search() && ! strpos( $content, 'cs-btn' ) ) {
-			
+
 			$content = cs_auto_post_excerpt( $content, 10 );
 		}
 		return $content;
@@ -225,6 +225,7 @@ if ( ! function_exists( 'cs_image_size_names_choose' ) ) {
 				$name                  = sanitize_title( $image_size['name'] );
 				$custom_sizes[ $name ] = $image_size['name'];
 			}
+
 			return array_merge( $image_sizes, $custom_sizes );
 		}
 

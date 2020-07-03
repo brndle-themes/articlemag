@@ -362,8 +362,8 @@ class Walker_Portfolio_List_Categories extends Walker_Category {
  */
 if ( ! function_exists( 'cs_get_image_sizes' ) ) {
 	function cs_get_image_sizes( $force = false, $flip = true ) {
-
 		$current_image_sizes = get_intermediate_image_sizes();
+		
 		foreach ( $current_image_sizes as $image_size ) {
 			$dimenssion                 = ( in_array( $image_size, array( 'thumbnail', 'medium', 'large' ) ) ) ? ' - (' . get_option( $image_size . '_size_w' ) . 'x' . get_option( $image_size . '_size_h' ) . ')' : '';
 			$image_sizes[ $image_size ] = $image_size . $dimenssion;
@@ -382,8 +382,8 @@ if ( ! function_exists( 'cs_get_image_sizes' ) ) {
 
 		$image_sizes['full'] = 'full (orginal size)';
 
-		$image_sizes['articlemag-featured-large'] = 'articlemag-featured-large (1920 * 600)';
-		$image_sizes['articlemag-thumb']          = 'articlemag-thumb (600 * 300)';
+		$image_sizes['articlemag-featured-large'] = 'articlemag-featured-large (1920 x 600)';
+		$image_sizes['articlemag-thumb']          = 'articlemag-thumb (600 x 300)';
 
 		$image_sizes = ( $flip ) ? array_flip( $image_sizes ) : $image_sizes;
 

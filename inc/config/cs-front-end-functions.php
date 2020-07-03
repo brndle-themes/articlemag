@@ -526,10 +526,9 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 
 		$size = ( empty( $cs_blog_image_size ) ) ? cs_get_option( 'blog_single_image_size' ) : $cs_blog_image_size;
 		$link = ( empty( $link ) ) ? get_permalink() : $link;
-		
-		if ( is_singular() ) {
 
-			if ( cs_get_option( 'blog_single_image_show' ) ) {				
+		if ( is_singular() ) {
+			if ( cs_get_option( 'blog_single_image_show' ) ) {
 				$post_meta = get_post_meta( get_the_ID(), '_custom_page_options', true );
 				if ( has_post_thumbnail() ) {
 					if ( empty( $post_meta['hide_featured_image'] ) ) {
