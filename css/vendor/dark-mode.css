@@ -272,6 +272,11 @@
 .dark-mode .select2-container--default .select2-search--dropdown .select2-search__field {
     border-color: #495061;
 }
+@media only screen and (max-width: 991px) {
+    .cs-mobile-toggle-track {
+        right: 98px;
+    }
+}
 
 /*===================================
             Buddypress
