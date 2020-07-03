@@ -387,6 +387,9 @@
 .dark-mode #group-create-tabs li.current{
     border-bottom: 0;
 }
+.dark-mode .buddypress .buddypress-wrap button{
+    background: none;
+}
 
 .dark-mode #buddypress div#item-header-cover-image h2,
 .dark-mode .buddypress-wrap .grid-filters a.active{
