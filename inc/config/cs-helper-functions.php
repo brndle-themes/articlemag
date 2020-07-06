@@ -163,13 +163,14 @@ if ( ! function_exists( 'cs_option2background' ) ) {
 
 			extract( $post_meta['background'] );
 
-			$image      = $post_meta['background']['background-image']['url'];
-			$repeat     = $post_meta['background']['background-repeat'];
-			$attachment = $post_meta['background']['background-attachment'];
-			$color      = $post_meta['background']['background-color'];
-			$bg_size    = $post_meta['background']['background-size'];
-			$position   = $post_meta['background']['background-position'];
-
+			$image          = $post_meta['background']['background-image']['url'];
+			$repeat         = $post_meta['background']['background-repeat'];
+			$attachment     = $post_meta['background']['background-attachment'];
+			$color          = $post_meta['background']['background-color'];
+			$bg_size        = $post_meta['background']['background-size'];
+			$position       = $post_meta['background']['background-position'];
+                        $default_image  = get_template_directory_uri() . '/images/default-image.jpg';
+                                
 			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' : $default_image;
 			$background_repeat     = ( ! empty( $image ) && ! empty( $repeat ) ) ? ' background-repeat: ' . $repeat . ';' : '';
 			$background_size       = ( ! empty( $image ) ) ? ' background-size: ' . $bg_size . ';' : '';

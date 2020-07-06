@@ -91,7 +91,7 @@ if (!class_exists('Walker_Nav_Menu_Custom')) {
             }
 
             $item_output = $args->before;
-
+            
             // if column title not disable
             if (empty($item->column_title)) {
 

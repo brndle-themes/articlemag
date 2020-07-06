@@ -11,7 +11,11 @@
 
 
 
-<?php if ( is_single() && 'post' == get_post_type() ) :
+<?php 
+global $post;
+$post_id = ( isset($post) ) ? $post->ID : false;
+
+if ( is_single() && 'post' == get_post_type() ) :
 ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
     <header class="entry-header">
