@@ -315,9 +315,10 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
     background-color: {$accent};
   }
     
-     #bbp_user_edit_submit:hover,
-  .bbp-submit-wrapper .button:hover,
-  .cs-btn-flat-accent:hoverbuddypress .comment-reply-link:hover,
+#bbp_user_edit_submit:hover,
+.bbp-submit-wrapper .button:hover,
+.cs-btn-flat-accent:hover,
+#buddypress .comment-reply-link:hover,
 #buddypress .comment-reply-link:hover,
 #buddypress .generic-button a:hover,
 #buddypress .standard-form button:hover,

@@ -34,7 +34,7 @@ if ( is_home() ) {
 						<img src="<?php echo esc_url( $slider_image[0] ); ?>" alt="<?php echo esc_attr( $slider_post->post_title ); ?>" />
 					</div>
 					<div class="header-post-title">
-						<a href="<?php echo esc_url( get_permalink( $slider_post->ID ) ); ?>" target="blank"><?php echo esc_html( $slider_post->post_title ); ?></a>
+						<a href="<?php echo esc_url( get_permalink( $slider_post->ID ) ); ?>" ><?php echo esc_html( $slider_post->post_title ); ?></a>
 					</div>				
 				</div>
 			<?php endforeach; ?>  
