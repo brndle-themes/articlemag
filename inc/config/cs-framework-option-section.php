@@ -354,11 +354,19 @@ if (!function_exists('articlemag_option_sections')) {
             'desc' => 'Home page header options.',
             'fields' => array(
                 array(
+                    'id' => 'hero_section',
+                    'type' => 'switcher',
+                    'title' => 'Hero Section',
+                    'multilang' => true,
+                    'default' => true,
+                ),
+                array(
                     'id' => 'set_homepage_cover',
                     'type' => 'switcher',
                     'title' => 'Dynamic Homepage Cover',
                     'multilang' => true,
                     'default' => true,
+                    'dependency' => array('hero_section', '==', 'true'),
                 ),
                 array(
                     'id' => 'post_count',
@@ -367,7 +375,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'desc' => 'Choose number of posts to be display in slider.',
                     'multilang' => true,
                     'default' => 5,
-                    'dependency' => array('set_homepage_cover', '==', 'true'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'true|true'),
                 ),
                 array(
                     'id' => 'set_post_categories',
@@ -378,7 +386,7 @@ if (!function_exists('articlemag_option_sections')) {
                         'taxonomy' => 'category',
                     ),
                     'empty_message' => __('Please create category first.', 'articlemag'),
-                    'dependency' => array('set_homepage_cover', '==', 'true'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'true|true'),
                 ),
                 array(
                     'id' => 'hero_slider_image_size',
@@ -386,7 +394,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Header Slider Image Size',
                     'options' => cs_get_image_sizes(true, false),
                     'default' => 'articlemag-featured-large',
-                    'dependency' => array('set_homepage_cover', '==', 'true'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'true|true'),
                 ),
                 array(
                     'id' => 'homepage_cover',
@@ -394,7 +402,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Homepage Cover',
                     'multilang' => true,
                     'default' => THEME_URI . '/images/default-image.jpg',
-                    'dependency' => array('set_homepage_cover', '==', 'false'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'false|true'),
                 ),
                 array(
                     'id' => 'homepage_title',
@@ -402,7 +410,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Homepage Title',
                     'multilang' => true,
                     'default' => 'ArticleMag Theme',
-                    'dependency' => array('set_homepage_cover', '==', 'false'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'false|true'),
                 ),
                 array(
                     'id' => 'homepage_default_subtitle',
@@ -410,7 +418,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Default Subtitle',
                     'multilang' => true,
                     'default' => 'Thoughts, stories and ideas.',
-                    'dependency' => array('set_homepage_cover', '==', 'false'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'false|true'),
                 ),
                 array(
                     'id' => 'homepage_action_button',
@@ -418,14 +426,14 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Action Button',
                     'multilang' => true,
                     'default' => 'Subscribe',
-                    'dependency' => array('set_homepage_cover', '==', 'false'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'false|true'),
                 ),
                 array(
                     'id' => 'homepage_action_button_link',
                     'type' => 'text',
                     'title' => 'Action Button Link',
                     'default' => '#',
-                    'dependency' => array('set_homepage_cover', '==', 'false'),
+                    'dependency' => array('set_homepage_cover|hero_section', '==|==', 'false|true'),
                 ),
             ),
         );
@@ -834,7 +842,7 @@ if (!function_exists('articlemag_option_sections')) {
                         ),
                     ),
                     'button_title' => 'Add New Typography',
-                    'min' => '11',
+                    'min' => '10',
                     'max' => '11',
                     'default' => array(
                         array(
@@ -866,15 +874,6 @@ if (!function_exists('articlemag_option_sections')) {
                                 'font-family' => 'Source Sans Pro',
                                 'font-weight' => '400',
                                 'font-size' => 16,
-                            ),
-                        ),
-                        array(
-                            'title' => 'User Menu Typography',
-                            'selector' => '#site-nav ul li ul#bp-userbar li a',
-                            'font' => array(
-                                'font-family' => 'Source Sans Pro',
-                                'font-weight' => '400',
-                                'font-size' => 14,
                             ),
                         ),
                         array(
