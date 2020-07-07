@@ -222,12 +222,12 @@ if (!class_exists('Walker_Nav_Menu_Custom')) {
                             $output .= '<li>' . $notification . '</li>';
                         }
                         $output .= '<li class="bp-view-all">';
-                        $output .= '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . '"> ' . esc_attr('View all notifications', 'buddyxpro') . '</a>';
+                        $output .= '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . ' " > ' . esc_attr('View all notifications', 'articlemag') . '</a>';
                         $output .= '</li>';
                         $output .= '</ul>';
                     } else {
                         $output .= '<ul id="bp-notify" class="sub-menu">';
-                        $output .= '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'varuna') . '</a></li>';
+                        $output .= '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'articlemag') . '</a></li>';
                         $output .= '</ul>';
                     }
                     $output .= '</div>';
@@ -244,6 +244,7 @@ if (!class_exists('Walker_Nav_Menu_Custom')) {
                     $user_link = function_exists('bp_core_get_user_domain') ? bp_core_get_user_domain(get_current_user_id()) : '#';
                     $output .= '<div class="cs-user-link-wrap sf-with-ul">';
                     $output .= '<a class="cs-user-link" href="' . $user_link . '">';
+                    $output .=  $current_user->user_login;
                     $output .= get_avatar($current_user->user_email, 50);
                     $output .= '</a>';
                     $output .= '</div>';

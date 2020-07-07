@@ -1321,6 +1321,7 @@ if (!function_exists('cs_get_bp_userbar')) {
                     $user_link = function_exists('bp_core_get_user_domain') ? bp_core_get_user_domain(get_current_user_id()) : '#';
                     echo '<div class="cs-user-link">';
                     // echo '<a href="'. $user_link .'">';
+                    // echo $current_user->user_login;
                     echo get_avatar($current_user->user_email, 50);
                     // echo '</a>';
                     echo '</div>';

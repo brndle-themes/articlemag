@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-03 07:00:06+00:00\n"
+"POT-Creation-Date: 2020-07-07 07:43:56+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,101 +154,101 @@ msgid "Enter your theme license key."
 msgstr ""
 
 #: edd-updater/theme-updater.php:29
-#: inc/config/cs-framework-option-section.php:1396
+#: inc/config/cs-framework-option-section.php:1412
 msgid "License Key"
 msgstr ""
 
 #: edd-updater/theme-updater.php:30
-#: inc/config/cs-framework-option-section.php:1397
+#: inc/config/cs-framework-option-section.php:1413
 msgid "License Action"
 msgstr ""
 
 #: edd-updater/theme-updater.php:31
-#: inc/config/cs-framework-option-section.php:1398
+#: inc/config/cs-framework-option-section.php:1414
 msgid "Deactivate License"
 msgstr ""
 
 #: edd-updater/theme-updater.php:32
-#: inc/config/cs-framework-option-section.php:1399
-#: inc/config/cs-framework-option-section.php:1436
+#: inc/config/cs-framework-option-section.php:1415
+#: inc/config/cs-framework-option-section.php:1452
 msgid "Activate License"
 msgstr ""
 
 #: edd-updater/theme-updater.php:33 edd-updater/theme-updater.php:46
-#: inc/config/cs-framework-option-section.php:1400
-#: inc/config/cs-framework-option-section.php:1413
+#: inc/config/cs-framework-option-section.php:1416
+#: inc/config/cs-framework-option-section.php:1429
 msgid "License status is unknown."
 msgstr ""
 
 #: edd-updater/theme-updater.php:34
-#: inc/config/cs-framework-option-section.php:1401
+#: inc/config/cs-framework-option-section.php:1417
 msgid "Renew?"
 msgstr ""
 
 #: edd-updater/theme-updater.php:35
-#: inc/config/cs-framework-option-section.php:1402
+#: inc/config/cs-framework-option-section.php:1418
 msgid "unlimited"
 msgstr ""
 
 #: edd-updater/theme-updater.php:36
-#: inc/config/cs-framework-option-section.php:1403
+#: inc/config/cs-framework-option-section.php:1419
 msgid "License key is active."
 msgstr ""
 
 #: edd-updater/theme-updater.php:37
-#: inc/config/cs-framework-option-section.php:1404
+#: inc/config/cs-framework-option-section.php:1420
 msgid "Expires %s."
 msgstr ""
 
 #: edd-updater/theme-updater.php:38
-#: inc/config/cs-framework-option-section.php:1405
+#: inc/config/cs-framework-option-section.php:1421
 msgid "Lifetime License."
 msgstr ""
 
 #: edd-updater/theme-updater.php:39
-#: inc/config/cs-framework-option-section.php:1406
+#: inc/config/cs-framework-option-section.php:1422
 msgid "You have %1$s / %2$s sites activated."
 msgstr ""
 
 #: edd-updater/theme-updater.php:40
-#: inc/config/cs-framework-option-section.php:1407
+#: inc/config/cs-framework-option-section.php:1423
 msgid "License key expired %s."
 msgstr ""
 
 #: edd-updater/theme-updater.php:41
-#: inc/config/cs-framework-option-section.php:1408
+#: inc/config/cs-framework-option-section.php:1424
 msgid "License key has expired."
 msgstr ""
 
 #: edd-updater/theme-updater.php:42
-#: inc/config/cs-framework-option-section.php:1409
+#: inc/config/cs-framework-option-section.php:1425
 msgid "License keys do not match."
 msgstr ""
 
 #: edd-updater/theme-updater.php:43
-#: inc/config/cs-framework-option-section.php:1410
+#: inc/config/cs-framework-option-section.php:1426
 msgid "License is inactive."
 msgstr ""
 
 #: edd-updater/theme-updater.php:44
-#: inc/config/cs-framework-option-section.php:1411
+#: inc/config/cs-framework-option-section.php:1427
 msgid "License key is disabled."
 msgstr ""
 
 #: edd-updater/theme-updater.php:45
-#: inc/config/cs-framework-option-section.php:1412
+#: inc/config/cs-framework-option-section.php:1428
 msgid "Site is inactive."
 msgstr ""
 
 #: edd-updater/theme-updater.php:47
-#: inc/config/cs-framework-option-section.php:1414
+#: inc/config/cs-framework-option-section.php:1430
 msgid ""
 "Updating this theme will lose any customizations you have made. 'Cancel' to "
 "stop, 'OK' to update."
 msgstr ""
 
 #: edd-updater/theme-updater.php:48
-#: inc/config/cs-framework-option-section.php:1415
+#: inc/config/cs-framework-option-section.php:1431
 msgid ""
 "<strong>%1$s %2$s</strong> is available. <a href=\"%3$s\" "
 "class=\"thickbox\" title=\"%4s\">Check out what's new</a> or <a "
@@ -259,36 +259,36 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1028
+#: inc/config/cs-actions-config.php:1029
 msgid "Featured"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1030
+#: inc/config/cs-actions-config.php:1031
 msgid "Recent"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1064 inc/config/cs-actions-config.php:1163
-#: inc/config/cs-actions-config.php:1293
+#: inc/config/cs-actions-config.php:1065 inc/config/cs-actions-config.php:1164
+#: inc/config/cs-actions-config.php:1294
 msgid "Thumbnail"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1068 inc/config/cs-actions-config.php:1168
+#: inc/config/cs-actions-config.php:1069 inc/config/cs-actions-config.php:1169
 msgid "Upload/Add image"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1069 inc/config/cs-actions-config.php:1169
+#: inc/config/cs-actions-config.php:1070 inc/config/cs-actions-config.php:1170
 msgid "Remove image"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1093 inc/config/cs-actions-config.php:1194
+#: inc/config/cs-actions-config.php:1094 inc/config/cs-actions-config.php:1195
 msgid "Choose an image"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1095 inc/config/cs-actions-config.php:1196
+#: inc/config/cs-actions-config.php:1096 inc/config/cs-actions-config.php:1197
 msgid "Use image"
 msgstr ""
 
-#: inc/config/cs-actions-config.php:1261
+#: inc/config/cs-actions-config.php:1262
 msgid "Image"
 msgstr ""
 
@@ -300,7 +300,7 @@ msgstr ""
 msgid "Error!"
 msgstr ""
 
-#: inc/config/cs-filters-config.php:169 inc/config/cs-helper-functions.php:1029
+#: inc/config/cs-filters-config.php:169 inc/config/cs-helper-functions.php:1030
 #: templates/page-blog-masonry.php:65 templates/page-blog-medium.php:65
 #: templates/page-blog-small.php:71
 msgid "Read More"
@@ -310,21 +310,21 @@ msgstr ""
 msgid "Please create category first."
 msgstr ""
 
-#: inc/config/cs-framework-option-section.php:1394
+#: inc/config/cs-framework-option-section.php:1410
 msgid "Articlemag - License"
 msgstr ""
 
-#: inc/config/cs-framework-option-section.php:1395
+#: inc/config/cs-framework-option-section.php:1411
 msgid "Enter your license key."
 msgstr ""
 
-#: inc/config/cs-framework-option-section.php:1424
-#: inc/config/cs-framework-option-section.php:1430
+#: inc/config/cs-framework-option-section.php:1440
+#: inc/config/cs-framework-option-section.php:1446
 #: inc/merlin/class-merlin.php:737
 msgid "License"
 msgstr ""
 
-#: inc/config/cs-framework-option-section.php:1425
+#: inc/config/cs-framework-option-section.php:1441
 msgid "Articlemag Theme License!"
 msgstr ""
 
@@ -395,25 +395,25 @@ msgstr ""
 msgid "Next Post"
 msgstr ""
 
-#: inc/config/cs-front-end-functions.php:635
+#: inc/config/cs-front-end-functions.php:634
 msgid "Load More"
 msgstr ""
 
-#: inc/config/cs-front-end-functions.php:676
-#: inc/config/cs-front-end-functions.php:719
+#: inc/config/cs-front-end-functions.php:675
+#: inc/config/cs-front-end-functions.php:718
 msgid "Previous"
 msgstr ""
 
-#: inc/config/cs-front-end-functions.php:677
-#: inc/config/cs-front-end-functions.php:718 inc/config/merlin-config.php:45
+#: inc/config/cs-front-end-functions.php:676
+#: inc/config/cs-front-end-functions.php:717 inc/config/merlin-config.php:45
 msgid "Next"
 msgstr ""
 
-#: inc/config/cs-front-end-functions.php:711
+#: inc/config/cs-front-end-functions.php:710
 msgid "Pages"
 msgstr ""
 
-#: inc/config/cs-front-end-functions.php:883
+#: inc/config/cs-front-end-functions.php:882
 msgid ""
 "You can edit your menu content on the Menus screen in the Appearance "
 "section."

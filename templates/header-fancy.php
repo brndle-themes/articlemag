@@ -18,7 +18,8 @@
 
         <div class="clear"></div>
       </div>
-      <?php echo cs_get_bp_userbar() ?><!-- /user-nav -->
+      <?php echo cs_get_bp_userbar();?><!-- /user-nav -->
+      
       <?php echo cs_mobile_icon(); ?><!-- /mobile-icon -->
     </div>
   </div>
