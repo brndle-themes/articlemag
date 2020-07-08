@@ -2,466 +2,512 @@
 /**
  *
  * Main Menu Walker
+ *
  * @since 1.0.0
  * @version 1.0.0
- *
  */
-if (!class_exists('Walker_Nav_Menu_Custom')) {
+if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 
-    /**
-     * Copied from WordPress 3.7 Core
-     * @since 1.0.0
-     * @version 1.0.0
-     *
-     */
-    class Walker_Nav_Menu_Custom extends Walker_Nav_Menu {
+	/**
+	 * Copied from WordPress 3.7 Core
+	 *
+	 * @since 1.0.0
+	 * @version 1.0.0
+	 */
+	class Walker_Nav_Menu_Custom extends Walker_Nav_Menu {
 
-        var $child_count = 0;
-        var $is_custom_width = false;
-        var $menu_type = array();
+		var $child_count     = 0;
+		var $is_custom_width = false;
+		var $menu_type       = array();
 
-        function start_lvl(&$output, $depth = 0, $args = array()) {
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
 
-            $style = ( $this->is_custom_width ) ? ' style="width: ' . $this->is_custom_width . 'px;"' : '';
-            $indent = str_repeat("\t", $depth);
-            $output .= "\n$indent<ul class=\"sub-menu\"" . $style . ">\n";
-        }
+			$style   = ( $this->is_custom_width ) ? ' style="width: ' . $this->is_custom_width . 'px;"' : '';
+			$indent  = str_repeat( "\t", $depth );
+			$output .= "\n$indent<ul class=\"sub-menu\"" . $style . ">\n";
+		}
 
-        function end_lvl(&$output, $depth = 0, $args = array()) {
+		function end_lvl( &$output, $depth = 0, $args = array() ) {
 
-            $indent = str_repeat("\t", $depth);
-            $output .= "$indent</ul>\n";
-        }
+			$indent  = str_repeat( "\t", $depth );
+			$output .= "$indent</ul>\n";
+		}
 
-        function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+		function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 
-            $class_names = '';
-            $value = '';
-            $indent = ( $depth ) ? str_repeat("\t", $depth) : '';
-            $classes = empty($item->classes) ? array() : $item->classes;
-            $classes[] = 'menu-item-' . $item->ID;
+			$class_names = '';
+			$value       = '';
+			$indent      = ( $depth ) ? str_repeat( "\t", $depth ) : '';
+			$classes     = empty( $item->classes ) ? array() : $item->classes;
+			$classes[]   = 'menu-item-' . $item->ID;
 
-            // adding depth class
-            $classes[] = 'cs-depth-' . $depth;
+			// adding depth class
+			$classes[] = 'cs-depth-' . $depth;
 
-            // adding if mega menu class
-            $classes[] = ( $depth == 0 && !empty($item->mega) ) ? 'cs-mega-menu' : '';
+			// adding if mega menu class
+			$classes[] = ( $depth == 0 && ! empty( $item->mega ) ) ? 'cs-mega-menu' : '';
 
-            // adding if natural-width class
-            $classes[] = ( $depth == 0 && !empty($item->mega) && $item->mega_width == 'natural' ) ? 'cs-col-' . $this->child_count . ' cs-' . $item->mega_width : '';
+			// adding if natural-width class
+			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && $item->mega_width == 'natural' ) ? 'cs-col-' . $this->child_count . ' cs-' . $item->mega_width : '';
 
-            // adding if custom-width class
-            $classes[] = ( $depth == 0 && !empty($item->mega) && $item->mega_width == 'custom' ) ? 'cs-' . $item->mega_width : '';
+			// adding if custom-width class
+			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && $item->mega_width == 'custom' ) ? 'cs-' . $item->mega_width : '';
 
-            // adding if right position class
-            $classes[] = ( $depth == 0 && !empty($item->mega) && !empty($item->mega_width) && !empty($item->mega_position) ) ? 'cs-right' : '';
+			// adding if right position class
+			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && ! empty( $item->mega_width ) && ! empty( $item->mega_position ) ) ? 'cs-right' : '';
 
-            // adding bootstrap col if parent item is mega!
-            if ($depth == 1 && isset($this->menu_type[$item->menu_item_parent])) {
-                $bs_col = (!cs_get_option('non_responsive') ) ? str_replace('md', 'xs', cs_get_bootstrap($this->child_count)) : cs_get_bootstrap($this->child_count);
-            }
-            $classes['col'] = (!empty($bs_col) ) ? $bs_col : '';
+			// adding bootstrap col if parent item is mega!
+			if ( $depth == 1 && isset( $this->menu_type[ $item->menu_item_parent ] ) ) {
+				$bs_col = ( ! cs_get_option( 'non_responsive' ) ) ? str_replace( 'md', 'xs', cs_get_bootstrap( $this->child_count ) ) : cs_get_bootstrap( $this->child_count );
+			}
+			$classes['col'] = ( ! empty( $bs_col ) ) ? $bs_col : '';
 
-            // adding force custom boostrap col
-            $classes['col'] = ( $depth == 1 && !empty($item->column_width) ) ? $item->column_width : $classes['col'];
+			// adding force custom boostrap col
+			$classes['col'] = ( $depth == 1 && ! empty( $item->column_width ) ) ? $item->column_width : $classes['col'];
 
-            $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
-            $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
-            $id = apply_filters('nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args);
-            $id = $id ? ' id="' . esc_attr($id) . '"' : '';
+			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
+			$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-            $output .= $indent . '<li' . $id . $value . $class_names . '>';
+			$output .= $indent . '<li' . $id . $value . $class_names . '>';
 
-            $atts = array();
-            $atts['title'] = !empty($item->attr_title) ? $item->attr_title : '';
-            $atts['target'] = !empty($item->target) ? $item->target : '';
-            $atts['rel'] = !empty($item->xfn) ? $item->xfn : '';
-            $atts['href'] = !empty($item->url) ? $item->url : '';
+			$atts           = array();
+			$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
+			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
+			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+			$atts['href']   = ! empty( $item->url ) ? $item->url : '';
 
-            $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args);
+			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 
-            $attributes = '';
-            foreach ($atts as $attr => $value) {
-                if (!empty($value)) {
-                    $value = ( 'href' === $attr ) ? esc_url($value) : esc_attr($value);
-                    $attributes .= ' ' . $attr . '="' . $value . '"';
-                }
-            }
+			$attributes = '';
+			foreach ( $atts as $attr => $value ) {
+				if ( ! empty( $value ) ) {
+					$value       = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
+					$attributes .= ' ' . $attr . '="' . $value . '"';
+				}
+			}
 
-            $item_output = $args->before;
-            
-            // if column title not disable
-            if (empty($item->column_title)) {
+			$item_output = isset( $args->before ) ? $args->before : '';
 
-                // if column title link not disable
-                if (empty($item->column_title_link)) {
+			// if column title not disable
+			if ( empty( $item->column_title ) ) {
 
-                    $cs_hover_effect = cs_get_option('header_menu_effect');
-                    $cs_hover_effect = ( $cs_hover_effect !== 'none' ) ? ' cs-hover cs-hover-effect-' . cs_get_option('header_menu_effect') : '';
+				// if column title link not disable
+				if ( empty( $item->column_title_link ) ) {
 
-                    $is_sticky_item = ( $depth == 0 ) ? ' cs-sticky-item' : '';
-                    $is_mega_column = ( isset($this->menu_type[$item->menu_item_parent]) ) ? ' cs-title' : '';
+					$cs_hover_effect = cs_get_option( 'header_menu_effect' );
+					$cs_hover_effect = ( $cs_hover_effect !== 'none' ) ? ' cs-hover cs-hover-effect-' . cs_get_option( 'header_menu_effect' ) : '';
 
-                    $item_output .= '<a' . $attributes . ' class="cs-link cs-link-depth-' . $depth . $is_sticky_item . $is_mega_column . '">';
-                } else if ($depth == 1 && !empty($item->column_title_link)) {
-                    $item_output .= '<a class="cs-link cs-title cs-column-title">' . $item->colum_title;
-                }
+					$is_sticky_item = ( $depth == 0 ) ? ' cs-sticky-item' : '';
+					$is_mega_column = ( isset( $this->menu_type[ $item->menu_item_parent ] ) ) ? ' cs-title' : '';
 
-                // adding icon
-                $item_output .= (!empty($item->icon) ) ? '<i class="' . cs_icon_class($item->icon) . '"></i>' : '';
-                $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+					$item_output .= '<a' . $attributes . ' class="cs-link cs-link-depth-' . $depth . $is_sticky_item . $is_mega_column . '">';
+				} elseif ( $depth == 1 && ! empty( $item->column_title_link ) ) {
+					$item_output .= '<a class="cs-link cs-title cs-column-title">' . $item->colum_title;
+				}
 
-                if (!empty($item->highlight)) {
-                    $highlight = (!empty($item->highlight_type) ) ? $item->highlight_type : 'default';
-                    $item_output .= '<span class="cs-label cs-label-' . $highlight . '">' . $item->highlight . '</span>';
-                }
+				// adding icon
+				$link_before  = isset( $args->link_before ) ? $args->link_before : '';
+				$link_after   = isset( $args->link_after ) ? $args->link_after : '';
+				$item_output .= ( ! empty( $item->icon ) ) ? '<i class="' . cs_icon_class( $item->icon ) . '"></i>' : '';
+				$item_output .= $link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $link_after;
 
-                // adding custom content
-                $item_output .= (!empty($item->content) ) ? '<span class="cs-content">' . do_shortcode($item->content) . '</span>' : '';
+				if ( ! empty( $item->highlight ) ) {
+					$highlight    = ( ! empty( $item->highlight_type ) ) ? $item->highlight_type : 'default';
+					$item_output .= '<span class="cs-label cs-label-' . $highlight . '">' . $item->highlight . '</span>';
+				}
 
-                // if column title link not disable
-                if (empty($item->column_title_link) || ( $depth == 1 && !empty($item->column_title_link) )) {
-                    $item_output .= '</a>';
-                }
-            }
+				// adding custom content
+				$item_output .= ( ! empty( $item->content ) ) ? '<span class="cs-content">' . do_shortcode( $item->content ) . '</span>' : '';
 
-            // adding force custom content
-            if (!empty($item->column_title)) {
-                $item_output .= (!empty($item->content) ) ? '<div class="cs-full-content">' . do_shortcode($item->content) . '</div>' : '';
-            }
+				// if column title link not disable
+				if ( empty( $item->column_title_link ) || ( $depth == 1 && ! empty( $item->column_title_link ) ) ) {
+					$item_output .= '</a>';
+				}
+			}
 
-            $item_output .= $args->after;
+			// adding force custom content
+			if ( ! empty( $item->column_title ) ) {
+				$item_output .= ( ! empty( $item->content ) ) ? '<div class="cs-full-content">' . do_shortcode( $item->content ) . '</div>' : '';
+			}
 
-            $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-        }
+			$item_output .= isset( $args->after ) ? $args->after : '';
 
-        function display_element($element, &$children_elements, $max_depth, $depth = 0, $args, &$output) {
+			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
+		}
 
-            if (!empty($element->mega)) {
-                $this->child_count = ( isset($children_elements[$element->ID]) ) ? count($children_elements[$element->ID]) : 0;
-                $this->menu_type[$element->ID] = true;
-            }
+		function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
 
-            if ($depth == 0 && !empty($element->mega) && $element->mega_width == 'custom') {
-                $this->is_custom_width = $element->mega_custom_width;
-            } else {
-                $this->is_custom_width = false;
-            }
+			if ( ! empty( $element->mega ) ) {
+				$this->child_count               = ( isset( $children_elements[ $element->ID ] ) ) ? count( $children_elements[ $element->ID ] ) : 0;
+				$this->menu_type[ $element->ID ] = true;
+			}
 
-            parent::display_element($element, $children_elements, $max_depth, $depth, $args, $output);
-        }
+			if ( $depth == 0 && ! empty( $element->mega ) && $element->mega_width == 'custom' ) {
+				$this->is_custom_width = $element->mega_custom_width;
+			} else {
+				$this->is_custom_width = false;
+			}
 
-        public function custom_wrap() {
+			parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+		}
 
-            $output = '';
-            if (cs_get_option('menu_search')) {
-                $output .= '<li class="cs-depth-0 cs-menu-search cs-top-modal">';
-                $output .= '<a id="nav-search" href="#" class="cs-link cs-sticky-item cs-open-modal"><span class="fa fa-search"></span></a>';
-                $output .= '<div class="cs-modal-content cs-module-search">' . get_search_form(false) . '</div>';
-                $output .= '</li>';
-            }
+		public function custom_wrap() {
 
-            if (cs_get_option('woo_menu_cart') && is_woocommerce_activated()) {
-                $output .= '<li class="cs-depth-0 cs-menu-cart cart-widget-opener">';
-                $output .= '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
-                $output .= '</li>';
-            }
+			$output = '';
+			if ( cs_get_option( 'menu_search' ) ) {
+				$output .= '<li class="cs-depth-0 cs-menu-search cs-top-modal">';
+				$output .= '<a id="nav-search" href="#" class="cs-link cs-sticky-item cs-open-modal"><span class="fa fa-search"></span></a>';
+				$output .= '<div class="cs-modal-content cs-module-search">' . get_search_form( false ) . '</div>';
+				$output .= '</li>';
+			}
 
-            if (cs_get_option('dark_mode')) {
-                $output .= '<li class="cs-depth-0 cs-toggle-track">';
-                $output .= '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
-                $output .= '</li>';
-            }
+			if ( cs_get_option( 'woo_menu_cart' ) && is_woocommerce_activated() ) {
+				$output .= '<li class="cs-depth-0 cs-menu-cart cart-widget-opener">';
+				$output .= '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
+				$output .= '</li>';
+			}
 
-            if (cs_get_option('bp_message')) {
-                if (class_exists('BuddyPress') && is_user_logged_in() && bp_is_active('messages')) {
+			if ( cs_get_option( 'dark_mode' ) ) {
+				$output .= '<li class="cs-depth-0 cs-toggle-track">';
+				$output .= '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
+				$output .= '</li>';
+			}
 
-                    $output .= '<li class="cs-depth-0 cs-message cs-bp_message">';
+			if ( cs_get_option( 'bp_message' ) ) {
+				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'messages' ) ) {
 
-                    $output .= '<div class="bp-msg cs-link cs-sticky-item">';
-                    $output .= '<a class="bp-icon-wrap" href="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '">';
-                    $output .= '<span class="fa fa-envelope"></span>';
-                    if (function_exists('bp_total_unread_messages_count')) {
-                        $count = bp_get_total_unread_messages_count();
-                        if ($count > 0) {
-                            $output .= '<span class="cs-notification-count cs-message-count">' . $count . '</span>';
-                        } else {
-                            $output .= '<span class="cs-notification-count cs-message-count"> 0 </span>';
-                        }
-                    }
-                    $output .= '</a>';
-                    $output .= '</div>';
+					$output .= '<li class="cs-depth-0 cs-message cs-bp_message">';
 
-                    $output .= '</li>';
-                }
-            }
+					$output .= '<div class="bp-msg cs-link cs-sticky-item">';
+					$output .= '<a class="bp-icon-wrap" href="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '">';
+					$output .= '<span class="fa fa-envelope"></span>';
+					if ( function_exists( 'bp_total_unread_messages_count' ) ) {
+						$count = bp_get_total_unread_messages_count();
+						if ( $count > 0 ) {
+							$output .= '<span class="cs-notification-count cs-message-count">' . $count . '</span>';
+						} else {
+							$output .= '<span class="cs-notification-count cs-message-count"> 0 </span>';
+						}
+					}
+					$output .= '</a>';
+					$output .= '</div>';
 
-            if (cs_get_option('bp_notifications')) {
-                if (class_exists('BuddyPress') && is_user_logged_in() && bp_is_active('notifications')) {
-                    global $bp;
+					$output .= '</li>';
+				}
+			}
 
-                    $output .= '<li class="cs-depth-0 cs-notification cs-bp_notifications">';
-                    $output .= '<div class = "user-notifications cs-link cs-sticky-item">';
-                    $output .= '<a class="bp-icon-wrap" href ="#" title = "' . esc_html(esc_attr('Notifications'), 'varuna') . '">';
-                    $output .= '<span class="fa fa-bell"> </span>';
+			if ( cs_get_option( 'bp_notifications' ) ) {
+				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'notifications' ) ) {
+					global $bp;
 
-                    if (function_exists('bp_notifications_get_unread_notification_count')) {
-                        $count = bp_notifications_get_unread_notification_count(get_current_user_id());
-                        $output .= '<span class="cs-notification-count">' . esc_html($count) . ' </span>';
-                    }
+					$output .= '<li class="cs-depth-0 cs-notification cs-bp_notifications">';
+					$output .= '<div class = "user-notifications cs-link cs-sticky-item">';
+					$output .= '<a class="bp-icon-wrap" href ="#" title = "' . esc_html( esc_attr( 'Notifications' ), 'varuna' ) . '">';
+					$output .= '<span class="fa fa-bell"> </span>';
 
-                    $output .= '</a>';
+					if ( function_exists( 'bp_notifications_get_unread_notification_count' ) ) {
+						$count   = bp_notifications_get_unread_notification_count( get_current_user_id() );
+						$output .= '<span class="cs-notification-count">' . esc_html( $count ) . ' </span>';
+					}
 
-                    $notifications = bp_notifications_get_notifications_for_user(bp_loggedin_user_id());
-                    if ($notifications) {
-                        $output .= '<ul id="bp-notify" class="sub-menu">';
-                        rsort($notifications);
-                        foreach ($notifications as $notification) {
-                            $output .= '<li>' . $notification . '</li>';
-                        }
-                        $output .= '<li class="bp-view-all">';
-                        $output .= '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . ' " > ' . esc_attr('View all notifications', 'articlemag') . '</a>';
-                        $output .= '</li>';
-                        $output .= '</ul>';
-                    } else {
-                        $output .= '<ul id="bp-notify" class="sub-menu">';
-                        $output .= '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'articlemag') . '</a></li>';
-                        $output .= '</ul>';
-                    }
-                    $output .= '</div>';
+					$output .= '</a>';
 
-                    $output .= '</li>';
-                }
-            }
+					$notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() );
+					if ( $notifications ) {
+						$output .= '<ul id="bp-notify" class="sub-menu">';
+						rsort( $notifications );
+						foreach ( $notifications as $notification ) {
+							$output .= '<li>' . $notification . '</li>';
+						}
+						$output .= '<li class="bp-view-all">';
+						$output .= '<a href="' . esc_url( bp_loggedin_user_domain() . $bp->notifications->slug ) . ' " > ' . esc_attr( 'View all notifications', 'articlemag' ) . '</a>';
+						$output .= '</li>';
+						$output .= '</ul>';
+					} else {
+						$output .= '<ul id="bp-notify" class="sub-menu">';
+						$output .= '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr( 'No new notifications', 'articlemag' ) . '</a></li>';
+						$output .= '</ul>';
+					}
+					$output .= '</div>';
 
-            if (cs_get_option('bp_user_menu')) {
-                $output .= '<li class="cs-depth-0 cs-bp-user-menu">';
-                $current_user = wp_get_current_user();
+					$output .= '</li>';
+				}
+			}
 
-                if (($current_user instanceof WP_User)) {
-                    $user_link = function_exists('bp_core_get_user_domain') ? bp_core_get_user_domain(get_current_user_id()) : '#';
-                    $output .= '<div class="cs-user-link-wrap sf-with-ul">';
-                    $output .= '<a class="cs-user-link" href="' . $user_link . '">';
-                    $output .=  $current_user->user_login;
-                    $output .= get_avatar($current_user->user_email, 50);
-                    $output .= '</a>';
-                    $output .= '</div>';
-                }
-                if (has_nav_menu('bp-userbar')) {
-                    $output .= urldecode_deep(wp_nav_menu(array('theme_location' => 'bp-userbar', 'menu_id' => 'bp-userbar', 'fallback_cb' => '', 'container_class' => false, 'menu_class' => 'sub-menu', 'echo' => false)));
-                }
-                $output .= '</li>';
-            }
+			if ( cs_get_option( 'bp_user_menu' ) ) {
+				$output      .= '<li class="cs-depth-0 cs-bp-user-menu">';
+				$current_user = wp_get_current_user();
 
-            $output = apply_filters('cs_custom_menu_wrap', $output);
+				if ( ( $current_user instanceof WP_User ) ) {
+					$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
+					$output   .= '<div class="cs-user-link-wrap sf-with-ul">';
+					$output   .= '<a class="cs-user-link" href="' . $user_link . '">';
+					$output   .= $current_user->user_login;
+					$output   .= get_avatar( $current_user->user_email, 50 );
+					$output   .= '</a>';
+					$output   .= '</div>';
+				}
+				if ( has_nav_menu( 'bp-userbar' ) ) {
+					$output .= urldecode_deep(
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'bp-userbar',
+								'menu_id'         => 'bp-userbar',
+								'fallback_cb'     => '',
+								'container_class' => false,
+								'menu_class'      => 'sub-menu',
+								'echo'            => false,
+							)
+						)
+					);
+				}
+				$output .= '</li>';
+			}
 
-            return '<ul id="%1$s" class="%2$s">%3$s' . $output . '</ul>';
-        }
+			$output = apply_filters( 'cs_custom_menu_wrap', $output );
 
-    }
+			return '<ul id="%1$s" class="%2$s">%3$s' . $output . '</ul>';
+		}
 
-    // Walker_Nav_Menu
+	}
+
+	// Walker_Nav_Menu
 }
 
 
-if (!class_exists('Walker_Nav_Menu_Edit_Custom')) {
+if ( ! class_exists( 'Walker_Nav_Menu_Edit_Custom' ) ) {
 
-    class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
+	class Walker_Nav_Menu_Edit_Custom extends Walker_Nav_Menu {
 
-        function start_lvl(&$output, $depth = 0, $args = array()) {
-            
-        }
+		function start_lvl( &$output, $depth = 0, $args = array() ) {
 
-        function end_lvl(&$output, $depth = 0, $args = array()) {
-            
-        }
+		}
 
-        function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
-            global $_wp_nav_menu_max_depth;
-            $_wp_nav_menu_max_depth = $depth > $_wp_nav_menu_max_depth ? $depth : $_wp_nav_menu_max_depth;
+		function end_lvl( &$output, $depth = 0, $args = array() ) {
 
-            ob_start();
-            $item_id = esc_attr($item->ID);
-            $removed_args = array(
-                'action',
-                'customlink-tab',
-                'edit-menu-item',
-                'menu-item',
-                'page-tab',
-                '_wpnonce',
-            );
+		}
 
-            $original_title = '';
-            if ('taxonomy' == $item->type) {
-                $original_title = get_term_field('name', $item->object_id, $item->object, 'raw');
-                if (is_wp_error($original_title))
-                    $original_title = false;
-            } elseif ('post_type' == $item->type) {
-                $original_object = get_post($item->object_id);
-                $original_title = get_the_title($original_object->ID);
-            }
+		function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
+			global $_wp_nav_menu_max_depth;
+			$_wp_nav_menu_max_depth = $depth > $_wp_nav_menu_max_depth ? $depth : $_wp_nav_menu_max_depth;
 
-            $classes = array(
-                'menu-item menu-item-depth-' . $depth,
-                'menu-item-' . esc_attr($item->object),
-                'menu-item-edit-' . ( ( isset($_GET['edit-menu-item']) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive'),
-            );
+			ob_start();
+			$item_id      = esc_attr( $item->ID );
+			$removed_args = array(
+				'action',
+				'customlink-tab',
+				'edit-menu-item',
+				'menu-item',
+				'page-tab',
+				'_wpnonce',
+			);
 
-            $title = $item->title;
+			$original_title = '';
+			if ( 'taxonomy' == $item->type ) {
+				$original_title = get_term_field( 'name', $item->object_id, $item->object, 'raw' );
+				if ( is_wp_error( $original_title ) ) {
+					$original_title = false;
+				}
+			} elseif ( 'post_type' == $item->type ) {
+				$original_object = get_post( $item->object_id );
+				$original_title  = get_the_title( $original_object->ID );
+			}
 
-            if (!empty($item->_invalid)) {
-                $classes[] = 'menu-item-invalid';
-                $title = sprintf('%s (Invalid)', $item->title);
-            } elseif (isset($item->post_status) && 'draft' == $item->post_status) {
-                $classes[] = 'pending';
-                $title = sprintf('%s (Pending)', $item->title);
-            }
+			$classes = array(
+				'menu-item menu-item-depth-' . $depth,
+				'menu-item-' . esc_attr( $item->object ),
+				'menu-item-edit-' . ( ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? 'active' : 'inactive' ),
+			);
 
-            $title = (!isset($item->label) || '' == $item->label ) ? $title : $item->label;
+			$title = $item->title;
 
-            $submenu_text = '';
-            if (0 == $depth)
-                $submenu_text = 'style="display: none;"';
-            ?>
-            <li id="menu-item-<?php echo $item_id; ?>" class="<?php echo implode(' ', $classes); ?>">
-                <dl class="menu-item-bar">
-                    <dt class="menu-item-handle">
-                        <span class="item-title"><span class="menu-item-title"><?php echo esc_html($title); ?></span> <span class="is-submenu" <?php echo $submenu_text; ?>><?php echo 'sub item'; ?></span></span>
-                        <span class="item-controls">
-                            <span class="item-type"><?php echo esc_html($item->type_label); ?></span>
+			if ( ! empty( $item->_invalid ) ) {
+				$classes[] = 'menu-item-invalid';
+				$title     = sprintf( '%s (Invalid)', $item->title );
+			} elseif ( isset( $item->post_status ) && 'draft' == $item->post_status ) {
+				$classes[] = 'pending';
+				$title     = sprintf( '%s (Pending)', $item->title );
+			}
 
-                            <!-- Mega Labels Action -->
-                            <?php do_action('cs_mega_menu_labels'); ?>
-                            <!-- /Mega Labels Action -->
+			$title = ( ! isset( $item->label ) || '' == $item->label ) ? $title : $item->label;
 
-                            <span class="item-order hide-if-js">
-                                <a href="<?php
-                                echo esc_url(wp_nonce_url(
-                                                add_query_arg(
-                                                        array(
-                                    'action' => 'move-up-menu-item',
-                                    'menu-item' => $item_id,
-                                                        ), remove_query_arg($removed_args, admin_url('nav-menus.php'))
-                                                ), 'move-menu_item'
-                                ));
-                                ?>" class="item-move-up"><abbr title="<?php echo 'Move up'; ?>">&#8593;</abbr></a>
-                                |
-                                <a href="<?php
-                                echo esc_url(wp_nonce_url(
-                                                add_query_arg(
-                                                        array(
-                                    'action' => 'move-down-menu-item',
-                                    'menu-item' => $item_id,
-                                                        ), remove_query_arg($removed_args, admin_url('nav-menus.php'))
-                                                ), 'move-menu_item'
-                                ));
-                                ?>" class="item-move-down"><abbr title="<?php echo 'Move down'; ?>">&#8595;</abbr></a>
-                            </span>
-                            <a class="item-edit" id="edit-<?php echo $item_id; ?>" title="<?php echo 'Edit Menu Item'; ?>" href="<?php
-                            echo ( isset($_GET['edit-menu-item']) && $item_id == $_GET['edit-menu-item'] ) ? admin_url('nav-menus.php') : esc_url(add_query_arg('edit-menu-item', $item_id, remove_query_arg($removed_args, admin_url('nav-menus.php#menu-item-settings-' . $item_id))));
-                            ?>"><?php echo 'Edit Menu Item'; ?></a>
-                        </span>
-                    </dt>
-                </dl>
+			$submenu_text = '';
+			if ( 0 == $depth ) {
+				$submenu_text = 'style="display: none;"';
+			}
+			?>
+			<li id="menu-item-<?php echo $item_id; ?>" class="<?php echo implode( ' ', $classes ); ?>">
+				<dl class="menu-item-bar">
+					<dt class="menu-item-handle">
+						<span class="item-title"><span class="menu-item-title"><?php echo esc_html( $title ); ?></span> <span class="is-submenu" <?php echo $submenu_text; ?>><?php echo 'sub item'; ?></span></span>
+						<span class="item-controls">
+							<span class="item-type"><?php echo esc_html( $item->type_label ); ?></span>
 
-                <div class="menu-item-settings" id="menu-item-settings-<?php echo $item_id; ?>">
-                    <?php if ('custom' == $item->type) : ?>
-                        <p class="field-url description description-wide">
-                            <label for="edit-menu-item-url-<?php echo $item_id; ?>">
-                                <?php echo 'URL'; ?><br />
-                                <input type="text" id="edit-menu-item-url-<?php echo $item_id; ?>" class="widefat code edit-menu-item-url" name="menu-item-url[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->url); ?>" />
-                            </label>
-                        </p>
-                    <?php endif; ?>
-                    <p class="description description-thin">
-                        <label for="edit-menu-item-title-<?php echo $item_id; ?>">
-                            <?php echo 'Navigation Label'; ?><br />
-                            <input type="text" id="edit-menu-item-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-title" name="menu-item-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->title); ?>" />
-                        </label>
-                    </p>
-                    <p class="description description-thin">
-                        <label for="edit-menu-item-attr-title-<?php echo $item_id; ?>">
-                            <?php echo 'Title Attribute'; ?><br />
-                            <input type="text" id="edit-menu-item-attr-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-attr-title" name="menu-item-attr-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->post_excerpt); ?>" />
-                        </label>
-                    </p>
-                    <p class="field-link-target description">
-                        <label for="edit-menu-item-target-<?php echo $item_id; ?>">
-                            <input type="checkbox" id="edit-menu-item-target-<?php echo $item_id; ?>" value="_blank" name="menu-item-target[<?php echo $item_id; ?>]"<?php checked($item->target, '_blank'); ?> />
-                            <?php echo 'Open link in a new window/tab'; ?>
-                        </label>
-                    </p>
-                    <p class="field-css-classes description description-thin">
-                        <label for="edit-menu-item-classes-<?php echo $item_id; ?>">
-                            <?php echo 'CSS Classes (optional)'; ?><br />
-                            <input type="text" id="edit-menu-item-classes-<?php echo $item_id; ?>" class="widefat code edit-menu-item-classes" name="menu-item-classes[<?php echo $item_id; ?>]" value="<?php echo esc_attr(implode(' ', $item->classes)); ?>" />
-                        </label>
-                    </p>
-                    <p class="field-xfn description description-thin">
-                        <label for="edit-menu-item-xfn-<?php echo $item_id; ?>">
-                            <?php echo 'Link Relationship (XFN)'; ?><br />
-                            <input type="text" id="edit-menu-item-xfn-<?php echo $item_id; ?>" class="widefat code edit-menu-item-xfn" name="menu-item-xfn[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->xfn); ?>" />
-                        </label>
-                    </p>
+							<!-- Mega Labels Action -->
+							<?php do_action( 'cs_mega_menu_labels' ); ?>
+							<!-- /Mega Labels Action -->
 
-                    <!-- Mega Menu Fields-->
-                    <?php do_action('cs_mega_menu_fields', $item_id, $item); ?>
-                    <!-- /Mega Menu Fields-->
+							<span class="item-order hide-if-js">
+								<a href="
+								<?php
+								echo esc_url(
+									wp_nonce_url(
+										add_query_arg(
+											array(
+												'action' => 'move-up-menu-item',
+												'menu-item' => $item_id,
+											),
+											remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) )
+										),
+										'move-menu_item'
+									)
+								);
+								?>
+								" class="item-move-up"><abbr title="<?php echo 'Move up'; ?>">&#8593;</abbr></a>
+								|
+								<a href="
+								<?php
+								echo esc_url(
+									wp_nonce_url(
+										add_query_arg(
+											array(
+												'action' => 'move-down-menu-item',
+												'menu-item' => $item_id,
+											),
+											remove_query_arg( $removed_args, admin_url( 'nav-menus.php' ) )
+										),
+										'move-menu_item'
+									)
+								);
+								?>
+								" class="item-move-down"><abbr title="<?php echo 'Move down'; ?>">&#8595;</abbr></a>
+							</span>
+							<a class="item-edit" id="edit-<?php echo $item_id; ?>" title="<?php echo 'Edit Menu Item'; ?>" href="
+																	 <?php
+																		echo ( isset( $_GET['edit-menu-item'] ) && $item_id == $_GET['edit-menu-item'] ) ? admin_url( 'nav-menus.php' ) : esc_url( add_query_arg( 'edit-menu-item', $item_id, remove_query_arg( $removed_args, admin_url( 'nav-menus.php#menu-item-settings-' . $item_id ) ) ) );
+																		?>
+							"><?php echo 'Edit Menu Item'; ?></a>
+						</span>
+					</dt>
+				</dl>
 
-                    <p class="field-move hide-if-no-js description description-wide">
-                        <label>
-                            <span><?php echo 'Move'; ?></span>
-                            <a href="#" class="menus-move-up"><?php echo 'Up one'; ?></a>
-                            <a href="#" class="menus-move-down"><?php echo 'Down one'; ?></a>
-                            <a href="#" class="menus-move-left"></a>
-                            <a href="#" class="menus-move-right"></a>
-                            <a href="#" class="menus-move-top"><?php echo 'To the top'; ?></a>
-                        </label>
-                    </p>
+				<div class="menu-item-settings" id="menu-item-settings-<?php echo $item_id; ?>">
+					<?php if ( 'custom' == $item->type ) : ?>
+						<p class="field-url description description-wide">
+							<label for="edit-menu-item-url-<?php echo $item_id; ?>">
+								<?php echo 'URL'; ?><br />
+								<input type="text" id="edit-menu-item-url-<?php echo $item_id; ?>" class="widefat code edit-menu-item-url" name="menu-item-url[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->url ); ?>" />
+							</label>
+						</p>
+					<?php endif; ?>
+					<p class="description description-thin">
+						<label for="edit-menu-item-title-<?php echo $item_id; ?>">
+							<?php echo 'Navigation Label'; ?><br />
+							<input type="text" id="edit-menu-item-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-title" name="menu-item-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->title ); ?>" />
+						</label>
+					</p>
+					<p class="description description-thin">
+						<label for="edit-menu-item-attr-title-<?php echo $item_id; ?>">
+							<?php echo 'Title Attribute'; ?><br />
+							<input type="text" id="edit-menu-item-attr-title-<?php echo $item_id; ?>" class="widefat edit-menu-item-attr-title" name="menu-item-attr-title[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->post_excerpt ); ?>" />
+						</label>
+					</p>
+					<p class="field-link-target description">
+						<label for="edit-menu-item-target-<?php echo $item_id; ?>">
+							<input type="checkbox" id="edit-menu-item-target-<?php echo $item_id; ?>" value="_blank" name="menu-item-target[<?php echo $item_id; ?>]"<?php checked( $item->target, '_blank' ); ?> />
+							<?php echo 'Open link in a new window/tab'; ?>
+						</label>
+					</p>
+					<p class="field-css-classes description description-thin">
+						<label for="edit-menu-item-classes-<?php echo $item_id; ?>">
+							<?php echo 'CSS Classes (optional)'; ?><br />
+							<input type="text" id="edit-menu-item-classes-<?php echo $item_id; ?>" class="widefat code edit-menu-item-classes" name="menu-item-classes[<?php echo $item_id; ?>]" value="<?php echo esc_attr( implode( ' ', $item->classes ) ); ?>" />
+						</label>
+					</p>
+					<p class="field-xfn description description-thin">
+						<label for="edit-menu-item-xfn-<?php echo $item_id; ?>">
+							<?php echo 'Link Relationship (XFN)'; ?><br />
+							<input type="text" id="edit-menu-item-xfn-<?php echo $item_id; ?>" class="widefat code edit-menu-item-xfn" name="menu-item-xfn[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->xfn ); ?>" />
+						</label>
+					</p>
 
-                    <?php
-                    // Nav Menu Roles Plugin conflict fixing here.
-                    if (class_exists('Nav_Menu_Roles')) {
-                        do_action('wp_nav_menu_item_custom_fields', $item_id, $item, $depth, $args);
-                    }
-                    ?>
+					<!-- Mega Menu Fields-->
+					<?php do_action( 'cs_mega_menu_fields', $item_id, $item ); ?>
+					<!-- /Mega Menu Fields-->
 
-                    <div class="menu-item-actions description-wide submitbox">
-                        <?php if ('custom' != $item->type && $original_title !== false) : ?>
-                            <p class="link-to-original">
-                                <?php printf('Original: %s', '<a href="' . esc_attr($item->url) . '">' . esc_html($original_title) . '</a>'); ?>
-                            </p>
-                        <?php endif; ?>
-                        <a class="item-delete submitdelete deletion" id="delete-<?php echo $item_id; ?>" href="<?php
-                        echo esc_url(wp_nonce_url(
-                                        add_query_arg(
-                                                array(
-                            'action' => 'delete-menu-item',
-                            'menu-item' => $item_id,
-                                                ), admin_url('nav-menus.php')
-                                        ), 'delete-menu_item_' . $item_id
-                        ));
-                        ?>"><?php echo 'Remove'; ?></a> <span class="meta-sep hide-if-no-js"> | </span> <a class="item-cancel submitcancel hide-if-no-js" id="cancel-<?php echo $item_id; ?>" href="<?php echo esc_url(add_query_arg(array('edit-menu-item' => $item_id, 'cancel' => time()), admin_url('nav-menus.php')));
-                        ?>#menu-item-settings-<?php echo $item_id; ?>"><?php echo 'Cancel'; ?></a>
-                    </div>
+					<p class="field-move hide-if-no-js description description-wide">
+						<label>
+							<span><?php echo 'Move'; ?></span>
+							<a href="#" class="menus-move-up"><?php echo 'Up one'; ?></a>
+							<a href="#" class="menus-move-down"><?php echo 'Down one'; ?></a>
+							<a href="#" class="menus-move-left"></a>
+							<a href="#" class="menus-move-right"></a>
+							<a href="#" class="menus-move-top"><?php echo 'To the top'; ?></a>
+						</label>
+					</p>
 
-                    <input class="menu-item-data-db-id" type="hidden" name="menu-item-db-id[<?php echo $item_id; ?>]" value="<?php echo $item_id; ?>" />
-                    <input class="menu-item-data-object-id" type="hidden" name="menu-item-object-id[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->object_id); ?>" />
-                    <input class="menu-item-data-object" type="hidden" name="menu-item-object[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->object); ?>" />
-                    <input class="menu-item-data-parent-id" type="hidden" name="menu-item-parent-id[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->menu_item_parent); ?>" />
-                    <input class="menu-item-data-position" type="hidden" name="menu-item-position[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->menu_order); ?>" />
-                    <input class="menu-item-data-type" type="hidden" name="menu-item-type[<?php echo $item_id; ?>]" value="<?php echo esc_attr($item->type); ?>" />
+					<?php
+					// Nav Menu Roles Plugin conflict fixing here.
+					if ( class_exists( 'Nav_Menu_Roles' ) ) {
+						do_action( 'wp_nav_menu_item_custom_fields', $item_id, $item, $depth, $args );
+					}
+					?>
 
-                    <div class="clear"></div>
-                </div><!-- .menu-item-settings-->
-                <ul class="menu-item-transport"></ul>
-                <?php
-                $output .= ob_get_clean();
-            }
+					<div class="menu-item-actions description-wide submitbox">
+						<?php if ( 'custom' != $item->type && $original_title !== false ) : ?>
+							<p class="link-to-original">
+								<?php printf( 'Original: %s', '<a href="' . esc_attr( $item->url ) . '">' . esc_html( $original_title ) . '</a>' ); ?>
+							</p>
+						<?php endif; ?>
+						<a class="item-delete submitdelete deletion" id="delete-<?php echo $item_id; ?>" href="
+																						   <?php
+																							echo esc_url(
+																								wp_nonce_url(
+																									add_query_arg(
+																										array(
+																											'action'    => 'delete-menu-item',
+																											'menu-item' => $item_id,
+																										),
+																										admin_url( 'nav-menus.php' )
+																									),
+																									'delete-menu_item_' . $item_id
+																								)
+																							);
+																							?>
+						"><?php echo 'Remove'; ?></a> <span class="meta-sep hide-if-no-js"> | </span> <a class="item-cancel submitcancel hide-if-no-js" id="cancel-<?php echo $item_id; ?>" href="
+									 <?php
+										echo esc_url(
+											add_query_arg(
+												array(
+													'edit-menu-item' => $item_id,
+													'cancel' => time(),
+												),
+												admin_url( 'nav-menus.php' )
+											)
+										);
+										?>
+						#menu-item-settings-<?php echo $item_id; ?>"><?php echo 'Cancel'; ?></a>
+					</div>
 
-        }
+					<input class="menu-item-data-db-id" type="hidden" name="menu-item-db-id[<?php echo $item_id; ?>]" value="<?php echo $item_id; ?>" />
+					<input class="menu-item-data-object-id" type="hidden" name="menu-item-object-id[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->object_id ); ?>" />
+					<input class="menu-item-data-object" type="hidden" name="menu-item-object[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->object ); ?>" />
+					<input class="menu-item-data-parent-id" type="hidden" name="menu-item-parent-id[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->menu_item_parent ); ?>" />
+					<input class="menu-item-data-position" type="hidden" name="menu-item-position[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->menu_order ); ?>" />
+					<input class="menu-item-data-type" type="hidden" name="menu-item-type[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->type ); ?>" />
 
-        // Walker_Nav_Menu_Edit
-    }
+					<div class="clear"></div>
+				</div><!-- .menu-item-settings-->
+				<ul class="menu-item-transport"></ul>
+				<?php
+				$output .= ob_get_clean();
+		}
+
+	}
+
+		// Walker_Nav_Menu_Edit
+}
