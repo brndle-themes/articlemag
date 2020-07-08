@@ -972,12 +972,11 @@ function display_articlemag_featured_posts() {
     ob_start();
     ?>
     <div class="article-slider">
-
         <?php
         $atts = NULL;
         $is_featured_exists = false;
         $args = array(
-            'posts_per_page' => $atts['limit'],
+            'posts_per_page' => -1,
             'post_type' => 'post',
             'meta_key' => 'meta-checkbox',
             'meta_value' => 1,
@@ -986,7 +985,7 @@ function display_articlemag_featured_posts() {
 
         if (!$all_posts->have_posts()) {
             $args = array(
-                'posts_per_page' => $atts['limit'],
+                'posts_per_page' => -1,
                 'post_type' => 'post',
             );
             $all_posts = new WP_Query($args);
