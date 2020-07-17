@@ -12,7 +12,7 @@ global $cs_has_section, $post;
 
 $cs_post_meta    = get_post_meta( $post->ID, '_side_custom_page_options', true );
 $cs_page_layout  = ( isset ( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'right';
-$cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : '9';
+$cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 $vc_exclude      = cs_get_option( 'vc_exclude_shortcodes' );
 $vc_exclude      = ( is_array( $vc_exclude ) ) ? $vc_exclude : array();
 $cs_page_padding = ( ! in_array( 'vc_row', $vc_exclude ) ) ? 'md-padding ' : '';

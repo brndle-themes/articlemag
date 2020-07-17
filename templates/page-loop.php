@@ -10,7 +10,7 @@
 $cs_blog_layout    = cs_get_option( 'blog_layout' );
 $cs_page_layout    = cs_get_option( 'blog_sidebar' );
 $cs_page_container = ( $cs_page_layout == 'fluid' ) ? '-fluid' : '';
-$cs_page_column    = ( $cs_page_layout == 'full' || $cs_page_layout == 'fluid' ) ? '12' : '9';
+$cs_page_column  = ( $cs_page_layout == 'full' || $cs_page_layout == 'fluid' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 $cs_blog_class     = ( $cs_blog_layout == 'grid' || $cs_blog_layout == 'masonry' ) ? 'masonry' : 'default blog-layout-'. $cs_blog_layout;
 ?>
 <section class="main-content md-padding page-layout-<?php echo $cs_page_layout; ?> blog-<?php echo $cs_blog_class; ?>">

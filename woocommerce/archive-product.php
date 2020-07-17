@@ -33,7 +33,7 @@ get_template_part( 'templates/page-header' );
 $shop_id          = wc_get_page_id( 'shop' );
 $cs_post_meta     = get_post_meta( $shop_id, '_side_custom_page_options', true );
 $cs_page_layout   = ( isset ( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'full';
-$cs_page_column   = ( $cs_page_layout == 'full' ) ? '12' : '9';
+$cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 
 ?>
 

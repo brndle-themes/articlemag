@@ -789,10 +789,10 @@ if ( ! function_exists( 'cs_link_pages' ) ) {
 if ( ! function_exists( 'cs_page_sidebar' ) ) {
 
 	function cs_page_sidebar( $base = 'right', $layout = 'right' ) {
-		if ( $base == $layout ) {
+		if ( $base == $layout || $layout == 'both' ) {
 			echo '<div class="col-md-3 cs-sidebar-clear">';
 			echo '<div class="page-sidebar sidebar-' . $base . '">';
-			get_sidebar();
+			get_sidebar( $base );
 			echo '</div>';
 			echo '</div>';
 		}

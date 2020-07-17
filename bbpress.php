@@ -10,7 +10,7 @@ get_header();
 get_template_part( 'templates/page-header' );
 
 $cs_bbpress_layout  = cs_get_option( 'bbpress_sidebar', 'full' );
-$cs_page_column  = ( $cs_bbpress_layout == 'full' ) ? '12' : '9';
+$cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 
 ?>
 <section class="main-content md-padding page-layout-<?php echo $cs_bbpress_layout; ?>">
