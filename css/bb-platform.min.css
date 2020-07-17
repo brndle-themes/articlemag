@@ -8,6 +8,7 @@
 # Group Single
 # Sidebar Widegts
 # Forums
+# Documents
 # Extra Plugins Support
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -18,6 +19,14 @@
     padding-bottom: 15px;
   }
 }
+.bb-activity-media-wrap {
+  margin: 0;
+}
+
+.bb-activity-media-elem {
+  padding: 0;
+}
+
 .activity-list .activity-item .activity-header .activity-time-since:before {
   content: none;
 }
@@ -57,8 +66,14 @@
   padding-left: 25px;
 }
 
-.buddypress #buddypress.buddypress-wrap .activity-update-form.media-off #whats-new-content .medium-editor-toolbar .medium-editor-toolbar-actions {
+#whats-new-form #whats-new-toolbar,
+#whats-new-form #whats-new-attachments {
+  margin: 0;
   padding: 0 15px;
+}
+
+#whats-new-form #whats-new-toolbar {
+  margin-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -186,12 +201,18 @@
   min-height: 185px;
 }
 
-.my-messages.has-buddypress-sidebar-right .bp-vertical-navs .member-home {
-  grid-template-columns: 1fr;
+.my-messages .cs-member-home .col-md-9 {
+  width: 100%;
 }
 
-.my-messages.has-buddypress-sidebar-right .bp-vertical-navs .member-home aside#secondary {
+.my-messages .cs-member-home .page-sidebar.sidebar-right,
+.my-messages .cs-member-home .page-sidebar.sidebar-left {
   display: none;
+}
+
+.bp-messages-content .actions .message_actions .message_action__list {
+  right: -1px;
+  top: 50px;
 }
 
 .bb-select-container span.select2-selection__choice__remove:before {
@@ -244,7 +265,6 @@
 
 .single-headers .group-status {
   margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .activity-list .activity-item .bp-generic-meta.action .unfav .like-count {
@@ -357,14 +377,29 @@
   margin-left: auto;
 }
 
-.send-invites.has-buddypress-sidebar-right .bp-vertical-navs .group-home,
-.groups.messages.has-buddypress-sidebar-right .bp-vertical-navs .group-home {
-  grid-template-columns: 1fr;
+.send-invites .cs-group-home .col-md-9,
+.groups.messages .cs-group-home .col-md-9 {
+  width: 100%;
 }
 
-.send-invites.has-buddypress-sidebar-right .bp-vertical-navs .group-home aside#secondary,
-.groups.messages.has-buddypress-sidebar-right .bp-vertical-navs .group-home aside#secondary {
+.send-invites .cs-group-home .page-sidebar.sidebar-right,
+.groups.messages .cs-group-home .page-sidebar.sidebar-right,
+.send-invites .cs-group-home .page-sidebar.sidebar-left,
+.groups.messages .cs-group-home .page-sidebar.sidebar-left {
   display: none;
+}
+
+.group-invites-column,
+.group-invites-members-listing .bp-invites-feedback {
+  padding: 15px;
+}
+
+#buddypress ul.group-inviters {
+  padding: 0;
+}
+
+#buddypress .bp-invites-content li ul.group-inviters li {
+  margin: 0;
 }
 
 .bb-album-actions {
@@ -389,14 +424,6 @@
 .buddypress-wrap .standard-form label,
 .buddypress-wrap .standard-form span.label {
   display: inline-block;
-}
-
-.group-invites-column {
-  padding: 15px;
-}
-
-.groups-manage-members-list ul {
-  padding-left: 0;
 }
 
 /*--------------------------------------------------------------
@@ -614,6 +641,47 @@ span.bbp-author-avatar img {
     margin-left: 0px;
   }
 }
+.bp-feedback {
+  border: 1px solid #e8e8e8;
+  box-shadow: none;
+  clear: both;
+}
+
+.bbp-reply-author .bbp-author-name {
+  display: block;
+}
+
+/*--------------------------------------------------------------
+# Documents
+--------------------------------------------------------------*/
+.directory.document .document-options {
+  right: 15px;
+  top: -22px;
+}
+
+.bp-document-listing .bb-media-actions-wrap {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.bp-document-listing .bp-media-header-wrap .bb-media-actions-wrap {
+  margin-bottom: 20px;
+}
+
+#media-stream .document-data-table-head,
+#media-folder-document-data-table .media-folder_items,
+.search-document-list .media-folder_items {
+  width: 100%;
+}
+
+.bp-document-listing .media-search-form .bp-dir-search-form {
+  border-radius: 100px;
+}
+
+#media-stream.document-parent #media-folder-document-data-table .media-folder_items {
+  margin: 0;
+}
+
 /*--------------------------------------------------------------
 # Extra Plugins Support
 --------------------------------------------------------------*/

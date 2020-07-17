@@ -7,69 +7,69 @@
  */
 ?>
 
-<h2 class="screen-heading group-invites-screen"><?php esc_html_e('Group Invites', 'articlemag'); ?></h2>
+<h2 class="screen-heading group-invites-screen"><?php esc_html_e( 'Group Invites', 'articlemag' ); ?></h2>
 
-<?php bp_nouveau_group_hook('before', 'invites_content'); ?>
+<?php bp_nouveau_group_hook( 'before', 'invites_content' ); ?>
 
-<?php if (bp_has_groups('type=invites&user_id=' . bp_loggedin_user_id())) : ?>
+<?php if ( bp_has_groups( 'type=invites&user_id=' . bp_loggedin_user_id() ) ) : ?>
 
-    <ul id="group-list" class="invites item-list bp-list" data-bp-list="groups_invites">
+	<ul id="group-list" class="invites item-list bp-list" data-bp-list="groups_invites">
 
-        <?php
-        while (bp_groups()) :
-            bp_the_group();
-            ?>
+		<?php
+		while ( bp_groups() ) :
+			bp_the_group();
+			?>
 
-            <li class="item-entry invites-list" data-bp-item-id="<?php bp_group_id(); ?>" data-bp-item-component="groups">
+			<li class="item-entry invites-list" data-bp-item-id="<?php bp_group_id(); ?>" data-bp-item-component="groups">
 
-                <div class="wrap list-wrap">
+				<div class="wrap list-wrap">
 
-                    <?php if (!bp_disable_group_avatar_uploads()) : ?>
-                        <div class="item-avatar">
-                            <a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar(); ?></a>
-                        </div>
-                    <?php endif; ?>
+					<?php if ( !bp_disable_group_avatar_uploads() ) : ?>
+						<div class="item-avatar">
+							<a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar(); ?></a>
+						</div>
+					<?php endif; ?>
 
-                    <div class="item">
-                        <div class="item-block">
-                            <h2 class="list-title groups-title"><?php bp_group_link(); ?></h2>
-                            <p class="meta group-details">
-                                <span class="small">
-                                    <?php
-                                    printf(
-                                            /* translators: %s = number of members */
-                                            _n('%s member', '%s members', bp_get_group_total_members(false), 'articlemag'), number_format_i18n(bp_get_group_total_members(false)));
-                                    ?>
-                                </span>
-                            </p>
+					<div class="item">
+						<div class="item-block">
+							<h2 class="list-title groups-title"><?php bp_group_link(); ?></h2>
+							<p class="meta group-details">
+								<span class="small">
+									<?php
+									printf(
+									/* translators: %s = number of members */
+									_n( '%s member', '%s members', bp_get_group_total_members( false ), 'articlemag' ), number_format_i18n( bp_get_group_total_members( false ) ) );
+									?>
+								</span>
+							</p>
 
-                            <p class="desc">
-                                <?php bp_group_description_excerpt(); ?>
-                            </p>
+							<p class="desc">
+								<?php bp_group_description_excerpt(); ?>
+							</p>
 
-                            <?php bp_nouveau_group_hook('', 'invites_item'); ?>
-                        </div>
-                        <?php
-                        bp_nouveau_groups_invite_buttons(
-                                array(
-                                    'container' => 'ul',
-                                    'button_element' => 'button',
-                                )
-                        );
-                        ?>
-                    </div>
+							<?php bp_nouveau_group_hook( '', 'invites_item' ); ?>
+						</div>
+						<?php
+						bp_nouveau_groups_invite_buttons(
+						array(
+							'container'		 => 'ul',
+							'button_element' => 'button',
+						)
+						);
+						?>
+					</div>
 
-                </div>
-            </li>
+				</div>
+			</li>
 
-        <?php endwhile; ?>
-    </ul>
+		<?php endwhile; ?>
+	</ul>
 
 <?php else : ?>
 
-    <?php bp_nouveau_user_feedback('member-invites-none'); ?>
+	<?php bp_nouveau_user_feedback( 'member-invites-none' ); ?>
 
 <?php endif; ?>
 
 <?php
-bp_nouveau_group_hook('after', 'invites_content');
+bp_nouveau_group_hook( 'after', 'invites_content' );

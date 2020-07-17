@@ -8,16 +8,10 @@
  * @since 3.0.0
  * @version 6.0.0
  */
-bp_nouveau_activity_hook('before', 'entry');
+bp_nouveau_activity_hook( 'before', 'entry' );
 ?>
 
 <li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>">
-
-    <div class="activity-card-head">
-        <h6 class="card-head-content-type">
-            <?php echo bp_get_activity_css_first_class(); ?>
-        </h6>
-    </div>
 
     <div class="activity-item-head">
 
@@ -25,7 +19,7 @@ bp_nouveau_activity_hook('before', 'entry');
 
             <a href="<?php bp_activity_user_link(); ?>">
 
-                <?php bp_activity_avatar(array('type' => 'full')); ?>
+				<?php bp_activity_avatar( array( 'type' => 'full' ) ); ?>
 
             </a>
 
@@ -33,46 +27,46 @@ bp_nouveau_activity_hook('before', 'entry');
 
         <div class="activity-header">
 
-            <?php bp_activity_action(); ?>
+			<?php bp_activity_action(); ?>
 
         </div>
 
-    </div>
+	</div>
 
 
-    <div class="activity-content">
+	<div class="activity-content">
 
-        <?php if (bp_nouveau_activity_has_content()) : ?>
+		<?php if ( bp_nouveau_activity_has_content() ) : ?>
 
-            <div class="activity-inner">
+			<div class="activity-inner">
 
-                <?php bp_nouveau_activity_content(); ?>
+				<?php bp_nouveau_activity_content(); ?>
 
-            </div>
+			</div>
 
-        <?php endif; ?>
+		<?php endif; ?>
 
-        <?php bp_nouveau_activity_entry_buttons(); ?>
+		<?php bp_nouveau_activity_entry_buttons(); ?>
 
-    </div>
+	</div>
 
-    <?php bp_nouveau_activity_hook('before', 'entry_comments'); ?>
+	<?php bp_nouveau_activity_hook( 'before', 'entry_comments' ); ?>
 
-    <?php if (bp_activity_get_comment_count() || ( is_user_logged_in() && ( bp_activity_can_comment() || bp_is_single_activity() ) )) : ?>
+	<?php if ( bp_activity_get_comment_count() || ( is_user_logged_in() && ( bp_activity_can_comment() || bp_is_single_activity() ) ) ) : ?>
 
-        <div class="activity-comments">
+		<div class="activity-comments">
 
-            <?php bp_activity_comments(); ?>
+			<?php bp_activity_comments(); ?>
 
-            <?php bp_nouveau_activity_comment_form(); ?>
+			<?php bp_nouveau_activity_comment_form(); ?>
 
-        </div>
+		</div>
 
-    <?php endif; ?>
+	<?php endif; ?>
 
-    <?php bp_nouveau_activity_hook('after', 'entry_comments'); ?>
+	<?php bp_nouveau_activity_hook( 'after', 'entry_comments' ); ?>
 
 </li>
 
 <?php
-bp_nouveau_activity_hook('after', 'entry');
+bp_nouveau_activity_hook( 'after', 'entry' );

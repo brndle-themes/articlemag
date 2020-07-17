@@ -8,71 +8,71 @@
 bp_nouveau_before_loop();
 ?>
 
-<?php if (bp_get_current_member_type()) : ?>
-    <p class="current-member-type"><?php bp_current_member_type_message(); ?></p>
+<?php if ( bp_get_current_member_type() ) : ?>
+	<p class="current-member-type"><?php bp_current_member_type_message(); ?></p>
 <?php endif; ?>
 
-<?php if (bp_has_members(bp_ajax_querystring('members'))) : ?>
+<?php if ( bp_has_members( bp_ajax_querystring( 'members' ) ) ) : ?>
 
-    <?php bp_nouveau_pagination('top'); ?>
+	<?php bp_nouveau_pagination( 'top' ); ?>
 
-    <ul id="members-list" class="<?php bp_nouveau_loop_classes(); ?>">
+	<ul id="members-list" class="<?php bp_nouveau_loop_classes(); ?>">
 
-        <?php while (bp_members()) : bp_the_member(); ?>
+		<?php while ( bp_members() ) : bp_the_member(); ?>
 
-            <li <?php bp_member_class(array('item-entry')); ?> data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
-                <div class="list-wrap">
+			<li <?php bp_member_class( array( 'item-entry' ) ); ?> data-bp-item-id="<?php bp_member_user_id(); ?>" data-bp-item-component="members">
+				<div class="list-wrap">
 
-                    <?php //do_action('buddyx_before_member_avatar_member_directory'); ?>
+					<?php do_action( 'articlemag_before_member_avatar_member_directory' ); ?>
 
-                    <div class="item-avatar">
-                        <a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar(bp_nouveau_avatar_args()); ?><?php// retailmarket_user_status(bp_get_member_user_id()); ?></a>
-                    </div>
+					<div class="item-avatar">
+						<a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?><?php articlemag_user_status( bp_get_member_user_id() ); ?></a>
+					</div>
 
-                    <div class="item">
+					<div class="item">
 
-                        <div class="item-block">
+						<div class="item-block">
 
-                            <div class="member-info-wrapper">
-                                <h2 class="list-title member-name">
-                                    <a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
-                                </h2>
+							<div class="member-info-wrapper">
+								<h2 class="list-title member-name">
+									<a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
+								</h2>
 
-                                <?php if (bp_nouveau_member_has_meta()) : ?>
-                                    <p class="item-meta last-activity">
-                                        <?php bp_nouveau_member_meta(); ?>
-                                    </p><!-- #item-meta -->
-                                <?php endif; ?>
-                            </div><!-- .member-info-wrapper -->
+								<?php if ( bp_nouveau_member_has_meta() ) : ?>
+									<p class="item-meta last-activity">
+										<?php bp_nouveau_member_meta(); ?>
+									</p><!-- #item-meta -->
+								<?php endif; ?>
+							</div><!-- .member-info-wrapper -->
 
-                            <div class="member-action-wrapper">
-                                <?php
-                                bp_nouveau_members_loop_buttons(
-                                        array(
-                                            'container' => 'ul',
-                                            'button_element' => 'button',
-                                        )
-                                );
-                                ?>
-                            </div><!-- .member-action-wrapper -->
+							<div class="member-action-wrapper">
+								<?php
+								bp_nouveau_members_loop_buttons(
+								array(
+									'container'		 => 'ul',
+									'button_element' => 'button',
+								)
+								);
+								?>
+							</div><!-- .member-action-wrapper -->
 
-                        </div>
+						</div>
 
-                    </div><!-- // .item -->
+					</div><!-- // .item -->
 
-                </div>
-            </li>
+				</div>
+			</li>
 
-        <?php endwhile; ?>
+		<?php endwhile; ?>
 
-    </ul>
+	</ul>
 
-    <?php bp_nouveau_pagination('bottom'); ?>
+	<?php bp_nouveau_pagination( 'bottom' ); ?>
 
-    <?php
+	<?php
 else :
 
-    bp_nouveau_user_feedback('members-loop-none');
+	bp_nouveau_user_feedback( 'members-loop-none' );
 
 endif;
 ?>

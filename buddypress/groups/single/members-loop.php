@@ -26,7 +26,7 @@
 
 				<div class="list-wrap">
 
-					<?php do_action( 'buddyx_before_member_avatar_member_directory' ); ?>
+					<?php do_action( 'articlemag_before_member_avatar_member_directory' ); ?>
 
 					<div class="item-avatar">
 						<a href="<?php bp_group_member_domain(); ?>">
