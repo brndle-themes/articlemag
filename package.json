@@ -1,5 +1,5 @@
 {
-    "name": "Articlemag",
+    "name": "ArticleMag",
     "dependencies": {
         "load-grunt-tasks": "^0.2.1"
     },

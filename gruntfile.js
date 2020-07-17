@@ -48,7 +48,7 @@ module.exports = function ( grunt ) {
         // uglify to concat, minify, and make source maps
         uglify: {
             options: {
-                banner: '/*! \n * Articlemag JavaScript Library \n * @package Articlemag \n */',
+                banner: '/*! \n * ArticleMag JavaScript Library \n * @package ArticleMag \n */',
                 sourceMap: 'js/main.js.map',
                 sourceMappingURL: 'main.js.map',
                 sourceMapPrefix: 2
@@ -105,8 +105,8 @@ module.exports = function ( grunt ) {
                     potFilename: 'articlemag.pot', // Name of the POT file.
                     potHeaders: { // Headers to add to the generated POT file.
                         poedit: true, // Includes common Poedit headers.
-                        'Last-Translator': 'Articlemag',
-                        'Language-Team': 'Articlemag',
+                        'Last-Translator': 'ArticleMag',
+                        'Language-Team': 'ArticleMag',
                         'report-msgid-bugs-to': '',
                         'x-poedit-keywordslist': true // Include a list of all possible gettext functions.
                     },
