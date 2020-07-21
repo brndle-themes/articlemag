@@ -266,6 +266,7 @@ function cs_get_custom_skin() {
   .cs-menu-effect .cs-link-depth-0:before,
   .cs-module-social a:hover,
   .cs-accent-background,
+  .articlemag_widget .widget-title h4:after,
         
   #buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
   .buddypress-wrap .bp-navs li.current a .count, .buddypress-wrap .bp-navs li.dynamic.current a .count, .buddypress-wrap .bp-navs li.selected a .count, .buddypress_object_nav .bp-navs li.current a .count, .buddypress_object_nav .bp-navs li.selected a .count {
@@ -836,6 +837,7 @@ nav#object-nav.vertical .selected > a, nav#object-nav.vertical a:hover, .bp-sing
 .ajax-pagination .cs-loader:after,
 .cs-accent-background,
 .widget_price_filter .ui-slider .ui-slider-handle,
+.articlemag_widget .widget-title h4:after
 
 #buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
 .buddypress-wrap .bp-navs li.current a .count, .buddypress-wrap .bp-navs li.dynamic.current a .count, .buddypress-wrap .bp-navs li.selected a .count, .buddypress_object_nav .bp-navs li.current a .count, .buddypress_object_nav .bp-navs li.selected a .count {
