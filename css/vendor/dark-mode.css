@@ -278,155 +278,297 @@
     }
 }
 
-/*===================================
-            Buddypress
-===================================*/
-
-.dark-mode .activity-update-form,
-.dark-mode .activity-list.bp-list .activity-item,
-.dark-mode .item-header-cover-image-wrapper,
-.dark-mode #buddypress.buddypress-wrap #item-body:not(#group-create-body),
-.dark-mode .bp-list > li .list-wrap,
-.dark-mode .groups-header .desc-wrap,
-.dark-mode .buddypress-wrap .bp-feedback,
-.dark-mode .activity-update-form #whats-new-textarea textarea,
-.dark-mode #item-body #group-invites-container .bp-invites-content .item-list > li,
-.dark-mode #buddypress p.warning,
-.dark-mode .buddypress-wrap .profile.edit .editfield,
-.dark-mode div.mce-panel,
-.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button,
-.dark-mode body.buddypress #buddypress.buddypress-wrap .standard-form .wp-editor-container button,
-.dark-mode body.buddypress #buddypress.buddypress-wrap .standard-form .wp-editor-container input[type=button],
-.dark-mode .bp-nouveau .bupr-row,
-.dark-mode .multi-review,
-.dark-mode .bp-member-add-form textarea,
-.dark-mode #group-invites-container,
-.dark-mode .groups-manage-members-list ul li:nth-child(even),
-.dark-mode .groups-manage-members-list ul li,
-.dark-mode #group-create-body,
-.dark-mode .buddypress .bp-invites-content ul.item-list > li{
-    background: #1c2939;
-    border-color: #495061;
-}
-.dark-mode .groups-manage-members-list ul li{
-    border-color: #495061 !important;
-}
-.dark-mode .buddypress-wrap .bp-subnavs li.current a,
-.dark-mode .buddypress-wrap .bp-subnavs li.selected a,
-.dark-mode .buddypress-wrap .bp-subnavs li.selected a:hover{
-    background: #1c2939;
+/* BuddyPress / BB Platform Pages Dark Mode */
+.dark-mode .mfp-content .rtm-single-meta {
+    background-color: #10161d;
 }
 
-.dark-mode .bp-nouveau .bupr-row,
-.dark-mode .multi-review{
-    border: 1px solid #495061;
-}
-.dark-mode #buddypress p.warning,
-.dark-mode body.bp-nouveau.media #buddypress #item-header-cover-image .user-nicename,
-.dark-mode #buddypress div#item-header-cover-image h2 a,
-.dark-mode #buddypress div#item-header-cover-image h2{
-    color: #fff;
-}
-.dark-mode .mce-toolbar .mce-ico{
-    color: #999;
-}
-.dark-mode .activity-update-form #whats-new-avatar,
-.dark-mode .medium-editor-element,
-.dark-mode .activity-card-head,
-.dark-mode .activity-list .activity-item .action,
-.dark-mode .buddypress-wrap form.bp-dir-search-form,
-.dark-mode .buddypress-wrap .select-wrap,
-.dark-mode #buddypress #whats-new-options,
-.dark-mode .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links),
-.dark-mode .buddypress-wrap form[data-bp-search].bp-invites-search-form,
-.dark-mode .buddypress-wrap ul.subnav,
-.dark-mode #drag-drop-area,
-.dark-mode .buddypress-wrap .standard-form .wp-editor-container,
-.dark-mode .bp-avatar-nav ul.avatar-nav-items li.current,
-.dark-mode .bp-avatar-nav ul,
-.dark-mode .drag-drop #drag-drop-area,
-.dark-mode .bb-groups-invites-left,
-.dark-mode .bb-panel-head,
-.dark-mode .bb-groups-invites-right-bottom{
-    border-color: #495061;
-}
-.dark-mode .activity-list .activity-item .activity-meta.action .button,
-.dark-mode .activity-list .activity-item .bp-generic-meta.action .button{
-    background: #495061 !important;
-    border-color: #495061 !important;
-    color: #dadde4 !important;
-}
-.dark-mode .activity-list .activity-item .activity-meta.action .button:hover,
-.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover{
-    color: #ffffff !important;
-    border-color: #495061 !important;
-}
-.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button{
-    color: #dadde4;
-}
-.dark-mode body.buddypress #buddypress.buddypress-wrap .wp-editor-tabs button:hover{
-    color: #fff;
+.dark-mode .rtm-comment-list li,
+.dark-mode .rtmedia-like-info,
+.dark-mode #message-threads li.selected,
+.dark-mode #bbpress-forums div.even,
+.dark-mode #bbpress-forums ul.even,
+.dark-mode #media-folder-document-data-table .media-folder_items .media-folder_actions .media-folder_action__list ul li a:hover, 
+.dark-mode .search-document-list .media-folder_items .media-folder_actions .media-folder_action__list ul li a:hover,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap .document-action_list ul li a:hover {
+    background: #495061;
 }
 
-.dark-mode #buddypress #dir-activity-search,
-.dark-mode #buddypress #dir-groups-search,
-.dark-mode body #buddypress select,
-.dark-mode .buddypress-wrap form.bp-dir-search-form,
-.dark-mode .buddypress-wrap .select-wrap,
-.dark-mode body #buddypress input[type=search],
-.dark-mode .buddypress-wrap form.bp-invites-search-form,
-.dark-mode .buddypress-wrap .standard-form .description,
-.dark-mode .rtmedia-uploader .drag-drop,
-.dark-mode .groups-manage-members-list .section-title,
-.dark-mode #group-create-tabs li,
-.dark-mode .buddypress-wrap .standard-form input:focus,
-.dark-mode .buddypress-wrap .standard-form select:focus,
-.dark-mode .buddypress-wrap .standard-form textarea:focus{
-    background-color: #1c2939;
-}
-.dark-mode #group-create-tabs li.current{
-    border-bottom: 0;
-}
-.dark-mode .buddypress .buddypress-wrap button{
-    background: none;
-}
-
-.dark-mode #buddypress div#item-header-cover-image h2,
-.dark-mode .buddypress-wrap .grid-filters a.active{
-    color: #fff;
-}
-
-.dark-mode .buddypress-wrap .standard-form .groups-members-search input[type=search],
+.dark-mode .buddypress-wrap .standard-form .groups-members-search input[type=search], 
 .dark-mode .buddypress-wrap .standard-form .groups-members-search input[type=text],
-.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=search],
-.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=text],
-.dark-mode .buddypress-wrap .standard-form input[type=color],
-.dark-mode .buddypress-wrap .standard-form input[type=date],
+.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=search], 
+.dark-mode .buddypress-wrap .standard-form [data-bp-search] input[type=text], 
+.dark-mode .buddypress-wrap .standard-form input[type=color], 
+.dark-mode .buddypress-wrap .standard-form input[type=date], 
 .dark-mode .buddypress-wrap .standard-form input[type=datetime-local],
-.dark-mode .buddypress-wrap .standard-form input[type=datetime],
-.dark-mode .buddypress-wrap .standard-form input[type=email],
+.dark-mode .buddypress-wrap .standard-form input[type=datetime], 
+.dark-mode .buddypress-wrap .standard-form input[type=email], 
 .dark-mode .buddypress-wrap .standard-form input[type=month],
 .dark-mode .buddypress-wrap .standard-form input[type=number],
 .dark-mode .buddypress-wrap .standard-form input[type=password],
 .dark-mode .buddypress-wrap .standard-form input[type=range],
 .dark-mode .buddypress-wrap .standard-form input[type=search],
-.dark-mode .buddypress-wrap .standard-form input[type=tel],
+.dark-mode .buddypress-wrap .standard-form input[type=tel], 
 .dark-mode .buddypress-wrap .standard-form input[type=text],
 .dark-mode .buddypress-wrap .standard-form input[type=time],
 .dark-mode .buddypress-wrap .standard-form input[type=url],
-.dark-mode .buddypress-wrap .standard-form input[type=week], 
+.dark-mode .buddypress-wrap .standard-form input[type=week],
 .dark-mode .buddypress-wrap .standard-form select,
-.dark-mode .buddypress-wrap .standard-form textarea{
+.dark-mode .buddypress-wrap .standard-form textarea,
+
+.dark-mode .activity-update-form #whats-new-textarea textarea,
+.dark-mode .buddypress-wrap form.bp-dir-search-form, 
+.dark-mode .buddypress-wrap form.bp-invites-search-form,
+.dark-mode .buddypress-wrap form.bp-messages-search-form,
+.dark-mode .buddypress-wrap .media_search.media_search,
+.dark-mode .buddypress-wrap .select-wrap,
+.dark-mode .rtm-media-single-comments textarea,
+
+.dark-mode #bbpress-forums div.bbp-the-content-wrapper,
+.dark-mode body .bb-select-dropdown.select2-dropdown,
+.dark-mode .select2-container--default .select2-selection--multiple,
+.dark-mode .directory.document .subnav-filters .subnav-search .bp-dir-search-form,
+.dark-mode .bp-media-header-wrap .media-search-form {
+    background-color: #111111;
+    color: inherit;
+    border-color: #495061;
+}
+
+.dark-mode .activity-update-form,
+.dark-mode .activity-list.bp-list .activity-item,
+.dark-mode .activity-list .activity-item .activity-meta.action,
+.dark-mode .bp-list > li .list-wrap,
+.dark-mode #group-create-body,
+.dark-mode #group-create-tabs li,
+.dark-mode .buddypress-wrap .bp-messages,
+.dark-mode .buddypress-wrap .bp-feedback,
+.dark-mode .bp-feedback,
+.dark-mode .buddypress .bp-invites-content ul.item-list > li,
+.dark-mode .bp-navs ul li .count, .buddypress-wrap .bp-navs li.dynamic a .count,
+.dark-mode .item-header-cover-image-wrapper,
+.dark-mode option,
+.dark-mode .bp-single-vert-nav .bp-wrap:not(.bp-fullwidth-wrap),
+.dark-mode nav#object-nav.vertical,
+.dark-mode .bp-messages-content #thread-preview .preview-content .preview-message,
+.dark-mode .buddypress-wrap:not(.bp-vertical-navs) .item-body,
+.dark-mode .rtmedia-uploader .drag-drop,
+.dark-mode .groups-header .desc-wrap,
+.dark-mode #group-invites-container,
+.dark-mode #bbpress-forums li.bbp-header,
+.dark-mode #bbpress-forums li.bbp-footer,
+.dark-mode #bbpress-forums div.odd, 
+.dark-mode #bbpress-forums ul.odd,
+.dark-mode #bbpress-forums div.bbp-forum-header,
+.dark-mode #bbpress-forums div.bbp-topic-header,
+.dark-mode #bbpress-forums div.bbp-reply-header,
+.dark-mode .buddypress-wrap select,
+.dark-mode #buddypress.buddypress-wrap form#whats-new-form #whats-new-options select,
+.dark-mode #media-stream.document-parent,
+.dark-mode #media-folder-document-data-table .media-folder_items .media-folder_actions .media-folder_action__list, 
+.dark-mode .search-document-list .media-folder_items .media-folder_actions .media-folder_action__list,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-description-wrap,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap>a i,
+.dark-mode .bb-document-theater .bb-media-section .img-section .img-block-wrap,
+.dark-mode .bb-document-theater .bb-media-section .img-section,
+.dark-mode .bb-document-theater .bb-media-info-section.document,
+.dark-mode .bb-document-theater .bb-media-section h3,
+.dark-mode .buddypress-wrap .single-screen-navs {
     background: #1c2939;
+}
+
+.dark-mode .buddypress .buddypress-wrap input[type=reset]:hover,
+.dark-mode .buddypress .buddypress-wrap button:hover,
+.dark-mode .wb-bp-profile-completion-wrap span.wb-bp-completion,
+.dark-mode .bp-list li .item-meta,
+.dark-mode .bp-list li .meta,
+.dark-mode .buddypress-wrap .bp-pagination,
+.dark-mode .single-headers .item-meta,
+.dark-mode #message-threads li .thread-content .excerpt,
+.dark-mode .bp-messages-content time,
+.dark-mode .buddypress-wrap .bp-messages,
+.dark-mode .buddypress-wrap .bp-feedback,
+.dark-mode .bp-feedback,
+.dark-mode .single-headers .group-status,
+.dark-mode #whats-new-messages-toolbar .bb-icon, 
+.dark-mode #whats-new-toolbar .bb-icon, 
+.dark-mode .ac-reply-toolbar .bb-icon,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .unfav .like-count,
+.dark-mode #media-stream .document-data-table-head .data-head,
+.dark-mode #media-folder-document-data-table .media-folder_items .media-folder_details__bottom, 
+.dark-mode .search-document-list .media-folder_items .media-folder_details__bottom,
+.dark-mode #media-stream.document-parent.group-column #media-folder-document-data-table .media-folder_items .media-folder_group a,
+.dark-mode #media-folder-document-data-table .media-folder_items .media-folder_details .media-folder_name, 
+.dark-mode .search-document-list .media-folder_items .media-folder_details .media-folder_name,
+.dark-mode #media-folder-document-data-table .media-folder_items .media-folder_actions .media-folder_action__list ul li a, 
+.dark-mode .search-document-list .media-folder_items .media-folder_actions .media-folder_action__list ul li a,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-description-wrap .document-detail-wrap,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap>a i,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap .document-action_list ul li a:hover {
+    color: #dadde4;
+}
+
+.dark-mode .activity-update-form,
+.dark-mode .medium-editor-element,
+.dark-mode .activity-update-form #whats-new-avatar,
+.dark-mode #buddypress #whats-new-options,
+.dark-mode .activity-list.bp-list .activity-item,
+.dark-mode .activity-list.bp-list .activity-item,
+.dark-mode .activity-list .activity-item .activity-meta.action,
+.dark-mode .activity-list .activity-item.has-comments .activity-content > .activity-meta.action,
+.dark-mode .buddypress-wrap .activity-comments ul li ul,
+.dark-mode .buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links),
+.dark-mode #site-nav .cs-notification .sub-menu li + li,
+.dark-mode .bp-list > li .list-wrap,
+.dark-mode .wb-bp-profile-completion-wrap ul.wb-bp-detailed-progress li.wb-bp-single-section-wrap span.wb-bp-section-number,
+.dark-mode #group-create-body,
+.dark-mode .buddypress-wrap .tabbed-links ol li.current,
+.dark-mode .buddypress-wrap .tabbed-links ul li.current,
+.dark-mode .buddypress-wrap .tabbed-links ol,
+.dark-mode .buddypress-wrap .tabbed-links ul,
+.dark-mode .group-settings-selections fieldset,
+.dark-mode .buddypress-wrap .group-status-type ul,
+.dark-mode .buddypress-wrap .bp-messages,
+.dark-mode .buddypress-wrap .bp-feedback,
+.dark-mode .bp-feedback,
+.dark-mode .buddypress .bp-invites-content ul.item-list > li,
+.dark-mode .wb-bp-profile-completion-wrap ul.wb-bp-detailed-progress li.wb-bp-single-section-wrap,
+.dark-mode .item-header-cover-image-wrapper,
+.dark-mode .bp-single-vert-nav .bp-wrap:not(.bp-fullwidth-wrap),
+.dark-mode nav#object-nav.vertical,
+.dark-mode .buddypress-wrap ul.subnav,
+.dark-mode .buddypress-wrap .profile.public .profile-group-title,
+.dark-mode .buddypress-wrap .bp-tables-user tr td.label, 
+.dark-mode .buddypress-wrap table.forum tr td.label, 
+.dark-mode .buddypress-wrap table.wp-profile-fields tr td.label,
+.dark-mode table > thead > tr > th,
+.dark-mode .buddypress-wrap:not(.bp-vertical-navs) .item-body,
+.dark-mode #message-threads,
+.dark-mode #message-threads li,
+.dark-mode .bp-messages-content #thread-preview,
+.dark-mode .bp-messages-content .preview-pane-header,
+.dark-mode .bp-messages-content .single-message-thread-header,
+.dark-mode .rtmedia-uploader .drag-drop,
+.dark-mode .bp-avatar-nav ul,
+.dark-mode .bp-avatar-nav ul.avatar-nav-items li.current,
+.dark-mode #buddypress ul.rtmedia-album-list li.rtmedia-list-item,
+.dark-mode .groups-header .desc-wrap,
+.dark-mode .activity-list li.bbp_topic_create .activity-content .activity-inner,
+.dark-mode .activity-list li.bbp_reply_create .activity-content .activity-inner,
+.dark-mode .bb-groups-invites-left,
+.dark-mode #group-invites-container,
+.dark-mode .bb-panel-head,
+.dark-mode #bbpress-forums ul.bbp-forums,
+.dark-mode #bbpress-forums ul.bbp-lead-topic,
+.dark-mode #bbpress-forums ul.bbp-replies,
+.dark-mode #bbpress-forums ul.bbp-search-results,
+.dark-mode #bbpress-forums ul.bbp-topics,
+.dark-mode #bbpress-forums li.bbp-header,
+.dark-mode #bbpress-forums li.bbp-footer,
+.dark-mode #bbpress-forums li.bbp-body ul.forum,
+.dark-mode #bbpress-forums li.bbp-body ul.topic,
+.dark-mode div.bbp-forum-header,
+.dark-mode div.bbp-topic-header,
+.dark-mode div.bbp-reply-header,
+.dark-mode #bbpress-forums div.bbp-reply-header,
+.dark-mode .buddypress-wrap select,
+.dark-mode #buddypress.buddypress-wrap form#whats-new-form #whats-new-options select,
+.dark-mode #activity-form-submit-wrapper,
+.dark-mode .buddypress-wrap #whats-new-post-in-box select, 
+.dark-mode .buddypress-wrap .filter select,
+.dark-mode .document-type-navs.main-navs,
+.dark-mode #media-stream.document-parent,
+.dark-mode #media-stream .document-data-table-head,
+.dark-mode #media-folder-document-data-table .media-folder_items,
+.dark-mode .search-document-list .media-folder_items,
+.dark-mode .buddypress-wrap .grid-filters,
+.dark-mode a.layout-grid-view,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-preview-wrap,
+.dark-mode .bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap>a i,
+.dark-mode .bb-document-theater .bb-media-section h3,
+.dark-mode .bb-document-theater .bb-media-section,
+.dark-mode .bb-document-theater .bb-media-info-section.document,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action {
     border-color: #495061; 
 }
 
-/*=================
+.dark-mode .activity-list .activity-item .activity-meta.action .button,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button {
+    background: #1c2939 !important;
+}
 
-Youzer
+.dark-mode .activity-list .activity-item .activity-content > .activity-meta.action .button,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button {
+    border-color: #495061 !important;
+}
 
-==================*/
+.dark-mode .activity-list .activity-item .activity-meta.action .button,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button {
+    color: rgba(255,255,255,0.5) !important;
+}
 
-.dark-mode .yz-page{
-    background: #10161d;
+.dark-mode .activity-list .activity-item .activity-content > .activity-meta.action .button:hover,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover {
+    border-color: #dadde4 !important;
+}
+
+.dark-mode .activity-list .activity-item .activity-meta.action .button:hover,
+.dark-mode .activity-list .activity-item .bp-generic-meta.action .button:hover {
+    color: #dadde4 !important;
+}
+
+.dark-mode button#rtmedia-add-media-button-post-update, 
+.dark-mode .rtm-upload-button-wrapper button.rtmedia-comment-media-upload, 
+.dark-mode button.rtmedia-comment-media-upload {
+    background: #1c2939 !important;
+    color: inherit !important;
+    box-shadow: inset 0 0 0 1px #1c2939;
+}
+
+.dark-mode .wb-bp-profile-completion-wrap .wb-bp-progress-wrap .wb-bp-progress-container {
+    box-shadow: 0 2px 5px #1c2939 inset;
+}
+
+.dark-mode .buddypress .buddypress-wrap button.fa:hover {
+    color: #dadde4;
+} 
+
+.dark-mode body.bp-nouveau.media #buddypress #item-header-cover-image .user-nicename, 
+.dark-mode #buddypress div#item-header-cover-image h2 a, 
+.dark-mode #buddypress div#item-header-cover-image h2 {
+    color: #fff;
+}
+
+.dark-mode .buddypress-wrap a[data-bp-close],
+.dark-mode .buddypress-wrap button[data-bp-close] {
+    background: #1c2939;
+}
+
+.dark-mode .activity-list .activity-item .bp-generic-meta.action {
+    border-radius: 0 0 8px 8px;
+}
+
+.dark-mode .buddypress-wrap .grid-filters a {
+    color: #7e7e7e;
+}
+
+.dark-mode .buddypress-wrap .grid-filters a.active {
+    color: #fff;
+}
+
+.bb-activity-media-wrap .bb-activity-media-elem.document-activity .document-action-wrap .document-action_list ul li a:hover {
+    background: #1c2939 !important;
+}
+
+@media screen and (max-width: 46.8em) {
+    .dark-mode .buddypress-wrap:not(.bp-single-vert-nav) .bp-navs:not(.bp-subnavs) li,
+    .dark-mode .buddypress-wrap .item-body {
+        background: #1c2939;
+    }
+    
+    .dark-mode .buddypress-wrap .item-body,
+    .dark-mode .buddypress-wrap .single-screen-navs li {
+        border-color: #495061; 
+    }
 }
