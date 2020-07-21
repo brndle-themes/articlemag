@@ -2833,16 +2833,16 @@ button#bp-delete-avatar {
   margin-right: 15px;
 }
 
-.varuna_widget .activity-list.item-list a img.avatar {
+.articlemag_widget .activity-list.item-list a img.avatar {
   margin: 0 3px 0 0;
 }
 
-body #buddypress .varuna_widget,
-body .varuna_widget {
+body #buddypress .articlemag_widget,
+body .articlemag_widget {
   border-radius: 8px;
 }
 
-body.buddypress .buddypress-wrap .varuna_widget .widget-title h4 {
+body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
   margin-top: 0;
 }
 

@@ -206,7 +206,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 					$output .= '<li class="cs-depth-0 cs-notification cs-bp_notifications">';
 					$output .= '<div class = "user-notifications cs-link cs-sticky-item">';
-					$output .= '<a class="bp-icon-wrap" href ="#" title = "' . esc_html( esc_attr( 'Notifications' ), 'varuna' ) . '">';
+					$output .= '<a class="bp-icon-wrap" href ="#" title = "' . esc_html( esc_attr( 'Notifications' ), 'articlemag' ) . '">';
 					$output .= '<span class="fa fa-bell"> </span>';
 
 					if ( function_exists( 'bp_notifications_get_unread_notification_count' ) ) {
