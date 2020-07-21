@@ -385,7 +385,7 @@
   pointer-events: none;
   padding: .2em .6em .3em;
   vertical-align: baseline;
-  background-color: #e9425d;
+  background-color: #293951;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -726,7 +726,7 @@
 }
 
 .cs_field_skin_select label .scheme-blue {
-  background-color: #e9425d;
+  background-color: #293951;
 }
 
 .cs_field_skin_select label .scheme-green {
@@ -1665,7 +1665,7 @@
 
 #icon-dialog .icon-set-fa {
   margin-top: 15px;
-  color: #e9425d;
+  color: #293951;
   border-color: #cde1f1;
 }
 
@@ -1808,7 +1808,7 @@ body.toplevel_page_articlemag {
 #menu-typography:after,
 #body-typography:after {
   content: 'default' !important;
-  background-color: #e9425d !important;
+  background-color: #293951 !important;
 }
 
 #headings-typography #element-css,

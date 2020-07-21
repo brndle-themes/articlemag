@@ -27,25 +27,12 @@ foreach ( glob( FRAMEWORK_INCLUDE_DIR . '/shortcodes/cs_*.php' ) as $shortcode )
 locate_template( 'inc/includes/custom-style.php', true );
 
 //
-// LearnDash Custom Style Adapted
-// ----------------------------------------------------------------------------------------------------
-if ( !is_plugin_active( 'design-upgrade-pro-learndash/design-upgrade-pro-learndash.php' ) ) {
-	locate_template( 'inc/includes/learndash-custom-style.php', true );
-}
-
-//
 // woocommerce integration
 // ----------------------------------------------------------------------------------------------------
 if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	locate_template( 'inc/plugins/woocommerce/woocommerce-config.php', true );
 }
 
-//
-// learndash integration
-// ----------------------------------------------------------------------------------------------------
-if ( is_plugin_active( 'sfwd-lms/sfwd_lms.php' ) ) {
-	locate_template( 'inc/plugins/learndash/learndash-config.php', true );
-}
 
 //
 // TGM integration

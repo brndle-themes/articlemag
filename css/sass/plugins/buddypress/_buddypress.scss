@@ -120,7 +120,7 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
     font-family: inherit;
     font-size: initial;
     color: #fff;
-    background-color: #e9425d;
+    background-color: #293951;
     border-radius: 3px !important;
     padding: 8px 20px;
     font-weight: 700;
@@ -130,7 +130,7 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
     cursor: pointer;
     display: inline-block;
     line-height: 1.3;
-    border: 1px solid #e9425d;
+    border: 1px solid #293951;
     outline: 0;
     vertical-align: middle;
     -webkit-appearance: none;
@@ -163,8 +163,8 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hove
 .buddypress .buddypress-wrap button.button.edit:hover,
 .buddypress .buddypress-wrap .btn-default:hover,
 .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover {
-    background-color: #de576d;
-    border: 1px solid #de576d;
+    background-color: #333;
+    border: 1px solid #333;
     color: #fff;
 }
 
@@ -289,7 +289,7 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
 .buddypress-wrap .bp-navs li:not(.selected) a:focus,
 .buddypress-wrap .bp-navs li:not(.selected) a:hover {
     background: transparent;
-    color: #e9425d;
+    color: #293951;
 }
 
 .buddypress-wrap .bp-navs li.current a,
@@ -299,19 +299,19 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
 .buddypress-wrap .bp-navs li.selected a:focus,
 .buddypress-wrap .bp-navs li.selected a:hover {
     background: transparent;
-    color: #e9425d;
+    color: #293951;
 }
 
 .buddypress-wrap .bp-navs li.current a,
 .buddypress-wrap .bp-navs li.selected a {
     background: transparent;
-    border-bottom: 1px solid #e9425d;
+    border-bottom: 1px solid #293951;
     font-weight: 500;
 }
 
 .buddypress-wrap .main-navs:not(.dir-navs) li.selected a,
 .buddypress-wrap .main-navs:not(.dir-navs) li.current a {
-    color: #e9425d;
+    color: #293951;
 }
 
 .bp-navs.bp-navs {
@@ -378,7 +378,7 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
 .buddypress-wrap .bp-navs li.selected a .count,
 .buddypress_object_nav .bp-navs li.current a .count,
 .buddypress_object_nav .bp-navs li.selected a .count {
-    background-color: #e9425d;
+    background-color: #293951;
 }
 
 .buddypress #buddypress.bp-dir-hori-nav .create-button a,
@@ -642,7 +642,7 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
 
 .buddypress-wrap .rtm-bp-navs ul li.selected a > span,
 .buddypress-wrap .rtm-bp-navs ul li.selected a:hover > span {
-    background: #e9425d;
+    background: #293951;
     color: #fff;
 }
 
@@ -780,7 +780,7 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
 }
 
 .media .rtm-tabs li.active a {
-    color: #e9425d;
+    color: #293951;
 }
 
 .media .rtm-tabs-content {
@@ -1729,7 +1729,7 @@ li.load-more a.loading::after {
 @media screen and (min-width: 46.8em) {
     .buddypress-wrap .tabbed-links ol li.current a,
     .buddypress-wrap .tabbed-links ul li.current a {
-        color: #e9425d;
+        color: #293951;
 
     }
 
@@ -2251,12 +2251,12 @@ table.notifications > thead > tr > th {
 
     nav#object-nav.vertical .selected>a {
         background: rgba(77,92,109,.1);
-        color: #e9425d;
+        color: #293951;
     }
 
     nav#object-nav.vertical a:hover {
         background: rgba(77,92,109,.1);
-        color: #e9425d;
+        color: #293951;
     }
 
     .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) {
@@ -2269,7 +2269,7 @@ table.notifications > thead > tr > th {
     }
 
     .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a {
-        color: #e9425d;
+        color: #293951;
         text-decoration: none;
     }
 
@@ -2645,7 +2645,7 @@ button#bp-delete-avatar {
 
 .buddypress.widget .item-options a:hover,
 .buddypress.widget .item-options a.selected {
-    color: #e9425d;
+    color: #293951;
 }
 
 .buddypress-wrap .buddypress.widget:after,

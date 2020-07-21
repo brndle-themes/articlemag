@@ -1290,7 +1290,7 @@ if ( ! function_exists( 'cs_get_field' ) ) {
 function get_predefined_colors( $skin = '' ) {
 
 	$skin   = ( ! empty( $skin ) ) ? $skin : cs_get_option( 'skin' );
-	$accent = '#e9425d';
+	$accent = '#293951';
 
 	if ( $skin == 'accent' ) {
 

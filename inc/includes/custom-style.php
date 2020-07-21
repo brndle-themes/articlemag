@@ -214,28 +214,12 @@ function cs_get_custom_skin() {
   a,
   .cs-accent-color,
   .cs-cart-widget-side .cs-module-woominicart .total .amount,
-  .buddypress-wrap .bp-navs li:not(.current) a:focus,
-.buddypress-wrap .bp-navs li:not(.current) a:hover,
-.buddypress-wrap .bp-navs li:not(.selected) a:focus,
-.buddypress-wrap .bp-navs li:not(.selected) a:hover,
-.buddypress-wrap .bp-navs li.current a,
-.buddypress-wrap .bp-navs li.current a:focus,
-.buddypress-wrap .bp-navs li.current a:hover,
-.buddypress-wrap .bp-navs li.selected a,
-.buddypress-wrap .bp-navs li.selected a:focus,
-.buddypress-wrap .bp-navs li.selected a:hover,
-.buddypress-wrap .main-navs:not(.dir-navs) li.selected a,
-.buddypress-wrap .main-navs:not(.dir-navs) li.current a,
-.media .rtm-tabs li.active a,
-.buddypress-wrap .tabbed-links ol li.current a,
-.buddypress-wrap .tabbed-links ul li.current a,
-.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a,
-.buddypress.widget .item-options a:hover,
-.buddypress.widget .item-options a.selected,
-ul#bp-userbar li a:hover,
-#site-nav .cs-notification .sub-menu li a:hover,
-nav#object-nav.vertical .selected > a,
-nav#object-nav.vertical a:hover{
+        
+  .buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.selected a, .buddypress.widget .item-options a.selected, .buddypress.widget .item-options a:hover,
+  .buddypress-wrap .bp-navs li:not(.current) a:focus, .buddypress-wrap .bp-navs li:not(.current) a:hover, .buddypress-wrap .bp-navs li:not(.selected) a:focus, .buddypress-wrap .bp-navs li:not(.selected) a:hover,
+  nav#object-nav.vertical .selected > a, nav#object-nav.vertical a:hover, .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a,
+  .buddypress-wrap .main-navs:not(.dir-navs) li.selected a, .buddypress-wrap .main-navs:not(.dir-navs) li.current a, .buddypress-wrap .tabbed-links ol li.current a, .buddypress-wrap .tabbed-links ul li.current a,
+  .buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.current a:focus, .buddypress-wrap .bp-navs li.current a:hover, .buddypress-wrap .bp-navs li.selected a, .buddypress-wrap .bp-navs li.selected a:focus, .buddypress-wrap .bp-navs li.selected a:hover {
     color: {$accent};
   }
 
@@ -282,74 +266,13 @@ nav#object-nav.vertical a:hover{
   .cs-menu-effect .cs-link-depth-0:before,
   .cs-module-social a:hover,
   .cs-accent-background,
-  #buddypress .comment-reply-link,
-#buddypress .generic-button a,
-#buddypress .standard-form button,
-#buddypress a.button,
-#buddypress input[type="button"],
-#buddypress input[type="reset"]:not(.text-button),
-#buddypress input[type="submit"],
-#buddypress ul.button-nav li a,
-a.bp-title-button,
-#buddypress.buddypress-wrap .activity-list .load-more a,
-#buddypress.buddypress-wrap .activity-list .load-newest a,
-.buddypress .buddypress-wrap .bp-list.grid .action a,
-.buddypress .buddypress-wrap .bp-list.grid .action button,
-.buddypress .buddypress-wrap .action button,
-form#bp-data-export button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
-.buddypress .buddypress-wrap button.button,
-.buddypress .buddypress-wrap button.button.edit,
-.buddypress .buddypress-wrap .btn-default,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
-.buddypress-wrap .bp-navs li.current a .count,
-.buddypress-wrap .bp-navs li.dynamic.current a .count,
-.buddypress-wrap .bp-navs li.selected a .count,
-.buddypress_object_nav .bp-navs li.current a .count,
-.buddypress_object_nav .bp-navs li.selected a .count,
-.buddypress-wrap .rtm-bp-navs ul li.selected a > span,
-.buddypress-wrap .rtm-bp-navs ul li.selected a:hover > span,
-.buddypress .buddypress-wrap .activity-read-more a,
-.cs-notification-count{
+        
+  #buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
+  .buddypress-wrap .bp-navs li.current a .count, .buddypress-wrap .bp-navs li.dynamic.current a .count, .buddypress-wrap .bp-navs li.selected a .count, .buddypress_object_nav .bp-navs li.current a .count, .buddypress_object_nav .bp-navs li.selected a .count {
     background-color: {$accent};
   }
     
-#bbp_user_edit_submit:hover,
-.bbp-submit-wrapper .button:hover,
-.cs-btn-flat-accent:hover,
-#buddypress .comment-reply-link:hover,
-#buddypress .comment-reply-link:hover,
-#buddypress .generic-button a:hover,
-#buddypress .standard-form button:hover,
-#buddypress a.button:hover,
-#buddypress input[type="button"]:hover,
-#buddypress input[type="reset"]:not(.text-button):hover,
-#buddypress input[type="submit"]:hover,
-#buddypress input[type=submit]:focus,
-#buddypress ul.button-nav li a:hover,
-a.bp-title-button:hover,
-#buddypress.buddypress-wrap .activity-list .load-more a:hover,
-#buddypress.buddypress-wrap .activity-list .load-newest a:hover,
-.buddypress .buddypress-wrap .bp-list.grid .action a:focus,
-.buddypress .buddypress-wrap .bp-list.grid .action a:hover,
-.buddypress .buddypress-wrap .bp-list.grid .action button:focus,
-.buddypress .buddypress-wrap .bp-list.grid .action button:hover,
-.buddypress .buddypress-wrap .action button:hover,
-form#bp-data-export button:hover,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover,
-.buddypress .buddypress-wrap button.button:hover,
-.buddypress .buddypress-wrap button.button.edit:hover,
-.buddypress .buddypress-wrap .btn-default:hover,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover,
-.buddypress .buddypress-wrap .activity-read-more a:hover,
-.buddypress .buddypress-wrap .activity-read-more a:focus{
-    background-color: {$accent_brightness};
-    border-color: {$accent};
-  }
-
-  .bbp-pagination-links span.current,
+.bbp-pagination-links span.current,
   .cs-icon-accent.cs-icon-outlined,
   .cs-icon-accent.cs-icon-outer,
   .cs-faq-filter a.active,
@@ -361,39 +284,15 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hove
   .page-pagination .current,
   .cs-menu-effect-6 .cs-link-depth-0:before,
   #site-nav > ul > li > ul,
+  #site-nav .cs-notification .sub-menu,
   .cs-modal-content,
   .cs-accent-border,
-  #buddypress .comment-reply-link,
-#buddypress .generic-button a,
-#buddypress .standard-form button,
-#buddypress a.button,
-#buddypress input[type="button"],
-#buddypress input[type="reset"]:not(.text-button),
-#buddypress input[type="submit"],
-#buddypress ul.button-nav li a,
-a.bp-title-button,
-#buddypress.buddypress-wrap .activity-list .load-more a,
-#buddypress.buddypress-wrap .activity-list .load-newest a,
-.buddypress .buddypress-wrap .bp-list.grid .action a,
-.buddypress .buddypress-wrap .bp-list.grid .action button,
-.buddypress .buddypress-wrap .action button,
-form#bp-data-export button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
-.buddypress .buddypress-wrap button.button,
-.buddypress .buddypress-wrap button.button.edit,
-.buddypress .buddypress-wrap .btn-default,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
-ul#bp-userbar,
-#site-nav .cs-notification .sub-menu{
+
+  #buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
+  .buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.selected a,
+  ul#bp-userbar {
     border-color: {$accent};
   }
-    
-    .buddypress-wrap .bp-navs li.current a,
-.buddypress-wrap .bp-navs li.selected a,
-.buddypress .buddypress-wrap .activity-read-more a{
-    border-color: {$accent};
-}
 
   .cs-menu-effect-4 .cs-link-depth-0:before{
     color: {$accent};
@@ -404,7 +303,17 @@ ul#bp-userbar,
     text-shadow: 8px 0 {$accent}, -8px 0 {$accent};
   }
 
- 
+ #bbp_user_edit_submit:hover,
+  .bbp-submit-wrapper .button:hover,
+  .cs-btn-flat-accent:hover,
+
+  #buddypress .comment-reply-link:hover, #buddypress .generic-button a:hover, #buddypress .standard-form button:hover, #buddypress a.button:hover, #buddypress input[type="button"]:hover, #buddypress input[type="reset"]:not(.text-button):hover, #buddypress input[type="submit"]:hover, #buddypress ul.button-nav li a:hover, a.bp-title-button:hover, #buddypress.buddypress-wrap .activity-list .load-more a:hover, #buddypress.buddypress-wrap .activity-list .load-newest a:hover, .buddypress .buddypress-wrap .bp-list.grid .action a:focus, .buddypress .buddypress-wrap .bp-list.grid .action a:hover, .buddypress .buddypress-wrap .bp-list.grid .action button:focus, .buddypress .buddypress-wrap .bp-list.grid .action button:hover, .buddypress .buddypress-wrap .action button:hover, form#bp-data-export button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover, .buddypress .buddypress-wrap button.button:hover, .buddypress .buddypress-wrap button.button.edit:hover, .buddypress .buddypress-wrap .btn-default:hover, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover {
+    background-color: {$accent_brightness};
+  }
+
+  #buddypress .comment-reply-link:hover, #buddypress .generic-button a:hover, #buddypress .standard-form button:hover, #buddypress a.button:hover, #buddypress input[type="button"]:hover, #buddypress input[type="reset"]:not(.text-button):hover, #buddypress input[type="submit"]:hover, #buddypress ul.button-nav li a:hover, a.bp-title-button:hover, #buddypress.buddypress-wrap .activity-list .load-more a:hover, #buddypress.buddypress-wrap .activity-list .load-newest a:hover, .buddypress .buddypress-wrap .bp-list.grid .action a:focus, .buddypress .buddypress-wrap .bp-list.grid .action a:hover, .buddypress .buddypress-wrap .bp-list.grid .action button:focus, .buddypress .buddypress-wrap .bp-list.grid .action button:hover, .buddypress .buddypress-wrap .action button:hover, form#bp-data-export button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover, .buddypress .buddypress-wrap button.button:hover, .buddypress .buddypress-wrap button.button.edit:hover, .buddypress .buddypress-wrap .btn-default:hover, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover {
+	border-color: {$accent_brightness};
+  }
 
   .cs-btn-outlined-accent {
     color: {$accent} !important;
@@ -880,28 +789,12 @@ CSS;
 a,
 .cs-accent-color,
 .cs-cart-widget-side .cs-module-woominicart .total .amount,
-.buddypress-wrap .bp-navs li:not(.current) a:focus,
-.buddypress-wrap .bp-navs li:not(.current) a:hover,
-.buddypress-wrap .bp-navs li:not(.selected) a:focus,
-.buddypress-wrap .bp-navs li:not(.selected) a:hover,
-.buddypress-wrap .bp-navs li.current a,
-.buddypress-wrap .bp-navs li.current a:focus,
-.buddypress-wrap .bp-navs li.current a:hover,
-.buddypress-wrap .bp-navs li.selected a,
-.buddypress-wrap .bp-navs li.selected a:focus,
-.buddypress-wrap .bp-navs li.selected a:hover,
-.buddypress-wrap .main-navs:not(.dir-navs) li.selected a,
-.buddypress-wrap .main-navs:not(.dir-navs) li.current a,
-.media .rtm-tabs li.active a,
-.buddypress-wrap .tabbed-links ol li.current a,
-.buddypress-wrap .tabbed-links ul li.current a,
-.bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a,
-.buddypress.widget .item-options a:hover,
-.buddypress.widget .item-options a.selected,
-ul#bp-userbar li a:hover,
-#site-nav .cs-notification .sub-menu li a:hover,
-nav#object-nav.vertical .selected > a,
-nav#object-nav.vertical a:hover{
+
+.buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.selected a, .buddypress.widget .item-options a.selected, .buddypress.widget .item-options a:hover,
+.buddypress-wrap .bp-navs li:not(.current) a:focus, .buddypress-wrap .bp-navs li:not(.current) a:hover, .buddypress-wrap .bp-navs li:not(.selected) a:focus, .buddypress-wrap .bp-navs li:not(.selected) a:hover,
+nav#object-nav.vertical .selected > a, nav#object-nav.vertical a:hover, .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a,
+.buddypress-wrap .main-navs:not(.dir-navs) li.selected a, .buddypress-wrap .main-navs:not(.dir-navs) li.current a,.buddypress-wrap .tabbed-links ol li.current a, .buddypress-wrap .tabbed-links ul li.current a,
+.buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.current a:focus, .buddypress-wrap .bp-navs li.current a:hover, .buddypress-wrap .bp-navs li.selected a, .buddypress-wrap .bp-navs li.selected a:focus, .buddypress-wrap .bp-navs li.selected a:hover {
   color: {$accent};
 }
 
@@ -943,36 +836,9 @@ nav#object-nav.vertical a:hover{
 .ajax-pagination .cs-loader:after,
 .cs-accent-background,
 .widget_price_filter .ui-slider .ui-slider-handle,
-#buddypress .comment-reply-link,
-#buddypress .generic-button a,
-#buddypress .standard-form button,
-#buddypress a.button,
-#buddypress input[type="button"],
-#buddypress input[type="reset"]:not(.text-button),
-#buddypress input[type="submit"],
-#buddypress ul.button-nav li a,
-a.bp-title-button,
-#buddypress.buddypress-wrap .activity-list .load-more a,
-#buddypress.buddypress-wrap .activity-list .load-newest a,
-.buddypress .buddypress-wrap .bp-list.grid .action a,
-.buddypress .buddypress-wrap .bp-list.grid .action button,
-.buddypress .buddypress-wrap .action button,
-form#bp-data-export button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
-.buddypress .buddypress-wrap button.button,
-.buddypress .buddypress-wrap button.button.edit,
-.buddypress .buddypress-wrap .btn-default,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
-.buddypress-wrap .bp-navs li.current a .count,
-.buddypress-wrap .bp-navs li.dynamic.current a .count,
-.buddypress-wrap .bp-navs li.selected a .count,
-.buddypress_object_nav .bp-navs li.current a .count,
-.buddypress_object_nav .bp-navs li.selected a .count,
-.buddypress-wrap .rtm-bp-navs ul li.selected a > span,
-.buddypress-wrap .rtm-bp-navs ul li.selected a:hover > span,
-.buddypress .buddypress-wrap .activity-read-more a,
-.cs-notification-count{
+
+#buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
+.buddypress-wrap .bp-navs li.current a .count, .buddypress-wrap .bp-navs li.dynamic.current a .count, .buddypress-wrap .bp-navs li.selected a .count, .buddypress_object_nav .bp-navs li.current a .count, .buddypress_object_nav .bp-navs li.selected a .count {
   background-color: {$accent};
 }
 
@@ -988,71 +854,24 @@ blockquote,
 .page-pagination .current,
 .cs-accent-border,
 .widget_price_filter .ui-slider .ui-slider-handle,
- #copyright .cs-powered-by,
-#buddypress .comment-reply-link,
-#buddypress .generic-button a,
-#buddypress .standard-form button,
-#buddypress a.button,
-#buddypress input[type="button"],
-#buddypress input[type="reset"]:not(.text-button),
-#buddypress input[type="submit"],
-#buddypress ul.button-nav li a,
-a.bp-title-button,
-#buddypress.buddypress-wrap .activity-list .load-more a,
-#buddypress.buddypress-wrap .activity-list .load-newest a,
-.buddypress .buddypress-wrap .bp-list.grid .action a,
-.buddypress .buddypress-wrap .bp-list.grid .action button,
-.buddypress .buddypress-wrap .action button,
-form#bp-data-export button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a,
-.buddypress .buddypress-wrap button.button,
-.buddypress .buddypress-wrap button.button.edit,
-.buddypress .buddypress-wrap .btn-default,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
-ul#bp-userbar,
-#site-nav .cs-notification .sub-menu{
+  
+#copyright .cs-powered-by,
+#buddypress .comment-reply-link, #buddypress .generic-button a, #buddypress .standard-form button, #buddypress a.button, #buddypress input[type="button"], #buddypress input[type="reset"]:not(.text-button), #buddypress input[type="submit"], #buddypress ul.button-nav li a, a.bp-title-button, #buddypress.buddypress-wrap .activity-list .load-more a, #buddypress.buddypress-wrap .activity-list .load-newest a, .buddypress .buddypress-wrap .bp-list.grid .action a, .buddypress .buddypress-wrap .bp-list.grid .action button, .buddypress .buddypress-wrap .action button, form#bp-data-export button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a, .buddypress .buddypress-wrap button.button, .buddypress .buddypress-wrap button.button.edit, .buddypress .buddypress-wrap .btn-default, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button,
+.buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.selected a,
+ul#bp-userbar {
   border-color: {$accent};
 }
 
 #bbp_user_edit_submit:hover,
 .bbp-submit-wrapper .button:hover,
 .cs-btn-flat-accent:hover,
-buddypress .comment-reply-link:hover,
-#buddypress .generic-button a:hover,
-#buddypress .standard-form button:hover,
-#buddypress a.button:hover,
-#buddypress input[type="button"]:hover,
- #buddypress input[type="button"]:focus,  
-#buddypress input[type=submit]:focus,
-#buddypress input[type="reset"]:not(.text-button):hover,
-#buddypress input[type="submit"]:hover,
-#buddypress ul.button-nav li a:hover,
-a.bp-title-button:hover,
-#buddypress.buddypress-wrap .activity-list .load-more a:hover,
-#buddypress.buddypress-wrap .activity-list .load-newest a:hover,
-.buddypress .buddypress-wrap .bp-list.grid .action a:focus,
-.buddypress .buddypress-wrap .bp-list.grid .action a:hover,
-.buddypress .buddypress-wrap .bp-list.grid .action button:focus,
-.buddypress .buddypress-wrap .bp-list.grid .action button:hover,
-.buddypress .buddypress-wrap .action button:hover,
-form#bp-data-export button:hover,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover,
-body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover,
-.buddypress .buddypress-wrap button.button:hover,
-.buddypress .buddypress-wrap button.button.edit:hover,
-.buddypress .buddypress-wrap .btn-default:hover,
-.buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover,
-.buddypress .buddypress-wrap .activity-read-more a:hover,
-.buddypress .buddypress-wrap .activity-read-more a:focus{
+
+#buddypress .comment-reply-link:hover, #buddypress .generic-button a:hover, #buddypress .standard-form button:hover, #buddypress a.button:hover, #buddypress input[type="button"]:hover, #buddypress input[type="reset"]:not(.text-button):hover, #buddypress input[type="submit"]:hover, #buddypress ul.button-nav li a:hover, a.bp-title-button:hover, #buddypress.buddypress-wrap .activity-list .load-more a:hover, #buddypress.buddypress-wrap .activity-list .load-newest a:hover, .buddypress .buddypress-wrap .bp-list.grid .action a:focus, .buddypress .buddypress-wrap .bp-list.grid .action a:hover, .buddypress .buddypress-wrap .bp-list.grid .action button:focus, .buddypress .buddypress-wrap .bp-list.grid .action button:hover, .buddypress .buddypress-wrap .action button:hover, form#bp-data-export button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover, .buddypress .buddypress-wrap button.button:hover, .buddypress .buddypress-wrap button.button.edit:hover, .buddypress .buddypress-wrap .btn-default:hover, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover {
   background-color: {$accent_brightness};
-  border-color: {$accent};
 }
 
-.buddypress-wrap .bp-navs li.current a,
-.buddypress-wrap .bp-navs li.selected a,
-.buddypress .buddypress-wrap .activity-read-more a{
-    border-color: {$accent};
+#buddypress .comment-reply-link:hover, #buddypress .generic-button a:hover, #buddypress .standard-form button:hover, #buddypress a.button:hover, #buddypress input[type="button"]:hover, #buddypress input[type="reset"]:not(.text-button):hover, #buddypress input[type="submit"]:hover, #buddypress ul.button-nav li a:hover, a.bp-title-button:hover, #buddypress.buddypress-wrap .activity-list .load-more a:hover, #buddypress.buddypress-wrap .activity-list .load-newest a:hover, .buddypress .buddypress-wrap .bp-list.grid .action a:focus, .buddypress .buddypress-wrap .bp-list.grid .action a:hover, .buddypress .buddypress-wrap .bp-list.grid .action button:focus, .buddypress .buddypress-wrap .bp-list.grid .action button:hover, .buddypress .buddypress-wrap .action button:hover, form#bp-data-export button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content button:hover, body.bp-nouveau.media #buddypress div#item-header div#item-header-content a:hover, .buddypress .buddypress-wrap button.button:hover, .buddypress .buddypress-wrap button.button.edit:hover, .buddypress .buddypress-wrap .btn-default:hover, .buddypress .buddypress-wrap button.gamipress-achievement-unlock-with-points-button:hover {
+  border-color: {$accent_brightness};
 }
 
 .cs-btn-outlined-accent {

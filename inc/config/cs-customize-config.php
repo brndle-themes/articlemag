@@ -24,7 +24,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					array(
 						'id'      => 'accent_color',
 						'type'    => 'color',
-						'dafault' => '#e9425d',
+						'dafault' => '#293951',
 					),
 				),
 			),
@@ -49,7 +49,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				array(
 					'id'      => 'accent_color',
 					'type'    => 'color',
-					'default' => '#e9425d',
+					'default' => '#293951',
 				),
 			),
 		);
@@ -152,13 +152,13 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'id'	  => 'top_bar_link_hover',
 					'title'	  => 'Link Hover Color',
 					'type'	  => 'color',
-					'default' => '#e9425d',
+					'default' => '#293951',
 				),
 				array(
 					'id'      => 'top_bar_icon_color',
 					'title'   => 'Icon Color',
 					'type'    => 'color',
-					'default' => '#e9425d',
+					'default' => '#293951',
 				),
 				array(
 					'id'      => 'top_bar_social_color',
@@ -170,7 +170,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'id'      => 'top_bar_social_hover',
 					'title'   => 'Social Icons Hover Color',
 					'type'    => 'color',
-					'default' => '#e9425d',
+					'default' => '#293951',
 
 				),
 			),
@@ -276,7 +276,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'id'      => 'header_link_hover',
 					'title'   => 'Link Hover Color',
 					'type'    => 'color',
-					'default' => '#e9425d',
+					'default' => '#293951',
 				),
 				array(
 					'id'      => 'header_link_hover_bg',
@@ -318,7 +318,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					'id'      => 'submenu_link_hover',
 					'type'    => 'color',
 					'title'   => 'Link Hover Color',
-					'dafault' => '#e9425d',
+					'dafault' => '#293951',
 				),
 				array(
 					'id'      => 'megamenu_colors',
@@ -416,7 +416,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'id'     => 'page_header_bg',
 						'title'  => 'Background Color',
 						'type'   => 'color',
-						'dafult' => '#e9425d',
+						'dafult' => '#293951',
 					),
 					array(
 						'id'     => 'page_header_color',
@@ -630,7 +630,7 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 						'id'      => 'footer_ba_bg',
 						'title'   => 'Background Color',
 						'type'    => 'color',
-						'dafault' => '#e9425d',
+						'dafault' => '#293951',
 					),
 					array(
 						'id'      => 'footer_ba_color',
