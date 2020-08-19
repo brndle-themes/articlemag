@@ -1355,6 +1355,29 @@ if (!function_exists('articlemag_option_sections')) {
                         'title' => 'Show User Message on Header',
                         'default' => 1,
                     ),
+                    array(
+                        'id' => 'heading',
+                        'type' => 'heading',
+                        'content' => 'Mobile View Header Icons',
+                    ),
+                    array(
+                        'id' => 'bp_mobile_user_menu',
+                        'type' => 'switcher',
+                        'title' => 'Show User Avatar on Header',
+                        'default' => 1,
+                    ),
+                    array(
+                        'id' => 'bp_mobile_notifications',
+                        'type' => 'switcher',
+                        'title' => 'Show User Notifications on Header',
+                        'default' => 0,
+                    ),
+                    array(
+                        'id' => 'bp_mobile_message',
+                        'type' => 'switcher',
+                        'title' => 'Show User Message on Header',
+                        'default' => 0,
+                    ),
                 ),
             );
         }

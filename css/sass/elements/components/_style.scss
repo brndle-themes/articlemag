@@ -76,6 +76,10 @@ a:hover {
     outline: 0;
 }
 
+:focus {
+    outline: none;
+}
+
 abbr[title] {
     border-bottom: 1px dotted;
 }
@@ -279,6 +283,7 @@ html {
 body {
     color: #4a4a4a;
     background-color: #fff;
+    line-height: normal;
     overflow-x: hidden;
 }
 
@@ -2027,6 +2032,10 @@ div.wp-caption.alignright .wp-caption-text {
  * - CONTENT
  * =========================================
  */
+.site {
+    overflow: hidden;
+}
+
 #content {
     overflow: visible;
     position: relative;
@@ -4743,10 +4752,6 @@ div.wp-caption.alignright .wp-caption-text {
     transition: all 0.2s;
 }
 
-.cs-user-link-wrap a:hover {
-    text-decoration: none;
-}
-
 .cs-header-left .cs-user-link-wrap,
 .cs-header-center .cs-user-link-wrap {
     height: 50px;
@@ -4798,20 +4803,28 @@ ul#bp-userbar {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    border-top: 2px solid #293951;
+    border-top: 2px solid #e9425d;
     margin-top: -2px;
     position: absolute;
     right: 0;
     z-index: 300;
     top: 100%;
-    width: 250px;
+    width: 170px;
     background-color: #fff;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.07);
+}
+
+#site-nav ul li ul#bp-userbar {
+    width: 170px;
 }
 
 ul#bp-userbar li {
     position: relative;
     line-height: 1.65em;
+}
+
+ul#bp-userbar li+li {
+    border-top: 1px solid #eee;
 }
 
 ul#bp-userbar li:first-child a {
@@ -4828,63 +4841,9 @@ ul#bp-userbar li a {
 }
 
 ul#bp-userbar li a:hover {
-    color: #293951;
+    color: #e9425d;
     background-color: #f8f8f8;
     text-decoration: none;
-}
-
-/* Mobile */
-#cs-mobile-userbar {
-    display: none;
-    position: absolute;
-    right: 0;
-    padding: 10px;
-    cursor: pointer;
-    line-height: 0;
-}
-
-#cs-mobile-userbar #bp-userbar {
-    display: none;
-}
-
-#cs-mobile-userbar #bp-userbar.active {
-    display: block;
-}
-
-#cs-mobile-userbar ul#bp-userbar {
-    right: -40px;
-}
-
-@media (max-width: 992px) {
-    #cs-mobile-userbar {
-        display: block;
-        right: 30px;
-        top: 0;
-        bottom: 0;
-        height: 100%;
-        line-height: 100px;
-        margin: auto 0;
-        padding: 0 10px;
-    }
-
-    .cs-header-left #cs-mobile-userbar {
-        line-height: 70px;
-    }
-
-    .cs-header-center #cs-mobile-userbar {
-        line-height: 47px;
-        right: 0;
-        z-index: 1;
-    }
-
-    .cs-header-center .cs-user-link img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .cs-header-center #cs-mobile-userbar ul#bp-userbar {
-        right: 0px;
-    }
 }
 
 /* User Notifications */
@@ -4897,7 +4856,7 @@ ul#bp-userbar li a:hover {
     line-height: 1em;
     border-radius: 2px;
     color: #fff;
-    background-color: #293951;
+    background-color: #e9425d;
 }
 
 .cs-notification .cs-notification-count {
@@ -4905,7 +4864,8 @@ ul#bp-userbar li a:hover {
 }
 
 .bp-msg .bp-icon-wrap,
-.user-notifications .bp-icon-wrap {
+.user-notifications .bp-icon-wrap,
+.cs-mobile-icons-wrapper .cs-menu-cart > a {
     color: #333;
 }
 
@@ -4920,7 +4880,7 @@ ul#bp-userbar li a:hover {
     right: 0;
     color: #333;
     background-color: #fff;
-    border-top: 2px solid #293951;
+    border-top: 2px solid #e9425d;
     text-decoration: none;
     box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.07);
 }
@@ -4939,7 +4899,7 @@ ul#bp-userbar li a:hover {
         text-decoration: none;
 
         &:hover {
-            color: #293951;
+            color: #e9425d;
             background-color: #f8f8f8;
             text-decoration: none;
         }
@@ -4957,4 +4917,62 @@ a.cs-btn.signin-button,
 a.cs-btn.signup-button {
     padding: 7px 15px;
     border-radius: 100px;
+}
+
+/* Mobile View Icons */
+#cs-mobile-userbar #bp-userbar {
+    display: none;
+}
+
+#cs-mobile-userbar #bp-userbar.active {
+    display: block;
+}
+
+#cs-mobile-userbar ul#bp-userbar {
+    right: -15px;
+}
+
+.cs-mobile-icons-wrapper {
+    display: none;
+}
+
+.cs-mobile-icons-wrapper > div {
+    padding: 0 8px;
+}
+
+.cs-mobile-icons-wrapper > div:first-child,
+.cs-mobile-icons-wrapper > div:last-child {
+    padding-left: 0;
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 480px) {
+    .cs-mobile-icons-wrapper > div {
+        padding: 0 4px;
+    } 
+    
+    #masthead .cs-inner {
+        display: flex;
+        align-items: center;
+    }
+
+    .cs-mobile-icons-wrapper {
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    #site-logo img {
+        max-width: 100%; 
+    }
+
+    .cs-header-default #site-logo {
+        margin-right: 15px;
+    }
+
+    #site-logo h1 {
+        font-size: 24px;
+    }
 }

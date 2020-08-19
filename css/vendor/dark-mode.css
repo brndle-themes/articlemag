@@ -25,11 +25,10 @@
  */
 .cs-mobile-toggle-track {
     display: none;
-    position: absolute;
-    top: 0;
-    right: 50px;
+    text-align: center;
     cursor: pointer;
     line-height: 0;
+    width: auto;
 }
 
 .cs-header-left .cs-mobile-toggle-track {

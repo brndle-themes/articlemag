@@ -112,6 +112,7 @@ CSS;
   .cs-header-left #site-logo{
     display: block !important;
     float: left;
+    line-height: 70px;
   }
 
   #cs-mobile-icon,
@@ -130,8 +131,106 @@ CSS;
 
   .cs-header-fancy .cs-fancy-row{
     margin-left: 0;
-    margin-right: 0;
   }
+
+    .cs-header-fancy .cs-fancy-logo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .cs-header-fancy #masthead .cs-inner {
+        display: flex;
+    }
+
+    #cs-mobile-userbar {
+        display: block;
+        height: 100%;
+        line-height: 100px;
+        cursor: pointer;
+    }
+
+    #cs-mobile-userbar .cs-user-link img {
+        margin-left: 0; 
+    }
+
+    .cs-header-left #cs-mobile-userbar {
+        line-height: 70px;
+    }
+
+    .cs-header-center #cs-mobile-userbar {
+        line-height: 50px;
+    }
+
+    .cs-header-center .cs-user-link img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cs-header-center #cs-mobile-userbar ul#bp-userbar {
+        right: 0px;
+    }
+
+    ul#bp-notify {
+        display: none;
+    }
+
+    .cs-mobile-icons-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .cs-mobile-icons-wrapper {
+        margin-right: 30px;
+    }
+
+    .cs-header-left .cs-sticky-item,
+    .cs-header-left .cs-mobile-icons-wrapper > div {
+        height: 70px;
+        line-height: 70px;
+    }
+
+    .cs-header-center .cs-sticky-item,
+    .cs-header-center .cs-mobile-icons-wrapper > div {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .cs-header-center #cs-mobile-icon {
+        left: 0;
+        right: auto;
+    }
+
+    .cs-header-center .cs-mobile-icons-wrapper {
+        margin-right: 0;
+    }
+
+    
+    [dir='rtl'] .cs-mobile-icons-wrapper {
+        margin-left: 30px;
+        margin-right: auto;
+    }
+
+    [dir='rtl'] .cs-mobile-icons-wrapper > div:first-child,
+    [dir='rtl'] .cs-mobile-icons-wrapper > div:last-child {
+        padding-left: 8px;
+        padding-right: 0;
+    }
+
+    [dir='rtl'] .cs-header-left #site-logo {
+        float: right;
+    }
+    
+    [dir='rtl'] .cs-header-center .cs-mobile-icons-wrapper {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin-right: 15px;
+    }
+
+    [dir='rtl'] .cs-header-fancy .cs-fancy-row {
+        margin-left: auto;
+        margin-right: 0;
+    }
 
 }
 CSS;
