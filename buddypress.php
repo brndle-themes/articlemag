@@ -34,7 +34,7 @@ if ( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta[ 'section' ] ) ) && !i
 	do_action( 'cs_page_end', true );
 } else {
 	?>
-	<section class="main-content <?php echo $cs_page_padding; ?>page-layout-<?php echo $cs_page_layout; ?>">
+	<section class="main-content <?php echo esc_attr($cs_page_padding); ?>page-layout-<?php echo esc_attr($cs_page_layout); ?>">
 		<?php
 		if ( ( function_exists( 'bp_is_user' )) && bp_is_user() || ( function_exists( 'bp_is_group' )) && bp_is_group() ) {
 			?>
@@ -56,7 +56,7 @@ if ( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta[ 'section' ] ) ) && !i
 
 					<?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-					<div class="col-md-<?php echo $cs_page_column; ?>">
+					<div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
 						<div class="page-content">
 							<?php
 							while ( have_posts() ) : the_post();

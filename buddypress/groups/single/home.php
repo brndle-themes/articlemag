@@ -37,7 +37,7 @@ if ( bp_has_groups() ) :
 			<div class="container">
 				<div class="row">
 					<?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
-					<div class="col-md-<?php echo $cs_page_column; ?>">
+					<div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
 
 						<div class="bp-wrap">
 

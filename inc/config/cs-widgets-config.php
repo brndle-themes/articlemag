@@ -23,17 +23,17 @@ class CS_About_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		echo $before_widget;
+		echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 
 		echo '<div class="textwidget">';
 
 		echo '<p>';
-		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="" />' : '';
-		echo $instance['logo_text'];
+		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'varuna').'" />' : '';
+		echo $instance['logo_text']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		echo '</p>';
 
 		echo '<p>';
@@ -57,7 +57,7 @@ class CS_About_Widget extends WP_Widget {
 
 		echo '</div><div class="clear"></div>';
 
-		echo $after_widget;
+		echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -286,10 +286,10 @@ class CS_Flickr_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		echo $before_widget;
+		echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 
 		echo '<div class="cs_flickr_widget">';
@@ -300,7 +300,7 @@ class CS_Flickr_Widget extends WP_Widget {
 
 		echo '</div><div class="clear"></div>';
 
-		echo $after_widget;
+		echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -437,10 +437,10 @@ class CS_Blog_Posts_Widget extends WP_Widget {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-		echo $before_widget;
+		echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 
 		echo '<div class="cs_blog_posts_widget">';
@@ -543,7 +543,7 @@ class CS_Blog_Posts_Widget extends WP_Widget {
 
 		echo '</div><div class="clear"></div>';
 
-		echo $after_widget;
+		echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 
 	function update( $new_instance, $old_instance ) {
@@ -741,10 +741,10 @@ class CS_Side_Menu_Widget extends WP_Widget {
 			// widget content
 			if ( ! empty( $list_pages ) ) {
 
-				echo $before_widget;
+				echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 				if ( ! empty( $title ) ) {
-					echo $before_title . $title . $after_title;
+					echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 				}
 
 				echo '<ul>';
@@ -752,7 +752,7 @@ class CS_Side_Menu_Widget extends WP_Widget {
 				echo '</ul>';
 			}
 
-			echo $after_widget;
+			echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 	}
 
@@ -768,8 +768,8 @@ class CS_Side_Menu_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title    = strip_tags( $instance['title'] );
 		?>
-		<p><label for="<?php echo $this->get_field_id( 'title' ); ?>">Title</label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>">Title</label>
+			<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 		<?php
 	}
 

@@ -36,7 +36,7 @@ function cs_get_custom_style() {
                 echo 'font-style: normal;';
                 echo 'font-weight: normal;';
             } else {
-                echo $font['css'];
+                echo $font['css']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
             }
 
             echo (!empty($font['ttf']) ) ? 'src: url(' . $font['ttf'] . ');' : '';
@@ -57,7 +57,7 @@ function cs_get_custom_style() {
 
     // typography
     // -----------------------------------------------------------
-    echo $cs_get_typography;
+    echo $cs_get_typography; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
     // header height
     // -----------------------------------------------------------

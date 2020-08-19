@@ -1370,3 +1370,20 @@ function get_predefined_colors( $skin = '' ) {
 
 	return $predefined_colors;
 }
+
+function articlemag_is_active_plugin( $plugin ) {
+    return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || articlemag_is_active_plugin_for_network( $plugin );
+}
+
+function articlemag_is_active_plugin_for_network( $plugin ) {
+    if ( ! is_multisite() ) {
+        return false;
+    }
+ 
+    $plugins = get_site_option( 'active_sitewide_plugins' );
+    if ( isset( $plugins[ $plugin ] ) ) {
+        return true;
+    }
+ 
+    return false;
+}

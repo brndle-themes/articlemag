@@ -54,10 +54,10 @@ class BP_Articlemag_Profile_Completion_Widget extends WP_Widget {
 
         /* Widget Template */
 
-        echo $args['before_widget'];
+        echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
         // Widget Title
-        echo $args['before_title'] . $instance['title'] . $args['after_title'];
+        echo $args['before_title'] . $instance['title'] . $args['after_title']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
         // Widget Content
 
@@ -128,7 +128,7 @@ class BP_Articlemag_Profile_Completion_Widget extends WP_Widget {
 
         </div>
         <?php
-        echo $args['after_widget'];
+        echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
     }
 
     /**

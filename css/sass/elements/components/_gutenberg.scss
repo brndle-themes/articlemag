@@ -20,14 +20,14 @@
     margin-bottom: 10px;
 }
 
-.page-content > *.alignfull {
+.page-content > *.alignfull:not(#buddypress) {
     position: relative;
     width: 100vw;
     max-width: 100vw;
     margin-left: calc(-50vw + 50%);
 }
 
-.page-content > *.alignwide {
+.page-content > *.alignwide:not(#buddypress) {
     position: relative;
     width: 80vw;
     left: 50%;
@@ -37,7 +37,7 @@
 }
 
 @media (max-width: 992px) {
-    .page-content > *.alignwide {
+    .page-content > *.alignwide:not(#buddypress) {
         width: 100%;
         left: auto;
         right: auto;

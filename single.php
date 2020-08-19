@@ -34,7 +34,7 @@ if( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_
 
       <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-      <div class="col-md-<?php echo $cs_page_column; ?>">
+      <div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
         <div class="page-content">
           <?php
             while ( have_posts() ) : the_post();

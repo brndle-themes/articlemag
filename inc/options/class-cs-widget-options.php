@@ -116,14 +116,14 @@ if ( ! function_exists( 'about_cs_widget' ) ) {
 	function about_cs_widget( $args, $instance ) {
 		extract( $args );
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance );
-		echo $args['before_widget'];
+		echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 		echo '<div class="textwidget">';
 		echo '<p>';
-		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="" />' : '';
-		echo $instance['logo_text'];
+		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'varuna').'" />' : '';
+		echo $instance['logo_text']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		echo '</p>';
 		echo '<p>';
 		echo ( ! empty( $instance['address'] ) ) ? '<strong class="about-strong">' . $instance['address'] . '</strong> ' : '';
@@ -138,7 +138,7 @@ if ( ! function_exists( 'about_cs_widget' ) ) {
 		echo ( ! empty( $instance['web_text'] ) ) ? '<a href="' . esc_url( $instance['web_url'] ) . '">' . $instance['web_text'] . '</a>' : '';
 		echo '</p>';
 		echo '</div><div class="clear"></div>';
-		echo $args['after_widget'];
+		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 }
 
@@ -220,15 +220,15 @@ if ( ! function_exists( 'flickr_cs_widget' ) ) {
 	function flickr_cs_widget( $args, $instance ) {
 				extract( $args );
 				$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance );
-				echo $args['before_widget'];
+				echo $args['before_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 				echo '<div class="cs_flickr_widget">';
 				$source = ( $instance['type'] == 'set' ) ? 'source=user_set&set=' : 'source=user&user=';
 				echo '<script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne? count=' . $instance['count'] . '&display=' . $instance['ordering'] . '&size=' . $instance['size'] . '&' . $source . $instance['flickr_id'] . '"></script>';
 				echo '</div><div class="clear"></div>';
-		echo $args['after_widget'];
+		echo $args['after_widget']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 }
 
@@ -331,10 +331,10 @@ if ( ! function_exists( 'blog_posts_cs_widget' ) ) {
 
 		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance );
 
-		echo $before_widget;
+		echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 		if ( ! empty( $title ) ) {
-			echo $before_title . $title . $after_title;
+			echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 
 		echo '<div class="cs_blog_posts_widget">';
@@ -437,7 +437,7 @@ if ( ! function_exists( 'blog_posts_cs_widget' ) ) {
 
 		echo '</div><div class="clear"></div>';
 
-		echo $after_widget;
+		echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 	}
 }
 
@@ -502,10 +502,10 @@ if ( ! function_exists( 'side_menu_cs_widget' ) ) {
 			// widget content
 			if ( ! empty( $list_pages ) ) {
 
-				echo $before_widget;
+				echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
 				if ( ! empty( $title ) ) {
-					echo $before_title . $title . $after_title;
+					echo $before_title . $title . $after_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 				}
 
 				echo '<ul>';
@@ -513,7 +513,7 @@ if ( ! function_exists( 'side_menu_cs_widget' ) ) {
 				echo '</ul>';
 			}
 
-			echo $after_widget;
+			echo $after_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 	}
 }

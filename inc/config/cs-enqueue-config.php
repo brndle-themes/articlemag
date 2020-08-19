@@ -76,17 +76,17 @@ function cs_wp_enqueue_styles() {
 	wp_enqueue_style( 'cs-theme', THEME_URI . '/css/theme.min.css', array(), time() );
 
 	// BuddySress
-	if ( class_exists( 'buddypress' ) && (!is_plugin_active( 'youzer/youzer.php' )) ) {
+	if ( class_exists( 'buddypress' ) && (!articlemag_is_active_plugin( 'youzer/youzer.php' )) ) {
 		wp_enqueue_style( 'cs-buddypress', THEME_URI . '/css/cs-buddypress.min.css', array(), time() );
 	}
         
         // youzer
-        if( is_plugin_active( 'youzer/youzer.php' ) ) {
+        if( articlemag_is_active_plugin( 'youzer/youzer.php' ) ) {
             wp_enqueue_style( 'cs-youzer', THEME_URI . '/css/cs-youzer.min.css', array(), time() );
         }
         
         // BB Platform
-	if ( is_plugin_active( 'buddyboss-platform/bp-loader.php' ) ) {
+	if ( articlemag_is_active_plugin( 'buddyboss-platform/bp-loader.php' ) ) {
 		wp_enqueue_style( 'cs-bb-platform', THEME_URI . '/css/bb-platform.min.css', array(), time() );
 	}
         

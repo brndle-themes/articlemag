@@ -26,13 +26,13 @@ if( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_
 
 } else {
 ?>
-<section class="main-content <?php echo $cs_page_padding; ?>page-layout-<?php echo $cs_page_layout; ?>">
+<section class="main-content <?php echo esc_attr($cs_page_padding); ?>page-layout-<?php echo esc_attr($cs_page_layout); ?>">
   <div class="container">
     <div class="row">
 
       <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-      <div class="col-md-<?php echo $cs_page_column; ?>">
+      <div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
         <div class="page-content">
           <?php
             // Start the Loop.

@@ -29,7 +29,7 @@ locate_template( 'inc/includes/custom-style.php', true );
 //
 // woocommerce integration
 // ----------------------------------------------------------------------------------------------------
-if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+if ( articlemag_is_active_plugin( 'woocommerce/woocommerce.php' ) ) {
 	locate_template( 'inc/plugins/woocommerce/woocommerce-config.php', true );
 }
 

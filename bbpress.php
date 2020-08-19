@@ -13,13 +13,13 @@ $cs_bbpress_layout  = cs_get_option( 'bbpress_sidebar', 'full' );
 $cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 
 ?>
-<section class="main-content md-padding page-layout-<?php echo $cs_bbpress_layout; ?>">
+<section class="main-content md-padding page-layout-<?php echo esc_attr($cs_bbpress_layout); ?>">
   <div class="container">
     <div class="row">
 
       <?php cs_page_sidebar( 'left', $cs_bbpress_layout ); ?>
 
-      <div class="col-md-<?php echo $cs_page_column; ?>">
+      <div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
         <div class="page-content">
           <?php
             while ( have_posts() ) : the_post();

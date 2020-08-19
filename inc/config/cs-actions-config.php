@@ -671,7 +671,7 @@ if (function_exists('wpcf7_add_form_tag') && !function_exists('wpcf7_submit_cust
         $value = isset($tag->values[0]) ? $tag->values[0] : '';
 
         if (empty($value)) {
-            $value = __('Send', 'contact-form-7');
+            $value = __('Send', 'articlemag');
         }
 
         $atts['type'] = 'submit';
@@ -697,7 +697,7 @@ if (function_exists('wpcf7_add_form_tag') && !function_exists('wpcf7_submit_cust
         $class = ( empty($tag_class) ) ? cs_get_button_class(array('size' => 'sm')) . ' ' . $class : $class;
 
         $atts['type'] = 'submit';
-        $atts['value'] = ( empty($value) ) ? __('Send', 'contact-form-7') : $value;
+        $atts['value'] = ( empty($value) ) ? __('Send', 'articlemag') : $value;
         $atts['class'] = $tag->get_class_option($class);
         $atts['id'] = $tag->get_id_option();
         $atts['tabindex'] = $tag->get_option('tabindex', 'int', true);

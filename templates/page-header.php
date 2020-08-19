@@ -108,9 +108,15 @@ echo '<section id="page-header"'. $cs_classes . $cs_parallax_speed . $cs_backgro
       echo '<div class="video-section-wrap">';
       echo '<div class="video-wrap">';
       echo '<video width="1920" height="1080" autoplay'. $cs_loop . $cs_muted . $cs_poster .'>';
-      echo ( $cs_mp4 ) ? '<source type="video/mp4" src="'. $cs_mp4 .'"></source>'   : '';
-      echo ( $cs_ogv ) ? '<source type="video/ogv" src="'. $cs_ogv .'"></source>'   : '';
-      echo ( $cs_webm ) ? '<source type="video/webm" src="'. $cs_webm .'"></source>' : '';
+      if ( $cs_mp4 ) {
+            echo '<source type="video/mp4" src="' . $cs_mp4 . '"></source>';
+      }
+      if ( $cs_ogv ) {
+            echo '<source type="video/ogv" src="' . $cs_ogv . '"></source>';
+      }
+      if ( $cs_webm ) {
+            '<source type="video/webm" src="' . $cs_webm . '"></source>';
+      }
       echo '</video>';
       echo '</div>';
       echo '</div>';

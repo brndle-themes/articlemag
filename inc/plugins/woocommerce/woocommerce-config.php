@@ -13,7 +13,7 @@ if ( !function_exists( 'cs_woocommerce_top_bar_ajax' ) ) {
 
 		$fragments[ '.cs-mini-cart' ]		 = '<div class="cs-mini-cart">' . $mini_cart . '</div>';
 		$fragments[ '.cs-cart-count' ]	 = '<span class="cs-cart-count">' . $woocommerce->cart->cart_contents_count . '</span>';
-		$fragments[ '.cs-cart-contents' ]	 = '<span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', $woocommerce->cart->cart_contents_count, 'woothemes' ), $woocommerce->cart->cart_contents_count ) . ' - ' . $woocommerce->cart->get_cart_total() . '</span>';
+		$fragments[ '.cs-cart-contents' ]	 = '<span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', $woocommerce->cart->cart_contents_count, 'articlemag' ), $woocommerce->cart->cart_contents_count ) . ' - ' . $woocommerce->cart->get_cart_total() . '</span>';
 
 		return $fragments;
 	}
@@ -202,7 +202,7 @@ if ( !function_exists( 'cs_woocommerce_get_product_thumbnail' ) ) {
 				$output				 .= '<div class="secondary-img">' . wp_get_attachment_image( $secondary_image_id, $size ) . '</div>';
 			}
 
-			$output .= (!$product->is_in_stock() ) ? '<span class="out-of-stock">' . __( 'Out of stock', 'woocommerce' ) . '</span>' : '';
+			$output .= (!$product->is_in_stock() ) ? '<span class="out-of-stock">' . __( 'Out of stock', 'articlemag' ) . '</span>' : '';
 
 			$output .= '</div>';
 		} elseif ( wc_placeholder_img_src() ) {
@@ -230,7 +230,7 @@ if ( !function_exists( 'cs_woocommerce_order_again_button' ) ) {
 			return;
 		?>
 		<p class="order-again">
-			<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'order_again', $order->id ), 'woocommerce-order_again' ) ); ?>" class="button <?php echo cs_get_button_class(); ?>"><i class="fa fa-refresh"></i> <?php _e( 'Order Again', 'woocommerce' ); ?></a>
+			<a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'order_again', $order->id ), 'woocommerce-order_again' ) ); ?>" class="button <?php echo cs_get_button_class(); ?>"><i class="fa fa-refresh"></i> <?php _e( 'Order Again', 'articlemag' ); ?></a>
 		</p>
 		<?php
 	}
@@ -248,7 +248,7 @@ if ( !function_exists( 'cs_get_product_search_form' ) ) {
 
 		$form = '<div class="cs-search-form">
       <form action="' . esc_url( home_url( '/' ) ) . '" method="get">
-        <input type="text" value="' . get_search_query() . '" name="s" class="cs-search" placeholder="' . esc_attr_x( 'Search Products&hellip;', 'placeholder', 'woocommerce' ) . '" />
+        <input type="text" value="' . get_search_query() . '" name="s" class="cs-search" placeholder="' . esc_attr_x( 'Search Products&hellip;', 'placeholder', 'articlemag' ) . '" />
         <button type="submit" class="fa fa-search"></button>
         <input type="hidden" name="post_type" value="product" />
       </form>

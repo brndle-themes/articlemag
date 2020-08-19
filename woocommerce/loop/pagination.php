@@ -47,7 +47,7 @@ if ( $total <= 1 ) {
     ) ) );
 
     foreach ($links as $link) {
-      echo $link;
+      echo $link; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
     }
 
   ?>

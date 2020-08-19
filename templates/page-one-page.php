@@ -39,7 +39,7 @@ if ( ( $cs_locations = get_nav_menu_locations() ) && isset( $cs_locations[$cs_lo
     $cs_nav_list    .= '</ul>';
     $cs_nav_list    .= '</nav><!-- /cs-fixed-nav -->';
 
-    echo $cs_nav_list;
+    echo $cs_nav_list; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
   }
 

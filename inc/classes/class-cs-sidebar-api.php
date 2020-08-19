@@ -11,7 +11,7 @@ class CSFramework_Sidebars_API {
 
     public function __construct() {
         $this->register_default_sidebars();
-        if (class_exists('buddypress') && (!is_plugin_active('youzer/youzer.php'))) {
+        if (class_exists('buddypress') && (!articlemag_is_active_plugin('youzer/youzer.php'))) {
             $this->register_buddypress_sidebars();
         }
         $this->register_footer_sidebars();

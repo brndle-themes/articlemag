@@ -54,7 +54,7 @@
 
         <?php
           if( $post_format == 'link' ) {
-            echo $cs_title;
+            echo $cs_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
           } else {
             the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
           }

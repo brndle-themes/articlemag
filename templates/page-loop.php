@@ -13,13 +13,13 @@ $cs_page_container = ( $cs_page_layout == 'fluid' ) ? '-fluid' : '';
 $cs_page_column  = ( $cs_page_layout == 'full' || $cs_page_layout == 'fluid' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 $cs_blog_class     = ( $cs_blog_layout == 'grid' || $cs_blog_layout == 'masonry' ) ? 'masonry' : 'default blog-layout-'. $cs_blog_layout;
 ?>
-<section class="main-content md-padding page-layout-<?php echo $cs_page_layout; ?> blog-<?php echo $cs_blog_class; ?>">
-  <div class="container<?php echo $cs_page_container; ?>">
+<section class="main-content md-padding page-layout-<?php echo esc_attr($cs_page_layout); ?> blog-<?php echo esc_attr($cs_blog_class); ?>">
+  <div class="container<?php echo esc_attr($cs_page_container); ?>">
     <div class="row">
 
       <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-      <div class="col-md-<?php echo $cs_page_column; ?>">
+      <div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
         <div class="page-content">
           <div class="article-post-gird">
 

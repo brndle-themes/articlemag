@@ -36,7 +36,7 @@ $cs_has_section	 = isset( $cs_post_meta[ 'section' ] ) ? true : false;
 	<div class="container">
 		<div class="row">
 			<?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
-			<div class="col-md-<?php echo $cs_page_column; ?>">
+			<div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
 				<div class="bp-wrap">
 					<?php if ( !bp_nouveau_is_object_nav_in_sidebar() ) : ?>
 

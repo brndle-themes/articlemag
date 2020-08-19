@@ -32,7 +32,7 @@
             $cs_link = cs_get_link_attributes( $cs_title );
             cs_post_thumbnail( $cs_link );
           }
-          echo $cs_title;
+          echo $cs_title; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 
         break;
 

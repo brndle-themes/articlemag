@@ -174,19 +174,19 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 						if ( is_woocommerce_activated() ) {
 
 							if ( is_user_logged_in() ) {
-								$out .= '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '"><i class="cs-in fa fa-user"></i>' . __( 'My Account Page', 'woocommerce' ) . '</a>';
+								$out .= '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '"><i class="cs-in fa fa-user"></i>' . __( 'My Account Page', 'articlemag' ) . '</a>';
 								$out .= ' / ';
-								$out .= '<a href="' . wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ) . '"><i class="cs-in fa fa-power-off"></i>' . __( 'Logout', 'woocommerce' ) . '</a>';
+								$out .= '<a href="' . wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) ) . '"><i class="cs-in fa fa-power-off"></i>' . __( 'Logout', 'articlemag' ) . '</a>';
 							} else {
 								$login_form = wp_login_form( array( 'echo' => false ) );
 								$login_form = str_replace( 'button-primary', cs_get_button_class( array( 'size' => 'xxs' ) ), $login_form );
 								$out       .= '<div class="cs-top-modal">';
-								$out       .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-user"></i>' . __( 'Login', 'woocommerce' ) . '</a>';
+								$out       .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-user"></i>' . __( 'Login', 'articlemag' ) . '</a>';
 								$out       .= '<div class="cs-modal-content">';
 								$out       .= $login_form;
 								$out       .= '<p class="cs-modal-lost-password">';
-								$out       .= ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) ? '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">' . __( 'Register', 'woocommerce' ) . '</a> - ' : '';
-								$out       .= '<a href="' . wc_lostpassword_url() . '">' . __( 'Lost your password?', 'woocommerce' ) . '</a>';
+								$out       .= ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) ? '<a href="' . get_permalink( wc_get_page_id( 'myaccount' ) ) . '">' . __( 'Register', 'articlemag' ) . '</a> - ' : '';
+								$out       .= '<a href="' . wc_lostpassword_url() . '">' . __( 'Lost your password?', 'articlemag' ) . '</a>';
 								$out       .= '</p>';
 								$out       .= '</div>';
 								$out       .= '</div>';
@@ -208,7 +208,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 					// ----------------------------------------------
 					case 'wooprice':
 						if ( is_woocommerce_activated() ) {
-							$out .= '<a href="' . wc_get_cart_url() . '"><i class="cs-in fa fa-shopping-cart"></i><span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', WC()->cart->cart_contents_count, 'woothemes' ), WC()->cart->cart_contents_count ) . WC()->cart->get_cart_total() . '</span></a>';
+							$out .= '<a href="' . wc_get_cart_url() . '"><i class="cs-in fa fa-shopping-cart"></i><span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', WC()->cart->cart_contents_count, 'articlemag' ), WC()->cart->cart_contents_count ) . WC()->cart->get_cart_total() . '</span></a>';
 						}
 
 						break;
@@ -224,7 +224,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 							$mini_cart = ob_get_clean();
 
 							$out .= '<div class="cs-top-modal">';
-							$out .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-shopping-cart"></i>' . __( 'Cart', 'woocommerce' ) . '<span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
+							$out .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-shopping-cart"></i>' . __( 'Cart', 'articlemag' ) . '<span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
 							$out .= '<div class="cs-modal-content woocommerce"><div class="cs-mini-cart">' . $mini_cart . '</div></div>';
 							$out .= '</div>';
 						}
@@ -545,7 +545,7 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 			if ( has_post_thumbnail() ) {
 					the_post_thumbnail( $size );
 			} else {
-				echo '<img src="' . $img_src . '" id="contextual" class="contextual" alt="" />';
+				echo '<img src="' . $img_src . '" id="contextual" class="contextual"  alt="' . esc_html__( 'No Image', 'articlemag') . '" />';
 			}
 			echo '<span class="entry-image-overlay"></span>';
 			echo '</a>';
@@ -639,7 +639,7 @@ if ( ! function_exists( 'cs_paging_nav' ) ) {
 			unset( $args['query'] );
 			wp_localize_script( 'cs-jquery-register', 'cs_load_more_' . $uniqid, $args );
 
-			echo $output;
+			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		} else {
 
 			if ( is_front_page() || is_home() ) {
@@ -684,7 +684,7 @@ if ( ! function_exists( 'cs_paging_nav' ) ) {
 					<div class="pagination-shadow">
 						<?php
 						foreach ( $links as $link ) {
-							echo $link;
+							echo $link; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 						}
 						?>
 					</div>
@@ -772,7 +772,7 @@ if ( ! function_exists( 'cs_link_pages' ) ) {
 		$output = apply_filters( 'wp_link_pages', $output, $args );
 
 		if ( $echo ) {
-			echo $output;
+			echo $output; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		}
 
 		return $output;
@@ -1384,7 +1384,7 @@ if ( ! function_exists( 'cs_google_analytics' ) ) {
 			<!-- Google Analytics -->
 			<script type="text/javascript">
 				var _gaq = _gaq || [ ];
-				_gaq.push( [ '_setAccount', '<?php echo $ga; ?>' ] );
+				_gaq.push( [ '_setAccount', '<?php echo esc_attr($ga); ?>' ] );
 				_gaq.push( [ '_trackPageview' ] );
 
 				( function () {
