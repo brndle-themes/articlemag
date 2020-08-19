@@ -22,6 +22,7 @@ function cs_get_custom_style() {
     $visible_top_bar = cs_get_option('visible_top_bar');
     $mobile_animations = cs_get_option('mobile_animations');
     $extra_header_height = (!empty($header_height) || $header_height === 0 ) ? $header_height + 40 : 140;
+    $container_width         = cs_get_option( 'container_width' );
 
     ob_start();
 
@@ -77,6 +78,19 @@ function cs_get_custom_style() {
   }
 CSS;
     }
+    
+    // container width
+	// -----------------------------------------------------------
+	if ( $container_width ) {
+            echo <<<CSS
+                @media (min-width: 1200px) {
+              .container {
+                  width: 100%;
+                  max-width: {$container_width}px;
+              }
+        }
+CSS;
+	}
 
     // header sticky height
     // -----------------------------------------------------------

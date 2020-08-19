@@ -1135,6 +1135,13 @@ if (!function_exists('articlemag_option_sections')) {
                     'info' => 'Embed 1600+ icomoon fonts',
                 ),
                 array(
+                    'id' => 'container_width',
+                    'type' => 'number',
+                    'title' => 'Site Container Width',
+                    'attributes' => array('placeholder' => 1170),
+                    'unit' => 'px'
+                ),
+                array(
                     'id' => 'boxed_layout',
                     'type' => 'switcher',
                     'title' => 'Boxed Layout',
