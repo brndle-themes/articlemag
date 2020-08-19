@@ -10,10 +10,23 @@
 global $post;
 
 // set post meta
-$cs_post_id         = ( isset( $post ) ) ? $post->ID : 0;
-$cs_post_id         = ( is_home() ) ? get_option( 'page_for_posts' ) : $cs_post_id;
-$cs_post_id         = ( is_woocommerce_shop() ) ? wc_get_page_id( 'shop' ) : $cs_post_id;
-$cs_post_meta       = get_post_meta( $cs_post_id, '_custom_page_options', true );
+$cs_post_id   = ( isset( $post ) ) ? $post->ID : 0;
+$cs_post_id   = ( is_home() ) ? get_option( 'page_for_posts' ) : $cs_post_id;
+$cs_post_id   = ( is_woocommerce_shop() ) ? wc_get_page_id( 'shop' ) : $cs_post_id;
+
+if ( class_exists( 'BuddyPress' ) && is_buddypress() ) {
+	$bp_pages = get_option( 'bp-pages' );
+	if ( bp_is_current_component( 'groups' ) && (!bp_is_group_single() && !bp_is_group_create()) ) {
+		$post = get_post( $bp_pages[ 'groups' ] );
+	} elseif ( bp_is_current_component( 'members' ) || bp_is_user() ) {
+		$post = get_post( $bp_pages[ 'members' ] );
+	} elseif ( bp_is_current_component( 'activity' ) && !bp_current_action( 'activity' ) ) {
+		$post = get_post( $bp_pages[ 'activity' ] );
+	}
+	$cs_post_id   = ( isset( $post ) ) ? $post->ID : 0;	
+}
+
+$cs_post_meta = get_post_meta( $cs_post_id, '_custom_page_options', true );
 
 // do not show header in front page
 if( is_front_page() && ! is_woocommerce_shop() && empty( $cs_post_meta['header_transparent'] ) && empty( $cs_post_meta['force_show_header'] ) ) { return; }

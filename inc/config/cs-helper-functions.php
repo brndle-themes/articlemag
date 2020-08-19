@@ -843,8 +843,23 @@ if ( ! function_exists( 'cs_get_post_meta' ) ) {
 		global $post;
 		$post_id = ( isset( $post ) ) ? $post->ID : false;
 		$post_id = ( is_front_page() ) ? get_option( 'page_on_front' ) : $post_id;
+		
+		$post_id = ( is_home() && get_option( 'page_for_posts' ) != '' ) ? get_option( 'page_for_posts' ) : $post_id;
 		$post_id = ( is_woocommerce_shop() ) ? wc_get_page_id( 'shop' ) : $post_id;
 		$post_id = ( ! is_tag() && ! is_archive() && ! is_search() && ! is_404() ) ? $post_id : false;
+		
+		if ( class_exists( 'BuddyPress' ) && is_buddypress() ) {
+			$bp_pages = get_option( 'bp-pages' );
+			if ( bp_is_current_component( 'groups' ) && (!bp_is_group_single() && !bp_is_group_create()) ) {
+				$post = get_post( $bp_pages[ 'groups' ] );
+			} elseif ( bp_is_current_component( 'members' ) || bp_is_user() ) {
+				$post = get_post( $bp_pages[ 'members' ] );
+			} elseif ( bp_is_current_component( 'activity' ) && !bp_current_action( 'activity' ) ) {
+				$post = get_post( $bp_pages[ 'activity' ] );
+			}
+			$post_id   = ( isset( $post ) ) ? $post->ID : 0;	
+		}
+		
 		return ( ! empty( $post_id ) ) ? get_post_meta( $post_id, '_custom_page_options', true ) : null;
 	}
 }
