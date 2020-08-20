@@ -852,7 +852,7 @@ if (!function_exists('articlemag_option_sections')) {
                                 'font-family' => 'Source Sans Pro',
                                 'font-weight' => '400',
                                 'font-size' => 16,
-                                'line-height' => 24,
+                                'line-height' => '',
                                 'subset' => 'latin',
                                 'color' => false,
                                 'word_spacing' => true,

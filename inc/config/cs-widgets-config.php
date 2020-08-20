@@ -32,7 +32,7 @@ class CS_About_Widget extends WP_Widget {
 		echo '<div class="textwidget">';
 
 		echo '<p>';
-		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'varuna').'" />' : '';
+		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'articlemag').'" />' : '';
 		echo $instance['logo_text']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		echo '</p>';
 

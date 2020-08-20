@@ -202,7 +202,10 @@
 .dark-mode #page-header .category-content,
 .dark-mode .single-post .entry-header .post-meta a,
 .dark-mode .single-post .entry-header .post-meta,
-.dark-mode .entry-author .author-meta ul.author-social a {
+.dark-mode .entry-author .author-meta ul.author-social a,
+.dark-mode .bp-msg .bp-icon-wrap, 
+.dark-mode .user-notifications .bp-icon-wrap,
+.dark-mode #site-nav a.cs-user-link {
     color: #999;
 }
 

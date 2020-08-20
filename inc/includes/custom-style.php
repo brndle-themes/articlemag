@@ -159,8 +159,13 @@ CSS;
     #cs-mobile-userbar {
         display: block;
         height: 100%;
-        line-height: 100px;
+        line-height: 65px;
         cursor: pointer;
+    }
+
+    .cs-header-fancy #cs-mobile-userbar {
+        height: 100%;
+        line-height: 100px;
     }
 
     #cs-mobile-userbar .cs-user-link img {
@@ -318,6 +323,12 @@ function cs_get_custom_skin() {
   .page-pagination a:hover,
   #site-nav ul li ul li .cs-link:hover,
   #site-nav > ul > li > .cs-link:hover,
+  #site-nav .cs-notification .sub-menu li a:hover,
+  ul#bp-userbar li a:hover,
+  #site-nav a.cs-user-link:hover,
+  .bp-msg .bp-icon-wrap:hover,
+  .user-notifications .bp-icon-wrap:hover,
+  .cs-mobile-icons-wrapper .cs-menu-cart > a:hover,
   #site-nav .current-menu-ancestor > .cs-link,
   #site-nav .current-menu-item > .cs-link,
   #site-logo h1 a:hover,
@@ -341,9 +352,15 @@ function cs_get_custom_skin() {
   .dark-mode #site-logo h1 a:hover,
   .dark-mode .entry-title a:hover,
   .dark-mode #site-nav > ul > li > .cs-link:hover,
+  .dark-mode #site-nav a.cs-user-link:hover,
+  .dark-mode .bp-msg .bp-icon-wrap:hover,
+  .dark-mode .user-notifications .bp-icon-wrap:hover,
+  .dark-mode .cs-mobile-icons-wrapper .cs-menu-cart > a:hover,
   .dark-mode #site-nav .current-menu-ancestor > .cs-link,
   .dark-mode #site-nav .current-menu-item > .cs-link,
   .dark-mode #site-nav ul li ul li .cs-link:hover,
+  .dark-mode #site-nav .cs-notification .sub-menu li a:hover,
+  .dark-mode ul#bp-userbar li a:hover,
   .dark-mode .comment-meta a:hover,
   .dark-mode .entry-tags a:hover,
   .dark-mode .entry-meta a:hover,
@@ -360,6 +377,7 @@ function cs_get_custom_skin() {
   #bbp_user_edit_submit,
   .bbp-submit-wrapper .button,
   .cs-cart-count,
+  .cs-notification-count,
   .cs-tab .cs-tab-nav ul li.active a:after,
   .cs-progress-bar,
   .cs-pricing-column-accent .cs-pricing-price,
@@ -722,7 +740,11 @@ CSS;
 
 #site-nav .current-menu-ancestor > .cs-link,
 #site-nav .current-menu-item > .cs-link,
-#site-nav > ul > li > .cs-link:hover {
+#site-nav > ul > li > .cs-link:hover,
+#site-nav a.cs-user-link:hover,
+.bp-msg .bp-icon-wrap:hover,
+.user-notifications .bp-icon-wrap:hover,
+.cs-mobile-icons-wrapper .cs-menu-cart > a:hover {
   color: {$header_link_hover};
   {$header_link_hover_bg_css}
 }
@@ -917,9 +939,15 @@ nav#object-nav.vertical .selected > a, nav#object-nav.vertical a:hover, .bp-sing
 .dark-mode #site-logo h1 a:hover,
 .dark-mode .entry-title a:hover,
 .dark-mode #site-nav > ul > li > .cs-link:hover,
+.dark-mode #site-nav a.cs-user-link:hover,
+.dark-mode .bp-msg .bp-icon-wrap:hover,
+.dark-mode .user-notifications .bp-icon-wrap:hover,
+.dark-mode .cs-mobile-icons-wrapper .cs-menu-cart > a:hover,
 .dark-mode #site-nav .current-menu-ancestor > .cs-link,
 .dark-mode #site-nav .current-menu-item > .cs-link,
 .dark-mode #site-nav ul li ul li .cs-link:hover,
+.dark-mode #site-nav .cs-notification .sub-menu li a:hover,
+.dark-mode ul#bp-userbar li a:hover,
 .dark-mode .comment-meta a:hover,
 .dark-mode .entry-tags a:hover,
 .dark-mode .entry-meta a:hover,
@@ -934,6 +962,7 @@ nav#object-nav.vertical .selected > a, nav#object-nav.vertical a:hover, .bp-sing
 #bbp_user_edit_submit,
 .bbp-submit-wrapper .button,
 .cs-cart-count,
+.cs-notification-count,
 .cs-tab .cs-tab-nav ul li.active a:after,
 .cs-progress-bar,
 .cs-pricing-column-accent .cs-pricing-price,

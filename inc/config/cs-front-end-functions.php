@@ -949,12 +949,6 @@ if ( ! function_exists( 'cs_mobile_icon' ) ) {
 		$output .= '<span><i class="cs-one"></i><i class="cs-two"></i><i class="cs-three"></i></span>';
 		$output .= '</div>';
 
-		if ( cs_get_option( 'dark_mode' ) ) {
-			$output .= '<div class="cs-toggle-track cs-mobile-toggle-track">';
-			$output .= '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
-			$output .= '</div>';
-		}
-
 		return $output;
 	}
 }
@@ -985,7 +979,7 @@ if (!function_exists('cs_get_bp_userbar')) {
 
                     echo '<div class="cs-notification cs-bp_notifications">';
                     echo '<div class = "user-notifications cs-link cs-sticky-item">';
-                    echo '<a class="bp-icon-wrap" href ="#" title = "' . esc_html(esc_attr('Notifications'), 'varuna') . '">';
+                    echo '<a class="bp-icon-wrap" href ="#" title = "' . esc_html(esc_attr('Notifications'), 'articlemag') . '">';
                     echo '<span class="fa fa-bell"> </span>';
 
                     if (function_exists('bp_notifications_get_unread_notification_count')) {
@@ -1003,12 +997,12 @@ if (!function_exists('cs_get_bp_userbar')) {
                             echo '<li>' . $notification . '</li>';
                         }
                         echo '<li class="bp-view-all">';
-                        echo '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . '"> ' . esc_attr('View all notifications', 'varuna') . '</a>';
+                        echo '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . '"> ' . esc_attr('View all notifications', 'articlemag') . '</a>';
                         echo '</li>';
                         echo '</ul>';
                     } else {
                         echo '<ul id="bp-notify" class="sub-menu">';
-                        echo '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'varuna') . '</a></li>';
+                        echo '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'articlemag') . '</a></li>';
                         echo '</ul>';
                     }
                     echo '</div>';
