@@ -1755,6 +1755,20 @@
     }
 }
 
+@media (max-width: 991px) { 
+    .woocommerce .cs-products, 
+    .woocommerce-page .cs-products {
+        > .row {
+            display: flex;
+            flex-flow: wrap;
+        }
+
+        .product {
+            width: 50%;
+        }
+    }
+}
+
 /*
  *  Dokan Plugin CSS :: Start
  *

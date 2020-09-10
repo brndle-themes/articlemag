@@ -70,6 +70,7 @@ body .buddypress-wrap .subnav-filters .last select {
     border-radius: 3px;
     box-shadow: none;
     padding: 0 12px;
+    padding-right: 40px;
     color: inherit;
 }
 
@@ -364,7 +365,7 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
     min-width: 22px;
     display: inline-block;
     margin-left: 3px;
-    padding: 2px 7px 2px;
+    padding: 1px 7px 1px;
     text-align: center;
     vertical-align: middle;
 }
@@ -934,6 +935,11 @@ select#whats-new-post-in {
     padding: 0;
 }
 
+.activity-update-form #whats-new-post-in-box {	
+    display: flex;	
+    align-items: center;	
+}
+
 #buddypress.buddypress-wrap form#whats-new-form #whats-new-submit {
     margin-left: auto;
 }
@@ -982,6 +988,7 @@ body.bp-nouveau .activity-update-form .rtmedia-uploader-div {
 
 .activity-update-form #whats-new-post-in-box #whats-new-post-in-box-items {
     margin: 0;
+    flex: 0 0 auto;
 }
 
 .activity-update-form #whats-new-post-in-box #whats-new-post-in-box-items li {
@@ -2046,6 +2053,7 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
 .bp-messages-content #thread-preview .preview-content .actions {
     display: flex;
     align-items: center;
+    flex-flow: row wrap;
 }
 
 .bp-messages-content #thread-preview .preview-content .preview-message {
@@ -2068,6 +2076,31 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
 .bp-messages-content .thread-participants ul,
 .single-headers ul {
     padding-left: 0;
+}
+
+	
+#message-threads li .thread-from img.avatar,	
+#message-threads li .thread-to img.avatar {	
+    max-width: 32px;	
+}	
+@media(max-width: 420px) {	
+    #message-threads li .thread-cb {	
+        flex: 1 2 10%;	
+        align-items: flex-start;	
+    }	
+    #message-threads li .thread-from, 	
+    #message-threads li .thread-to {	
+        flex: 1 2 30%;	
+    }	
+    #message-threads li .thread-from img.avatar, 	
+    #message-threads li .thread-to img.avatar {	
+        float: none;	
+        margin: 0 0 5px;	
+    }	
+    #message-threads li .thread-from .user-name,	
+    #message-threads li .thread-to .user-name {	
+        display: block;	
+    }	
 }
 
 /* notifications */
@@ -2596,6 +2629,10 @@ button#bp-delete-avatar {
 .widget.buddypress div.item-content,
 .widget.buddypress div.item-meta {
     margin: 0;
+}
+
+.widget.buddypress div.item-meta {	
+    font-size: 13px;	
 }
 
 #buddypress.buddypress-wrap .widget.buddypress ul.item-list,

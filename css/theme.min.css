@@ -10635,7 +10635,7 @@ div.wp-caption.alignright .wp-caption-text {
   list-style-type: none;
 }
 
-.articlemag_widget ul li {
+.articlemag_widget ul:not(.bbp-stats) li {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(232, 232, 232, 0.4);
@@ -11843,6 +11843,26 @@ a.cs-btn.signup-button {
 
   #site-logo h1 {
     font-size: 24px;
+  }
+}
+/*--------------------------------------------------------------
+# Youzer
+--------------------------------------------------------------*/
+.yz-page-main-content button#bbp_search_submit {
+  margin-top: -4px;
+  opacity: 1;
+}
+.yz-page-main-content button#bbp_search_submit:before {
+  font-family: 'FontAwesome';
+}
+
+.yz-page-main-content .cs-search-form {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 425px) {
+  .yz-page-main-content .cs-search-form button {
+    position: relative;
   }
 }
 
