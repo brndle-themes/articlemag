@@ -91,7 +91,7 @@ function cs_wp_enqueue_styles() {
 	}
         
         // Forums
-	if ( class_exists( 'bbPress' ) && (!varuna_is_active_plugin( 'youzer/youzer.php' )) ) {
+	if ( class_exists( 'bbPress' ) && (!articlemag_is_active_plugin( 'youzer/youzer.php' )) ) {
 		wp_enqueue_style( 'cs-bbpress', THEME_URI . '/css/bbpress.min.css', array(), null );
 	}
 
