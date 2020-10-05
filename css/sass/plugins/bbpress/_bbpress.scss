@@ -7,6 +7,23 @@
 
 /* =bbPress Style
 -------------------------------------------------------------- */
+#bbpress-forums {
+    font-size: inherit;
+    line-height: normal;
+}
+
+#bbpress-forums ul.bbp-lead-topic,
+#bbpress-forums ul.bbp-topics,
+#bbpress-forums ul.bbp-forums,
+#bbpress-forums ul.bbp-replies,
+#bbpress-forums ul.bbp-search-results {
+    font-size: inherit;
+}
+
+#bbpress-forums fieldset.bbp-form select, 
+#bbpress-forums fieldset.bbp-form input[type="text"] {
+    height: auto;
+}
 
 #bbpress-forums hr {
     margin: 0 0 24px 0;
