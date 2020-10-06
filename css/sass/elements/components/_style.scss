@@ -5005,3 +5005,21 @@ a.cs-btn.signup-button {
         position: relative;
     } 
 }
+
+/* Mobile View Sidebar Order */
+.row.cs-row-wrap {
+    display: flex;
+    flex-flow: wrap;
+}
+
+@media (max-width: 991px) {
+    .cs-sidebar-clear {
+        order: 2;
+        width: 100%;
+    }
+    
+    .cs-content-wrapper {
+        order: 1;
+        width: 100%;
+    }
+}

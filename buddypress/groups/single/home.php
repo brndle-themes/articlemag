@@ -25,9 +25,9 @@ if ( bp_has_groups() ) :
 
 		<div class="cs-group-home">
 			<div class="container">
-				<div class="row">
+				<div class="row cs-row-wrap">
 					<?php cs_page_sidebar( 'left', $cs_buddypresss_layout ); ?>
-					<div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
+					<div class="cs-content-wrapper col-md-<?php echo esc_attr($cs_page_column); ?>">
 
 						<div class="bp-wrap">
 

@@ -11865,5 +11865,29 @@ a.cs-btn.signup-button {
     position: relative;
   }
 }
+/* Mobile View Sidebar Order */
+.row.cs-row-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+@media (max-width: 991px) {
+  .cs-sidebar-clear {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 100%;
+  }
+
+  .cs-content-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=theme.min.css.map */

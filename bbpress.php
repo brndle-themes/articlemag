@@ -15,11 +15,11 @@ $cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout ==
 ?>
 <section class="main-content md-padding page-layout-<?php echo esc_attr($cs_bbpress_layout); ?>">
   <div class="container">
-    <div class="row">
+    <div class="row cs-row-wrap">
 
       <?php cs_page_sidebar( 'left', $cs_bbpress_layout ); ?>
 
-      <div class="col-md-<?php echo esc_attr($cs_page_column); ?>">
+      <div class="cs-content-wrapper col-md-<?php echo esc_attr($cs_page_column); ?>">
         <div class="page-content">
           <?php
             while ( have_posts() ) : the_post();
