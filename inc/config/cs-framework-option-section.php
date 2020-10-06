@@ -721,7 +721,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'title' => 'Copyright',
                     'shortcode' => true,
                     'multilang' => true,
-                    'default' => '<div class="pull-left">Copyright &copy; [cs_current_year]</div>
+                    'default' => '<div class="pull-left">Copyright &copy; [cs_current_year] ArticleMag | Theme by Brndle</div>
 		<div class="pull-right">Build with [cs_fa icon="heart" style="color: red"] WordPress</div>',
                     'after' => '<p class="cs-alert cs-alert-info">Helpful shortcodes: [cs_current_year] [cs_home_url] [cs_social] or any shortcode.</p>',
                 ),
