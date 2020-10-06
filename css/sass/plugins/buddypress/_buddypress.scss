@@ -10,7 +10,14 @@
 # Group Single
 # BuddyPress Sidebar
 # BuddyPress Profile Completion
-#BuddyPress User Menu
+# BuddyPress User Menu	
+# Extra Plugins Support	
+    ## BuddyPress Status	
+    ## BuddyPress Quote	
+    ## BuddyPress Polls	
+    ## BuddyPress Profile Pro	
+    ## BuddyPress Member Review	
+    ## BuddyPress Group Review
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -240,8 +247,6 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
     border: 1px solid #e8e8e8;
     border-radius: 3px;
     box-shadow: none;
-
-    /*    max-width: 1140px;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -291,6 +296,10 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
 .buddypress-wrap .bp-navs li:not(.selected) a:hover {
     background: transparent;
     color: #293951;
+}
+
+.buddypress-wrap:not(.bp-single-vert-nav) .main-navs > ul > li > a {	
+    padding: 10px;	
 }
 
 .buddypress-wrap .bp-navs li.current a,
@@ -1224,6 +1233,14 @@ div#buddypress .activity-read-more a:hover {
 
 .buddypress-wrap .activity-comments {
     margin: 0;
+    
+    .activity-meta.action a {	
+        font-size: 14px;	
+    }
+}
+
+#buddypress.buddypress-wrap .activity-comments .activity-meta.action a {	
+    font-size: 14px;	
 }
 
 form.ac-form .ac-reply-content {
@@ -1673,11 +1690,6 @@ li.load-more a.loading::after {
 }
 
 /* group-create */
-.group-create.buddypress .main-content {
-    max-width: 1140px;
-    margin: auto;
-}
-
 #group-create-body {
     position: relative;
     margin: 1rem 0 30px;
@@ -2617,6 +2629,10 @@ button#bp-delete-avatar {
     padding-left: 0;
 }
 
+form#request-membership-form #group-request-send {	
+    margin-top: 15px;	
+}
+
 /*--------------------------------------------------------------
 # BuddyPress Sidebar
 --------------------------------------------------------------*/
@@ -2905,4 +2921,146 @@ body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
     border-bottom: 3px solid white;
     border-right: 3px solid white;
     transform: rotate(45deg);
+}
+
+/*--------------------------------------------------------------
+# Extra Plugins Support
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## BuddyPress Status
+--------------------------------------------------------------*/
+.bpsts-status-div {
+    margin-bottom: 10px;
+}
+
+img.bpsts-name-icon {
+    max-width: 20px;
+    margin: -3px 0px 0 3px;
+}
+
+table.bpsts-statuses-table tfoot {
+    display: none
+}
+
+th.bpsts-th {
+    padding: 10px 20px;
+}
+
+td.bpsts-user-status,
+td.bpsts-status-actions,
+td.bpsts-user-status-icon {
+    padding: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+td.bpsts-status-actions {
+    width: 130px;
+}
+
+td.bpsts-status-actions > a {
+    margin: 5px;
+}
+
+footer.bpsts-image-folder-name .name {
+    padding: 0 10px;
+}
+
+/*--------------------------------------------------------------
+## BuddyPress Quote
+--------------------------------------------------------------*/
+.quote-btn {
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+
+    span.quote-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+    }
+}
+
+.bp-nouveau .bpquotes-bg-selection-div {
+    margin: 0;
+}
+
+/*--------------------------------------------------------------
+## BuddyPress Polls
+--------------------------------------------------------------*/
+body.bp-nouveau .bpolls-html-container {
+    margin-top: 10px;
+}
+
+.bp-nouveau .bpolls-polls-option-html {
+    margin: 0 0 10px;
+    width: 100%;
+}
+
+input#bpolls-datetimepicker {
+    width: 100%;
+}
+
+.bpolls-options-attach-container {
+    padding: 15px;
+    padding-top: 0;
+}
+
+/*--------------------------------------------------------------
+## BuddyPress Profile Pro
+--------------------------------------------------------------*/
+.buddypress-wrap .profile.extended-fields {
+    fieldset legend {
+        padding: 4px 12px;
+    }
+
+    .bprm-container {
+        border: 0;
+    }
+}
+
+.buddypress-wrap .bp-tables-user tr td.label, 
+.buddypress-wrap table.wp-profile-fields tr td.label {
+    border: 0;
+}
+
+.bprm-profile-fields td.label.field-title {
+    font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+## BuddyPress Member Review
+--------------------------------------------------------------*/
+.bupr-bp-member-reviews-block,
+.bupr-bp-member-review-no-popup-add-block {
+    margin-top: 15px;
+}
+
+.member_stars {
+    width: 16px;
+    height: 16px;
+}
+
+/*--------------------------------------------------------------
+## BuddyPress Group Review
+--------------------------------------------------------------*/
+.group-add-form, 
+.bgr-group-reviews-block {
+    margin-top: 0;
+}
+
+.bgr-stars {
+    width: 16px;
+    height: 16px;
+}
+
+@media screen and (min-width: 782px) {
+    .rating-bgr {
+        text-align: left;
+    } 
+}
+
+.review-ratings {
+    margin-top: 15px;
 }
