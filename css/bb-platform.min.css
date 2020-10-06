@@ -19,6 +19,13 @@
     padding-bottom: 15px;
   }
 }
+.bp-nouveau-activity-form-placeholder- #whats-new-placeholder,
+.bp-nouveau-activity-form-placeholder- #whats-new,
+.activity-update-form #whats-new-placeholder,
+.activity-update-form #whats-new {
+  padding: 0;
+}
+
 .bb-activity-media-wrap {
   margin: 0;
 }
@@ -152,6 +159,32 @@
   margin-bottom: 0;
 }
 
+@media screen and (min-width: 46.8em) {
+  .buddypress-wrap .group-create-links ul li.current,
+  .buddypress-wrap .group-create-links ol li.current {
+    border-color: #ccc #ccc #fff;
+    border-style: solid;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-width: 1px;
+    margin-bottom: -1px;
+    padding: 0 0.5em 1px;
+  }
+
+  .buddypress-wrap .group-create-links {
+    border-bottom: 1px solid #ccc;
+  }
+}
+#group-create-tabs li a,
+#group-create-tabs li span {
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.buddypress-wrap #group-create-tabs li.current a {
+  font-weight: 600;
+}
+
 /*--------------------------------------------------------------
 # Member Single
 --------------------------------------------------------------*/
@@ -208,6 +241,10 @@
 .bp-messages-content .actions .message_actions .message_action__list {
   right: -1px;
   top: 50px;
+}
+
+#message_content {
+  border: 1px solid #e8e8e8;
 }
 
 .bb-select-container span.select2-selection__choice__remove:before {
@@ -318,7 +355,7 @@
 }
 
 .activity-list .activity-item .activity-content > .bp-generic-meta.action .button:hover {
-  border: 1px solid rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid #293951 !important;
   color: rgba(0, 0, 0, 0.8) !important;
 }
 
@@ -830,6 +867,26 @@ div.profile_completion_wrap ul.pc_detailed_progress li span.completed_staus {
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_detailed_progress_wrap .single_section_wrap.completed .progress .completed_staus {
   border: 1px solid #05d786;
   color: #05d786;
+}
+
+/*--------------------------------------------------------------
+# BuddyPress Moderation Pro
+--------------------------------------------------------------*/
+.bp-nouveau .activity-list .activity-item .activity-meta.action a.bmpro-flag-activity-btn {
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.bp-nouveau .activity-list .activity-item .activity-meta.action a.bmpro-flag-activity-btn[data-bp-tooltip]:before {
+  top: -1px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.bp-nouveau .activity-list .activity-item .activity-meta.action a.bmpro-flag-activity-btn[data-bp-tooltip]:after {
+  top: -30px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 /*# sourceMappingURL=bb-platform.min.css.map */

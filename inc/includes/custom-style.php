@@ -425,6 +425,11 @@ function cs_get_custom_skin() {
   ul#bp-userbar {
     border-color: {$accent};
   }
+    
+  .activity-list .activity-item .activity-content > .activity-meta.action .button:hover,
+  .activity-list .activity-item .activity-content > .bp-generic-meta.action .button:hover {
+    border-color: {$accent} !important;
+  }
 
   .cs-menu-effect-4 .cs-link-depth-0:before{
     color: {$accent};
@@ -1004,6 +1009,11 @@ blockquote,
 .buddypress-wrap .bp-navs li.current a, .buddypress-wrap .bp-navs li.selected a,
 ul#bp-userbar {
   border-color: {$accent};
+}
+  
+.activity-list .activity-item .activity-content > .activity-meta.action .button:hover,
+.activity-list .activity-item .activity-content > .bp-generic-meta.action .button:hover {
+  border-color: {$accent} !important;
 }
 
 #bbp_user_edit_submit:hover,
