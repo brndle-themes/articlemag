@@ -154,11 +154,12 @@
 .buddypress-wrap .grid.bp-list .action .generic-button{
     margin-bottom: 16px;
 }
+
 .buddypress-wrap .grid.bp-list .action .generic-button:last-child{
     margin-bottom: 0;
 }
 
-	@media screen and (min-width: 46.8em) {	
+@media screen and (min-width: 46.8em) {	
     .buddypress-wrap .group-create-links ul li.current,	
     .buddypress-wrap .group-create-links ol li.current {	
         border-color: #ccc #ccc #fff;	
@@ -169,18 +170,22 @@
         margin-bottom: -1px;	
         padding: 0 0.5em 1px;	
     }	
+    
     .buddypress-wrap .group-create-links {	
         border-bottom: 1px solid #ccc;	
     }	
 }	
+
 #group-create-tabs li a,	
 #group-create-tabs li span {	
     text-decoration: none;	
     border-bottom: 0;	
 }	
+
 .buddypress-wrap #group-create-tabs li.current a {	
     font-weight: 600;	
 }
+
 /*--------------------------------------------------------------
 # Member Single
 --------------------------------------------------------------*/
@@ -236,7 +241,7 @@
     top: 50px;
 }
 
-		
+
 #message_content {	
     border: 1px solid #e8e8e8;	
 }
