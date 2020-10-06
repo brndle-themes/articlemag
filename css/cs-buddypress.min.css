@@ -1691,6 +1691,58 @@ li.load-more a.loading::after {
     width: 25%;
   }
 }
+/* Members and Groups Directory Card Layout */
+.bp-list:not(.grid) .articlemag-mem-cover-wrapper,
+.bp-list:not(.grid) .articlemag-grp-cover-wrapper {
+  display: none;
+}
+
+.buddypress-wrap .grid.bp-list > li .list-wrap .item-avatar {
+  margin-top: -60px;
+}
+
+.articlemag-mem-cover-wrapper,
+.articlemag-grp-cover-wrapper {
+  position: relative;
+  margin: -16px;
+}
+
+.articlemag-mem-cover-img,
+.articlemag-grp-cover-img {
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 52.56%;
+  display: block;
+  background: #555;
+}
+
+.articlemag-mem-cover-img:before,
+.articlemag-grp-cover-img:before {
+  background: rgba(0, 0, 0, 0.25);
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.articlemag-mem-cover-img img,
+.articlemag-grp-cover-img img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+  min-height: 100%;
+  width: auto;
+  min-width: 100%;
+  object-fit: cover;
+}
+
 /*--------------------------------------------------------------
 # Groups Directory
 --------------------------------------------------------------*/

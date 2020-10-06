@@ -83,3 +83,42 @@ if ( !function_exists( 'is_buddypress_activated' ) ) {
 	}
 
 }
+
+
+/**
+ * showing member cover image on member directory page
+ */
+if ( !function_exists( 'articlemag_render_member_cover_image' ) ) {
+        add_action( 'articlemag_before_member_avatar_member_directory', 'articlemag_render_member_cover_image', 10 );
+
+	function articlemag_render_member_cover_image() {
+            $cover_img_url = bp_attachments_get_attachment( 'url', $args = array(
+                    'object_dir' => 'members',
+                    'item_id'	 => $user_id = bp_get_member_user_id(),
+                    'type'		 => 'cover-image',
+            ) );
+            $default_members_cover = cs_get_option( 'bp_custom_members_cover' );
+        /* @var $cover_img_url type */
+        $cover_img_url = $cover_img_url ?: $default_members_cover;
+            echo '<div class="articlemag-mem-cover-wrapper"><div class="articlemag-mem-cover-img"><img src="' . $cover_img_url . '" /></div></div>';
+	}
+}
+
+/**
+ * showing group cover image on groups directory page
+ */
+if ( !function_exists( 'articlemag_render_group_cover_image' ) ) {
+	add_action( 'articlemag_before_group_avatar_group_directory', 'articlemag_render_group_cover_image', 10 );
+                
+	function articlemag_render_group_cover_image() {
+		$cover_img_url = bp_attachments_get_attachment( 'url', $args = array(
+			'object_dir' => 'groups',
+			'item_id'	 => $group_id = bp_get_group_id(),
+			'type'		 => 'cover-image',
+		 ) );
+		$default_groups_cover = cs_get_option( 'bp_custom_groups_cover' );
+        /* @var $cover_img_url type */
+        $cover_img_url = $cover_img_url ?: $default_groups_cover;
+            echo '<div class="articlemag-grp-cover-wrapper"><div class="articlemag-grp-cover-img"><img src="' . $cover_img_url . '" /></div></div>';
+	}
+}

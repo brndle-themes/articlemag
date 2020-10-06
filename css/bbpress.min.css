@@ -21,7 +21,7 @@
 
 #bbpress-forums fieldset.bbp-form select,
 #bbpress-forums fieldset.bbp-form input[type="text"] {
-  height: auto;
+  height: 34px;
 }
 
 #bbpress-forums hr {
