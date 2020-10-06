@@ -91,6 +91,30 @@ class CSFramework_Sidebars_API {
                     'after_title' => '</h4></div>',
                 )
         );
+        
+        register_sidebar(
+                array(
+                    'id' => 'member_single',
+                    'name' => 'Members &rarr; Single Member',
+                    'description' => 'Drag widgets for member single sidebar',
+                    'before_widget' => '<div class="articlemag_widget %2$s">',
+                    'after_widget' => '<div class="clear"></div></div>',
+                    'before_title' => '<div class="widget-title"><h4>',
+                    'after_title' => '</h4></div>',
+                )
+        );
+        
+        register_sidebar(
+                array(
+                    'id' => 'groups_single',
+                    'name' => 'Groups &rarr; Single Group',
+                    'description' => 'Drag widgets for groups single sidebar',
+                    'before_widget' => '<div class="articlemag_widget %2$s">',
+                    'after_widget' => '<div class="clear"></div></div>',
+                    'before_title' => '<div class="widget-title"><h4>',
+                    'after_title' => '</h4></div>',
+                )
+        );
     }
 
     /**

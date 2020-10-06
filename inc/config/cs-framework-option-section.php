@@ -1345,6 +1345,11 @@ if (!function_exists('articlemag_option_sections')) {
                 'desc' => 'BuddyPress Header Icons Settings!',
                 'fields' => array(
                     array(
+                        'id' => 'heading',
+                        'type' => 'heading',
+                        'content' => 'Desktop View Header Icons',
+                    ),
+                    array(
                         'id' => 'bp_user_menu',
                         'type' => 'switcher',
                         'title' => 'Show User Avatar on Header',
@@ -1384,6 +1389,85 @@ if (!function_exists('articlemag_option_sections')) {
                         'type' => 'switcher',
                         'title' => 'Show User Message on Header',
                         'default' => 0,
+                    ),
+                    array(
+                        'id' => 'heading',
+                        'type' => 'heading',
+                        'content' => 'Sidebar Options',
+                    ),
+                    array(
+                        'id' => 'buddypress_single_member_sidebar',
+                        'type' => 'select',
+                        'title' => 'Single Member Sidebar',
+                        'options' => array(
+                            'right' => 'Right Sidebar',
+                            'left' => 'Left Sidebar',
+                            'full' => 'No Sidebar',
+                        ),
+                        'default' => 'full',
+                    ),
+                    array(
+                        'id' => 'buddypress_single_member_widget',
+                        'type' => 'select',
+                        'title' => 'Single Member Sidebar Widget',
+                        'options' => cs_wp_registered_sidebars(),
+                        'default' => 'member_single',
+                        'dependency' => array('buddypress_single_member_sidebar', 'any', 'right,left'),
+                    ),
+                    array(
+                        'id' => 'buddypress_single_group_sidebar',
+                        'type' => 'select',
+                        'title' => 'Single Group Sidebar',
+                        'options' => array(
+                            'right' => 'Right Sidebar',
+                            'left' => 'Left Sidebar',
+                            'full' => 'No Sidebar',
+                        ),
+                        'default' => 'full',
+                    ),
+                    array(
+                        'id' => 'buddypress_single_group_widget',
+                        'type' => 'select',
+                        'title' => 'Single Group Sidebar Widget',
+                        'options' => cs_wp_registered_sidebars(),
+                        'default' => 'groups_single',
+                        'dependency' => array('buddypress_single_group_sidebar', 'any', 'right,left'),
+                    ),
+                    array(
+                        'id' => 'heading',
+                        'type' => 'heading',
+                        'content' => 'Members Directory Options',
+                    ),
+                    array(
+                        'id' => 'bp_members_cover',
+                        'type' => 'switcher',
+                        'title' => 'Customize Members Cover Background ?',
+                        'default' => 0,
+                    ),
+                    array(
+                        'id' => 'bp_custom_members_cover',
+                        'type' => 'upload',
+                        'title' => 'Set Default Cover Image',
+                        'multilang' => true,
+                        'dependency' => array( 'bp_members_cover', '==', 'true' ),
+                    ),
+                    array(
+                        'id' => 'heading',
+                        'type' => 'heading',
+                        'content' => 'Groups Directory Options',
+                    ),
+                    array(
+                        'id' => 'bp_groups_cover',
+                        'type' => 'switcher',
+                        'title' => 'Customize Groups Cover Background ?',
+                        'default' => 0,
+                    ),
+                    array(
+                        'id' => 'bp_custom_groups_cover',
+                        'type' => 'upload',
+                        'title' => 'Set Default Cover Image',
+                        'multilang' => true,
+                        'dependency' => array( 'bp_groups_cover', '==', 'true' ),
                     ),
                 ),
             );

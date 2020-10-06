@@ -44,6 +44,13 @@
 
 		$cs_meta	 = get_post_meta( $post->ID, '_side_custom_page_options', true );
 		$cs_widget	 = (!empty( $cs_meta[ 'left_sidebar_widget' ] ) ) ? $cs_meta[ 'left_sidebar_widget' ] : '';
+                
+                if ( bp_is_user() ) {
+                    $cs_widget = cs_get_option( 'buddypress_single_member_widget' );
+                }
+                if ( bp_is_group() ) {
+                    $cs_widget = cs_get_option( 'buddypress_single_group_widget' );
+                }
 	}
 
 	if ( is_bbpress_activated() && is_bbpress() ) {
