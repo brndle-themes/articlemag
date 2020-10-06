@@ -1138,7 +1138,7 @@ if (!function_exists('articlemag_option_sections')) {
                     'id' => 'container_width',
                     'type' => 'number',
                     'title' => 'Site Container Width',
-                    'attributes' => array('placeholder' => 1170),
+                    'attributes' => array('placeholder' => 1260),
                     'unit' => 'px'
                 ),
                 array(

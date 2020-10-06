@@ -13,7 +13,7 @@ if (!function_exists('cs_after_setup_theme')) {
         global $content_width;
 
         if (!isset($content_width)) {
-            $content_width = 1170;
+            $content_width = 1260;
         }
 
         add_theme_support('post-thumbnails');
