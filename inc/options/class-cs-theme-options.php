@@ -47,11 +47,11 @@ if ( ! class_exists( 'Articlemag_Theme_Options' ) ) {
 					$this->prefix,
 					array(
 						// framework title.
-						'framework_title'         => 'Articlemag Option <small>by BRNDLE</small>',
+						'framework_title'         => 'ArticleMag Option <small>by BRNDLE</small>',
 						'framework_class'         => '',
 
 						// menu settings.
-						'menu_title'              => 'Articlemag',
+						'menu_title'              => 'ArticleMag',
 						'menu_slug'               => $this->prefix,
 						'menu_type'               => 'menu',
 						'menu_capability'         => 'manage_options',
