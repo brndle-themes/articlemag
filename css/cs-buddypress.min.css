@@ -1162,6 +1162,28 @@ body:not(.logged-in) .activity-list.bp-list .activity-item {
   margin-bottom: 15px !important;
 }
 
+.activity-list .activity-item .activity-inner > ol,
+.activity-list .activity-item .activity-inner > ul {
+  margin: 0;
+  padding: 0 15px;
+}
+
+.activity-list .activity-item .activity-inner > ul li,
+.activity-list .activity-item .activity-inner > ol li {
+  list-style: decimal;
+  margin: 0 0 3px 18px;
+  padding: 0;
+}
+
+.activity-list .activity-item .activity-inner > ul li {
+  list-style: disc;
+}
+
+.activity-list .activity-item .activity-inner > ol li:before,
+.activity-list .activity-item .activity-inner > ul li:before {
+  content: none;
+}
+
 .activity-list .activity-item .activity-meta.action .fav:before,
 .activity-list .activity-item .activity-meta.action .unfav:before {
   content: "\f487";
