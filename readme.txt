@@ -39,7 +39,6 @@ GNU General Public License for more details.
 * Fix: CS bugs fixes updated
 * Fix: (#60) Managed Ul for childern comments
 * Fix: (#59) Tooltip not working fixed
-* Fix: Demo importer files updated and flickr id change
 * Fix: (#57) Fixed limit
 * Fix: typography theme options fixed
 * Fix: Single post in images width fixed

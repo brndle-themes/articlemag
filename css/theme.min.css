@@ -10738,20 +10738,6 @@ div.wp-caption.alignright .wp-caption-text {
   border-radius: 2px;
 }
 
-.cs_flickr_widget {
-  display: inline;
-}
-
-.cs_flickr_widget a:hover {
-  opacity: 0.75;
-}
-
-.cs_flickr_widget img {
-  border-width: 0 1px 1px 0;
-  border-color: transparent;
-  border-style: solid;
-}
-
 .widget_recent_comments .recentcomments:before {
   content: "\f0e5";
   font-size: 12px;
