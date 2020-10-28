@@ -1,8 +1,8 @@
 === ArticleMag ===
 Contributors: brndle
 Requires at least: WordPress 3.2
-Tested up to: 5.3.2
-Stable tag: 1.4.0
+Tested up to: 5.5.1
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -33,6 +33,18 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.5.0 =
+* Fix: Managed whats new section text formatting with bb platform
+* Fix: Managed edit activity with bb platform
+* Fix: Removed flickr widget
+* Fix: Added members and groups directory listing cover image
+* Fix: Update copyright content
+* Fix: Update container default width 1170px to 1260px
+* Fix: Added buddypress member and group single page sidebar
+* Fix: Update forum pages font size
+* Fix: Managed forum listing with youzer, bbpress, bbplatform and css fixes
+* Fix: Managed header icons style and theme fixes
 
 = 1.4.0 =
 * Fix: Fixed nav Menu Location Issue and Fixed License Key Issues
