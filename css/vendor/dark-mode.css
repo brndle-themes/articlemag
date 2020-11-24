@@ -3,7 +3,7 @@
  */
 .cs-toggle-track {
     width: 40px;
-    text-align: right;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .cs-header-left .cs-mobile-toggle-track {
-    top: 10px;
+    top: 0px;
 }
 
 .cs-header-center .cs-mobile-toggle-track {
@@ -45,7 +45,7 @@
 .dark-mode body,
 .dark-mode .cs-boxed-layout #main {
     background-color: #10161d;
-    color: #999;
+    color: #dadada;
 }
 
 .dark-mode h1,
@@ -124,7 +124,7 @@
 .dark-mode .blog-default .article-post,
 .dark-mode .comment-list .comment.even,
 .dark-mode .comment-list .comment {
-    border-color: #495061;
+    border-color: #212931;
 }
 
 .dark-mode #page-header,
@@ -185,7 +185,7 @@
 .dark-mode #top-bar,
 .dark-mode .cs-top-module > a,
 .dark-mode .cs-top-module .cs-open-modal,
-.dark-mode #site-nav > ul > li > .cs-link,
+.dark-mode #site-nav > ul > li.menu-item.cs-depth-0 > .cs-link,
 .dark-mode #site-nav ul li ul li .cs-link,
 .dark-mode .comment-meta a,
 .dark-mode .entry-tags a,
@@ -205,8 +205,14 @@
 .dark-mode .entry-author .author-meta ul.author-social a,
 .dark-mode .bp-msg .bp-icon-wrap, 
 .dark-mode .user-notifications .bp-icon-wrap,
-.dark-mode #site-nav a.cs-user-link {
-    color: #999;
+.dark-mode #site-nav a.cs-user-link,
+.dark-mode .cs-mobile-icons-wrapper .cs-menu-cart > a,
+.dark-mode  .cs-mobile-toggle-track {
+    color: #dadada;
+}
+
+.dark-mode #cs-mobile-icon i{
+    background-color: #dadada;
 }
 
 .dark-mode .share-content .sticky-icons:hover,
@@ -276,7 +282,9 @@
 }
 @media only screen and (max-width: 991px) {
     .cs-mobile-toggle-track {
-        right: 98px;
+        right: 35px;
+        top: 0;
+        position: absolute;
     }
 }
 

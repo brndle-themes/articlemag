@@ -1027,13 +1027,24 @@ div.wp-caption.alignright .wp-caption-text {
 #site-nav > ul > li {
     float: left;
 }
-#site-nav > ul > li > .cs-link {
+#site-nav > ul > li.menu-item.cs-depth-0 > .cs-link {
     display: block;
     position: relative;
     padding-left: 15px;
     padding-right: 15px;
     color: #333;
 }
+
+#site-nav > ul > li.cs-depth-0 > .cs-link{
+    padding: 0  8px;
+}
+
+#site-nav > ul > li.cs-user-signin{
+    float: right;
+}
+
+
+
 #site-nav > ul > li > .cs-link:hover {
     color: #333;
     text-decoration: none;
@@ -1148,10 +1159,6 @@ div.wp-caption.alignright .wp-caption-text {
     font-weight: 600;
 }
 
-#nav-search {
-    font-size: 20px !important;
-}
-
 #site-header-shadow {
     position: absolute;
     bottom: -5px;
@@ -1253,7 +1260,21 @@ div.wp-caption.alignright .wp-caption-text {
 .cs-header-left .cs-toggle-track,
 .cs-header-left .cs-message,
 .cs-header-left .cs-notification,
-.cs-header-left .cs-bp-user-menu {
+.cs-header-left .cs-bp-user-menu,
+
+.cs-header-center  .cs-menu-cart,
+.cs-header-center  .cs-menu-search,
+.cs-header-center  .cs-toggle-track,
+.cs-header-center  .cs-message,
+.cs-header-center  .cs-notification,
+.cs-header-center  .cs-bp-user-menu,
+
+.cs-header-fancy  .cs-menu-cart,
+.cs-header-fancy  .cs-menu-search,
+.cs-header-fancy  .cs-toggle-track,
+.cs-header-fancy  .cs-message,
+.cs-header-fancy  .cs-notification,
+.cs-header-fancy  .cs-bp-user-menu{
     float: right !important;
 }
 
@@ -1538,8 +1559,8 @@ div.wp-caption.alignright .wp-caption-text {
     position: absolute;
     right: 0;
     top: 50%;
-    margin-top: -18px;
-    padding: 10px;
+    margin-top: -9px;
+    padding: 0;
     cursor: pointer;
     line-height: 0;
 }
@@ -4754,6 +4775,11 @@ div.wp-caption.alignright .wp-caption-text {
     padding-left: 0;
 }
 
+.cs-header-fancy  .cs-user-link-wrap{
+    height: 100px;
+    line-height: 100px;
+}
+
 .cs-header-center .cs-user-link-wrap {
     padding-left: 5px;
     padding-right: 5px;
@@ -4786,7 +4812,6 @@ div.wp-caption.alignright .wp-caption-text {
     padding: 3px;
     margin-top: -3px;
     margin-left: 5px;
-    background: #fff;
     border-radius: 100%;
 }
 
@@ -4846,12 +4871,16 @@ ul#bp-userbar li a:hover {
     display: inline-block;
     position: relative;
     top: -5px;
-    padding: 2px 3px;
+    padding: 0;
     font-size: 9px;
-    line-height: 1em;
-    border-radius: 2px;
+    margin-left: -5px;
     color: #fff;
     background-color: #293951;
+    border-radius: 100px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
 }
 
 .cs-notification .cs-notification-count {
@@ -4904,7 +4933,7 @@ ul#bp-userbar li a:hover {
 /* User Message */
 .cs-notification-count.cs-message-count {
     top: -8px;
-    margin-left: 3px;
+    margin-left: -5px;
 }
 
 /* User Sign in/ Sign Up Button */
@@ -4968,7 +4997,7 @@ a.cs-btn.signup-button {
     }
 
     #site-logo h1 {
-        font-size: 24px;
+        font-size: 18px;
     }
 }
 

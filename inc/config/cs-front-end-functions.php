@@ -545,7 +545,7 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
 			if ( has_post_thumbnail() ) {
 					the_post_thumbnail( $size );
 			} else {
-				echo '<img src="' . $img_src . '" id="contextual" class="contextual"  alt="' . esc_html__( 'No Image', 'articlemag') . '" />';
+				echo '<img src="' . $img_src . '" id="contextual" class="contextual"  alt="' . esc_html__( 'No Image', 'articlemag' ) . '" />';
 			}
 			echo '<span class="entry-image-overlay"></span>';
 			echo '</a>';
@@ -949,6 +949,12 @@ if ( ! function_exists( 'cs_mobile_icon' ) ) {
 		$output .= '<span><i class="cs-one"></i><i class="cs-two"></i><i class="cs-three"></i></span>';
 		$output .= '</div>';
 
+		if ( cs_get_option( 'dark_mode' ) ) {
+			$output .= '<div class="cs-toggle-track cs-mobile-toggle-track">';
+			$output .= '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
+			$output .= '</div>';
+		}
+
 		return $output;
 	}
 }
@@ -956,114 +962,122 @@ if ( ! function_exists( 'cs_mobile_icon' ) ) {
 /**
  *
  * Get BuddyPress userbar.
+ *
  * @since   1.0.0
  * @version 1.0.0
- *
  */
-if (!function_exists('cs_get_bp_userbar')) {
+if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
 
-    function cs_get_bp_userbar() {
-        ?>
-        <div class="cs-mobile-icons-wrapper">
-            <?php
-            
-            if (cs_get_option('woo_menu_cart') && is_woocommerce_activated()) {
-                echo '<div class="cs-menu-cart cart-widget-opener">';
-                echo '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
-                echo '</div>';
-            }
-            
-            if (cs_get_option('bp_mobile_notifications')) {
-                if (class_exists('BuddyPress') && is_user_logged_in() && bp_is_active('notifications')) {
-                    global $bp;
+	function cs_get_bp_userbar() {
+		?>
+		<div class="cs-mobile-icons-wrapper">
+			<?php
 
-                    echo '<div class="cs-notification cs-bp_notifications">';
-                    echo '<div class = "user-notifications cs-link cs-sticky-item">';
-                    echo '<a class="bp-icon-wrap" href ="#" title = "' . esc_html(esc_attr('Notifications'), 'articlemag') . '">';
-                    echo '<span class="fa fa-bell"> </span>';
+			if ( cs_get_option( 'woo_menu_cart' ) && is_woocommerce_activated() ) {
+				echo '<div class="cs-menu-cart cart-widget-opener">';
+				echo '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
+				echo '</div>';
+			}
 
-                    if (function_exists('bp_notifications_get_unread_notification_count')) {
-                        $count = bp_notifications_get_unread_notification_count(get_current_user_id());
-                        echo '<span class="cs-notification-count">' . esc_html($count) . ' </span>';
-                    }
+			if ( cs_get_option( 'bp_mobile_notifications' ) ) {
+				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'notifications' ) ) {
+					global $bp;
 
-                    echo '</a>';
+					echo '<div class="cs-notification cs-bp_notifications">';
+					echo '<div class = "user-notifications cs-link cs-sticky-item">';
+					echo '<a class="bp-icon-wrap" href ="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '" title = "' . esc_html( esc_attr( 'Notifications' ), 'articlemag' ) . '">';
+					echo '<span class="fa fa-bell"> </span>';
 
-                    $notifications = bp_notifications_get_notifications_for_user(bp_loggedin_user_id());
-                    if ($notifications) {
-                        echo '<ul id="bp-notify" class="sub-menu">';
-                        rsort($notifications);
-                        foreach ($notifications as $notification) {
-                            echo '<li>' . $notification . '</li>';
-                        }
-                        echo '<li class="bp-view-all">';
-                        echo '<a href="' . esc_url(bp_loggedin_user_domain() . $bp->notifications->slug) . '"> ' . esc_attr('View all notifications', 'articlemag') . '</a>';
-                        echo '</li>';
-                        echo '</ul>';
-                    } else {
-                        echo '<ul id="bp-notify" class="sub-menu">';
-                        echo '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr("No new notifications", 'articlemag') . '</a></li>';
-                        echo '</ul>';
-                    }
-                    echo '</div>';
+					if ( function_exists( 'bp_notifications_get_unread_notification_count' ) ) {
+						$count = bp_notifications_get_unread_notification_count( get_current_user_id() );
+						echo '<span class="cs-notification-count">' . esc_html( $count ) . ' </span>';
+					}
 
-                    echo '</div>';
-                }
-            }
+					echo '</a>';
 
-            if (cs_get_option('bp_mobile_message')) {
-                if (class_exists('BuddyPress') && is_user_logged_in() && bp_is_active('messages')) {
+					$notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() );
+					if ( $notifications ) {
+						echo '<ul id="bp-notify" class="sub-menu">';
+						rsort( $notifications );
+						foreach ( $notifications as $notification ) {
+							echo '<li>' . $notification . '</li>';
+						}
+						echo '<li class="bp-view-all">';
+						echo '<a href="' . esc_url( bp_loggedin_user_domain() . $bp->notifications->slug ) . '"> ' . esc_attr( 'View all notifications', 'articlemag' ) . '</a>';
+						echo '</li>';
+						echo '</ul>';
+					} else {
+						echo '<ul id="bp-notify" class="sub-menu">';
+						echo '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr( 'No new notifications', 'articlemag' ) . '</a></li>';
+						echo '</ul>';
+					}
+					echo '</div>';
 
-                    echo '<div class="cs-message cs-bp_message">';
+					echo '</div>';
+				}
+			}
 
-                    echo '<div class="bp-msg cs-link cs-sticky-item">';
-                    echo '<a class="bp-icon-wrap" href="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '">';
-                    echo '<span class="fa fa-envelope"></span>';
-                    if (function_exists('bp_total_unread_messages_count')) {
-                        $count = bp_get_total_unread_messages_count();
-                        if ($count > 0) {
-                            echo '<span class="cs-notification-count cs-message-count">' . $count . '</span>';
-                        } else {
-                            echo '<span class="cs-notification-count cs-message-count"> 0 </span>';
-                        }
-                    }
-                    echo '</a>';
-                    echo '</div>';
+			if ( cs_get_option( 'bp_mobile_message' ) ) {
+				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'messages' ) ) {
 
-                    echo '</div>';
-                }
-            }
-            
-//            if (cs_get_option('dark_mode')) {
-//                echo '<div class="cs-toggle-track cs-mobile-toggle-track">';
-//                echo '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
-//                echo '</div>';
-//            }
+					echo '<div class="cs-message cs-bp_message">';
 
-            if (cs_get_option('bp_mobile_user_menu')) {
+					echo '<div class="bp-msg cs-link cs-sticky-item">';
+					echo '<a class="bp-icon-wrap" href="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '">';
+					echo '<span class="fa fa-envelope"></span>';
+					if ( function_exists( 'bp_total_unread_messages_count' ) ) {
+						$count = bp_get_total_unread_messages_count();
+						if ( $count > 0 ) {
+							echo '<span class="cs-notification-count cs-message-count">' . $count . '</span>';
+						} else {
+							echo '<span class="cs-notification-count cs-message-count"> 0 </span>';
+						}
+					}
+					echo '</a>';
+					echo '</div>';
 
-                if (is_user_logged_in()) {
-                    echo '<div id="cs-mobile-userbar">';
-                    $current_user = wp_get_current_user();
-                    if (($current_user instanceof WP_User)) {
-                        $user_link = function_exists('bp_core_get_user_domain') ? bp_core_get_user_domain(get_current_user_id()) : '#';
-                        echo '<div class="cs-user-link">';
-                        //echo '<a href="'. $user_link .'">';
-                        echo get_avatar($current_user->user_email, 40);
-                        //echo '</a>';
-                        echo '</div>';
-                    }
-                    if (has_nav_menu('bp-userbar')) {
-                        wp_nav_menu(array('theme_location' => 'bp-userbar', 'menu_id' => 'bp-userbar', 'fallback_cb' => '', 'container_class' => false, 'menu_class' => 'sub-menu'));
-                    }
-                    echo '</div>';
-                }
-            }
-            ?></div>
-            <?php
-        }
+					echo '</div>';
+				}
+			}
 
-    }
+			// if (cs_get_option('dark_mode')) {
+			// echo '<div class="cs-toggle-track cs-mobile-toggle-track">';
+			// echo '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
+			// echo '</div>';
+			// }
+
+			if ( cs_get_option( 'bp_mobile_user_menu' ) ) {
+
+				if ( is_user_logged_in() ) {
+					echo '<div id="cs-mobile-userbar">';
+					$current_user = wp_get_current_user();
+					if ( ( $current_user instanceof WP_User ) ) {
+						$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
+						echo '<div class="cs-user-link">';
+						// echo '<a href="'. $user_link .'">';
+						echo get_avatar( $current_user->user_email, 40 );
+						// echo '</a>';
+						echo '</div>';
+					}
+					if ( has_nav_menu( 'bp-userbar' ) ) {
+						wp_nav_menu(
+							array(
+								'theme_location'  => 'bp-userbar',
+								'menu_id'         => 'bp-userbar',
+								'fallback_cb'     => '',
+								'container_class' => false,
+								'menu_class'      => 'sub-menu',
+							)
+						);
+					}
+					echo '</div>';
+				}
+			}
+			?>
+			</div>
+			<?php
+	}
+}
 
 /**
  *
@@ -1490,7 +1504,7 @@ if ( ! function_exists( 'cs_google_analytics' ) ) {
 			<!-- Google Analytics -->
 			<script type="text/javascript">
 				var _gaq = _gaq || [ ];
-				_gaq.push( [ '_setAccount', '<?php echo esc_attr($ga); ?>' ] );
+				_gaq.push( [ '_setAccount', '<?php echo esc_attr( $ga ); ?>' ] );
 				_gaq.push( [ '_trackPageview' ] );
 
 				( function () {

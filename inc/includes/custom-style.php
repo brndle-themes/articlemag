@@ -132,6 +132,7 @@ CSS;
   #cs-mobile-icon,
   .cs-mobile-toggle-track{
     display: block;
+
   }
 
   #main{
@@ -199,7 +200,7 @@ CSS;
     }
 
     .cs-mobile-icons-wrapper {
-        margin-right: 30px;
+        margin-right: 50px;
     }
 
     .cs-header-left .cs-sticky-item,
@@ -215,13 +216,29 @@ CSS;
     }
 
     .cs-header-center #cs-mobile-icon {
-        left: 0;
+        left: 15px;
         right: auto;
     }
 
     .cs-header-center .cs-mobile-icons-wrapper {
         margin-right: 0;
     }
+    
+    .cs-header-center #site-logo{
+      padding:0 15px;
+    }
+
+    .cs-header-center #masthead{
+      padding:0 15px;
+    }
+
+    .cs-header-center .cs-mobile-toggle-track {
+      right: 0;
+      position: absolute;
+      left: 35px;
+      width: 40px;
+    }
+
 
     
     [dir='rtl'] .cs-mobile-icons-wrapper {
