@@ -985,7 +985,7 @@ if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
 
 					echo '<div class="cs-notification cs-bp_notifications">';
 					echo '<div class = "user-notifications cs-link cs-sticky-item">';
-					echo '<a class="bp-icon-wrap" href ="' . bp_loggedin_user_domain() . bp_get_messages_slug() . '" title = "' . esc_html( esc_attr( 'Notifications' ), 'articlemag' ) . '">';
+					echo '<a class="bp-icon-wrap" href ="' . esc_url( bp_loggedin_user_domain() . $bp->notifications->slug ) . '" title = "' . esc_html( esc_attr( 'Notifications' ), 'articlemag' ) . '">';
 					echo '<span class="fa fa-bell"> </span>';
 
 					if ( function_exists( 'bp_notifications_get_unread_notification_count' ) ) {
