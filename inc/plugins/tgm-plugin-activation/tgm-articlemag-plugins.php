@@ -44,6 +44,12 @@ function articlemag_register_required_plugins() {
 	 * If the source is NOT from the .org repo, then source is also required.
 	 */
 	$plugins = array(	
+		// Classic Widgets
+		array(
+			'name'		 => 'Classic Widgets',
+			'slug'		 => 'classic-widgets',
+			'required'	 => true,
+		),
 		// Page Loader
 		array(
 			'name'		 => 'LoftLoader',
