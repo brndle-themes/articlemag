@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 defined( 'THEME_DIR' ) or define( 'THEME_DIR', get_template_directory() );
 defined( 'THEME_URI' ) or define( 'THEME_URI', get_template_directory_uri() );
-defined( 'THEME_VERSION' ) or define( 'THEME_VERSION', '1.0.0' );
+defined( 'THEME_VERSION' ) or define( 'THEME_VERSION', '1.6.0' );
 defined( 'THEME_CACHE_DIR' ) or define( 'THEME_CACHE_DIR', THEME_DIR . '/cache' );
 defined( 'THEME_CACHE_URI' ) or define( 'THEME_CACHE_URI', THEME_URI . '/cache' );
 defined( 'FRAMEWORK_DIR' ) or define( 'FRAMEWORK_DIR', THEME_DIR . '/inc' );
