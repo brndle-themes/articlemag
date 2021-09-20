@@ -552,7 +552,7 @@ class Merlin {
 			<?php printf( esc_html( $strings['title%s%s%s%s'] ), '<ti', 'tle>', esc_html( $this->theme->name ), '</title>' ); ?>
 			<?php do_action( 'admin_print_styles' ); ?>
 			<?php do_action( 'admin_print_scripts' ); ?>
-			<?php do_action( 'admin_head' ); ?>
+			<?php // do_action( 'admin_head' ); ?>
 		</head>
 		<body class="merlin__body merlin__body--<?php echo esc_attr( $current_step ); ?>">
 		<?php
@@ -1619,11 +1619,6 @@ class Merlin {
 			 */
 			function {$slug_no_hyphens}_child_enqueue_styles() {
 			    wp_enqueue_style( '{$slug}-style' , get_template_directory_uri() . '/style.css' );
-			    wp_enqueue_style( '{$slug}-child-style',
-			        get_stylesheet_directory_uri() . '/style.css',
-			        array( '{$slug}-style' ),
-			        wp_get_theme()->get('Version')
-			    );
 			}
 			add_action(  'wp_enqueue_scripts', '{$slug_no_hyphens}_child_enqueue_styles' );\n
 		";
