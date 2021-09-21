@@ -139,7 +139,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 		}
 
-		function display_element( $element, &$children_elements, $max_depth, $depth = 0, $args, &$output ) {
+		function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
 
 			if ( ! empty( $element->mega ) ) {
 				$this->child_count               = ( isset( $children_elements[ $element->ID ] ) ) ? count( $children_elements[ $element->ID ] ) : 0;

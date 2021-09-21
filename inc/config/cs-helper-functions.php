@@ -765,8 +765,8 @@ if ( ! function_exists( 'cs_get_typography' ) ) {
 
 					if ( ! empty( $font['selector'] ) ) {
 					$weight = ( isset($font['font']['font-weight']) && $font['font']['font-weight'] != 'regular' ) ? esc_attr( $font['font']['font-weight'] ) : 400;
-					$style     = cs_esc_number( $font['font']['font-weight'] );
-					$style     = ( $style && $style != 'regular' ) ? $style : '400';
+					$style     =  isset( $font['font']['font-weight'] ) ? cs_esc_number( $font['font']['font-weight'] ) : '';
+					$style     = ( $style && $style != 'regular' ) ? $style : 'regular';
 					$transform = ( isset($font['font']['text-transform']) && $font['font']['text-transform'] != 'none' ) ? esc_attr( $font['font']['text-transform'] ) : '';
 					$letter    = ( isset($font['font']['letter-spacing']) && $font['font']['letter-spacing']!= '0.5' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
 					$aligment    = ( isset($font['font']['text-align']) && $font['font']['text-align']!= 'left' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
