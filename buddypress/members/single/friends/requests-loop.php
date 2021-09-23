@@ -4,7 +4,9 @@
  *
  * @since 5.0.0
  * @version 5.0.0
+ * @package BuddyPress
  */
+
 ?>
 
 <?php if ( bp_has_members( bp_ajax_querystring( 'friendship_requests' ) . '&include=' . bp_get_friendship_requests() ) ) : ?>
@@ -15,7 +17,7 @@
 		<?php
 		while ( bp_members() ) :
 			bp_the_member();
-		?>
+			?>
 			<li id="friendship-<?php bp_friend_friendship_id(); ?>" <?php bp_member_class( array( 'item-entry' ) ); ?> data-bp-item-id="<?php bp_friend_friendship_id(); ?>" data-bp-item-component="members">
 				<div class="list-wrap">
 					<div class="item-avatar">

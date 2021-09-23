@@ -5,7 +5,6 @@
  * @package EDD Sample Theme
  * @version 1.0.3
  */
-
 class EDD_Theme_Updater {
 
 	private $remote_api_url;
@@ -21,15 +20,15 @@ class EDD_Theme_Updater {
 	/**
 	 * Initiate the Theme updater
 	 *
-	 * @param array $args    Array of arguments from the theme requesting an update check
-	 * @param array $strings Strings for the update process
+	 * @param array $args    Array of arguments from the theme requesting an update check.
+	 * @param array $strings Strings for the update process.
 	 */
 	function __construct( $args = array(), $strings = array() ) {
 
 		$defaults = array(
 			'remote_api_url' => 'http://easydigitaldownloads.com',
 			'request_data'   => array(),
-			'theme_slug'     => get_template(), // use get_stylesheet() for child theme updates
+			'theme_slug'     => get_template(), // use get_stylesheet() for child theme updates.
 			'item_name'      => '',
 			'license'        => '',
 			'version'        => '',
@@ -49,11 +48,11 @@ class EDD_Theme_Updater {
 		$this->response_key   = $this->theme_slug . '-' . $this->beta . '-update-response';
 		$this->strings        = $strings;
 
-		add_filter( 'site_transient_update_themes',        array( $this, 'theme_update_transient' ) );
+		add_filter( 'site_transient_update_themes', array( $this, 'theme_update_transient' ) );
 		add_filter( 'delete_site_transient_update_themes', array( $this, 'delete_theme_update_transient' ) );
-		add_action( 'load-update-core.php',                array( $this, 'delete_theme_update_transient' ) );
-		add_action( 'load-themes.php',                     array( $this, 'delete_theme_update_transient' ) );
-		add_action( 'load-themes.php',                     array( $this, 'load_themes_screen' ) );
+		add_action( 'load-update-core.php', array( $this, 'delete_theme_update_transient' ) );
+		add_action( 'load-themes.php', array( $this, 'delete_theme_update_transient' ) );
+		add_action( 'load-themes.php', array( $this, 'load_themes_screen' ) );
 	}
 
 	/**
@@ -147,12 +146,18 @@ class EDD_Theme_Updater {
 				'slug'       => $this->theme_slug,
 				'version'    => $this->version,
 				'author'     => $this->author,
-				'beta'       => $this->beta
+				'beta'       => $this->beta,
 			);
 
-			$response = wp_remote_post( $this->remote_api_url, array( 'timeout' => 15, 'body' => $api_params ) );
+			$response = wp_remote_post(
+				$this->remote_api_url,
+				array(
+					'timeout' => 15,
+					'body'    => $api_params,
+				)
+			);
 
-			// Make sure the response was successful
+			// Make sure the response was successful.
 			if ( is_wp_error( $response ) || 200 != wp_remote_retrieve_response_code( $response ) ) {
 				$failed = true;
 			}
@@ -163,15 +168,15 @@ class EDD_Theme_Updater {
 				$failed = true;
 			}
 
-			// If the response failed, try again in 30 minutes
+			// If the response failed, try again in 30 minutes.
 			if ( $failed ) {
-				$data = new stdClass;
+				$data              = new stdClass();
 				$data->new_version = $this->version;
 				set_transient( $this->response_key, $data, strtotime( '+30 minutes', current_time( 'timestamp' ) ) );
 				return false;
 			}
 
-			// If the status is 'ok', return the update arguments
+			// If the status is 'ok', return the update arguments.
 			if ( ! $failed ) {
 				$update_data->sections = maybe_unserialize( $update_data->sections );
 				set_transient( $this->response_key, $update_data, strtotime( '+12 hours', current_time( 'timestamp' ) ) );

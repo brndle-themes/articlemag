@@ -14,6 +14,7 @@
  * @package WooCommerce/Templates
  * @version 10.0.0
  */
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -35,7 +36,7 @@ if ( post_password_required() ) {
 		<div class="col-md-6">
 			<?php
 			/**
-			 * woocommerce_before_single_product_summary hook
+			 * Hook : woocommerce_before_single_product_summary hook
 			 *
 			 * @hooked woocommerce_show_product_sale_flash - 10
 			 * @hooked woocommerce_show_product_images - 20
@@ -48,7 +49,7 @@ if ( post_password_required() ) {
 			<div class="summary entry-summary">
 				<?php
 				/**
-				 * woocommerce_single_product_summary hook
+				 * Hook : woocommerce_single_product_summary hook
 				 *
 				 * @hooked woocommerce_template_single_title - 5
 				 * @hooked woocommerce_template_single_rating - 10
@@ -66,7 +67,7 @@ if ( post_password_required() ) {
 		<div class="col-md-12">
 			<?php
 			/**
-			 * woocommerce_after_single_product_summary hook
+			 * Hook : woocommerce_after_single_product_summary hook
 			 *
 			 * @hooked woocommerce_output_product_data_tabs - 10
 			 * @hooked woocommerce_output_related_products - 20

@@ -7,39 +7,45 @@
  *
  * @since 3.0.0
  * @version 6.0.0
+ * @package BuddyPress
  */
+
 bp_nouveau_activity_hook( 'before', 'entry' );
 ?>
 
-<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="<?php if ( function_exists( 'bp_nouveau_edit_activity_data' ) ) { bp_nouveau_edit_activity_data(); } ?>">
+<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="
+										<?php
+										if ( function_exists( 'bp_nouveau_edit_activity_data' ) ) {
+											bp_nouveau_edit_activity_data(); }
+										?>
+">
 
-    <div class="activity-item-head">
+	<div class="activity-item-head">
 
-        <div class="activity-avatar item-avatar">
+		<div class="activity-avatar item-avatar">
 
-            <a href="<?php bp_activity_user_link(); ?>">
+			<a href="<?php bp_activity_user_link(); ?>">
 
 		<?php bp_activity_avatar( array( 'type' => 'full' ) ); ?>
 
-            </a>
+			</a>
 
-        </div>
+		</div>
 
-        <div class="activity-header">
+		<div class="activity-header">
 
-            <?php bp_activity_action(); ?>
-            
-            <?php 
-                if ( function_exists( 'bp_nouveau_activity_is_edited' ) ) {
-                                bp_nouveau_activity_is_edited();
-                }
+			<?php bp_activity_action(); ?>
+			<?php
+			if ( function_exists( 'bp_nouveau_activity_is_edited' ) ) {
+							bp_nouveau_activity_is_edited();
+			}
 
-                if ( function_exists( 'bp_nouveau_activity_privacy' ) ) {
-                        bp_nouveau_activity_privacy(); 
-                }
-            ?>
+			if ( function_exists( 'bp_nouveau_activity_privacy' ) ) {
+					bp_nouveau_activity_privacy();
+			}
+			?>
 
-        </div>
+		</div>
 
 	</div>
 
@@ -55,12 +61,11 @@ bp_nouveau_activity_hook( 'before', 'entry' );
 			</div>
 
 		<?php endif; ?>
-            
-                <?php 
-		if ( function_exists( 'bp_nouveau_activity_state' ) ) {
-			bp_nouveau_activity_state(); 
-		}
-		?>
+			<?php
+			if ( function_exists( 'bp_nouveau_activity_state' ) ) {
+				bp_nouveau_activity_state();
+			}
+			?>
 
 		<?php bp_nouveau_activity_entry_buttons(); ?>
 

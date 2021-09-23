@@ -6,8 +6,12 @@
  * @since 1.0.0
  * @version 1.1.0
  */
+
 if ( ! function_exists( 'cs_top_bar' ) ) {
 
+	/**
+	 * Cs top bar
+	 */
 	function cs_top_bar() {
 
 		$options = cs_get_post_meta( '_custom_page_options' );
@@ -57,22 +61,19 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 				switch ( $module['module'] ) {
 
-					// module text
-					// ----------------------------------------------
+					// module text.
 					case 'text':
 						$out .= ( ! empty( $module['icon'] ) ) ? '<i class="' . cs_icon_class( $module['icon'] ) . '"></i>' : '';
 						$out .= cs_multilang_value( $module['text'] );
 						break;
 
-					// module text
-					// ----------------------------------------------
+					// module text.
 					case 'textarea':
 						$out .= ( ! empty( $module['icon'] ) ) ? '<i class="' . cs_icon_class( $module['icon'] ) . '"></i>' : '';
 						$out .= do_shortcode( cs_multilang_value( $module['content'] ) );
 						break;
 
-					// module link
-					// ----------------------------------------------
+					// module link.
 					case 'link':
 						$target = ( ! empty( $module['target'] ) ) ? ' target="' . $module['target'] . '"' : '';
 						$out   .= '<a href="' . cs_multilang_value( $module['link'] ) . '"' . $target . '>';
@@ -81,8 +82,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 						$out   .= '</a>';
 						break;
 
-					// module menu
-					// ----------------------------------------------
+					// module menu.
 					case 'menu':
 						$out .= '<div class="cs-top-modal-hover cs-lang-top-modal">';
 
@@ -117,15 +117,13 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module social
-					// ----------------------------------------------
+					// module social.
 					case 'social':
 						$target = ( ! empty( $module['target'] ) ) ? ' target="' . $module['target'] . '"' : '';
 						$out   .= '<a href="' . cs_multilang_value( $module['link'] ) . '"' . $target . ' class="' . cs_icon_class( $module['icon'] ) . '"></a>';
 						break;
 
-					// module modal
-					// ----------------------------------------------
+					// module modal.
 					case 'modal':
 						$out .= '<div class="cs-top-modal">';
 						$out .= '<a href="#" class="cs-open-modal">';
@@ -136,8 +134,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 						$out .= '</div>';
 						break;
 
-					// module search
-					// ----------------------------------------------
+					// module search.
 					case 'search':
 						$out .= '<div class="cs-top-modal">';
 						$out .= '<a href="#" class="cs-open-modal"><i class="cs-in fa fa-search"></i>' . __( 'Search', 'articlemag' ) . '</a>';
@@ -145,8 +142,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 						$out .= '</div>';
 						break;
 
-					// module wp login
-					// ----------------------------------------------
+					// module wp login.
 					case 'wplogin':
 						if ( is_user_logged_in() ) {
 							$out .= '<a href="' . wp_logout_url() . '"><i class="cs-in fa fa-power-off"></i>' . __( 'Log Out', 'articlemag' ) . '</a>';
@@ -168,8 +164,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module woocommerce login
-					// ----------------------------------------------
+					// module woocommerce login.
 					case 'woologin':
 						if ( is_woocommerce_activated() ) {
 
@@ -195,8 +190,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module woocommerce cart count
-					// ----------------------------------------------
+					// module woocommerce cart count.
 					case 'woocount':
 						if ( is_woocommerce_activated() ) {
 							$out .= '<a href="' . wc_get_cart_url() . '"><i class="fa fa-shopping-cart"></i><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
@@ -204,8 +198,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module woocommerce cart price
-					// ----------------------------------------------
+					// module woocommerce cart price.
 					case 'wooprice':
 						if ( is_woocommerce_activated() ) {
 							$out .= '<a href="' . wc_get_cart_url() . '"><i class="cs-in fa fa-shopping-cart"></i><span class="cs-cart-contents">' . sprintf( _n( '%d item', '%d items', WC()->cart->cart_contents_count, 'articlemag' ), WC()->cart->cart_contents_count ) . WC()->cart->get_cart_total() . '</span></a>';
@@ -213,12 +206,11 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module woocommerce mini cart
-					// ----------------------------------------------
+					// module woocommerce mini cart.
 					case 'woominicart':
 						if ( is_woocommerce_activated() ) {
 
-							// Get mini cart
+							// Get mini cart.
 							ob_start();
 							woocommerce_mini_cart();
 							$mini_cart = ob_get_clean();
@@ -231,8 +223,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module module wpml
-					// ----------------------------------------------
+					// module module wpml.
 					case 'wpml':
 						if ( is_wpml_activated() ) {
 
@@ -245,7 +236,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 								$out .= '<div class="cs-top-modal cs-lang-top-modal">';
 
-								// current language
+								// current language.
 								$out .= '<a href="#" class="cs-open-modal">';
 								foreach ( $icl_get_languages as $id => $current_lang ) {
 									if ( $current_lang['active'] ) {
@@ -258,7 +249,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 								}
 								$out .= '</a>';
 
-								// list languages
+								// list languages.
 								$out .= '<div class="cs-modal-content">';
 								$out .= '<ul>';
 								foreach ( $icl_get_languages as $id => $language ) {
@@ -282,8 +273,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module module qtranslate
-					// ----------------------------------------------
+					// module module qtranslate.
 					case 'qtranslate':
 						if ( is_qtranslate_activated() ) {
 
@@ -298,14 +288,14 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 								$out .= '<div class="cs-top-modal cs-lang-top-modal">';
 
-								// current language
+								// current language.
 								$out .= '<a href="#" class="cs-open-modal">';
 								$out .= '<img src="' . $q_image . $q_config['flag'][ $q_current ] . '" alt="' . $q_config['language_name'][ $q_current ] . '" />';
 								$out .= $q_config['language_name'][ $q_current ];
 								$out .= '<i class="cs-down fa fa-angle-down"></i>';
 								$out .= '</a>';
 
-								// list languages
+								// list languages.
 								$out .= '<div class="cs-modal-content">';
 								$out .= '<ul>';
 								foreach ( $q_languages as $id => $language ) {
@@ -328,8 +318,7 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 						break;
 
-					// module module polylang
-					// ----------------------------------------------
+					// module module polylang.
 					case 'polylang':
 						if ( is_polylang_activated() ) {
 
@@ -342,13 +331,13 @@ if ( ! function_exists( 'cs_top_bar_modules' ) ) {
 
 								$out .= '<div class="cs-top-modal cs-lang-top-modal">';
 
-								// current language
+								// current language.
 								$out .= '<a href="#" class="cs-open-modal">';
 								$out .= $curlang->flag . $curlang->name;
 								$out .= '<i class="cs-down fa fa-angle-down"></i>';
 								$out .= '</a>';
 
-								// list languages
+								// list languages.
 								$out .= '<div class="cs-modal-content">';
 								$out .= '<ul>';
 
@@ -489,6 +478,9 @@ if ( ! function_exists( 'cs_posted_on' ) ) {
  */
 if ( ! function_exists( 'cs_post_nav' ) ) {
 
+	/**
+	 * Cs post nav
+	 */
 	function cs_post_nav() {
 
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
@@ -563,6 +555,9 @@ if ( ! function_exists( 'cs_post_thumbnail' ) ) {
  */
 if ( ! function_exists( 'cs_page_featured_image' ) ) {
 
+	/**
+	 * Cs page featured image
+	 */
 	function cs_page_featured_image() {
 
 		if ( post_password_required() || ! has_post_thumbnail() ) {
@@ -592,6 +587,11 @@ if ( ! function_exists( 'cs_page_featured_image' ) ) {
  */
 if ( ! function_exists( 'cs_paging_nav' ) ) {
 
+	/**
+	 * Cs paging nav
+	 *
+	 * @param array $args Define args.
+	 */
 	function cs_paging_nav( $args = array() ) {
 
 		if ( ! empty( $args['wp_query'] ) ) {
@@ -872,6 +872,9 @@ if ( ! function_exists( 'cs_site_logo' ) ) {
  */
 if ( ! function_exists( 'cs_site_menu' ) ) {
 
+	/**
+	 * Cs site menu
+	 */
 	function cs_site_menu() {
 
 		$output = '<nav id="site-nav" role="navigation">';
@@ -897,6 +900,9 @@ if ( ! function_exists( 'cs_site_menu' ) ) {
  */
 if ( ! function_exists( 'cs_site_mobile_menu' ) ) {
 
+	/**
+	 * Cs site mobile menu
+	 */
 	function cs_site_mobile_menu() {
 
 		ob_start();
@@ -968,6 +974,9 @@ if ( ! function_exists( 'cs_mobile_icon' ) ) {
  */
 if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
 
+	/**
+	 * Cs get bp userbar
+	 */
 	function cs_get_bp_userbar() {
 		?>
 		<div class="cs-mobile-icons-wrapper">
@@ -1040,12 +1049,6 @@ if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
 				}
 			}
 
-			// if (cs_get_option('dark_mode')) {
-			// echo '<div class="cs-toggle-track cs-mobile-toggle-track">';
-			// echo '<div class="cs-link cs-sticky-item"><i class="fa fa-moon-o" aria-hidden="true"></i><i class="fa fa-sun-o" aria-hidden="true"></i></div>';
-			// echo '</div>';
-			// }
-
 			if ( cs_get_option( 'bp_mobile_user_menu' ) ) {
 
 				if ( is_user_logged_in() ) {
@@ -1088,6 +1091,9 @@ if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
  */
 if ( ! function_exists( 'cs_site_mobile_languages' ) ) {
 
+	/**
+	 * Cs site mobile languages
+	 */
 	function cs_site_mobile_languages() {
 
 		$output = '';
@@ -1181,6 +1187,11 @@ if ( ! function_exists( 'cs_site_mobile_languages' ) ) {
  */
 if ( ! function_exists( 'cs_get_button_class' ) ) {
 
+	/**
+	 * Cs get button class
+	 *
+	 * @param  array $args define args.
+	 */
 	function cs_get_button_class( $args = array() ) {
 
 		$defaults = array(
@@ -1210,6 +1221,9 @@ if ( ! function_exists( 'cs_get_button_class' ) ) {
  */
 if ( ! function_exists( 'cs_comment_form' ) ) {
 
+	/**
+	 * Cs comment form
+	 */
 	function cs_comment_form() {
 		ob_start();
 		comment_form();
@@ -1228,6 +1242,9 @@ if ( ! function_exists( 'cs_comment_form' ) ) {
  */
 if ( ! function_exists( 'cs_footer_area' ) ) {
 
+	/**
+	 * Cs footer area
+	 */
 	function cs_footer_area() {
 
 		$output         = '';
@@ -1450,6 +1467,9 @@ if ( ! function_exists( 'cs_footer_bar_modules' ) ) {
  */
 if ( ! function_exists( 'cs_custom_js' ) ) {
 
+	/**
+	 * Cs custom js
+	 */
 	function cs_custom_js() {
 		$custom_js = cs_get_option( 'custom_js' );
 		if ( $custom_js ) {
@@ -1467,6 +1487,9 @@ if ( ! function_exists( 'cs_custom_js' ) ) {
  */
 if ( ! function_exists( 'cs_header_before' ) ) {
 
+	/**
+	 * Cs header before
+	 */
 	function cs_header_before() {
 
 		global $post;

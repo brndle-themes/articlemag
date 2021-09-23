@@ -4,7 +4,9 @@
  *
  * @since 3.0.0
  * @version 3.0.0
+ * @package BuddyPress
  */
+
 ?>
 
 <div id="cover-image-container">
@@ -14,15 +16,15 @@
 <div class="container">
 	<div class="item-header-cover-image-wrapper">
 		<div id="item-header-cover-image">
-            <div id="item-header-avatar">
-                <a href="<?php bp_displayed_user_link(); ?>">
+			<div id="item-header-avatar">
+				<a href="<?php bp_displayed_user_link(); ?>">
 
 					<?php bp_displayed_user_avatar( 'type=full' ); ?>
 
-                </a>
-            </div><!-- #item-header-avatar -->
+				</a>
+			</div><!-- #item-header-avatar -->
 
-            <div id="item-header-content">
+			<div id="item-header-content">
 
 				<?php if ( bp_is_active( 'activity' ) && bp_activity_do_mentions() ) : ?>
 					<h2 class="user-nicename">@<?php bp_displayed_user_mentionname(); ?></h2>
@@ -40,16 +42,16 @@
 
 				<?php
 				bp_nouveau_member_header_buttons(
-				array(
-					'container'			 => 'ul',
-					'button_element'	 => 'button',
-					'container_classes'	 => array( 'member-header-actions' ),
-				)
+					array(
+						'container'         => 'ul',
+						'button_element'    => 'button',
+						'container_classes' => array( 'member-header-actions' ),
+					)
 				);
 				?>
 
-            </div><!-- #item-header-content -->
+			</div><!-- #item-header-content -->
 
-        </div><!-- #item-header-cover-image -->
+		</div><!-- #item-header-cover-image -->
 	</div><!-- .item-header-cover-image-wrapper -->
 </div><!-- .container -->

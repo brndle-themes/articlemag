@@ -13,6 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Articlemag_Customizer_Options' ) ) {
 
+	/**
+	 * Articlemag Customizer Options
+	 */
 	class Articlemag_Customizer_Options {
 
 		// Hold the class instance.
@@ -44,10 +47,16 @@ if ( ! class_exists( 'Articlemag_Customizer_Options' ) ) {
 		}
 
 
+		/**
+		 * Includes
+		 */
 		public function includes() {
 			require_once get_parent_theme_file_path( 'inc/config/cs-customize-config.php' );
 		}
 
+		/**
+		 * Configure configuration option
+		 */
 		public function configure_configuration_option() {
 			// Control core classes for avoid errors.
 			if ( class_exists( 'CSF' ) ) {
@@ -67,6 +76,9 @@ if ( ! class_exists( 'Articlemag_Customizer_Options' ) ) {
 			}
 		}
 
+		/**
+		 * Configuration option sections
+		 */
 		public function configuration_option_sections() {
 			if ( class_exists( 'CSF' ) ) {
 				$skin = cs_get_option( 'skin' );
@@ -89,17 +101,17 @@ if ( ! class_exists( 'Articlemag_Customizer_Options' ) ) {
 				}
 			}
 		}
-/**
- *
- * Reset Customize Settings
- *
- * @since 1.0.0
- * @version 1.0.0
- */
-public function reset() {
-	delete_option( CUSTOMIZE_OPTION_NAME );
-	update_option( CACHED_OPTION_NAME, false );
-	die();
+		/**
+		 *
+		 * Reset Customize Settings
+		 *
+		 * @since 1.0.0
+		 * @version 1.0.0
+		 */
+		public function reset() {
+			delete_option( CUSTOMIZE_OPTION_NAME );
+			update_option( CACHED_OPTION_NAME, false );
+			die();
 		}
 	}
 }

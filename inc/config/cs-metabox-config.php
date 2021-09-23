@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  * CSFramework Metabox Config
@@ -58,8 +57,8 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 							'custom-padding' => 'Custom Padding',
 						),
 						'default' => array(
-						    'custom-padding'  => 'lg-padding',
-						 ),
+							'custom-padding' => 'lg-padding',
+						),
 					),
 					array(
 						'id'         => 'top',
@@ -76,13 +75,13 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 						'dependency' => array( 'padding', '==', 'custom-padding' ),
 					),
 					array(
-						'id'             => 'position',
-						'type'           => 'select',
-						'title'          => 'Center Title',
-						'options'        => array(
+						'id'      => 'position',
+						'type'    => 'select',
+						'title'   => 'Center Title',
+						'options' => array(
 							'default' => 'Choose a position',
-							'title' => 'Center Title',
-							'all'   => 'Center All',
+							'title'   => 'Center Title',
+							'all'     => 'Center All',
 						),
 						'default' => 'default',
 					),
@@ -209,16 +208,11 @@ if ( ! function_exists( 'articlemag_metabox_sections' ) ) {
 						'type'  => 'switcher',
 						'title' => 'Disable Page Header',
 					),
-					// array(
-					// 'id'        => 'breadcrumb',
-					// 'type'      => 'switcher',
-					// 'title'     => 'Disable Breadcrumb',
-					// ),
-						array(
-							'id'    => 'disable_title',
-							'type'  => 'switcher',
-							'title' => 'Disable Title',
-						),
+					array(
+						'id'    => 'disable_title',
+						'type'  => 'switcher',
+						'title' => 'Disable Title',
+					),
 					array(
 						'id'    => 'disable_top_bar',
 						'type'  => 'switcher',

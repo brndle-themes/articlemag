@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
+	/**
+	 * Articlemag customizer sections
+	 */
 	function articlemag_customizer_sections() {
 		$wp_customize_colors = array();
 
@@ -149,9 +152,9 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 
 				),
 				array(
-					'id'	  => 'top_bar_link_hover',
-					'title'	  => 'Link Hover Color',
-					'type'	  => 'color',
+					'id'      => 'top_bar_link_hover',
+					'title'   => 'Link Hover Color',
+					'type'    => 'color',
 					'default' => '#293951',
 				),
 				array(
@@ -182,7 +185,6 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 			'fields'   => array(
 				array(
 					'id'                         => 'header_image',
-					//'transport'                  => 'postMessage',
 					'title'                      => 'Background Image',
 					'type'                       => 'background',
 					'background_color'           => false,
@@ -199,11 +201,10 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 
 				),
 				array(
-					'id'        => 'header_repeat',
-					'title'     => 'Background Repeat',
-					//'transport' => 'postMessage',
-					'type'      => 'select',
-					'options'   => array(
+					'id'      => 'header_repeat',
+					'title'   => 'Background Repeat',
+					'type'    => 'select',
+					'options' => array(
 						''          => 'repeat',
 						'repeat-x'  => 'repeat-x',
 						'repeat-y'  => 'repeat-y',
@@ -212,11 +213,10 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 
 				),
 				array(
-					'id'        => 'header_position',
-					'title'     => 'Background Position',
-					//'transport' => 'postMessage',
-					'type'      => 'select',
-					'options'   => array(
+					'id'      => 'header_position',
+					'title'   => 'Background Position',
+					'type'    => 'select',
+					'options' => array(
 						''          => 'Left Top',
 						'0% 50%'    => 'Left Center',
 						'0% 100%'   => 'Left Bottom',
@@ -229,11 +229,10 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					),
 				),
 				array(
-					'id'        => 'header_attachment',
-					'title'     => 'Background Attachment',
-					//'transport' => 'postMessage',
-					'type'      => 'select',
-					'options'   => array(
+					'id'      => 'header_attachment',
+					'title'   => 'Background Attachment',
+					'type'    => 'select',
+					'options' => array(
 						''      => 'scroll',
 						'fixed' => 'fixed',
 					),
@@ -250,26 +249,23 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 					),
 				),
 				array(
-					'id'        => 'header_bg',
-					'title'     => 'Background Color',
-					//'transport' => 'postMessage',
-					'type'      => 'color',
-					'default'   => '#ffffff',
+					'id'      => 'header_bg',
+					'title'   => 'Background Color',
+					'type'    => 'color',
+					'default' => '#ffffff',
 
 				),
 				array(
-					'id'        => 'header_border',
-					'title'     => 'Border Color',
-					//'transport' => 'postMessage',
-					'type'      => 'color',
-					'default'   => 'rgba(255, 255, 255, 0.1)',
+					'id'      => 'header_border',
+					'title'   => 'Border Color',
+					'type'    => 'color',
+					'default' => 'rgba(255, 255, 255, 0.1)',
 				),
 				array(
-					'id'        => 'header_link',
-					'title'     => 'Link Color',
-					//'transport' => 'postMessage',
-					'type'      => 'color',
-					'default'   => '#555555',
+					'id'      => 'header_link',
+					'title'   => 'Link Color',
+					'type'    => 'color',
+					'default' => '#555555',
 				),
 
 				array(
@@ -453,11 +449,11 @@ if ( ! function_exists( 'articlemag_customizer_sections' ) ) {
 				// ),
 				),
 			);
-			// section
+			// section.
 			$wp_customize_colors['footer'] = array(
 				'title'    => '04. Footer Colors',
 				'priority' => 5,
-				// fields
+				// fields.
 				'fields'   => array(
 					array(
 						'id'                         => 'footer_image',

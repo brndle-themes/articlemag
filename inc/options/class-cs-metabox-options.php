@@ -13,6 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 
+	/**
+	 * Articlemag_MetaBox_Options
+	 */
 	class Articlemag_MetaBox_Options {
 
 		// Hold the class instance.
@@ -61,43 +64,44 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 			// Control core classes for avoid errors.
 			if ( class_exists( 'CSF' ) ) {
 				$post_type = 'page';
-				if (isset($_GET['post_type']) && $_GET['post_type'] != '' ) {
+				if ( isset( $_GET['post_type'] ) && $_GET['post_type'] != '' ) {
 					$post_type = $_GET['post_type'];
 				}
-				if (isset($_GET['post']) && $_GET['post'] != '' ) {
-					$post_type = get_post_type($_GET['post']);
+				if ( isset( $_GET['post'] ) && $_GET['post'] != '' ) {
+					$post_type = get_post_type( $_GET['post'] );
 				}
-				
+
 				CSF::createMetabox(
-					$this->prefix, array(
-						'title'				 => 'Custom Options',
-						'post_type'			 => array( 'post', 'page', 'product', 'sfwd-courses', 'sfwd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-certificates', 'sfwd-assignment', 'sfwd-groups', $post_type ),
-						'data_type'			 => 'serialize',
-						'context'			 => 'advanced',
-						'priority'			 => 'default',
+					$this->prefix,
+					array(
+						'title'              => 'Custom Options',
+						'post_type'          => array( 'post', 'page', 'product', 'sfwd-courses', 'sfwd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-certificates', 'sfwd-assignment', 'sfwd-groups', $post_type ),
+						'data_type'          => 'serialize',
+						'context'            => 'advanced',
+						'priority'           => 'default',
 						'exclude_post_types' => array(),
-						'page_templates'	 => '',
-						'post_formats'		 => '',
-						'show_restore'		 => true,
-						'enqueue_webfont'	 => true,
-						'async_webfont'		 => false,
-						'output_css'		 => true,
-						'theme'				 => 'dark',
-						'class'				 => '',
+						'page_templates'     => '',
+						'post_formats'       => '',
+						'show_restore'       => true,
+						'enqueue_webfont'    => true,
+						'async_webfont'      => false,
+						'output_css'         => true,
+						'theme'              => 'dark',
+						'class'              => '',
 					)
-				);				
-				
-				
+				);
+
 				CSF::createMetabox(
-					$this->side_prefix, array(
-						'title'				 => 'Side Bar Model',
-						'post_type'			 => array( 'post', 'page', 'product', 'sfwd-courses', 'sfwd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-certificates', 'sfwd-assignment', 'sfwd-groups', $post_type ),
-						'data_type'			 => 'serialize',
-						'context'			 => 'side',
-						'priority'			 => 'default',
+					$this->side_prefix,
+					array(
+						'title'              => 'Side Bar Model',
+						'post_type'          => array( 'post', 'page', 'product', 'sfwd-courses', 'sfwd-lessons', 'sfwd-topic', 'sfwd-quiz', 'sfwd-certificates', 'sfwd-assignment', 'sfwd-groups', $post_type ),
+						'data_type'          => 'serialize',
+						'context'            => 'side',
+						'priority'           => 'default',
 						'exclude_post_types' => array(),
-						'page_templates'	 => '',
-						'post_formats'		 => '',
+						'page_templates'     => '',
+						'post_formats'       => '',
 					)
 				);
 			}
@@ -126,7 +130,7 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 					$sidebars = array(
 						'left'  => FRAMEWORK_URI . '/config/sidebars/sidebar_left.png',
 						'right' => FRAMEWORK_URI . '/config/sidebars/sidebar_right.png',
-                                                'both'	 => FRAMEWORK_URI . '/config/sidebars/sidebar_both.png',
+						'both'  => FRAMEWORK_URI . '/config/sidebars/sidebar_both.png',
 						'full'  => FRAMEWORK_URI . '/config/sidebars/sidebar_full.png',
 						'fluid' => FRAMEWORK_URI . '/config/sidebars/sidebar_fluid.png',
 					);
@@ -140,39 +144,40 @@ if ( ! class_exists( 'Articlemag_MetaBox_Options' ) ) {
 						}
 					}
 					if ( class_exists( 'CSF' ) ) {
-				CSF::createSection(
-					$this->side_prefix, array(
-						'title'	 => 'Sidebar',
-						'fields' => array(
+						CSF::createSection(
+							$this->side_prefix,
 							array(
-								'id'		 => 'sidebar',
-								'type'		 => 'image_select',
-								'options'	 => $sidebars,
-								'default'	 => array( 'full' ),
-								'attributes' => array(
-									'data-depend-id' => 'page_sidebars',
+								'title'  => 'Sidebar',
+								'fields' => array(
+									array(
+										'id'         => 'sidebar',
+										'type'       => 'image_select',
+										'options'    => $sidebars,
+										'default'    => array( 'full' ),
+										'attributes' => array(
+											'data-depend-id' => 'page_sidebars',
+										),
+									),
+									array(
+										'id'          => 'left_sidebar_widget',
+										'type'        => 'select',
+										'options'     => array_reverse( $sidebar_widgets ),
+										'default'     => 'sidebar-1',
+										'placeholder' => 'Choose a custom sidebar',
+										'dependency'  => array( 'page_sidebars', 'any', 'left,both' ),
+									),
+									array(
+										'id'          => 'right_sidebar_widget',
+										'type'        => 'select',
+										'options'     => array_reverse( $sidebar_widgets ),
+										'default'     => 'sidebar-1',
+										'placeholder' => 'Choose a Right sidebar',
+										'dependency'  => array( 'page_sidebars', 'any', 'right,both' ),
+									),
 								),
-							),
-							array(
-								'id'			 => 'left_sidebar_widget',
-								'type'			 => 'select',
-								'options'		 => array_reverse( $sidebar_widgets ),
-								'default'		 => 'sidebar-1',
-								'placeholder'	 => 'Choose a custom sidebar',
-								'dependency'	 => array( 'page_sidebars', 'any', 'left,both' ),
-							),
-							array(
-								'id'			 => 'right_sidebar_widget',
-								'type'			 => 'select',
-								'options'		 => array_reverse( $sidebar_widgets ),
-								'default'		 => 'sidebar-1',
-								'placeholder'	 => 'Choose a Right sidebar',
-								'dependency'	 => array( 'page_sidebars', 'any', 'right,both' ),
-							),
-						),
-					)
-				);
-			}
+							)
+						);
+					}
 
 		}
 	}

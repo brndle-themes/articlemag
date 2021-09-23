@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  * About Widget
@@ -32,7 +31,7 @@ class CS_About_Widget extends WP_Widget {
 		echo '<div class="textwidget">';
 
 		echo '<p>';
-		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'articlemag').'" />' : '';
+		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' . esc_html__( 'Footer Logo', 'articlemag' ) . '" />' : '';
 		echo $instance['logo_text']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		echo '</p>';
 
@@ -82,27 +81,6 @@ class CS_About_Widget extends WP_Widget {
 	}
 
 	function form( $instance ) {
-		//
-		// $instance = wp_parse_args(
-		// (array) $instance,
-		// array(
-		// 'title'        => '',
-		// 'img'          => '',
-		// 'logo_text'    => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-		// 'address'      => 'Address:',
-		// 'address_text' => '3060 Duncan Avenue<br />Garden City, NY 11530',
-		// 'phone'        => 'Phone:',
-		// 'phone_text'   => '0800 555 5555',
-		// 'empty'        => '',
-		// 'empty_text'   => '',
-		// 'mail'         => 'mail',
-		// 'mail_text'    => 'info@domain.com',
-		// 'web'          => 'Web',
-		// 'web_text'     => 'domain.com',
-		// 'web_url'      => 'http://domain.com',
-		// )
-		// );
-
 		$title        = ! empty( $instance['title'] ) ? $instance['title'] : '';
 		$img          = ! empty( $instance['img'] ) ? $instance['img'] : '';
 		$logo_text    = ! empty( $instance['logo_text'] ) ? $instance['logo_text'] : 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
@@ -118,7 +96,7 @@ class CS_About_Widget extends WP_Widget {
 		$web_text     = ! empty( $instance['web_text'] ) ? $instance['web_text'] : 'domain.com';
 		$web_url      = ! empty( $instance['web_url'] ) ? $instance['web_url'] : 'http://domain.com';
 
-		// WIDGET TITLE
+		// WIDGET TITLE.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'title' ),
@@ -129,7 +107,7 @@ class CS_About_Widget extends WP_Widget {
 			$title
 		);
 
-		// IMAGE - TEXT
+		// IMAGE - TEXT.
 		cs_get_field(
 			array(
 				'id'           => $this->get_field_name( 'img' ),
@@ -151,7 +129,7 @@ class CS_About_Widget extends WP_Widget {
 			$logo_text
 		);
 
-		// ADDRESS
+		// ADDRESS.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'address' ),
@@ -171,7 +149,7 @@ class CS_About_Widget extends WP_Widget {
 			$address_text
 		);
 
-		// PHONE
+		// PHONE.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'phone' ),
@@ -191,7 +169,7 @@ class CS_About_Widget extends WP_Widget {
 			$phone_text
 		);
 
-		// EMPTY
+		// EMPTY.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'empty' ),
@@ -211,7 +189,7 @@ class CS_About_Widget extends WP_Widget {
 			$empty_text
 		);
 
-		// MAIL
+		// MAIL.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'mail' ),
@@ -231,7 +209,7 @@ class CS_About_Widget extends WP_Widget {
 			$mail_text
 		);
 
-		// WEB
+		// WEB.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'web' ),
@@ -440,7 +418,7 @@ class CS_Blog_Posts_Widget extends WP_Widget {
 		$full_width_image = $instance['full_width_image'];
 		$image_size       = $instance['image_size'];
 
-		// WIDGET TITLE
+		// WIDGET TITLE.
 		cs_get_field(
 			array(
 				'id'    => $this->get_field_name( 'title' ),
@@ -467,7 +445,7 @@ class CS_Blog_Posts_Widget extends WP_Widget {
 			$type
 		);
 
-		// FIELDS
+		// FIELDS.
 		cs_get_field(
 			array(
 				'id'         => $this->get_field_name( 'cats' ),
@@ -589,7 +567,7 @@ class CS_Side_Menu_Widget extends WP_Widget {
 				)
 			);
 
-			// widget content
+			// widget content.
 			if ( ! empty( $list_pages ) ) {
 
 				echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
@@ -619,8 +597,8 @@ class CS_Side_Menu_Widget extends WP_Widget {
 		$instance = wp_parse_args( (array) $instance, array( 'title' => '' ) );
 		$title    = strip_tags( $instance['title'] );
 		?>
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>">Title</label>
-			<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
+		<p><label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>">Title</label>
+			<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" /></p>
 		<?php
 	}
 

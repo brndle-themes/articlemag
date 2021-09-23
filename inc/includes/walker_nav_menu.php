@@ -6,6 +6,7 @@
  * @since 1.0.0
  * @version 1.0.0
  */
+
 if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 
@@ -42,19 +43,19 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 			$classes     = empty( $item->classes ) ? array() : $item->classes;
 			$classes[]   = 'menu-item-' . $item->ID;
 
-			// adding depth class
+			// adding depth class.
 			$classes[] = 'cs-depth-' . $depth;
 
-			// adding if mega menu class
+			// adding if mega menu class.
 			$classes[] = ( $depth == 0 && ! empty( $item->mega ) ) ? 'cs-mega-menu' : '';
 
-			// adding if natural-width class
+			// adding if natural-width class.
 			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && $item->mega_width == 'natural' ) ? 'cs-col-' . $this->child_count . ' cs-' . $item->mega_width : '';
 
-			// adding if custom-width class
+			// adding if custom-width class.
 			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && $item->mega_width == 'custom' ) ? 'cs-' . $item->mega_width : '';
 
-			// adding if right position class
+			// adding if right position class.
 			$classes[] = ( $depth == 0 && ! empty( $item->mega ) && ! empty( $item->mega_width ) && ! empty( $item->mega_position ) ) ? 'cs-right' : '';
 
 			// adding bootstrap col if parent item is mega!
@@ -63,7 +64,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 			}
 			$classes['col'] = ( ! empty( $bs_col ) ) ? $bs_col : '';
 
-			// adding force custom boostrap col
+			// adding force custom boostrap col.
 			$classes['col'] = ( $depth == 1 && ! empty( $item->column_width ) ) ? $item->column_width : $classes['col'];
 
 			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
@@ -92,10 +93,10 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 			$item_output = isset( $args->before ) ? $args->before : '';
 
-			// if column title not disable
+			// if column title not disable.
 			if ( empty( $item->column_title ) ) {
 
-				// if column title link not disable
+				// if column title link not disable.
 				if ( empty( $item->column_title_link ) ) {
 
 					$cs_hover_effect = cs_get_option( 'header_menu_effect' );
@@ -109,7 +110,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 					$item_output .= '<a class="cs-link cs-title cs-column-title">' . $item->colum_title;
 				}
 
-				// adding icon
+				// adding icon.
 				$link_before  = isset( $args->link_before ) ? $args->link_before : '';
 				$link_after   = isset( $args->link_after ) ? $args->link_after : '';
 				$item_output .= ( ! empty( $item->icon ) ) ? '<i class="' . cs_icon_class( $item->icon ) . '"></i>' : '';
@@ -120,16 +121,16 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 					$item_output .= '<span class="cs-label cs-label-' . $highlight . '">' . $item->highlight . '</span>';
 				}
 
-				// adding custom content
+				// adding custom content.
 				$item_output .= ( ! empty( $item->content ) ) ? '<span class="cs-content">' . do_shortcode( $item->content ) . '</span>' : '';
 
-				// if column title link not disable
+				// if column title link not disable.
 				if ( empty( $item->column_title_link ) || ( $depth == 1 && ! empty( $item->column_title_link ) ) ) {
 					$item_output .= '</a>';
 				}
 			}
 
-			// adding force custom content
+			// adding force custom content.
 			if ( ! empty( $item->column_title ) ) {
 				$item_output .= ( ! empty( $item->content ) ) ? '<div class="cs-full-content">' . do_shortcode( $item->content ) . '</div>' : '';
 			}
@@ -157,10 +158,9 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 		public function custom_wrap() {
 
-			
-            $output = '';
+			$output = '';
 
-            if ( ! is_user_logged_in() ) {
+			if ( ! is_user_logged_in() ) {
 
 				$output .= '<li class="cs-depth-0 cs-user-signin">';
 				$output .= '<div class="cs-link cs-sticky-item">';
@@ -179,8 +179,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 				}
 			}
 
-
-            if ( cs_get_option( 'bp_user_menu' ) ) {
+			if ( cs_get_option( 'bp_user_menu' ) ) {
 				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() ) {
 					$output      .= '<li class="cs-depth-0 cs-bp-user-menu">';
 					$current_user = wp_get_current_user();
@@ -211,7 +210,6 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 					$output .= '</li>';
 				}
 			}
-
 
 			if ( cs_get_option( 'bp_message' ) ) {
 				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'messages' ) ) {
@@ -274,9 +272,6 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 				}
 			}
 
-            
-		
-
 			if ( cs_get_option( 'woo_menu_cart' ) && is_woocommerce_activated() ) {
 				$output .= '<li class="cs-depth-0 cs-menu-cart cart-widget-opener">';
 				$output .= '<a href="' . wc_get_cart_url() . '" class="cs-link cs-sticky-item"><span class="fa fa-shopping-cart"></span><span class="cs-cart-count">' . WC()->cart->cart_contents_count . '</span></a>';
@@ -289,14 +284,13 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 				$output .= '</li>';
 			}
 
-            if ( cs_get_option( 'menu_search' ) ) {
+			if ( cs_get_option( 'menu_search' ) ) {
 				$output .= '<li class="cs-depth-0 cs-menu-search cs-top-modal">';
 				$output .= '<a id="nav-search" href="#" class="cs-link cs-sticky-item cs-open-modal"><span class="fa fa-search"></span></a>';
 				$output .= '<div class="cs-modal-content cs-module-search">' . get_search_form( false ) . '</div>';
 				$output .= '</li>';
 			}
 
-			
 			$output = apply_filters( 'cs_custom_menu_wrap', $output );
 
 			return '<ul id="%1$s" class="%2$s">%3$s' . $output . '</ul>';
@@ -304,7 +298,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 	}
 
-	// Walker_Nav_Menu
+	// Walker_Nav_Menu.
 }
 
 
@@ -538,5 +532,5 @@ if ( ! class_exists( 'Walker_Nav_Menu_Edit_Custom' ) ) {
 
 	}
 
-		// Walker_Nav_Menu_Edit
+		// Walker_Nav_Menu_Edit.
 }

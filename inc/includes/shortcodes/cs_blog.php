@@ -6,6 +6,7 @@
  * @since 1.0.0
  * @version 1.2.0
  */
+
 if ( ! function_exists( 'cs_blog' ) ) {
 	function cs_blog( $atts, $content = '', $key = '' ) {
 
@@ -40,7 +41,7 @@ if ( ! function_exists( 'cs_blog' ) ) {
 			$paged = intval( get_query_var( 'paged' ) );
 		}
 
-		// Query args
+		// Query args.
 		$args = array(
 			'posts_per_page' => $limit,
 			'paged'          => $paged,
@@ -48,7 +49,7 @@ if ( ! function_exists( 'cs_blog' ) ) {
 			'post_status'    => 'publish',
 		);
 
-		// Nav args
+		// Nav args.
 		$nav_args = array(
 			'size'           => $size,
 			'columns'        => $columns,
@@ -77,7 +78,7 @@ if ( ! function_exists( 'cs_blog' ) ) {
 				while ( have_posts() ) :
 					the_post();
 					get_template_part( 'templates/page-blog', 'masonry' );
-				  endwhile;
+				endwhile;
 				echo '</div><!-- isotope-blog -->';
 				cs_paging_nav( $nav_args );
 				echo '</div><!-- isotope-wrapper -->';
@@ -85,7 +86,7 @@ if ( ! function_exists( 'cs_blog' ) ) {
 
 			} else {
 
-				// loop posts
+				// loop posts.
 				while ( have_posts() ) :
 					the_post();
 
@@ -93,29 +94,29 @@ if ( ! function_exists( 'cs_blog' ) ) {
 					$more = 0;
 
 					if ( $type == 'default' ) {
-						  get_template_part( 'post-formats/content', get_post_format() );
+						get_template_part( 'post-formats/content', get_post_format() );
 					} else {
 						get_template_part( 'templates/page-blog', $type );
 					}
 
-			  endwhile;
+			endwhile;
 
-				// loop nav
+				// loop nav.
 				cs_paging_nav( $nav_args );
 			}
 
 			echo '</div>';
 
-	  else :
-		  echo '<span class="fa fa-warning-sign"></span> please check settings.';
-	  endif;
+	else :
+		echo '<span class="fa fa-warning-sign"></span> please check settings.';
+	endif;
 
-	  wp_reset_query();
-	  wp_reset_postdata();
-	  $wp_query = $tmp_query;
+	wp_reset_query();
+	wp_reset_postdata();
+	$wp_query = $tmp_query;
 
-	  $output = ob_get_clean();
-	  return $output;
+	$output = ob_get_clean();
+	return $output;
 	}
 	add_shortcode( 'cs_blog', 'cs_blog' );
 }

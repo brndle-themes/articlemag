@@ -2,57 +2,59 @@
 /**
  *
  * The template for displaying all pages.
+ *
  * @since 1.0.0
  * @version 1.4.0
- *
  */
+
 get_header();
 get_template_part( 'templates/page-header' );
 
 global $cs_has_section, $post;
 
 $cs_post_meta    = get_post_meta( $post->ID, '_side_custom_page_options', true );
-$cs_page_layout  = ( isset ( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'full';
+$cs_page_layout  = ( isset( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'full';
 $cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 $vc_exclude      = cs_get_option( 'vc_exclude_shortcodes' );
 $vc_exclude      = ( is_array( $vc_exclude ) ) ? $vc_exclude : array();
 $cs_page_padding = ( ! in_array( 'vc_row', $vc_exclude ) ) ? 'md-padding ' : '';
 $cs_has_section  = isset( $cs_post_meta['section'] ) ? true : false;
 
-if( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_array( 'vc_row', $vc_exclude ) ) {
+if ( ( $cs_page_layout == 'fluid' || isset( $cs_post_meta['section'] ) ) && ! in_array( 'vc_row', $vc_exclude ) ) {
 
-  get_template_part('templates/page', 'section');
-  do_action( 'cs_page_end', true );
+	get_template_part( 'templates/page', 'section' );
+	do_action( 'cs_page_end', true );
 
 } else {
-?>
-<section class="main-content <?php echo esc_attr($cs_page_padding); ?>page-layout-<?php echo esc_attr($cs_page_layout); ?>">
-  <div class="container">
-    <div class="row cs-row-wrap">
+	?>
+<section class="main-content <?php echo esc_attr( $cs_page_padding ); ?>page-layout-<?php echo esc_attr( $cs_page_layout ); ?>">
+<div class="container">
+	<div class="row cs-row-wrap">
 
-      <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
+	<?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-      <div class="cs-content-wrapper col-md-<?php echo esc_attr($cs_page_column); ?>">
-        <div class="page-content">
-          <?php
-            // Start the Loop.
-            while ( have_posts() ) : the_post();
+	<div class="cs-content-wrapper col-md-<?php echo esc_attr( $cs_page_column ); ?>">
+		<div class="page-content">
+		<?php
+			// Start the Loop.
+			while ( have_posts() ) :
+				the_post();
 
-              cs_page_featured_image();
-              the_content();
-              cs_link_pages();
-              do_action( 'cs_page_end' );
+				cs_page_featured_image();
+				the_content();
+				cs_link_pages();
+				do_action( 'cs_page_end' );
 
-            endwhile;
-          ?>
-        </div>
-      </div>
+			endwhile;
+			?>
+		</div>
+	</div>
 
-      <?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
+	<?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
 
-    </div>
-  </div>
+	</div>
+</div>
 </section>
-<?php
+	<?php
 }
 get_footer();

@@ -17,63 +17,66 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-  exit; // Exit if accessed directly
+	exit; // Exit if accessed directly.
 }
 
 get_header( 'shop' );
 
 get_template_part( 'templates/page-header' );
 
-$cs_page_layout     = 'full';
-$cs_page_column     = '12';
+$cs_page_layout = 'full';
+$cs_page_column = '12';
 
-if ( cs_get_option( 'woo_product_sidebar') ) {
-  $shop_id          = apply_filters( 'cs_woo_product_sidebar', wc_get_page_id( 'shop' ) );
-  $cs_post_meta     = get_post_meta( $shop_id, '_side_custom_page_options', true );
-  $cs_page_layout   = ( isset ( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'full';
-  $cs_page_column  = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
+if ( cs_get_option( 'woo_product_sidebar' ) ) {
+	$shop_id        = apply_filters( 'cs_woo_product_sidebar', wc_get_page_id( 'shop' ) );
+	$cs_post_meta   = get_post_meta( $shop_id, '_side_custom_page_options', true );
+	$cs_page_layout = ( isset( $cs_post_meta['sidebar'] ) ) ? $cs_post_meta['sidebar'] : 'full';
+	$cs_page_column = ( $cs_page_layout == 'full' ) ? '12' : ( ( $cs_page_layout == 'both' ) ? '6' : '9' );
 }
 ?>
 
-<section class="main-content md-padding page-layout-<?php echo esc_attr($cs_page_layout); ?>">
+<section class="main-content md-padding page-layout-<?php echo esc_attr( $cs_page_layout ); ?>">
   <div class="container">
-    <div class="row cs-row-wrap">
+	<div class="row cs-row-wrap">
 
-      <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
+	  <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-      <div class="cs-content-wrapper col-md-<?php echo esc_attr($cs_page_column); ?>">
-        <div class="page-content">
-          <?php
-            /**
-             * woocommerce_before_main_content hook
-             *
-             * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-             * @hooked woocommerce_breadcrumb - 20
-             */
-            do_action( 'woocommerce_before_main_content' );
-          ?>
+	  <div class="cs-content-wrapper col-md-<?php echo esc_attr( $cs_page_column ); ?>">
+		<div class="page-content">
+		  <?php
+			/**
+			 * Hook : woocommerce_before_main_content hook
+			 *
+			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+			 * @hooked woocommerce_breadcrumb - 20
+			 */
+			do_action( 'woocommerce_before_main_content' );
+			?>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 
-              <?php wc_get_template_part( 'content', 'single-product' ); ?>
+				<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-            <?php endwhile; // end of the loop. ?>
+			<?php endwhile; // end of the loop. ?>
 
-          <?php
-            /**
-             * woocommerce_after_main_content hook
-             *
-             * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-             */
-            do_action( 'woocommerce_after_main_content' );
-          ?>
+		  <?php
+			/**
+			 * Hook : woocommerce_after_main_content hook
+			 *
+			 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+			 */
+			do_action( 'woocommerce_after_main_content' );
+			?>
 
-        </div><!-- /page-content -->
-      </div><!-- /colmd -->
+		</div><!-- /page-content -->
+	  </div><!-- /colmd -->
 
-      <?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
+	  <?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
 
-    </div>
+	</div>
   </div>
 </section>
 <?php get_footer( 'shop' ); ?>

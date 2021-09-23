@@ -1,14 +1,17 @@
 <?php
-
 /**
  *
  * Footer Social
+ *
  * @since 1.0.0
  * @version 1.0.0
- *
  */
-if ( !function_exists( 'cs_social' ) ) {
 
+if ( ! function_exists( 'cs_social' ) ) {
+
+	/**
+	 * Cs social
+	 */
 	function cs_social() {
 
 		$options = cs_get_post_meta();

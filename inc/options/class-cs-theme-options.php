@@ -5,6 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'Articlemag_Theme_Options' ) ) {
 
+	/**
+	 * Articlemag_Theme_Options
+	 */
 	class Articlemag_Theme_Options {
 
 		/**
@@ -34,10 +37,16 @@ if ( ! class_exists( 'Articlemag_Theme_Options' ) ) {
 		}
 
 
+		/**
+		 * Includes
+		 */
 		public function includes() {
 			require_once get_parent_theme_file_path( '/inc/config/cs-framework-option-section.php' );
 		}
 
+		/**
+		 * Configure theme option
+		 */
 		public function configure_theme_option() {
 			// Control core classes for avoid errors.
 			if ( class_exists( 'CSF' ) ) {
@@ -100,6 +109,9 @@ if ( ! class_exists( 'Articlemag_Theme_Options' ) ) {
 			}
 		}
 
+		/**
+		 * Option sections
+		 */
 		public function option_sections() {
 			if ( class_exists( 'CSF' ) ) {
 				$tabs = articlemag_option_sections();

@@ -155,6 +155,11 @@ if ( ! function_exists( 'cs_esc_number' ) ) {
   * @version 1.0.0
   */
 if ( ! function_exists( 'cs_option2background' ) ) {
+	/**
+	 * Cs option2background
+	 *
+	 * @param array $post_meta define post_meta.
+	 */
 	function cs_option2background( $post_meta = array() ) {
 
 		$out = '';
@@ -163,14 +168,14 @@ if ( ! function_exists( 'cs_option2background' ) ) {
 
 			extract( $post_meta['background'] );
 
-			$image          = $post_meta['background']['background-image']['url'];
-			$repeat         = $post_meta['background']['background-repeat'];
-			$attachment     = $post_meta['background']['background-attachment'];
-			$color          = $post_meta['background']['background-color'];
-			$bg_size        = $post_meta['background']['background-size'];
-			$position       = $post_meta['background']['background-position'];
-                        $default_image  = get_template_directory_uri() . '/images/default-image.jpg';
-                                
+			$image                     = $post_meta['background']['background-image']['url'];
+			$repeat                    = $post_meta['background']['background-repeat'];
+			$attachment                = $post_meta['background']['background-attachment'];
+			$color                     = $post_meta['background']['background-color'];
+			$bg_size                   = $post_meta['background']['background-size'];
+			$position                  = $post_meta['background']['background-position'];
+						$default_image = get_template_directory_uri() . '/images/default-image.jpg';
+
 			$background_image      = ( ! empty( $image ) ) ? 'background-image: url(' . $image . ');' : $default_image;
 			$background_repeat     = ( ! empty( $image ) && ! empty( $repeat ) ) ? ' background-repeat: ' . $repeat . ';' : '';
 			$background_size       = ( ! empty( $image ) ) ? ' background-size: ' . $bg_size . ';' : '';
@@ -242,6 +247,9 @@ if ( ! function_exists( 'cs_brightness' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'articlemag_categorized_blog' ) ) {
+	/**
+	 * Articlemag categorized blog
+	 */
 	function articlemag_categorized_blog() {
 		if ( false === ( $all_the_cool_cats = get_transient( 'articlemag_category_count' ) ) ) {
 
@@ -267,6 +275,9 @@ if ( ! function_exists( 'articlemag_categorized_blog' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'articlemag_category_transient_flusher' ) ) {
+	/**
+	 * Articlemag category transient flusher
+	 */
 	function articlemag_category_transient_flusher() {
 		delete_transient( 'articlemag_category_count' );
 	}
@@ -364,7 +375,7 @@ class Walker_Portfolio_List_Categories extends Walker_Category {
 if ( ! function_exists( 'cs_get_image_sizes' ) ) {
 	function cs_get_image_sizes( $force = false, $flip = true ) {
 		$current_image_sizes = get_intermediate_image_sizes();
-		
+
 		foreach ( $current_image_sizes as $image_size ) {
 			$dimenssion                 = ( in_array( $image_size, array( 'thumbnail', 'medium', 'large' ) ) ) ? ' - (' . get_option( $image_size . '_size_w' ) . 'x' . get_option( $image_size . '_size_h' ) . ')' : '';
 			$image_sizes[ $image_size ] = $image_size . $dimenssion;
@@ -431,6 +442,9 @@ if ( ! function_exists( 'cs_icon_class' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'cs_blank_png' ) ) {
+	/**
+	 * Cs blank png
+	 */
 	function cs_blank_png() {
 		return 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=';
 	}
@@ -475,12 +489,15 @@ if ( ! function_exists( 'cs_multilang_value' ) ) {
 
 /**
  *
- * is go_pricing activated
+ * Is go_pricing activated
  *
  * @since 1.0.0
  * @version 1.0.0
  */
 if ( ! function_exists( 'is_go_pricing_activated' ) ) {
+	/**
+	 * Is go pricing activated
+	 */
 	function is_go_pricing_activated() {
 		if ( class_exists( 'GW_GoPricing' ) ) {
 			return true;
@@ -491,12 +508,15 @@ if ( ! function_exists( 'is_go_pricing_activated' ) ) {
 
 /**
  *
- * is woocommerce activated
+ * Is woocommerce activated
  *
  * @since 1.0.0
  * @version 1.0.0
  */
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	/**
+	 * Check woocommerce activated
+	 */
 	function is_woocommerce_activated() {
 		if ( class_exists( 'woocommerce' ) ) {
 			return true;
@@ -507,12 +527,15 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 
 /**
  *
- * is woocommerce shop
+ * Is woocommerce shop
  *
  * @since 1.0.0
  * @version 1.0.0
  */
 if ( ! function_exists( 'is_woocommerce_shop' ) ) {
+	/**
+	 * Is woocommerce shop
+	 */
 	function is_woocommerce_shop() {
 		if ( is_woocommerce_activated() && is_shop() ) {
 			return true;
@@ -523,12 +546,15 @@ if ( ! function_exists( 'is_woocommerce_shop' ) ) {
 
 /**
  *
- * is wpml activated
+ * Is wpml activated
  *
  * @since 1.0.0
  * @version 1.1.0
  */
 if ( ! function_exists( 'is_wpml_activated' ) ) {
+	/**
+	 * Is wpml activated
+	 */
 	function is_wpml_activated() {
 		if ( class_exists( 'SitePress' ) ) {
 			return true;
@@ -539,12 +565,15 @@ if ( ! function_exists( 'is_wpml_activated' ) ) {
 
 /**
  *
- * qTranslate-x compatibility
+ * QTranslate-x compatibility
  *
  * @since 3.3.0
  * @version 1.0.0
  */
 if ( function_exists( 'qtranxf_init' ) && ! function_exists( 'qtranslate_compatibility_enable' ) ) {
+	/**
+	 * Qtranslate compatibility enable
+	 */
 	function qtranslate_compatibility_enable() {
 		return true;
 	}
@@ -553,12 +582,15 @@ if ( function_exists( 'qtranxf_init' ) && ! function_exists( 'qtranslate_compati
 
 /**
  *
- * is qtranslate activated
+ * Is qtranslate activated
  *
  * @since 1.0.0
  * @version 1.0.0
  */
 if ( ! function_exists( 'is_qtranslate_activated' ) ) {
+	/**
+	 * Is qtranslate activated
+	 */
 	function is_qtranslate_activated() {
 		if ( function_exists( 'qtrans_getSortedLanguages' ) ) {
 			return true;
@@ -569,12 +601,15 @@ if ( ! function_exists( 'is_qtranslate_activated' ) ) {
 
 /**
  *
- * is polylang activated
+ * Is polylang activated
  *
  * @since 1.3.0
  * @version 1.0.0
  */
 if ( ! function_exists( 'is_polylang_activated' ) ) {
+	/**
+	 * Is polylang activated
+	 */
 	function is_polylang_activated() {
 		if ( class_exists( 'Polylang' ) ) {
 			return true;
@@ -583,14 +618,11 @@ if ( ! function_exists( 'is_polylang_activated' ) ) {
 	}
 }
 
-/**
- *
- * is gravityforms activated
- *
- * @since 1.0.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'is_gravityforms_activated' ) ) {
+	/**
+	 * Is gravityforms activated
+	 */
 	function is_gravityforms_activated() {
 		if ( class_exists( 'RGForms' ) ) {
 			return true;
@@ -599,14 +631,11 @@ if ( ! function_exists( 'is_gravityforms_activated' ) ) {
 	}
 }
 
-/**
- *
- * is ninjaforms activated
- *
- * @since 1.3.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'is_ninjaforms_activated' ) ) {
+	/**
+	 * Is ninjaforms activated
+	 */
 	function is_ninjaforms_activated() {
 		if ( class_exists( 'Ninja_Forms' ) ) {
 			return true;
@@ -615,14 +644,11 @@ if ( ! function_exists( 'is_ninjaforms_activated' ) ) {
 	}
 }
 
-/**
- *
- * is bbpress activated
- *
- * @since 1.0.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'is_bbpress_activated' ) ) {
+	/**
+	 * Is bbpress activated
+	 */
 	function is_bbpress_activated() {
 		if ( class_exists( 'bbPress' ) ) {
 			return true;
@@ -631,14 +657,11 @@ if ( ! function_exists( 'is_bbpress_activated' ) ) {
 	}
 }
 
-/**
- *
- * is js_composer activated
- *
- * @since 1.0.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'is_vc_activated' ) ) {
+	/**
+	 * Is vc activated
+	 */
 	function is_vc_activated() {
 		if ( class_exists( 'Vc_Manager' ) && defined( 'WPB_VC_VERSION' ) && version_compare( WPB_VC_VERSION, '4.2.3', '>=' ) ) {
 			return true;
@@ -661,14 +684,10 @@ if ( ! function_exists( 'cs_is_activated' ) ) {
 	}
 }
 
-/**
- *
- * WebSafe Fonts
- *
- * @since 1.0.0
- * @version 1.0.0
- */
 if ( ! function_exists( 'cs_get_websafe_fonts' ) ) {
+	/**
+	 * Cs get websafe fonts
+	 */
 	function cs_get_websafe_fonts() {
 
 		$fonts = array(
@@ -707,14 +726,11 @@ if ( ! function_exists( 'cs_is_googe_font' ) ) {
 	}
 }
 
-/**
- *
- * Enqueue Google Fonts
- *
- * @since 1.0.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'cs_enqueue_google_fonts' ) ) {
+	/**
+	 * Enqueue google fonts
+	 */
 	function cs_enqueue_google_fonts() {
 
 		$embed_fonts = array();
@@ -747,48 +763,42 @@ if ( ! function_exists( 'cs_enqueue_google_fonts' ) ) {
 }
 
 
-/**
- *
- * Typography
- *
- * @since 1.0.0
- * @version 1.0.0
- */
 if ( ! function_exists( 'cs_get_typography' ) ) {
+	/**
+	 * Typography
+	 */
 	function cs_get_typography() {
 
 		$typography = cs_get_option( 'typography' );
 		$output     = '';
 		if ( ! empty( $typography ) ) {
 			foreach ( $typography as $font ) {
-				if ( ! empty( $font) ){
+				if ( ! empty( $font ) ) {
 
 					if ( ! empty( $font['selector'] ) ) {
-					$weight = ( isset($font['font']['font-weight']) && $font['font']['font-weight'] != 'regular' ) ? esc_attr( $font['font']['font-weight'] ) : 400;
-					$style     =  isset( $font['font']['font-weight'] ) ? cs_esc_number( $font['font']['font-weight'] ) : '';
-					$style     = ( $style && $style != 'regular' ) ? $style : 'regular';
-					$transform = ( isset($font['font']['text-transform']) && $font['font']['text-transform'] != 'none' ) ? esc_attr( $font['font']['text-transform'] ) : '';
-					$letter    = ( isset($font['font']['letter-spacing']) && $font['font']['letter-spacing']!= '0.5' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
-					$aligment    = ( isset($font['font']['text-align']) && $font['font']['text-align']!= 'left' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
-					$color    = ( isset($font['font']['color']) && $font['font']['color']!= 'none' ) ? esc_attr( $font['font']['color'] ) : '';
-					$family    = ( isset($font['font']['font-family']) && $font['font']['font-family']!= '"' . $font['font']['font-family'] . '", Arial, sans-serif' ) ? esc_attr( $font['font']['font-family'] ) : '';
-					$output .= $font['selector'] . '{';
-					$output .= ( ! empty( $family ) ) ? 'font-family: ' . $family . ';' : '';
-					$output .= ( ! empty( $font['font']['line-height'] ) ) ? 'line-height: ' . $font['font']['line-height'] . 'px;' : '';
-					$output .= ( ! empty( $font['font']['font-size'] ) ) ? 'font-size: ' . $font['font']['font-size'] . 'px;' : '';
-					$output .= 'font-style: ' . $style . ';';
-					$output .= ( ! empty( $weight ) ) ? 'font-weight: ' . $weight . ';' : '';
-					$output .= ( ! empty( $transform ) ) ? 'text-transform: ' . $transform . ';' : '';
-					$output .= ( ! empty( $letter ) ) ? 'letter-spacing: ' . $letter . 'px;' : '';
-					$output .= ( ! empty( $aligment ) ) ? 'text-align: ' . $aligment . ';' : '';
-					$output .= ( ! empty( $color ) ) ? 'color: ' . $color . ';' : '';
-					$output .= ( ! empty( $font['css'] ) ) ? $font['css'] : '';
-					$output .= '}';
+						$weight    = ( isset( $font['font']['font-weight'] ) && $font['font']['font-weight'] != 'regular' ) ? esc_attr( $font['font']['font-weight'] ) : 400;
+						$style     = isset( $font['font']['font-weight'] ) ? cs_esc_number( $font['font']['font-weight'] ) : '';
+						$style     = ( $style && $style != 'regular' ) ? $style : 'regular';
+						$transform = ( isset( $font['font']['text-transform'] ) && $font['font']['text-transform'] != 'none' ) ? esc_attr( $font['font']['text-transform'] ) : '';
+						$letter    = ( isset( $font['font']['letter-spacing'] ) && $font['font']['letter-spacing'] != '0.5' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
+						$aligment  = ( isset( $font['font']['text-align'] ) && $font['font']['text-align'] != 'left' ) ? esc_attr( $font['font']['letter-spacing'] ) : '';
+						$color     = ( isset( $font['font']['color'] ) && $font['font']['color'] != 'none' ) ? esc_attr( $font['font']['color'] ) : '';
+						$family    = ( isset( $font['font']['font-family'] ) && $font['font']['font-family'] != '"' . $font['font']['font-family'] . '", Arial, sans-serif' ) ? esc_attr( $font['font']['font-family'] ) : '';
+						$output   .= $font['selector'] . '{';
+						$output   .= ( ! empty( $family ) ) ? 'font-family: ' . $family . ';' : '';
+						$output   .= ( ! empty( $font['font']['line-height'] ) ) ? 'line-height: ' . $font['font']['line-height'] . 'px;' : '';
+						$output   .= ( ! empty( $font['font']['font-size'] ) ) ? 'font-size: ' . $font['font']['font-size'] . 'px;' : '';
+						$output   .= 'font-style: ' . $style . ';';
+						$output   .= ( ! empty( $weight ) ) ? 'font-weight: ' . $weight . ';' : '';
+						$output   .= ( ! empty( $transform ) ) ? 'text-transform: ' . $transform . ';' : '';
+						$output   .= ( ! empty( $letter ) ) ? 'letter-spacing: ' . $letter . 'px;' : '';
+						$output   .= ( ! empty( $aligment ) ) ? 'text-align: ' . $aligment . ';' : '';
+						$output   .= ( ! empty( $color ) ) ? 'color: ' . $color . ';' : '';
+						$output   .= ( ! empty( $font['css'] ) ) ? $font['css'] : '';
+						$output   .= '}';
 
+					}
 				}
-				}
-
-				
 			}
 		}
 
@@ -798,25 +808,22 @@ if ( ! function_exists( 'cs_get_typography' ) ) {
 }
 
 
-/**
- *
- * Font CSS
- *
- * @since 1.0.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'cs_get_animations' ) ) {
+	/**
+	 * Cs get animations
+	 */
 	function cs_get_animations() {
 
 		$animations = array(
 			'',
-			// fading_entrances
+			// fading_entrances.
 			'fadeIn',
 			'fadeInLeft',
 			'fadeInRight',
 			'fadeInUp',
 			'fadeInDown',
-			// attention_seekers
+			// attention_seekers.
 			'bounce',
 			'flash',
 			'pulse',
@@ -824,7 +831,7 @@ if ( ! function_exists( 'cs_get_animations' ) ) {
 			'swing',
 			'tada',
 			'wobble',
-			// bouncing_entrances
+			// bouncing_entrances.
 			'bounceIn',
 			'bounceInLeft',
 			'bounceInRight',
@@ -838,35 +845,32 @@ if ( ! function_exists( 'cs_get_animations' ) ) {
 	}
 }
 
-/**
- *
- * Get Post Meta
- *
- * @since 1.0.0
- * @version 1.1.0
- */
+
 if ( ! function_exists( 'cs_get_post_meta' ) ) {
+	/**
+	 * Get post meta
+	 */
 	function cs_get_post_meta() {
 		global $post;
 		$post_id = ( isset( $post ) ) ? $post->ID : false;
 		$post_id = ( is_front_page() ) ? get_option( 'page_on_front' ) : $post_id;
-		
+
 		$post_id = ( is_home() && get_option( 'page_for_posts' ) != '' ) ? get_option( 'page_for_posts' ) : $post_id;
 		$post_id = ( is_woocommerce_shop() ) ? wc_get_page_id( 'shop' ) : $post_id;
 		$post_id = ( ! is_tag() && ! is_archive() && ! is_search() && ! is_404() ) ? $post_id : false;
-		
+
 		if ( class_exists( 'BuddyPress' ) && is_buddypress() ) {
 			$bp_pages = get_option( 'bp-pages' );
-			if ( bp_is_current_component( 'groups' ) && (!bp_is_group_single() && !bp_is_group_create()) ) {
-				$post = get_post( $bp_pages[ 'groups' ] );
+			if ( bp_is_current_component( 'groups' ) && ( ! bp_is_group_single() && ! bp_is_group_create() ) ) {
+				$post = get_post( $bp_pages['groups'] );
 			} elseif ( bp_is_current_component( 'members' ) || bp_is_user() ) {
-				$post = get_post( $bp_pages[ 'members' ] );
-			} elseif ( bp_is_current_component( 'activity' ) && !bp_current_action( 'activity' ) ) {
-				$post = get_post( $bp_pages[ 'activity' ] );
+				$post = get_post( $bp_pages['members'] );
+			} elseif ( bp_is_current_component( 'activity' ) && ! bp_current_action( 'activity' ) ) {
+				$post = get_post( $bp_pages['activity'] );
 			}
-			$post_id   = ( isset( $post ) ) ? $post->ID : 0;	
+			$post_id = ( isset( $post ) ) ? $post->ID : 0;
 		}
-		
+
 		return ( ! empty( $post_id ) ) ? get_post_meta( $post_id, '_custom_page_options', true ) : null;
 	}
 }
@@ -946,14 +950,10 @@ if ( ! function_exists( 'cs_encode_string' ) ) {
 }
 
 
-/**
- *
- * Get Registered Sidebars
- *
- * @since 1.0.0
- * @version 1.0.0
- */
 if ( ! function_exists( 'cs_wp_registered_sidebars' ) ) {
+	/**
+	 * Get registered sidebars
+	 */
 	function cs_wp_registered_sidebars() {
 
 		global $wp_registered_sidebars;
@@ -980,7 +980,7 @@ if ( ! function_exists( 'cs_wp_registered_sidebars' ) ) {
 if ( ! function_exists( 'cs_array_insert' ) ) {
 	function cs_array_insert( $array = array(), $values = array(), $target = 'after', $position = false ) {
 
-		// enforce existing position
+		// enforce existing position.
 		if ( $position !== false && ! isset( $array[ $position ] ) ) {
 			return $array;
 		}
@@ -1082,14 +1082,11 @@ if ( ! function_exists( 'cs_is_custom_font' ) ) {
 	}
 }
 
-/**
- *
- * Get Nav Menus
- *
- * @since 4.2.0
- * @version 1.0.0
- */
+
 if ( ! function_exists( 'cs_get_nav_menus' ) ) {
+	/**
+	 * Get nav menus
+	 */
 	function cs_get_nav_menus() {
 
 		$menus = array();
@@ -1215,14 +1212,10 @@ if ( ! function_exists( 'cs_set_option' ) ) {
 	}
 }
 
-/**
- *
- * Framework Get All Option
- *
- * @since 1.0.0
- * @version 1.0.0
- */
 if ( ! function_exists( 'cs_get_all_option' ) ) {
+	/**
+	 * Framework Get All Option
+	 */
 	function cs_get_all_option() {
 
 		$options    = get_option( FRAMEWORK_OPTION_NAME );
@@ -1249,16 +1242,16 @@ if ( ! function_exists( 'cs_get_field' ) ) {
 		// check for field type
 		if ( isset( $field['type'] ) ) {
 
-			// set class name
+			// set class name.
 			$class = 'CSF_Field_' . $field['type'];
-			// check class
+			// check class.
 			if ( class_exists( $class ) ) {
 
 				$el_wrap_id    = ( isset( $field['id'] ) ) ? ' id="element-' . $field['id'] . '"' : '';
 				$el_class      = ( isset( $field['el_class'] ) ) ? ' class_' . $field['el_class'] : '';
 				$el_wrap_class = ( ! isset( $field['pseudo'] ) ) ? 'cs-element-wrap' : 'pseudo-field';
 
-				// add dependencies attributes
+				// add dependencies attributes.
 				$depend = '';
 				$hidden = '';
 				$sub    = ( isset( $field['sub'] ) ) ? 'sub-' : '';
@@ -1321,10 +1314,10 @@ function get_predefined_colors( $skin = '' ) {
 	} elseif ( $skin == 'custom' ) {
 
 		$predefined_colors = array(
-			// accent color
+			// accent color.
 			'accent_color'               => $accent,
 
-			// top bar
+			// top bar.
 			'top_bar_bg'                 => '#f1f1f1',
 			'top_bar_border'             => '#e8e8e8',
 			'top_bar_text'               => '#555555',
@@ -1334,32 +1327,32 @@ function get_predefined_colors( $skin = '' ) {
 			'top_bar_social_color'       => '#555555',
 			'top_bar_social_hover'       => $accent,
 
-			// header
+			// header.
 			'header_bg'                  => '#ffffff',
 			'header_border'              => 'rgba(255, 255, 255, 0.1)',
 			'header_link'                => '#555555',
 			'header_link_hover'          => $accent,
 
-			// submenu
+			// submenu.
 			'submenu_bg'                 => '#ffffff',
 			'submenu_bg_hover'           => '#f8f8f8',
 			'submenu_border'             => '#eeeeee',
 			'submenu_link'               => '#555555',
 			'submenu_link_hover'         => $accent,
 
-			// mega-menu
+			// mega-menu.
 			'submenu_mega_title_color'   => '#555555',
 			'submenu_mega_title_bgcolor' => '#f5f5f5',
 			'submenu_mega_title_border'  => '#eeeeee',
 
-			// page-header
+			// page-header.
 			'page_header_bg'             => $accent,
 			'page_header_color'          => '#ffffff',
 			'breadcrumb_bgcolor'         => 'rgba(0,0,0,0.5)',
 			'breadcrumb_color'           => '#ffffff',
 			'breadcrumb_link_color'      => '#ffffff',
 
-			// footer
+			// footer.
 			'footer_bg'                  => '#222222',
 			'footer_color'               => '#999999',
 			'footer_link_color'          => '#cccccc',
@@ -1367,7 +1360,7 @@ function get_predefined_colors( $skin = '' ) {
 			'footer_title_color'         => '#ffffff',
 			'footer_border_color'        => '#444444',
 
-			// footer before and after
+			// footer before and after.
 			'footer_ba_bg'               => $accent,
 			'footer_ba_color'            => '#ffffff',
 			'footer_ba_link_color'       => '#ffffff',
@@ -1375,13 +1368,13 @@ function get_predefined_colors( $skin = '' ) {
 			'footer_ba_title_color'      => '#ffffff',
 			'footer_ba_border_color'     => '#ffffff',
 
-			// copyright
+			// copyright.
 			'copyright_bg'               => '#111111',
 			'copyright_color'            => '#555555',
 			'copyright_link_color'       => '#555555',
 			'copyright_link_hover'       => '#ffffff',
 
-			// logo bar
+			// logo bar.
 			'logo_bar_bg'                => '#ffffff',
 			'logo_bar_color'             => '#555555',
 		);
@@ -1394,18 +1387,18 @@ function get_predefined_colors( $skin = '' ) {
 }
 
 function articlemag_is_active_plugin( $plugin ) {
-    return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || articlemag_is_active_plugin_for_network( $plugin );
+	return in_array( $plugin, (array) get_option( 'active_plugins', array() ) ) || articlemag_is_active_plugin_for_network( $plugin );
 }
 
 function articlemag_is_active_plugin_for_network( $plugin ) {
-    if ( ! is_multisite() ) {
-        return false;
-    }
- 
-    $plugins = get_site_option( 'active_sitewide_plugins' );
-    if ( isset( $plugins[ $plugin ] ) ) {
-        return true;
-    }
- 
-    return false;
+	if ( ! is_multisite() ) {
+		return false;
+	}
+
+	$plugins = get_site_option( 'active_sitewide_plugins' );
+	if ( isset( $plugins[ $plugin ] ) ) {
+		return true;
+	}
+
+	return false;
 }

@@ -1,5 +1,8 @@
 <?php
-// Cannot access directly.
+/**
+ * Cannot access directly.
+ */
+
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
@@ -109,9 +112,9 @@ if ( ! function_exists( 'about_cs_widget' ) ) {
 	/**
 	 * [about_cs_widget Front-end display of about us widget]
 	 *
-	 * @param  [type] $args     [description]
-	 * @param  [type] $instance [description]
-	 * @return [type]           [description]
+	 * @param  [type] $args     [description].
+	 * @param  [type] $instance [description].
+	 * @return [type]           [description].
 	 */
 	function about_cs_widget( $args, $instance ) {
 		extract( $args );
@@ -122,7 +125,7 @@ if ( ! function_exists( 'about_cs_widget' ) ) {
 		}
 		echo '<div class="textwidget">';
 		echo '<p>';
-		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' .esc_html__('Footer Logo', 'articlemag').'" />' : '';
+		echo ( ! empty( $instance['img'] ) ) ? '<img src="' . $instance['img'] . '" class="footer-logo-left" alt="' . esc_html__( 'Footer Logo', 'articlemag' ) . '" />' : '';
 		echo $instance['logo_text']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output
 		echo '</p>';
 		echo '<p>';
@@ -230,9 +233,9 @@ if ( ! function_exists( 'blog_posts_cs_widget' ) ) {
 	/**
 	 * [blog_posts_cs_widget Front-end display of blog-post widget]
 	 *
-	 * @param  [type] $args     [description]
-	 * @param  [type] $instance [description]
-	 * @return [type]           [description]
+	 * @param  [type] $args     [description].
+	 * @param  [type] $instance [description].
+	 * @return [type]           [description].
 	 */
 	function blog_posts_cs_widget( $args, $instance ) {
 		global $wp_query, $paged, $post;
@@ -249,7 +252,7 @@ if ( ! function_exists( 'blog_posts_cs_widget' ) ) {
 
 		echo '<div class="cs_blog_posts_widget">';
 
-		// Query
+		// Query.
 		$args = array(
 			'posts_per_page' => $instance['limit'],
 			'post_type'      => 'post',
@@ -379,8 +382,8 @@ if ( ! function_exists( 'side_menu_cs_widget' ) ) {
 	/**
 	 * [side_menu_cs_widget description]
 	 *
-	 * @param  [type] $args     [description]
-	 * @param  [type] $instance [description]
+	 * @param  [type] $args     [description].
+	 * @param  [type] $instance [description].
 	 */
 	function side_menu_cs_widget( $args, $instance ) {
 		if ( is_page() ) {
@@ -409,7 +412,7 @@ if ( ! function_exists( 'side_menu_cs_widget' ) ) {
 				)
 			);
 
-			// widget content
+			// widget content.
 			if ( ! empty( $list_pages ) ) {
 
 				echo $before_widget; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output

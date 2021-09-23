@@ -4,7 +4,9 @@
  *
  * @since 3.0.0
  * @version 3.2.0
+ * @package BuddyPress
  */
+
 ?>
 
 <div id="cover-image-container">
@@ -13,8 +15,8 @@
 
 <div class="container">
 	<div class="item-header-cover-image-wrapper">
-        <div id="item-header-cover-image">
-			<?php if ( !bp_disable_group_avatar_uploads() ) : ?>
+		<div id="item-header-cover-image">
+			<?php if ( ! bp_disable_group_avatar_uploads() ) : ?>
 				<div id="item-header-avatar">
 					<a href="<?php echo esc_url( bp_get_group_permalink() ); ?>" title="<?php echo esc_attr( bp_get_group_name() ); ?>">
 
@@ -24,7 +26,7 @@
 				</div><!-- #item-header-avatar -->
 			<?php endif; ?>
 
-			<?php if ( !bp_nouveau_groups_front_page_description() ) : ?>
+			<?php if ( ! bp_nouveau_groups_front_page_description() ) : ?>
 				<div id="item-header-content">
 
 					<h2 class="bp-group-title"><?php echo esc_attr( bp_get_group_name() ); ?></h2>
@@ -37,7 +39,7 @@
 						?>
 					</p>
 
-					<?php //echo bp_nouveau_group_meta()->group_type_list; ?>
+					<?php // echo bp_nouveau_group_meta()->group_type_list; ?>
 					<?php echo isset( bp_nouveau_group_meta()->group_type_list ) ? bp_nouveau_group_meta()->group_type_list : ''; ?>
 					<?php bp_nouveau_group_hook( 'before', 'header_meta' ); ?>
 
@@ -56,10 +58,10 @@
 
 			<?php bp_get_template_part( 'groups/single/parts/header-item-actions' ); ?>
 
-        </div><!-- #item-header-cover-image -->
-    </div><!-- .item-header-cover-image-wrapper -->
+		</div><!-- #item-header-cover-image -->
+	</div><!-- .item-header-cover-image-wrapper -->
 
-	<?php if ( !bp_nouveau_groups_front_page_description() && bp_nouveau_group_has_meta( 'description' ) ) : ?>
+	<?php if ( ! bp_nouveau_groups_front_page_description() && bp_nouveau_group_has_meta( 'description' ) ) : ?>
 		<div class="desc-wrap">
 			<div class="group-description">
 				<?php bp_group_description(); ?>

@@ -17,13 +17,14 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-  exit;
+	exit;
 }
 
 /**
  * Filter tabs and allow third parties to add their own
  *
  * Each tab is an array containing title, callback and priority.
+ *
  * @see woocommerce_default_product_tabs()
  */
 $tabs = apply_filters( 'woocommerce_product_tabs', array() );
@@ -31,28 +32,28 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 if ( ! empty( $tabs ) ) : ?>
 
   <div class="cs-tab cs-tab-default cs-tab-accent woocommerce-tabs">
-    <div class="cs-tab-nav">
-      <ul class="tabs">
-        <?php foreach ( $tabs as $key => $tab ) : ?>
-          <li class="<?php echo esc_attr( $key ); ?>_tab">
-            <a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
-          </li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
+	<div class="cs-tab-nav">
+	  <ul class="tabs">
+		<?php foreach ( $tabs as $key => $tab ) : ?>
+		  <li class="<?php echo esc_attr( $key ); ?>_tab">
+			<a href="#tab-<?php echo esc_attr( $key ); ?>"><?php echo apply_filters( 'woocommerce_product_' . $key . '_tab_title', esc_html( $tab['title'] ), $key ); ?></a>
+		  </li>
+		<?php endforeach; ?>
+	  </ul>
+	</div>
 
-    <div class="cs-tab-contents">
-      <?php foreach ( $tabs as $key => $tab ) : ?>
-        <div class="panel entry-content cs-tab-content" id="tab-<?php echo esc_attr( $key ); ?>">
-          <?php
-            ob_start();
-            call_user_func( $tab['callback'], $key, $tab );
-            $content = ob_get_clean();
-            echo apply_filters( 'wc_tab_'. $tab['callback'], $content );
-          ?>
-        </div>
-      <?php endforeach; ?>
-    </div>
+	<div class="cs-tab-contents">
+	  <?php foreach ( $tabs as $key => $tab ) : ?>
+		<div class="panel entry-content cs-tab-content" id="tab-<?php echo esc_attr( $key ); ?>">
+			<?php
+			ob_start();
+			call_user_func( $tab['callback'], $key, $tab );
+			$content = ob_get_clean();
+			echo apply_filters( 'wc_tab_' . $tab['callback'], $content );
+			?>
+		</div>
+	  <?php endforeach; ?>
+	</div>
   </div>
 
 <?php endif; ?>

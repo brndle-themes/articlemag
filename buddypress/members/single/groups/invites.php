@@ -4,7 +4,9 @@
  *
  * @since 3.0.0
  * @version 3.1.0
+ * @package BuddyPress
  */
+
 ?>
 
 <h2 class="screen-heading group-invites-screen"><?php esc_html_e( 'Group Invites', 'articlemag' ); ?></h2>
@@ -24,7 +26,7 @@
 
 				<div class="wrap list-wrap">
 
-					<?php if ( !bp_disable_group_avatar_uploads() ) : ?>
+					<?php if ( ! bp_disable_group_avatar_uploads() ) : ?>
 						<div class="item-avatar">
 							<a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar(); ?></a>
 						</div>
@@ -38,7 +40,9 @@
 									<?php
 									printf(
 									/* translators: %s = number of members */
-									_n( '%s member', '%s members', bp_get_group_total_members( false ), 'articlemag' ), number_format_i18n( bp_get_group_total_members( false ) ) );
+										_n( '%s member', '%s members', bp_get_group_total_members( false ), 'articlemag' ),
+										number_format_i18n( bp_get_group_total_members( false ) )
+									);
 									?>
 								</span>
 							</p>
@@ -51,10 +55,10 @@
 						</div>
 						<?php
 						bp_nouveau_groups_invite_buttons(
-						array(
-							'container'		 => 'ul',
-							'button_element' => 'button',
-						)
+							array(
+								'container'      => 'ul',
+								'button_element' => 'button',
+							)
 						);
 						?>
 					</div>

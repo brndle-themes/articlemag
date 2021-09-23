@@ -6,6 +6,7 @@
  * @since 1.0.0
  * @version 1.0.0
  */
+
 if ( ! function_exists( 'cs_content_filter' ) ) {
 	function cs_content_filter( $content ) {
 		$post_format = get_post_format();
@@ -371,6 +372,9 @@ if ( ! function_exists( 'cs_is_googe_font_custom' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'cs_wpcf7_load_css' ) ) {
+	/**
+	 * Cs wpcf7 load css
+	 */
 	function cs_wpcf7_load_css() {
 		return false;
 	}
@@ -385,6 +389,9 @@ if ( ! function_exists( 'cs_wpcf7_load_css' ) ) {
  * @version 1.0.0
  */
 if ( ! function_exists( 'cs_wpseo_metabox_prio' ) ) {
+	/**
+	 * Cs wpseo metabox prio
+	 */
 	function cs_wpseo_metabox_prio() {
 		return 'low';
 	}
@@ -412,5 +419,4 @@ if ( ! function_exists( 'cs_admin_post_thumbnail_html' ) ) {
 		return $content;
 
 	}
-	// add_filter( 'admin_post_thumbnail_html', 'cs_admin_post_thumbnail_html', 20, 2);
 }

@@ -1,16 +1,17 @@
-      </div><!-- /content -->
+	</div><!-- /content -->
 
-    </div><!-- /main -->
+	</div><!-- /main -->
 
-    <?php echo cs_footer_area(); ?><!-- /footer -->
+	<?php echo cs_footer_area(); ?><!-- /footer -->
 
-  </div><!-- /page -->
+</div><!-- /page -->
 
-  <div id="cs-top" class="fa fa-chevron-up"></div>
+<div id="cs-top" class="fa fa-chevron-up"></div>
 
-  <?php echo cs_custom_js(); ?>
+<?php echo cs_custom_js(); ?>
 
-  <?php wp_footer(); ?>
+<?php wp_footer(); ?>
 
-  </body>
+</body>
 </html>
+

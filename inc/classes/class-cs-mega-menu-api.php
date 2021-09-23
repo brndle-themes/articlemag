@@ -6,8 +6,12 @@
  * @since 1.0.0
  * @version 1.5.0
  */
+
 locate_template( 'inc/includes/walker_nav_menu.php', true );
 
+/**
+ * CSFramework_Mega_Menu_API
+ */
 class CSFramework_Mega_Menu_API {
 
 	public $extra_fields = array( 'highlight', 'highlight_type', 'icon', 'mega', 'mega_width', 'mega_position', 'mega_custom_width', 'column_title', 'column_title_link', 'column_width', 'content' );
@@ -31,28 +35,28 @@ class CSFramework_Mega_Menu_API {
 	 */
 	public function cs_mega_menu_fields( $item_id, $item ) {
 		?>
-  <p class="field-highlight description description-thin">
+<p class="field-highlight description description-thin">
 	<label for="edit-menu-item-highlight-<?php echo $item_id; ?>">
-	  Highlight<br />
-	  <input type="text" id="edit-menu-item-highlight-<?php echo $item_id; ?>" class="widefat code edit-menu-item-highlight" name="menu-item-highlight[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->highlight ); ?>" />
+	Highlight<br />
+	<input type="text" id="edit-menu-item-highlight-<?php echo $item_id; ?>" class="widefat code edit-menu-item-highlight" name="menu-item-highlight[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->highlight ); ?>" />
 	</label>
-  </p>
+</p>
 
-  <p class="field-highlight-type description description-thin">
+<p class="field-highlight-type description description-thin">
 	<label for="edit-menu-item-highlight-type-<?php echo $item_id; ?>">
-	  Highlight Type<br />
-	  <select id="edit-menu-item-highlight-type-<?php echo $item_id; ?>" name="menu-item-highlight_type[<?php echo $item_id; ?>]">
+	Highlight Type<br />
+	<select id="edit-menu-item-highlight-type-<?php echo $item_id; ?>" name="menu-item-highlight_type[<?php echo $item_id; ?>]">
 		<option value="">default</option>
 		<?php
 		foreach ( array( 'info', 'success', 'warning', 'danger' ) as $highlight ) {
 			echo '<option value="' . $highlight . '"' . selected( $highlight, $item->highlight_type ) . '>' . $highlight . '</option>';
 		}
 		?>
-	  </select>
+	</select>
 	</label>
-  </p>
+</p>
 
-  <div class="field-icon description description-wide">
+<div class="field-icon description description-wide">
 		<?php
 		$icon   = ( ! empty( $item->icon ) ) ? $item->icon : '';
 		$nonce  = wp_create_nonce( 'csf_icon_nonce' );
@@ -60,7 +64,7 @@ class CSFramework_Mega_Menu_API {
 
 		?>
 		<div class="cs_field cs_field_icon">
-	  <div class="cs-icon-select">
+	<div class="cs-icon-select">
 			<span class="csf-icon-preview<?php echo $hidden; ?>"><i class="<?php echo $icon; ?>"></i></span>
 			<a href="javascript:void(0)" class="button button-primary icon-add" data-nonce="<?php echo $nonce; ?>">Add Icon</a>
 			<a href="javascript:void(0)" class="button csf-warning-primary icon-remove<?php echo $hidden; ?>">Remove Icon</a>
@@ -73,14 +77,14 @@ class CSFramework_Mega_Menu_API {
   <div class="cs-mega-menu">
 
 	<div class="field-mega">
-	  <label for="edit-menu-item-mega-<?php echo $item_id; ?>">
+	<label for="edit-menu-item-mega-<?php echo $item_id; ?>">
 		<input type="checkbox" class="is-mega" id="edit-menu-item-mega-<?php echo $item_id; ?>" value="mega" name="menu-item-mega[<?php echo $item_id; ?>]"<?php checked( $item->mega, 'mega' ); ?> />
 		Mega Menu
-	  </label>
+	</label>
 	</div>
 
 	<div class="field-mega-width">
-	  <select id="edit-menu-item-mega_width-<?php echo $item_id; ?>" name="menu-item-mega_width[<?php echo $item_id; ?>]" class="is-width">
+	<select id="edit-menu-item-mega_width-<?php echo $item_id; ?>" name="menu-item-mega_width[<?php echo $item_id; ?>]" class="is-width">
 		<option value="">Full Width</option>
 		<?php
 		  $mega_width = array(
@@ -95,42 +99,42 @@ class CSFramework_Mega_Menu_API {
 	</div>
 
 	<div class="mega-depend-width hidden">
-	  <p class="description">
+	<p class="description">
 		<label for="edit-menu-item-mega_custom_width<?php echo $item_id; ?>">
-		  Custom Mega Menu Width (without px)<br />
-		  <input type="text" id="edit-menu-item-mega_custom_width<?php echo $item_id; ?>" class="widefat code edit-menu-item-mega_custom_width" name="menu-item-mega_custom_width[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->mega_custom_width ); ?>" />
+		Custom Mega Menu Width (without px)<br />
+		<input type="text" id="edit-menu-item-mega_custom_width<?php echo $item_id; ?>" class="widefat code edit-menu-item-mega_custom_width" name="menu-item-mega_custom_width[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->mega_custom_width ); ?>" />
 		</label>
-	  </p>
+	</p>
 	</div>
 
 	<div class="mega-depend-position hidden">
-	  <p class="description">
+	<p class="description">
 		<label for="edit-menu-item-mega_position<?php echo $item_id; ?>">
-		  <input type="checkbox" id="edit-menu-item-mega_position<?php echo $item_id; ?>" value="1" name="menu-item-mega_position[<?php echo $item_id; ?>]"<?php checked( $item->mega_position, 1 ); ?> />
-		  Mega Right Position (optional)
+		<input type="checkbox" id="edit-menu-item-mega_position<?php echo $item_id; ?>" value="1" name="menu-item-mega_position[<?php echo $item_id; ?>]"<?php checked( $item->mega_position, 1 ); ?> />
+		Mega Right Position (optional)
 		</label>
-	  </p>
+	</p>
 	</div>
 
 	<div class="clear"></div>
-  </div>
+</div>
 
-  <div class="cs-mega-column">
+<div class="cs-mega-column">
 
 	<p class="field-column description description-thin">
-	  <label for="edit-menu-item-column-title-<?php echo $item_id; ?>">
+	<label for="edit-menu-item-column-title-<?php echo $item_id; ?>">
 		<input type="checkbox" id="edit-menu-item-column-title-<?php echo $item_id; ?>" value="1" name="menu-item-column_title[<?php echo $item_id; ?>]"<?php checked( $item->column_title, 1 ); ?> /> Disable Title
-	  </label>
+	</label>
 	</p>
 
 	<p class="field-column description description-thin cs-last">
-	  <label for="edit-menu-item-column-title-link-<?php echo $item_id; ?>">
+	<label for="edit-menu-item-column-title-link-<?php echo $item_id; ?>">
 		<input type="checkbox" id="edit-menu-item-column-title-link-<?php echo $item_id; ?>" value="1" name="menu-item-column_title_link[<?php echo $item_id; ?>]"<?php checked( $item->column_title_link, 1 ); ?> /> Disable Title Link
-	  </label>
+	</label>
 	</p>
 
 	<p class="field-column description">
-	  <select id="edit-menu-item-column_width-<?php echo $item_id; ?>" name="menu-item-column_width[<?php echo $item_id; ?>]">
+	<select id="edit-menu-item-column_width-<?php echo $item_id; ?>" name="menu-item-column_width[<?php echo $item_id; ?>]">
 		<option value="">Custom column width (optional)</option>
 		<?php
 		  $column_width = array(
@@ -155,18 +159,21 @@ class CSFramework_Mega_Menu_API {
 	</p>
 
 	<div class="clear"></div>
-  </div>
+</div>
 
-  <p class="field-content description description-wide">
+<p class="field-content description description-wide">
 	<label for="edit-menu-item-content-<?php echo $item_id; ?>">
-	  Description ( and can be used any shortcode )<br />
-	  <textarea id="edit-menu-item-content-<?php echo $item_id; ?>" class="widefat edit-menu-item-content" rows="3" cols="20" name="menu-item-content[<?php echo $item_id; ?>]"><?php echo $item->content; ?></textarea>
+	Description ( and can be used any shortcode )<br />
+	<textarea id="edit-menu-item-content-<?php echo $item_id; ?>" class="widefat edit-menu-item-content" rows="3" cols="20" name="menu-item-content[<?php echo $item_id; ?>]"><?php echo $item->content; ?></textarea>
 	</label>
-  </p>
+</p>
 
-  <div class="clear"></div>
+<div class="clear"></div>
 		<?php
 	}
+	/**
+	 * @cs_mega_menu_labels
+	 */
 	public function cs_mega_menu_labels() {
 
 		$out  = '<span class="item-mega"><span class="cs-label cs-label-primary">Mega Menu</span></span>';
@@ -198,7 +205,7 @@ class CSFramework_Mega_Menu_API {
 				$args['items_wrap'] = $walker->custom_wrap();
 			}
 		} elseif ( isset( $args['mobile'] ) || $location == 'mobile' ) {
-				  $args['after'] = '<div class="cs-dropdown-plus"><i class="fa fa-plus"></i></div>';
+				$args['after'] = '<div class="cs-dropdown-plus"><i class="fa fa-plus"></i></div>';
 		}
 
 		return $args;

@@ -4,7 +4,9 @@
  *
  * @since 3.0.0
  * @version 3.1.0
+ * @package BuddyPress
  */
+
 bp_nouveau_before_loop();
 ?>
 
@@ -28,7 +30,7 @@ bp_nouveau_before_loop();
 
 					<?php do_action( 'articlemag_before_group_avatar_group_directory' ); ?>
 
-					<?php if ( !bp_disable_group_avatar_uploads() ) : ?>
+					<?php if ( ! bp_disable_group_avatar_uploads() ) : ?>
 						<div class="item-avatar">
 							<a href="<?php bp_group_permalink(); ?>"><?php bp_group_avatar( bp_nouveau_avatar_args() ); ?></a>
 						</div>
@@ -50,7 +52,8 @@ bp_nouveau_before_loop();
 								<?php
 								printf(
 								/* translators: %s = last activity timestamp (e.g. "active 1 hour ago") */
-								__( 'active %s', 'articlemag' ), bp_get_group_last_active()
+									__( 'active %s', 'articlemag' ),
+									bp_get_group_last_active()
 								);
 								?>
 							</p>
