@@ -811,26 +811,31 @@ if (!function_exists('articlemag_flush_rewrites')) {
 }
 
 /**
- *
  * OnePage site Link Attribute
  *
- * @since 1.9.3
+ * @since   1.9.3
  * @version 1.0.0
  */
 if (!function_exists('articlemag_nav_menu_link_attributes')) {
 
     function articlemag_nav_menu_link_attributes($atts) {
-
-        $template = basename(get_page_template());
-
-        if ($template != 'page-one-page.php' && !is_front_page() && substr($atts['href'], 0, 1) == '#' && strlen($atts['href']) > 1) {
-            $atts['href'] = home_url('/') . $atts['href'];
+        global $post;
+        $one_page_template = false;
+        if ( $post ) {
+            $template = get_post_meta( $post->ID, '_wp_page_template', true );
+            if ( false !== $template && strpos($template, 'page-one-page.php') !== false) {
+                $one_page_template = true;
+            }
+        }
+        
+        if ( false === $one_page_template && !is_front_page() && substr( $atts['href'], 0, 1 ) == '#' && strlen( $atts['href'] ) > 1 ) {
+            $atts['href'] = home_url( '/' ) . $atts['href'];
         }
 
         return $atts;
     }
 
-    add_action('nav_menu_link_attributes', 'articlemag_nav_menu_link_attributes');
+    add_filter('nav_menu_link_attributes', 'articlemag_nav_menu_link_attributes');
 }
 
 /**
