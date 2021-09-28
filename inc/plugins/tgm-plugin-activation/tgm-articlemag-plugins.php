@@ -50,18 +50,6 @@ function articlemag_register_required_plugins() {
 			'slug'     => 'classic-widgets',
 			'required' => true,
 		),
-		// Page Loader.
-		array(
-			'name'     => 'LoftLoader',
-			'slug'     => 'loftloader',
-			'required' => false,
-		),
-		// Post Types Order.
-		array(
-			'name'     => 'Post Types Order',
-			'slug'     => 'post-types-order',
-			'required' => false,
-		),
 		// Regenerate Thumbnails.
 		array(
 			'name'     => 'Regenerate Thumbnails',
