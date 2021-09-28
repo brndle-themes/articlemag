@@ -9334,6 +9334,10 @@ div.wp-caption.alignright .wp-caption-text {
  * 10.01 BLOG DEFAULT
  * ========================================
  */
+.blog section#page-header {
+  display: none;
+}
+
 .blog-default .article-post {
   padding-bottom: 50px;
   border-bottom: 1px solid #e8e8e8;
