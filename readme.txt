@@ -2,7 +2,7 @@
 Contributors: brndle
 Requires at least: WordPress 3.2
 Tested up to: 5.8.1
-Stable tag: 2.0.0
+Stable tag: 1.7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -34,7 +34,7 @@ GNU General Public License for more details.
 
 == Changelog ==
 
-= 2.0.0 =
+= 1.7.0 =
 * Fix: Updated CS framework 2.2.4
 * Fix: Updated Demo Content
 * Fix: Fixed PHP CS
