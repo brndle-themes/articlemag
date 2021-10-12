@@ -20,6 +20,10 @@
     display: inline-block;
 }
 
+.dark-mode .cs-search-form input[type=text] {
+    color: #999;
+}
+
 /**
  * Toggle Track Mobile View
  */
