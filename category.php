@@ -26,9 +26,9 @@ get_header(); ?>
 				<h1 class="page-title"><?php printf( __( '%s', 'articlemag' ), single_cat_title( '', false ) ); ?></h1>
 				<?php
 					$cs_term_description = term_description();
-					if ( ! empty( $cs_term_description ) ) {
-						printf( '<div class="header-content">%s</div>', $cs_term_description ); }
-					?>
+				if ( ! empty( $cs_term_description ) ) {
+					printf( '<div class="header-content">%s</div>', $cs_term_description ); }
+				?>
 				<?php echo cs_breadcrumb(); ?>  
 			</div>  
 		</div>       
