@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -113,7 +112,7 @@ span.bb-activity-edited-text {
 }
 
 .bb-media-privacy-wrap .privacy:before {
-  content: "";
+  content: "\e960";
   font-family: bb-icons;
   font-size: 12px;
 }
@@ -172,7 +171,7 @@ span.bb-activity-edited-text {
 }
 
 #bp-invites-submit-loader .dashicons-update:before {
-  content: "";
+  content: "\f463";
   font-family: dashicons;
 }
 
@@ -292,7 +291,7 @@ span.bb-activity-edited-text {
 }
 
 .bb-select-container span.select2-selection__choice__remove:before {
-  content: "";
+  content: "\f335";
   font-family: dashicons;
 }
 
@@ -404,7 +403,7 @@ span.bb-activity-edited-text {
 }
 
 .activity-list .activity-item .bp-generic-meta.action .delete-activity:before {
-  content: "";
+  content: "\eaea";
 }
 
 .activity-list .activity-item .activity-comments .bp-generic-meta.action {
@@ -420,12 +419,12 @@ span.bb-activity-edited-text {
 }
 
 .activity-list .activity-item .activity-meta.action .acomment-reply.button:before {
-  content: "";
+  content: "\e80b";
 }
 
 .activity-list .activity-item .bp-generic-meta.action .fav:before,
 .activity-list .activity-item .bp-generic-meta.action .unfav:before {
-  content: "";
+  content: "\e815";
 }
 
 .activity-list .activity-item .bp-generic-meta.action .unfav:before {
@@ -789,7 +788,7 @@ li.bbp-topic-reply-count {
 }
 
 ul.bplock-login-shortcode-tabs .fa-sign-in:before {
-  content: "";
+  content: "\f2f6";
 }
 
 /*--------------------------------------------------------------
