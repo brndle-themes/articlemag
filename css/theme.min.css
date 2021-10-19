@@ -2674,15 +2674,13 @@ td.visible-print {
  */
 .page-content > *.alignleft {
   float: left;
-  max-width: -webkit-calc(4 * (100vw / 12));
-  max-width: calc(4 * (100vw / 12));
+  max-width: 33.3333333333vw;
   margin: 7px 24px 10px 0;
 }
 
 .page-content > *.alignright {
   float: right;
-  max-width: -webkit-calc(4 * (100vw / 12));
-  max-width: calc(4 * (100vw / 12));
+  max-width: 33.3333333333vw;
   margin: 7px 0 10px 24px;
 }
 
@@ -2782,7 +2780,7 @@ td.visible-print {
 .wp-block-archives a:before,
 .wp-block-categories a:before {
   font-family: "FontAwesome";
-  content: "";
+  content: "\f0f6";
   display: inline-block;
   margin-right: 5px;
 }
@@ -3539,7 +3537,7 @@ td.visible-print {
 }
 
 .cs-anim-icon:before {
-  content: "";
+  content: "\f054";
   display: inline-block;
   -ms-transform: rotate(0);
   -webkit-transform: rotate(0);
@@ -7738,7 +7736,6 @@ div.wp-caption.alignright .wp-caption-text {
 #site-nav .current-menu-ancestor > .cs-link,
 #site-nav .current-menu-item > .cs-link {
   color: #333;
-  font-weight: 600;
 }
 
 #site-header-shadow {
@@ -7966,7 +7963,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .cs-down-icon #site-nav .menu-item-has-children > a:after {
-  content: "";
+  content: "\f107";
   font-family: "FontAwesome";
   font-style: normal;
   font-weight: normal;
@@ -7977,7 +7974,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 #site-nav .menu-item-has-children .menu-item-has-children > a:after {
-  content: "";
+  content: "\f105";
   font-family: "FontAwesome";
   font-style: normal;
   font-weight: normal;
@@ -9013,71 +9010,71 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .entry-featured:before {
-  content: "";
+  content: "\f041";
 }
 
 .entry-date a:before {
-  content: "";
+  content: "\f017";
 }
 
 .entry-author-link a:before {
-  content: "";
+  content: "\f007";
 }
 
 .entry-cat-links:before {
-  content: "";
+  content: "\f115";
 }
 
 .entry-comments-link a:before {
-  content: "";
+  content: "\f0e5";
 }
 
 .entry-edit-link a:before {
-  content: "";
+  content: "\f040";
 }
 
 .entry-love a:before {
-  content: "";
+  content: "\f08a";
 }
 
 .entry-tags:before {
-  content: "";
+  content: "\f02c";
 }
 
 .entry-format-aside a:before {
-  content: "";
+  content: "\f1db";
 }
 
 .entry-format-gallery a:before {
-  content: "";
+  content: "\f030";
 }
 
 .entry-format-link a:before {
-  content: "";
+  content: "\f0c1";
 }
 
 .entry-format-image a:before {
-  content: "";
+  content: "\f03e";
 }
 
 .entry-format-quote a:before {
-  content: "";
+  content: "\f10e";
 }
 
 .entry-format-status a:before {
-  content: "";
+  content: "\f0a2";
 }
 
 .entry-format-video a:before {
-  content: "";
+  content: "\f03d";
 }
 
 .entry-format-audio a:before {
-  content: "";
+  content: "\f028";
 }
 
 .entry-format-chat a:before {
-  content: "";
+  content: "\f0e6";
 }
 
 .entry-loved {
@@ -9773,9 +9770,11 @@ div.wp-caption.alignright .wp-caption-text {
   margin-top: 0;
   margin-bottom: 60px;
   margin-left: -webkit-calc(-100vw / 2 + 100% / 2);
-  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-left: -webkit-calc(-50vw + 50%);
+  margin-left: calc(-50vw + 50%);
   margin-right: -webkit-calc(-100vw / 2 + 100% / 2);
-  margin-right: calc(-100vw / 2 + 100% / 2);
+  margin-right: -webkit-calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   max-width: 100vw;
 }
 
@@ -10227,11 +10226,11 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 #cancel-comment-reply-link:before {
-  content: "";
+  content: "\f00d";
 }
 
 .comment-reply-link:before {
-  content: "";
+  content: "\f112";
 }
 
 #cancel-comment-reply-link,
@@ -10360,7 +10359,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .comment-metadata time:before {
-  content: "";
+  content: "\f017";
   margin-right: 0;
 }
 
@@ -10369,7 +10368,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .comment-metadata .comment-edit-link:before {
-  content: "";
+  content: "\f040";
 }
 
 .comment-author {
@@ -10729,7 +10728,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .widget_recent_entries .post-date:before {
-  content: "";
+  content: "\f017";
   margin-right: 2px;
   opacity: 0.7;
 }
@@ -10756,7 +10755,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .widget_recent_comments .recentcomments:before {
-  content: "";
+  content: "\f0e5";
   font-size: 12px;
   margin-top: 5px;
   margin-right: 7px;
@@ -10935,7 +10934,7 @@ div.wp-caption.alignright .wp-caption-text {
 }
 
 .widget_pages a:before {
-  content: "";
+  content: "\f105";
   font-size: 90%;
   margin-right: 5px;
   opacity: 0.5;

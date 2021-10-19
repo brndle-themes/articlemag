@@ -27,7 +27,9 @@ if ( is_single() && 'post' == get_post_type() ) :
 <?php else : ?>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'article-post' ); ?>>
-
+	<?php
+		$post_id = get_post_thumbnail_id( $post );
+	?>
 	<div class="article-card-img" style="background: url(<?php echo get_the_post_thumbnail_url( $post_id, 'large' ); ?>);">
 	  <a href="<?php the_permalink(); ?>" class="article-card-link"></a>
 	  <div class="article-avatar">
