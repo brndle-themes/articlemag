@@ -48,7 +48,8 @@ class EDD_Theme_Updater {
 		$this->response_key   = $this->theme_slug . '-' . $this->beta . '-update-response';
 		$this->strings        = $strings;
 
-		add_filter( 'site_transient_update_themes', array( $this, 'theme_update_transient' ) );
+		// add_filter( 'site_transient_update_themes', array( $this, 'theme_update_transient' ) );
+		add_filter( 'pre_set_site_transient_update_themes', array( $this, 'theme_update_transient' ) );
 		add_filter( 'delete_site_transient_update_themes', array( $this, 'delete_theme_update_transient' ) );
 		add_action( 'load-update-core.php', array( $this, 'delete_theme_update_transient' ) );
 		add_action( 'load-themes.php', array( $this, 'delete_theme_update_transient' ) );
@@ -112,8 +113,21 @@ class EDD_Theme_Updater {
 	function theme_update_transient( $value ) {
 		$update_data = $this->check_for_update();
 		if ( $update_data ) {
-			$value->response[ $this->theme_slug ] = $update_data;
+
+			if ( ! is_object( $value ) ) {
+				$value = new stdClass();
+			}
+
+			// Make sure the theme property is set. See issue 1463 on Github in the Software Licensing Repo.
+			$update_data['theme'] = $this->theme_slug;
+
+			if ( version_compare( $this->version, $update_data['new_version'], '<' ) ) {
+				$value->response[ $this->theme_slug ] = $update_data;
+			} else {
+				$value->no_update[ $this->theme_slug ] = $update_data;
+			}
 		}
+
 		return $value;
 	}
 

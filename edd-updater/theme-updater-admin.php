@@ -125,15 +125,6 @@ class EDD_Articlemag_Theme_Updater_Admin {
 	}
 
 	/**
-	 * Adds a menu item for the theme license under the appearance menu.
-	 *
-	 * @since 1.0.0
-	 */
-	function license_menu() {
-		$strings = $this->strings;
-	}
-
-	/**
 	 * Outputs the markup used on the theme license page.
 	 *
 	 * @since 1.0.0
@@ -389,9 +380,6 @@ class EDD_Articlemag_Theme_Updater_Admin {
 			)
 		);
 		return true;
-
-		// wp_redirect( $this->get_license_page_url() );
-		// wp_die();
 	}
 
 	/**
