@@ -3221,6 +3221,44 @@ CSF::createSection( $prefix, array(
       'dependency' => array( 'opt-nested-select-1|opt-nested-select-2|opt-nested-select-3', 'any|==|==', 'black,white|large|hello' ),
     ),
 
+    array(
+      'type'    => 'subheading',
+      'content' => 'Contains Dependencies',
+    ),
+
+    array(
+      'id'       => 'opt-depend-checkbox-1',
+      'type'     => 'checkbox',
+      'title'    => 'Select a color or more.',
+      'inline'   => true,
+      'options'  => array(
+        'blue'   => 'Blue',
+        'yellow' => 'Yellow',
+        'green'  => 'Green',
+      ),
+    ),
+
+    array(
+      'type'       => 'notice',
+      'style'      => 'info',
+      'content'    => 'Selected (blue) color.',
+      'dependency' => array( 'opt-depend-checkbox-1', 'contains', 'blue' ),
+    ),
+
+    array(
+      'type'       => 'notice',
+      'style'      => 'warning',
+      'content'    => 'Selected (yellow) color.',
+      'dependency' => array( 'opt-depend-checkbox-1', 'contains', 'yellow' ),
+    ),
+
+    array(
+      'type'       => 'notice',
+      'style'      => 'success',
+      'content'    => 'Selected (green) color.',
+      'dependency' => array( 'opt-depend-checkbox-1', 'contains', 'green' ),
+    ),
+
   )
 ) );
 
