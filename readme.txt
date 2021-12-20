@@ -1,8 +1,8 @@
 === ArticleMag ===
 Contributors: brndle
 Requires at least: WordPress 3.2
-Tested up to: 5.8.1
-Stable tag: 1.7.0
+Tested up to: 5.8.2
+Stable tag: 1.8.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -33,6 +33,11 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.8.0 =
+* Fix: Update theme update files
+* Fix: Updated CS framework 2.2.5
+* Fix: Fixed theme updater issue 
 
 = 1.7.0 =
 * Fix: Updated CS framework 2.2.4
