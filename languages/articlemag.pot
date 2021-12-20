@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-19 10:01:10+00:00\n"
+"POT-Creation-Date: 2021-12-20 13:45:29+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -100,48 +100,48 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:217 inc/merlin/class-merlin.php:1878
+#: edd-updater/theme-updater-admin.php:208 inc/merlin/class-merlin.php:1878
 msgid "Error"
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:245
-#: edd-updater/theme-updater-admin.php:284
-#: edd-updater/theme-updater-admin.php:350 inc/merlin/class-merlin.php:1505
+#: edd-updater/theme-updater-admin.php:236
+#: edd-updater/theme-updater-admin.php:275
+#: edd-updater/theme-updater-admin.php:341 inc/merlin/class-merlin.php:1505
 #: inc/merlin/class-merlin.php:1546
 msgid "An error occurred, please try again."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:257 inc/merlin/class-merlin.php:1518
+#: edd-updater/theme-updater-admin.php:248 inc/merlin/class-merlin.php:1518
 #. translators: Expiration date
 msgid "Your license key expired on %s."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:263 inc/merlin/class-merlin.php:1524
+#: edd-updater/theme-updater-admin.php:254 inc/merlin/class-merlin.php:1524
 msgid "Your license key has been disabled."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:267
+#: edd-updater/theme-updater-admin.php:258
 msgid "Invalid license."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:272 inc/merlin/class-merlin.php:1533
+#: edd-updater/theme-updater-admin.php:263 inc/merlin/class-merlin.php:1533
 msgid "Your license is not active for this URL."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:276 inc/merlin/class-merlin.php:1538
+#: edd-updater/theme-updater-admin.php:267 inc/merlin/class-merlin.php:1538
 #. translators: EDD Item Name
 msgid "This appears to be an invalid license key for %s."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:280 inc/merlin/class-merlin.php:1542
+#: edd-updater/theme-updater-admin.php:271 inc/merlin/class-merlin.php:1542
 msgid "Your license key has reached its activation limit."
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:319
+#: edd-updater/theme-updater-admin.php:310
 msgid "Activate License Key"
 msgstr ""
 
-#: edd-updater/theme-updater-admin.php:386
+#: edd-updater/theme-updater-admin.php:377
 msgid "Deactivate License Key."
 msgstr ""
 
@@ -626,76 +626,76 @@ msgstr ""
 msgid "A special note for this import."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:226
+#: inc/cs-framework/classes/admin-options.class.php:230
 msgid "Error while saving the changes."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:286
+#: inc/cs-framework/classes/admin-options.class.php:290
 msgid "Settings successfully imported."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:298
-#: inc/cs-framework/classes/admin-options.class.php:314
+#: inc/cs-framework/classes/admin-options.class.php:302
+#: inc/cs-framework/classes/admin-options.class.php:318
 msgid "Default settings restored."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:385
+#: inc/cs-framework/classes/admin-options.class.php:389
 msgid "Settings saved."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:565
+#: inc/cs-framework/classes/admin-options.class.php:569
 msgid "You have unsaved changes, save your changes!"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:567
+#: inc/cs-framework/classes/admin-options.class.php:571
 msgid "show all settings"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:569
+#: inc/cs-framework/classes/admin-options.class.php:573
 #: inc/cs-framework/fields/icon/icon.php:57
 #: inc/cs-framework/fields/map/map.php:23
 msgid "Search..."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:572
-#: inc/cs-framework/classes/admin-options.class.php:695
+#: inc/cs-framework/classes/admin-options.class.php:576
+#: inc/cs-framework/classes/admin-options.class.php:699
 msgid "Save"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:572
-#: inc/cs-framework/classes/admin-options.class.php:695
+#: inc/cs-framework/classes/admin-options.class.php:576
+#: inc/cs-framework/classes/admin-options.class.php:699
 msgid "Saving..."
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:573
-#: inc/cs-framework/classes/admin-options.class.php:696
+#: inc/cs-framework/classes/admin-options.class.php:577
+#: inc/cs-framework/classes/admin-options.class.php:700
 msgid "Reset Section"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:573
-#: inc/cs-framework/classes/admin-options.class.php:696
+#: inc/cs-framework/classes/admin-options.class.php:577
+#: inc/cs-framework/classes/admin-options.class.php:700
 msgid "Are you sure to reset this section options?"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:574
-#: inc/cs-framework/classes/admin-options.class.php:697
+#: inc/cs-framework/classes/admin-options.class.php:578
+#: inc/cs-framework/classes/admin-options.class.php:701
 msgid "Reset All"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:574
-#: inc/cs-framework/classes/admin-options.class.php:697
+#: inc/cs-framework/classes/admin-options.class.php:578
+#: inc/cs-framework/classes/admin-options.class.php:701
 #: inc/cs-framework/classes/comment-options.class.php:216
 #: inc/cs-framework/classes/metabox-options.class.php:294
 #: inc/cs-framework/fields/backup/backup.php:31
 msgid "Reset"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:574
-#: inc/cs-framework/classes/admin-options.class.php:697
+#: inc/cs-framework/classes/admin-options.class.php:578
+#: inc/cs-framework/classes/admin-options.class.php:701
 msgid "Are you sure you want to reset all settings to default values?"
 msgstr ""
 
-#: inc/cs-framework/classes/admin-options.class.php:672
+#: inc/cs-framework/classes/admin-options.class.php:676
 #: inc/cs-framework/classes/comment-options.class.php:199
 #: inc/cs-framework/classes/metabox-options.class.php:277
 #: inc/cs-framework/fields/button_set/button_set.php:56
@@ -711,28 +711,28 @@ msgstr ""
 msgid "update post"
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:594
+#: inc/cs-framework/classes/setup.class.php:598
 msgid "Are you sure?"
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:595
+#: inc/cs-framework/classes/setup.class.php:599
 msgid "Please enter %s or more characters"
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:596
+#: inc/cs-framework/classes/setup.class.php:600
 msgid "Searching..."
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:597
+#: inc/cs-framework/classes/setup.class.php:601
 msgid "No results found."
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:698
+#: inc/cs-framework/classes/setup.class.php:702
 msgid "Oops! Not allowed."
 msgstr ""
 
-#: inc/cs-framework/classes/setup.class.php:770
 #: inc/cs-framework/classes/setup.class.php:774
+#: inc/cs-framework/classes/setup.class.php:778
 msgid "Field not found!"
 msgstr ""
 
