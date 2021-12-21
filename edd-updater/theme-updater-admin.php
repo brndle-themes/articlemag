@@ -110,12 +110,13 @@ class EDD_Articlemag_Theme_Updater_Admin {
 			// Load our custom theme updater.
 			include dirname( __FILE__ ) . '/theme-updater-class.php';
 		}
-
+		$license_key = get_option( $this->theme_slug . '_license_key' );
+		$license_key = ( $license_key != '' ) ? $license_key : cs_get_option( $this->theme_slug . '_license', '' );
 		new EDD_Theme_Updater(
 			array(
 				'remote_api_url' => $this->remote_api_url,
 				'version'        => $this->version,
-				'license'        => trim( get_option( $this->theme_slug . '_license_key' ) ),
+				'license'        => trim( $license_key ),
 				'item_name'      => $this->item_name,
 				'author'         => $this->author,
 				'beta'           => $this->beta,
