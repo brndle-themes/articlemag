@@ -630,6 +630,7 @@ td.bbp-topic-counts {
   list-style: none;
   display: inline;
   border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
@@ -1456,15 +1457,19 @@ body.my-account #bbpress-forums {
   background: none;
   border: 2px solid transparent;
   -webkit-user-select: none;
+  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   /* cs-btn-xxs */
   font-size: 12px;
   padding: 6px 16px;
   line-height: 16px;
   /* cs-btn-rounded */
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
   border-radius: 0.2em;
   /* cs-btn-flat-accent */
   color: #fff;

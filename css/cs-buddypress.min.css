@@ -353,12 +353,8 @@ body.buddypress #buddypress.buddypress-wrap .html-active button.switch-html {
 
 .buddypress-wrap .bp-pagination {
   float: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .bp-navs ul li .count,
@@ -486,15 +482,10 @@ body .buddypress-wrap form.bp-messages-search-form input[type="search"],
 }
 
 .rtm-activity-media-list:not(.rtmedia-activity-media-length-1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   margin: 0 !important;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   position: relative;
 }
 
@@ -508,18 +499,14 @@ body .buddypress-wrap form.bp-messages-search-form input[type="search"],
 }
 
 .media-type-photo {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 
 .rtmedia-activity-media-length-1 .media-type-photo,
 .rtmedia-activity-media-length-4 .media-type-photo:first-child,
 .rtmedia-activity-media-length-3 .media-type-photo:first-child {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   min-width: 0;
 }
@@ -527,9 +514,7 @@ body .buddypress-wrap form.bp-messages-search-form input[type="search"],
 .rtm-activity-media-list:not(.rtmedia-activity-media-length-1):not(.rtmedia-activity-media-length-3):not(.rtmedia-activity-media-length-4) .media-type-photo:first-child,
 .rtm-activity-media-list:not(.rtmedia-activity-media-length-4) .media-type-photo:nth-child(2),
 .rtm-activity-media-list.rtmedia-activity-media-length-3 .media-type-photo:nth-child(3) {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 
@@ -678,18 +663,10 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
 
 /* media page media */
 .media .rtmedia-list:not(.masonry) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .media .rtmedia-container .rtmedia-list.rtmedia-list-media > li.rtmedia-list-item {
@@ -743,8 +720,7 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
 
 .media .rtmedia-list.rtmedia-list-media > li.rtmedia-list-item:hover .rtmedia-item-thumbnail > img {
   opacity: .4;
-  -webkit-animation: lightBlur .5s forwards;
-          animation: lightBlur .5s forwards;
+  animation: lightBlur .5s forwards;
 }
 
 @-webkit-keyframes lightBlur {
@@ -773,19 +749,10 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
   left: 0;
   right: 0;
   bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
   z-index: 9;
 }
@@ -794,14 +761,9 @@ body.bp-nouveau .activity-update-form .rtmedia-plupload-container {
   color: rgba(255, 255, 255, 0.8);
   pointer-events: auto;
   text-decoration: none;
-  -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out;
-          transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 5px 10px;
   border-radius: 20px;
 }
@@ -844,8 +806,7 @@ button.mfp-arrow {
 }
 
 .rtmedia-gallery-item-actions .dashicons {
-  -webkit-transition: none;
-          transition: none;
+  transition: none;
 }
 
 /* rtm-lightbox */
@@ -975,12 +936,8 @@ select#whats-new-post-in {
 }
 
 .activity-update-form #whats-new-post-in-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 #buddypress.buddypress-wrap form#whats-new-form #whats-new-submit {
@@ -995,25 +952,17 @@ select#whats-new-post-in {
 
 #buddypress #whats-new-options {
   border-top: 1px solid #ddd;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  align-items: center;
   margin-left: 0;
   padding: 0 15px;
 }
 
 #buddypress #whats-new-submit {
   margin: 10px 0 10px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row-reverse;
-      flex-flow: row-reverse;
+  flex-flow: row-reverse;
 }
 
 .activity-update-form #whats-new-submit input {
@@ -1038,9 +987,7 @@ body.bp-nouveau .activity-update-form .rtmedia-uploader-div {
 
 .activity-update-form #whats-new-post-in-box #whats-new-post-in-box-items {
   margin: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .activity-update-form #whats-new-post-in-box #whats-new-post-in-box-items li {
@@ -1082,8 +1029,6 @@ body:not(.logged-in) .activity-list.bp-list .activity-item {
 }
 
 .activity-item-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 0;
 }
@@ -1104,9 +1049,7 @@ body:not(.logged-in) .activity-list.bp-list .activity-item {
 .activity-list.item-list .activity-item .activity-avatar {
   margin: 0 15px 0 0;
   width: auto;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40px;
-          flex: 0 0 40px;
+  flex: 0 0 40px;
   line-height: 0;
 }
 
@@ -1451,12 +1394,8 @@ input#rt_media_comment_submit {
 }
 
 .buddypress-wrap .activity-comments .show-all button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -1476,6 +1415,23 @@ li.load-more a.loading::after {
   -webkit-animation: spin 1s infinite linear;
   animation: spin 1s infinite linear;
 }
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -1486,12 +1442,10 @@ li.load-more a.loading::after {
 }
 @keyframes spin {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 /*--------------------------------------------------------------
@@ -1550,6 +1504,7 @@ li.load-more a.loading::after {
   margin: 1rem 0;
   padding: 1em;
   border: 1px solid #e8e8e8;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px !important;
   background: #fff;
@@ -1575,17 +1530,10 @@ li.load-more a.loading::after {
     float: left;
     margin-right: 0;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .bp-list li .item-avatar img.avatar {
@@ -1616,11 +1564,8 @@ li.load-more a.loading::after {
 /* Grid View */
 .buddypress-wrap .grid.bp-list {
   padding-top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-bottom: 0;
   width: auto;
   margin: 0 -15px;
@@ -1704,7 +1649,6 @@ li.load-more a.loading::after {
 @media screen and (min-width: 46.8em) {
   .grid.four > li {
     width: 33.333333%;
-    width: -webkit-calc(100% / 3);
     width: calc(100% / 3);
   }
 }
@@ -1771,17 +1715,10 @@ li.load-more a.loading::after {
 /* List View */
 @media screen and (min-width: 46.8em) {
   #groups-list.bp-list .item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #groups-list.bp-list:not(.grid) li .item-avatar img.avatar {
@@ -1791,9 +1728,7 @@ li.load-more a.loading::after {
   #groups-list.bp-list:not(.grid) li .item .item-block {
     display: block;
     width: auto;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 70%;
-            flex: 0 0 70%;
+    flex: 0 0 70%;
     min-height: 85px;
   }
 
@@ -1827,6 +1762,7 @@ li.load-more a.loading::after {
   margin: 1rem 0 30px;
   padding: 1em;
   border: 1px solid #e8e8e8;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background: #fff;
@@ -1894,16 +1830,11 @@ li.load-more a.loading::after {
   background-color: #fff;
   border: 1px solid #e8e8e8;
   margin: 0 0 -1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   padding: 15px;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 0;
 }
 
@@ -1913,9 +1844,7 @@ li.load-more a.loading::after {
   }
 }
 .buddypress .bp-invites-content ul.item-list > li .item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 
 .buddypress .bp-invites-content ul.item-list > li .item .list-title {
@@ -2117,6 +2046,7 @@ button.button.avatar-crop-submit {
   position: relative;
   padding: 1em;
   border: 1px solid #e8e8e8;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 8px !important;
   background: #fff;
@@ -2197,14 +2127,9 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
 
 /* message-threads */
 .bp-messages-content #thread-preview .preview-content .actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .bp-messages-content #thread-preview .preview-content .preview-message {
@@ -2236,19 +2161,13 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
 
 @media (max-width: 420px) {
   #message-threads li .thread-cb {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 2 10%;
-            flex: 1 2 10%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex: 1 2 10%;
+    align-items: flex-start;
   }
 
   #message-threads li .thread-from,
   #message-threads li .thread-to {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 2 30%;
-            flex: 1 2 30%;
+    flex: 1 2 30%;
   }
 
   #message-threads li .thread-from img.avatar,
@@ -2266,8 +2185,6 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
 .buddypress-wrap table.notifications .actions,
 .buddypress-wrap table.notifications .notification-actions {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2319,17 +2236,10 @@ table.notifications > thead > tr > th {
   }
 
   #group-list.bp-list .item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 
   #group-list.bp-list .item .item-block {
@@ -2385,11 +2295,8 @@ table.notifications > thead > tr > th {
   }
 
   .bp-single-vert-nav .bp-wrap:not(.bp-fullwidth-wrap) {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
+    flex-flow: row wrap;
     width: 100%;
     background: #fff;
     border: 1px solid #e8e8e8;
@@ -2428,9 +2335,7 @@ table.notifications > thead > tr > th {
 
   .bp-single-vert-nav .item-body:not(#group-create-body) {
     padding: 15px;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     min-width: 1px;
     margin: 0;
     border-left: 0;
@@ -2439,15 +2344,9 @@ table.notifications > thead > tr > th {
 
   nav#object-nav.vertical a {
     border: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 1px;
     padding: 10px 15px;
   }
@@ -2488,7 +2387,6 @@ table.notifications > thead > tr > th {
   .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li a {
     font-size: inherit;
     border-right: 0;
-    padding: 0.5em -webkit-calc(.5em + 2px);
     padding: 0.5em calc(.5em + 2px);
   }
 }
@@ -2513,6 +2411,7 @@ table.notifications > thead > tr > th {
     position: relative;
     padding: 1em;
     border: 1px solid #e8e8e8;
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     border-radius: 8px !important;
     background: #fff;
@@ -2574,8 +2473,6 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 
 @media screen and (min-width: 782px) {
   body.single-item.groups #buddypress div#item-header #item-header-cover-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 
@@ -2598,12 +2495,8 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
   }
 
   body.single-item.groups #buddypress div#item-header .center-view .groups-meta.action {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 
   body.single-item.groups #buddypress div#item-header .center-view #item-header-cover-image #item-actions {
@@ -2676,16 +2569,11 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
   border-bottom: 0;
   margin: 0;
   margin-bottom: -1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+  flex-flow: row wrap;
   padding: 15px;
   position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 0;
   width: 100%;
 }
@@ -2716,12 +2604,8 @@ body.single-item.groups #buddypress div#item-header #item-header-cover-image #it
 }
 
 #buddypress ul.group-inviters {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-top: 8px;
 }
 
@@ -2911,9 +2795,7 @@ form#request-membership-form #group-request-send {
 .buddypress.widget ul#friends-list li,
 .buddypress.widget ul#groups-list li,
 .buddypress.widget ul#members-list li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  flex: 0 1 auto;
   margin: 0 0 1em;
   padding: 0;
   width: 100%;
@@ -2954,12 +2836,8 @@ form#request-membership-form #group-request-send {
 }
 
 .widget.buddypress.bp-latest-activities footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #e8e8e8;
@@ -2992,15 +2870,9 @@ body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
 # BuddyPress Profile Completion
 --------------------------------------------------------------*/
 .wb-bp-profile-completion-wrap .wb-bp-user-avatar-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -3034,8 +2906,6 @@ body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
   height: 3px;
   background-color: #4caf50;
   border-radius: 12px !important;
-  background-image: -webkit-gradient(linear, left top, right top, from(#4cd964), color-stop(#5ac8fa), color-stop(#007aff), color-stop(#5856d6), to(#ff2d55));
-  background-image: -webkit-linear-gradient(left, #4cd964, #5ac8fa, #007aff, #5856d6, #ff2d55);
   background-image: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #5856d6, #ff2d55);
 }
 
@@ -3105,9 +2975,7 @@ body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
   width: 9px;
   border-bottom: 3px solid white;
   border-right: 3px solid white;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*--------------------------------------------------------------
