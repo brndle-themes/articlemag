@@ -1056,7 +1056,7 @@ if ( ! function_exists( 'cs_get_bp_userbar' ) ) {
 					$current_user = wp_get_current_user();
 					if ( ( $current_user instanceof WP_User ) ) {
 						$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
-						echo '<div class="cs-user-link">';
+						echo '<div class="cs-user-link cs-sticky-item">';
 						// echo '<a href="'. $user_link .'">';
 						echo get_avatar( $current_user->user_email, 40 );
 						// echo '</a>';
