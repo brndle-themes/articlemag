@@ -4,7 +4,6 @@
  *
  * @since   3.0.0
  * @version 3.0.0
- * @package BuddyPress
  */
 
 $has_cover_image          = '';

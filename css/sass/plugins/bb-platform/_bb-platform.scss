@@ -258,6 +258,12 @@ span.bb-activity-edited-text {
     float: left;
     overflow: visible;
     width: auto;
+} 
+
+.single-headers .member-header-actions-wrap {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 @media screen and (min-width: 783px) {

@@ -2,9 +2,8 @@
 /**
  * BuddyPress - Groups Home
  *
- * @since 3.0.0
+ * @since   3.0.0
  * @version 3.0.0
- * @package BuddyPress
  */
 
 global $cs_has_section, $post;
@@ -21,7 +20,7 @@ if ( bp_has_groups() ) :
 
 		<div id="item-header" role="complementary" data-bp-item-id="<?php bp_group_id(); ?>" data-bp-item-component="groups" class="groups-header single-headers">
 
-			<?php bp_nouveau_group_header_template_part(); ?>
+		<?php bp_nouveau_group_header_template_part(); ?>
 
 		</div><!-- #item-header -->
 
@@ -30,24 +29,16 @@ if ( bp_has_groups() ) :
 				<div class="row cs-row-wrap">
 					<?php cs_page_sidebar( 'left', $cs_buddypresss_layout ); ?>
 					<div class="cs-content-wrapper col-md-<?php echo esc_attr( $cs_page_column ); ?>">
-
 						<div class="bp-wrap">
-
 							<?php if ( ! bp_nouveau_is_object_nav_in_sidebar() ) : ?>
-
 								<?php bp_get_template_part( 'groups/single/parts/item-nav' ); ?>
-
 							<?php endif; ?>
-
 							<div id="item-body" class="item-body">
-
 								<?php bp_nouveau_group_template_part(); ?>
-
 							</div><!-- #item-body -->
-
-						</div><!-- // .bp-wrap -->
+						</div><!-- .bp-wrap -->
 					</div><!-- .col -->
-					<?php cs_page_sidebar( 'right', $cs_buddypresss_layout ); ?>
+				<?php cs_page_sidebar( 'right', $cs_buddypresss_layout ); ?>
 				</div><!-- .row -->
 			</div><!-- .container -->
 		</div><!-- .cs-group-home -->

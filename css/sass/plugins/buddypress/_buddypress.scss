@@ -1867,6 +1867,10 @@ li.load-more a.loading::after {
 /*--------------------------------------------------------------
 # Member Single
 --------------------------------------------------------------*/
+.single-headers {
+    margin-bottom: 30px;
+}
+
 body.buddypress.bp-user #page-header,
 body.buddypress.single-item.groups #page-header {
     display: none;
