@@ -114,11 +114,14 @@ span.bb-activity-edited-text {
 .bb-media-privacy-wrap .privacy:before {
   content: "\e960";
   font-family: bb-icons;
-  font-size: 12px;
 }
 
 span.bb-activity-edited-text {
   font-size: 12px;
+}
+
+.activity-list .bb-activity-more-options-wrap .bb-activity-more-options .generic-button {
+  margin: 0;
 }
 
 /*--------------------------------------------------------------

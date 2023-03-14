@@ -5,28 +5,27 @@
  * This template is used by activity-loop.php and AJAX functions to show
  * each activity.
  *
- * @since 3.0.0
+ * @since   3.0.0
  * @version 6.0.0
- * @package BuddyPress
  */
 
 bp_nouveau_activity_hook( 'before', 'entry' );
 ?>
 
-<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="
-										<?php
-										if ( function_exists( 'bp_nouveau_edit_activity_data' ) ) {
-											bp_nouveau_edit_activity_data(); }
-										?>
-">
+<li class="<?php bp_activity_css_class(); ?>" id="activity-<?php bp_activity_id(); ?>" data-bp-activity-id="<?php bp_activity_id(); ?>" data-bp-timestamp="<?php bp_nouveau_activity_timestamp(); ?>" data-bp-activity="<?php if ( function_exists( 'bp_nouveau_edit_activity_data' ) ) { bp_nouveau_edit_activity_data(); } ?>">
 
+	<?php
+	if ( function_exists( 'buddypress' ) && isset( buddypress()->buddyboss ) ) {
+		bb_nouveau_activity_entry_bubble_buttons();
+	}
+	?>
 	<div class="activity-item-head">
 
 		<div class="activity-avatar item-avatar">
 
 			<a href="<?php bp_activity_user_link(); ?>">
 
-		<?php bp_activity_avatar( array( 'type' => 'full' ) ); ?>
+			<?php bp_activity_avatar( array( 'type' => 'full' ) ); ?>
 
 			</a>
 
@@ -35,13 +34,14 @@ bp_nouveau_activity_hook( 'before', 'entry' );
 		<div class="activity-header">
 
 			<?php bp_activity_action(); ?>
+
 			<?php
 			if ( function_exists( 'bp_nouveau_activity_is_edited' ) ) {
-							bp_nouveau_activity_is_edited();
+				bp_nouveau_activity_is_edited();
 			}
 
 			if ( function_exists( 'bp_nouveau_activity_privacy' ) ) {
-					bp_nouveau_activity_privacy();
+				bp_nouveau_activity_privacy();
 			}
 			?>
 
@@ -56,16 +56,23 @@ bp_nouveau_activity_hook( 'before', 'entry' );
 
 			<div class="activity-inner">
 
-				<?php bp_nouveau_activity_content(); ?>
+				<?php
+				if ( function_exists( 'buddypress' ) && isset( buddypress()->buddyboss ) || ! function_exists( 'bp_activity_type_part' ) ) {
+					echo bp_nouveau_activity_content();
+				} else {
+					bp_get_template_part( 'activity/type-parts/content', bp_activity_type_part() );
+				}
 
+				?>
 			</div>
 
 		<?php endif; ?>
-			<?php
-			if ( function_exists( 'bp_nouveau_activity_state' ) ) {
-				bp_nouveau_activity_state();
-			}
-			?>
+
+		<?php
+		if ( function_exists( 'bp_nouveau_activity_state' ) ) {
+			bp_nouveau_activity_state();
+		}
+		?>
 
 		<?php bp_nouveau_activity_entry_buttons(); ?>
 
@@ -77,9 +84,9 @@ bp_nouveau_activity_hook( 'before', 'entry' );
 
 		<div class="activity-comments">
 
-			<?php bp_activity_comments(); ?>
+		<?php bp_activity_comments(); ?>
 
-			<?php bp_nouveau_activity_comment_form(); ?>
+		<?php bp_nouveau_activity_comment_form(); ?>
 
 		</div>
 
