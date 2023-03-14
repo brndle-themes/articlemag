@@ -11,43 +11,57 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 4.0.0
+ * @package WooCommerce\Templates
+ * @version 7.4.0
+ *
+ * @var bool   $readonly If the input should be set to readonly mode.
+ * @var string $type     The input type attribute.
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( $max_value && $min_value === $max_value ) {
-	?>
-	<div class="quantity hidden">
-		<input type="hidden" id="<?php echo esc_attr( $input_id ); ?>" class="qty" name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $min_value ); ?>" />
-	</div>
-	<?php
-} else {
-	/* translators: %s: Quantity. */
-	$labelledby = ! empty( $args['product_name'] ) ? sprintf( __( '%s quantity', 'articlemag' ), strip_tags( $args['product_name'] ) ) : '';
+/* translators: %s: Quantity. */
+$label = ! empty( $args['product_name'] ) ? sprintf( esc_html__( '%s quantity', 'articlemag' ), wp_strip_all_tags( $args['product_name'] ) ) : esc_html__( 'Quantity', 'articlemag' );
 
-	$qty_end   = '<input type="button" value="+" class="product_quantity_plus button">';
-	$qty_start = '<input type="button" value="-" class="product_quantity_minus button">';
-	?>
-	<div class="quantity">
-		<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'articlemag' ); ?></label>
-		<input type="button" value="-" class="product_quantity_minus button">
-		<input
-			type="number"
-			id="<?php echo esc_attr( $input_id ); ?>"
-			class="input-text qty text"
-			step="<?php echo esc_attr( $step ); ?>"
-			min="<?php echo esc_attr( $min_value ); ?>"
-			max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
-			name="<?php echo esc_attr( $input_name ); ?>"
-			value="<?php echo esc_attr( $input_value ); ?>"
-			title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'articlemag' ); ?>"
-			size="4"
-			pattern="<?php echo esc_attr( $pattern ); ?>"
-			inputmode="<?php echo esc_attr( $inputmode ); ?>"
-			aria-labelledby="<?php echo esc_attr( $labelledby ); ?>" />
-			<input type="button" value="+" class="product_quantity_plus button">
-	</div>
+?>
+<div class="quantity">
 	<?php
-}
+	/**
+	 * Hook to output something before the quantity input field.
+	 *
+	 * @since 7.2.0
+	 */
+	do_action( 'woocommerce_before_quantity_input_field' );
+
+	?>
+	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php echo esc_attr( $label ); ?></label>
+	<input type="button" value="-" class="product_quantity_minus button">
+	<input
+		type="<?php echo esc_attr( $type ); ?>"
+		<?php echo $readonly ? 'readonly="readonly"' : ''; ?>
+		id="<?php echo esc_attr( $input_id ); ?>"
+		class="<?php echo esc_attr( join( ' ', (array) $classes ) ); ?>"
+		name="<?php echo esc_attr( $input_name ); ?>"
+		value="<?php echo esc_attr( $input_value ); ?>"
+		title="<?php echo esc_attr_x( 'Qty', 'Product quantity input tooltip', 'articlemag' ); ?>"
+		size="4"
+		min="<?php echo esc_attr( $min_value ); ?>"
+		max="<?php echo esc_attr( 0 < $max_value ? $max_value : '' ); ?>"
+		<?php if ( ! $readonly ) : ?>
+			step="<?php echo esc_attr( $step ); ?>"
+			placeholder="<?php echo esc_attr( $placeholder ); ?>"
+			inputmode="<?php echo esc_attr( $inputmode ); ?>"
+			autocomplete="<?php echo esc_attr( isset( $autocomplete ) ? $autocomplete : 'on' ); ?>"
+		<?php endif; ?>
+	/>
+	<input type="button" value="+" class="product_quantity_plus button">
+	<?php
+	/**
+	 * Hook to output something after quantity input field
+	 *
+	 * @since 3.6.0
+	 */
+	do_action( 'woocommerce_after_quantity_input_field' );
+	?>
+</div>
+<?php
