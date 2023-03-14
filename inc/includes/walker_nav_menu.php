@@ -186,7 +186,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 					if ( ( $current_user instanceof WP_User ) ) {
 						$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
-						$output   .= '<div class="cs-user-link-wrap sf-with-ul">';
+						$output   .= '<div class="cs-user-link-wrap sf-with-ul cs-sticky-item">';
 						$output   .= '<a class="cs-user-link" href="' . $user_link . '">';
 						$output   .= $current_user->display_name;
 						$output   .= get_avatar( $current_user->user_email, 50 );
