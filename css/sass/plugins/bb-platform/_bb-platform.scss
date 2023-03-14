@@ -1,4 +1,4 @@
-/*--------------------------------------------------------------
+ /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Activity Directory
@@ -27,6 +27,27 @@
 .activity-update-form #whats-new {	
     padding: 0;	
 }
+
+#whats-new-form {
+    border: 0;
+    border-radius: var(--global-border-radius);
+}
+
+.modal-popup #whats-new-form {
+    border: 1px solid var(--color--theme-border);
+}
+
+#whats-new-form .bb-model-header {
+    border-color: var(--color--theme-border);
+    border-radius: var(--global-border-radius) var(--global-border-radius) 0 0;
+}
+
+.activity-update-form .whats-new-form-footer,
+.bp-nouveau-activity-form-placeholder- .whats-new-form-footer {
+    border-color: var(--color--theme-border);
+    border-radius: 0 0 var(--global-border-radius) var(--global-border-radius);
+}
+
 
 .bb-activity-media-wrap {
     margin: 0;
@@ -101,9 +122,7 @@
     padding: 0 15px;
 }
 
-#whats-new-form #whats-new-toolbar {
-    margin-bottom: 10px;
-}
+
 
 span.bb-activity-edited-text {
     font-size: 12px;
@@ -269,6 +288,14 @@ span.bb-activity-edited-text {
     }
 }
 
+.users-header #item-header-avatar a.link-change-profile-image {
+    top: 60px;
+}
+
+.bb-single-main-nav .bb-single-nav-item-point {
+    display: inline;
+}
+
 .item-header-cover-image-wrapper {
     min-height: 185px;
 }
@@ -317,6 +344,11 @@ span.bb-activity-edited-text {
 
 .friends-request-list > li .item-meta {
     margin: 0;
+}
+
+body .select2-container .select2-dropdown.bb-compose-input .avatar {
+    max-width: 30px;
+    margin-right: 6px;
 }
 
 /*--------------------------------------------------------------
@@ -378,8 +410,8 @@ span.bb-activity-edited-text {
     padding: 6px 12px !important;
     background: 0 0;
     color: inherit;
-    background: #fff!important;
-    color: rgba(0,0,0,.6)!important;
+    background: #fff !important;
+    color: rgba(0, 0, 0, .6)!important;
     font-weight: 400;
     border-radius: .28571429rem !important;
     text-transform: none;

@@ -1015,6 +1015,7 @@ button.rtmedia-comment-media-upload {
 }
 
 .activity-list.bp-list .activity-item {
+  width: 100%;
   position: relative;
   margin: 2rem 0;
   padding: 0;

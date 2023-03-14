@@ -7,7 +7,7 @@
  * @package BuddyPress
  */
 
-?>
+ ?>
 
 <?php bp_nouveau_member_hook( 'before', 'home_content' ); ?>
 
