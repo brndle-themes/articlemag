@@ -66,7 +66,7 @@ class CSFramework_Mega_Menu_API {
 		<div class="cs_field cs_field_icon">
 	<div class="cs-icon-select">
 			<span class="csf-icon-preview<?php echo $hidden; ?>"><i class="<?php echo $icon; ?>"></i></span>
-			<a href="javascript:void(0)" class="button button-primary icon-add" data-nonce="<?php echo $nonce; ?>">Add Icon</a>
+			<!-- <a href="javascript:void(0)" class="button button-primary icon-add" data-nonce="<?php echo $nonce; ?>">Add Icon</a> -->
 			<a href="javascript:void(0)" class="button csf-warning-primary icon-remove<?php echo $hidden; ?>">Remove Icon</a>
 			<input type="hidden" name="menu-item-icon[<?php echo $item_id; ?>]" value="<?php echo $item->icon; ?>" class="widefat code edit-menu-item-icon icon-value"/>
 		</div>
