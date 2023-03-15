@@ -67,7 +67,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 			// adding force custom boostrap col.
 			$classes['col'] = ( $depth == 1 && ! empty( $item->column_width ) ) ? $item->column_width : $classes['col'];
 
-			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
+			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
 			$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
 			$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
@@ -81,7 +81,7 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 			$atts['href']   = ! empty( $item->url ) ? $item->url : '';
 
-			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args, $depth );
 
 			$attributes = '';
 			foreach ( $atts as $attr => $value ) {
