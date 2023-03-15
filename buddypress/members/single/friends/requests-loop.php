@@ -2,11 +2,9 @@
 /**
  * BuddyPress - Members Friends Requests Loop
  *
- * @since 5.0.0
+ * @since   5.0.0
  * @version 5.0.0
- * @package BuddyPress
  */
-
 ?>
 
 <?php if ( bp_has_members( bp_ajax_querystring( 'friendship_requests' ) . '&include=' . bp_get_friendship_requests() ) ) : ?>
@@ -14,10 +12,10 @@
 	<?php bp_nouveau_pagination( 'top' ); ?>
 
 	<ul id="friend-list" class="<?php bp_nouveau_loop_classes(); ?>">
-		<?php
-		while ( bp_members() ) :
-			bp_the_member();
-			?>
+	<?php
+	while ( bp_members() ) :
+		bp_the_member();
+		?>
 			<li id="friendship-<?php bp_friend_friendship_id(); ?>" <?php bp_member_class( array( 'item-entry' ) ); ?> data-bp-item-id="<?php bp_friend_friendship_id(); ?>" data-bp-item-component="members">
 				<div class="list-wrap">
 					<div class="item-avatar">
@@ -39,7 +37,7 @@
 				</div>
 			</li>
 
-		<?php endwhile; ?>
+	<?php endwhile; ?>
 	</ul>
 
 	<?php bp_nouveau_friend_hook( 'requests_content' ); ?>

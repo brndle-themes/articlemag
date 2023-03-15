@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA;;sCAEsC;AACtC,0CAA0C;EACtC,gBAAgB,EAAE,WAAW;EAC7B,YAAY,EAAE,WAAW",
-"sources": ["sass/plugins/youzer/_youzer.scss"],
-"names": [],
-"file": "cs-youzer.min.css"
-}
+{"version":3,"sources":["sass/plugins/youzer/_youzer.scss","cs-youzer.min.css"],"names":[],"mappings":"AAAA;;sCAEsC;AACtC;EACI,8BAA6B;EAC7B,0BAAyB;CCC5B","file":"cs-youzer.min.css"}

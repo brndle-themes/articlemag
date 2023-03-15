@@ -2,9 +2,8 @@
 /**
  * BuddyPress - Members Single Group Invites
  *
- * @since 3.0.0
+ * @since   3.0.0
  * @version 3.1.0
- * @package BuddyPress
  */
 
 ?>
@@ -15,12 +14,12 @@
 
 <?php if ( bp_has_groups( 'type=invites&user_id=' . bp_loggedin_user_id() ) ) : ?>
 
-	<ul id="group-list" class="invites item-list bp-list" data-bp-list="groups_invites">
+<ul id="group-list" class="invites item-list bp-list" data-bp-list="groups_invites">
 
-		<?php
-		while ( bp_groups() ) :
-			bp_the_group();
-			?>
+	<?php
+	while ( bp_groups() ) :
+		bp_the_group();
+		?>
 
 			<li class="item-entry invites-list" data-bp-item-id="<?php bp_group_id(); ?>" data-bp-item-component="groups">
 
@@ -66,7 +65,7 @@
 				</div>
 			</li>
 
-		<?php endwhile; ?>
+	<?php endwhile; ?>
 	</ul>
 
 <?php else : ?>
