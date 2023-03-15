@@ -10,13 +10,13 @@
 
 get_header(); ?>
 <?php
-  $category      = get_queried_object();
-  $get_term_meta = get_term_meta( $category->term_id, 'category_thumbnail_id' );
-  $cat_thumb_url = wp_get_attachment_image_src( $get_term_meta[0], 'large' );
-  $cat_img_url   = $cat_thumb_url[0];
+$category      = get_queried_object();
+$get_term_meta = get_term_meta( $category->term_id, 'category_thumbnail_id' );
+$cat_thumb_url = wp_get_attachment_image_src( isset( $get_term_meta[0] ) ? $get_term_meta[0] : '', 'large' );
+$cat_img_url   = isset( $cat_thumb_url[0] ) ? $cat_thumb_url[0] : '';
 ?>
 <section id="page-header">
-<div class="category-hero" style="background-image: url('<?php echo $cat_img_url; ?>');"></div>
+<div class="category-hero" style="background-image: url('<?php echo esc_url( $cat_img_url ); ?>');"></div>
 <div class="container">
 	<div class="row">
 	<div class="col-md-12 md-padding">
