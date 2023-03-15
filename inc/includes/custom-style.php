@@ -500,7 +500,7 @@ CSS;
 
 		// top-bar.
 		$top_bar_image        = cs_get_option( 'top_bar_image' );
-		$top_bar_image_url    = $top_bar_image['background-image']['url'];
+		$top_bar_image_url    = isset( $top_bar_image['background-image']['url'] ) ? $top_bar_image['background-image']['url'] : '';
 		$top_bar_repeat       = cs_get_option( 'top_bar_repeat' );
 		$top_bar_position     = cs_get_option( 'top_bar_position' );
 		$top_bar_attachment   = cs_get_option( 'top_bar_attachment' );
@@ -527,7 +527,7 @@ CSS;
 
 		// header.
 		$header_image         = cs_get_option( 'header_image' );
-		$header_image_url     = $header_image['background-image']['url'];
+		$header_image_url     = isset( $header_image['background-image']['url'] ) ? $header_image['background-image']['url'] : '';
 		$header_repeat        = cs_get_option( 'header_repeat' );
 		$header_position      = cs_get_option( 'header_position' );
 		$header_attachment    = cs_get_option( 'header_attachment' );
@@ -564,7 +564,7 @@ CSS;
 
 		// page-header.
 		$page_header_image      = cs_get_option( 'page_header_image' );
-		$page_header_image_url  = $page_header_image['background-image']['url'];
+		$page_header_image_url  = isset( $page_header_image['background-image']['url'] ) ? $page_header_image['background-image']['url'] : '';
 		$page_header_repeat     = cs_get_option( 'page_header_repeat' );
 		$page_header_position   = cs_get_option( 'page_header_position' );
 		$page_header_attachment = cs_get_option( 'page_header_attachment' );
@@ -588,7 +588,7 @@ CSS;
 
 		// footer.
 		$footer_image        = cs_get_option( 'footer_image' );
-		$footer_image_url    = $footer_image['background-image']['url'];
+		$footer_image_url    = isset( $footer_image['background-image']['url'] ) ? $footer_image['background-image']['url'] : '';
 		$footer_repeat       = cs_get_option( 'footer_repeat' );
 		$footer_position     = cs_get_option( 'footer_position' );
 		$footer_attachment   = cs_get_option( 'footer_attachment' );
@@ -613,7 +613,7 @@ CSS;
 
 		// footer before and after.
 		$footer_ba_image        = cs_get_option( 'footer_ba_image' );
-		$footer_ba_url          = $footer_ba_image['background-image']['url'];
+		$footer_ba_url          = isset( $footer_ba_image['background-image']['url'] ) ? $footer_ba_image['background-image']['url'] : '';
 		$footer_ba_repeat       = cs_get_option( 'footer_ba_repeat' );
 		$footer_ba_position     = cs_get_option( 'footer_ba_position' );
 		$footer_ba_attachment   = cs_get_option( 'footer_ba_attachment' );
@@ -638,7 +638,7 @@ CSS;
 
 		// copyright.
 		$copyright_image      = cs_get_option( 'copyright_image' );
-		$copyright_url        = $copyright_image['background-image']['url'];
+		$copyright_url        = isset( $copyright_image['background-image']['url'] ) ? $copyright_image['background-image']['url'] : '';
 		$copyright_repeat     = cs_get_option( 'copyright_repeat' );
 		$copyright_position   = cs_get_option( 'copyright_position' );
 		$copyright_attachment = cs_get_option( 'copyright_attachment' );
@@ -661,7 +661,7 @@ CSS;
 
 		// logo bar.
 		$logo_bar_image      = cs_get_option( 'logo_bar_image' );
-		$logo_bar_url        = $logo_bar_image['background-image']['url'];
+		$logo_bar_url        = isset( $logo_bar_image['background-image']['url'] ) ? $logo_bar_image['background-image']['url'] : '';
 		$logo_bar_repeat     = cs_get_option( 'logo_bar_repeat' );
 		$logo_bar_position   = cs_get_option( 'logo_bar_position' );
 		$logo_bar_attachment = cs_get_option( 'logo_bar_attachment' );

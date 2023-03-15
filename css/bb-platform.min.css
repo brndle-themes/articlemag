@@ -1,4 +1,4 @@
- /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Activity Directory
@@ -149,7 +149,9 @@ span.bb-activity-edited-text {
 
 .members-directory-wrapper .bp-profile-search-widget {
   margin-right: 30px;
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .bp-single-vert-nav .bp-wrap {
@@ -221,7 +223,7 @@ span.bb-activity-edited-text {
 
 @media screen and (min-width: 46.8em) {
   .buddypress-wrap .group-create-links ul li.current,
-  .buddypress-wrap .group-create-links ol li.current {
+.buddypress-wrap .group-create-links ol li.current {
     border-color: #ccc #ccc #fff;
     border-style: solid;
     border-top-left-radius: 4px;
@@ -230,7 +232,6 @@ span.bb-activity-edited-text {
     margin-bottom: -1px;
     padding: 0 0.5em 1px;
   }
-
   .buddypress-wrap .group-create-links {
     border-bottom: 1px solid #ccc;
   }
@@ -255,23 +256,31 @@ span.bb-activity-edited-text {
 }
 
 .single-headers .member-header-actions-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
 }
 
 @media screen and (min-width: 783px) {
   #buddypress div#item-header #item-header-cover-image #item-header-content {
     padding: 0;
     padding-left: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
   #buddypress div#item-header .center-view #item-header-cover-image #item-header-content {
     width: 100%;
   }
-
   .single-headers img.avatar {
     float: left;
   }
@@ -280,7 +289,6 @@ span.bb-activity-edited-text {
   #buddypress #item-header-cover-image #item-header-avatar {
     float: none;
   }
-
   #buddypress #item-header-cover-image #item-header-avatar img.avatar {
     margin: 0 auto;
     margin-bottom: 15px;
@@ -326,6 +334,8 @@ span.bb-activity-edited-text {
 }
 
 .friends-request-list .bp-generic-meta.friends-meta.action {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -358,8 +368,8 @@ body .select2-container .select2-dropdown.bb-compose-input .avatar {
 }
 @media screen and (min-width: 46.8em) {
   .single-headers .center-view a.button,
-  .single-headers .center-view div.generic-button,
-  .single-headers .center-view li.generic-button {
+.single-headers .center-view div.generic-button,
+.single-headers .center-view li.generic-button {
     float: none;
   }
 }
@@ -408,7 +418,7 @@ body .select2-container .select2-dropdown.bb-compose-input .avatar {
   background: #fff !important;
   color: rgba(0, 0, 0, 0.6) !important;
   font-weight: 400;
-  border-radius: .28571429rem !important;
+  border-radius: 0.28571429rem !important;
   text-transform: none;
   text-shadow: none !important;
 }
@@ -423,7 +433,7 @@ body .select2-container .select2-dropdown.bb-compose-input .avatar {
 }
 
 #buddypress .activity-list .activity-item .activity-content > .bp-generic-meta.action .button {
-  border-radius: .28571429rem !important;
+  border-radius: 0.28571429rem !important;
 }
 
 .activity-list .activity-item .activity-content > .bp-generic-meta.action .button:hover {
@@ -637,8 +647,12 @@ body .select2-container .select2-dropdown.bb-compose-input .avatar {
 }
 
 .bbp-topic-meta .bbp-author-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 3px;
 }
 
@@ -656,6 +670,8 @@ span.bbp-author-avatar img {
 }
 
 .bbp-topic-title span.bbp-topic-started-by {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -665,8 +681,12 @@ span.bbp-author-avatar img {
 }
 
 .bbp-topic-freshness-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bp-messages-content {
@@ -681,7 +701,7 @@ span.bbp-author-avatar img {
 }
 
 .bp-messages-content #bp-message-content .medium-editor-toolbar .medium-editor-toolbar-actions button {
-  color: #4d5c6d !important;
+  color: rgb(77, 92, 109) !important;
 }
 
 .medium-editor-element {
@@ -754,8 +774,8 @@ ul.bbp-stats h4 {
 
 @media only screen and (max-width: 480px) {
   li.bbp-forum-topic-count,
-  li.bbp-forum-reply-count,
-  li.bbp-topic-reply-count {
+li.bbp-forum-reply-count,
+li.bbp-topic-reply-count {
     display: none;
   }
 }
@@ -820,8 +840,11 @@ ul.bplock-login-shortcode-tabs .fa-sign-in:before {
 }
 
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_progress_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -ms-flex-flow: column;
+      flex-flow: column;
 }
 
 div.profile_completion_wrap .progress_text_wrap {
@@ -829,7 +852,9 @@ div.profile_completion_wrap .progress_text_wrap {
 }
 
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_progress_wrap .progress_text_wrap {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
   text-align: left;
 }
 
@@ -844,7 +869,9 @@ div.profile_completion_wrap ul.pc_detailed_progress li.incomplete span.section_n
 }
 
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_progress_wrap .progress_container {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
   border: 0;
   background-color: #eef0f3;
   margin-bottom: 6px;
@@ -871,7 +898,7 @@ div.profile_completion_wrap ul.pc_detailed_progress li.incomplete span.section_n
 }
 
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_detailed_progress_wrap .single_section_wrap:before {
-  content: '';
+  content: "";
   border: 2px solid #d0d3d6;
   margin-left: -30px;
   margin-right: 10px;
@@ -891,6 +918,7 @@ div.profile_completion_wrap ul.pc_detailed_progress li.incomplete span.section_n
 }
 
 .widget.widget_bp_profile_completion_widget .profile_completion_wrap .pc_detailed_progress_wrap .single_section_wrap .section_name {
+  width: -webkit-calc(100% - 55px);
   width: calc(100% - 55px);
   display: inline-block;
   white-space: nowrap;
