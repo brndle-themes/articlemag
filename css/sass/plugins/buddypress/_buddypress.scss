@@ -2140,6 +2140,13 @@ body.bp-nouveau.media #buddypress div#item-header div#item-header-content ul div
     padding: 0;
 }
 
+@media screen and (min-width: 46.8em) {
+    .bp-single-vert-nav .bp-navs.vertical li {
+        float: none;
+        margin-right: 0;
+    }
+}
+
 /* message-threads */
 .bp-messages-content #thread-preview .preview-content .actions {
     display: flex;
