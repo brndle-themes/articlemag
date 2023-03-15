@@ -84,7 +84,8 @@
 }
 
 .dark-mode #masthead,
-.dark-mode #header-logo {
+.dark-mode #header-logo,
+.dark-mode #masthead.is-compact {
     background-color: #10161d;
 }
 
@@ -189,7 +190,6 @@
 .dark-mode #top-bar,
 .dark-mode .cs-top-module > a,
 .dark-mode .cs-top-module .cs-open-modal,
-.dark-mode #site-nav > ul > li.menu-item.cs-depth-0 > .cs-link,
 .dark-mode #site-nav > ul > li > .cs-link,
 .dark-mode #site-nav ul li ul li .cs-link,
 .dark-mode .comment-meta a,
@@ -552,7 +552,10 @@
 
 .dark-mode body.bp-nouveau.media #buddypress #item-header-cover-image .user-nicename, 
 .dark-mode #buddypress div#item-header-cover-image h2 a, 
-.dark-mode #buddypress div#item-header-cover-image h2 {
+.dark-mode #buddypress div#item-header-cover-image h2,
+.dark-mode nav#object-nav.vertical .selected > a,
+.dark-mode .bp-single-vert-nav .item-body:not(#group-create-body) #subnav:not(.tabbed-links) li.current a,
+.dark-mode nav#object-nav.vertical a:hover {
     color: #fff;
 }
 
