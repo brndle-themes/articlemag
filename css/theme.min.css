@@ -7408,6 +7408,11 @@ div.wp-caption.alignright .wp-caption-text {
   float: right;
 }
 
+#site-nav > ul > li > .cs-link,
+#site-nav a.cs-user-link {
+  color: #333;
+}
+
 #site-nav > ul > li > .cs-link:hover {
   color: #333;
   text-decoration: none;

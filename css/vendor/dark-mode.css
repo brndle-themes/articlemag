@@ -190,6 +190,7 @@
 .dark-mode .cs-top-module > a,
 .dark-mode .cs-top-module .cs-open-modal,
 .dark-mode #site-nav > ul > li.menu-item.cs-depth-0 > .cs-link,
+.dark-mode #site-nav > ul > li > .cs-link,
 .dark-mode #site-nav ul li ul li .cs-link,
 .dark-mode .comment-meta a,
 .dark-mode .entry-tags a,
