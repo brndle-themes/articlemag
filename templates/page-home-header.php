@@ -34,7 +34,7 @@ if ( is_home() ) {
 						<?php $slider_image = wp_get_attachment_image_src( get_post_thumbnail_id( $slider_post->ID ), $size ); ?>			
 						<div class="header-hero-post">
 							<div class="header-post-img">
-								<img src="<?php echo esc_url( $slider_image[0] ); ?>" alt="<?php echo esc_attr( $slider_post->post_title ); ?>" />
+								<img src="<?php echo esc_url( isset( $slider_image[0] ) ? $slider_image[0] : '' ); ?>" alt="<?php echo esc_attr( $slider_post->post_title ); ?>" />
 							</div>
 							<div class="header-post-title">
 								<a href="<?php echo esc_url( get_permalink( $slider_post->ID ) ); ?>" ><?php echo esc_html( $slider_post->post_title ); ?></a>
