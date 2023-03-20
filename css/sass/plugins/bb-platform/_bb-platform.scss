@@ -459,14 +459,15 @@ body .select2-container .select2-dropdown.bb-compose-input .avatar {
 }
 
 .activity-list .activity-item .activity-meta.action .acomment-reply.button:before {
-    content: "\e80b";
+    content: "\ee33";
+    font-weight: 400;
 }
 
 .activity-list .activity-item .bp-generic-meta.action .fav:before,
 .activity-list .activity-item .bp-generic-meta.action .unfav:before {
-    content: "\e815";
+    content: "\ef41";
+    font-weight: 400;
 }
-
 .activity-list .activity-item .bp-generic-meta.action .unfav:before {
     color: #db2828;
 }
