@@ -1,4 +1,56 @@
 @charset "UTF-8";
+/**
+ * Custom Properties
+ * aka CSS variables.
+ *
+ * @link: https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+ **/
+:root {
+  /* Colors */
+  --color-theme-primary: #293951;
+  --color-theme-body: #fff;
+  --color-theme-text: #555;
+  --color-theme-title: #333;
+  --color-theme-content: #fff;
+  --color-theme-alt-content: #f9fbff;
+  --color-theme-link: #293951;
+  --color-theme-meta: #777;
+  --color--theme-border: #e8e8e8;
+  /* box shadow */
+  --global-box-shadow: 15px 15px 20px rgba(58, 46, 68, 0.08);
+  /* Custom editor colors */
+  --color-theme-primary-dark: #7800D6;
+  --color-theme-primary-light: #e2ebf9;
+  --color-theme-success: #00c792;
+  --color-theme-success-dark: #029f76;
+  --color-theme-success-light: #cdfff2;
+  --color-theme-danger: #f14646;
+  --color-theme-danger-dark: #f23737;
+  --color-theme-danger-light: #fff0f0;
+  --color-theme-warning: #ffe978;
+  --color-theme-warning-dark: #fbe15f;
+  --color-theme-warning-light: #f8f3db;
+  --color-theme-info: #0099cc;
+  --color-theme-info-dark: #0187b4;
+  --color-theme-info-light: #f7f7f7;
+  --color-theme-orange: #f07a3a;
+  --color-theme-orange-dark: #ed6922;
+  --color-theme-orange-light: #f9d1bc;
+  --color-theme-grey: #6F7F92;
+  --color-theme-secondary: #000505;
+  --color-theme-black: #000;
+  --color-theme-white: #fff;
+  --color-theme-online: #2DCDB2;
+  --color-theme-offline: #F6C23A;
+  --warning-bgcolor: #fff0f0;
+  --warning-border: #f14646;
+  --info-bg-color: #dff7ff;
+  --info-border-color: #0099cc;
+  --unread-message-color: #f7f7f7;
+  --color-theme-hr: #ccc;
+  --global-border-radius: 8px;
+}
+
 .cs-animation {
   visibility: hidden;
 }
