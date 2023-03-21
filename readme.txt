@@ -1,8 +1,8 @@
 === ArticleMag ===
 Contributors: brndle
 Requires at least: WordPress 3.2
-Tested up to: 5.8.2
-Stable tag: 1.8.0
+Tested up to: 6.2.0
+Stable tag: 1.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
@@ -33,6 +33,27 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+= 1.9.0 =
+* Fix: (#118) Added css variables and undefined variables fixes
+* Fix: (#118) bb platform icons fixes
+* Fix: (#118) Update woocommerce override files
+* Fix: (#118) Fixed home page warning
+* Fix: (#118) Managed dark mode fixes
+* Fix: (#118) Managed color scheme fixes
+* Fix: (#118) Fixed undefined array key error
+* Fix: (#118) Update buddypress override files
+* Fix: (#118) Managed box layout UI and fixes
+* Fix: (#118) Managed vertical navigation UI
+* Fix: (#118) Fixed nav menu warnings with bb platform
+* Fix: (#118) Fixed warnings with build own skin and fixes
+* Fix: (#118) Managed single group cover header section with bb platform
+* Fix: (#118) Managed single member cover header section with bb platform
+* Fix: (#118) Managed activity page with bb platform
+* Fix: (#118) Update woocommerce override files structure
+* Fix: (#118) Managed user menu height with custom mobile height
+* Fix: (#118) Managed user menu height with custom height
+* Fix: (#118) Update cs framework
+* Fix: (#118) Hide add icon button from menus
 
 = 1.8.0 =
 * Fix: Update theme update files
