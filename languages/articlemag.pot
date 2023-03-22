@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-20 11:04:56+00:00\n"
+"POT-Creation-Date: 2023-03-22 12:53:19+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -478,6 +478,21 @@ msgstr ""
 msgid ""
 "You can edit your menu content on the Menus screen in the Appearance "
 "section."
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:996
+#: inc/includes/walker_nav_menu.php:242
+msgid "Notifications"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:1025
+#: inc/includes/walker_nav_menu.php:271
+msgid "View all notifications"
+msgstr ""
+
+#: inc/config/cs-front-end-functions.php:1031
+#: inc/includes/walker_nav_menu.php:277
+msgid "No new notifications"
 msgstr ""
 
 #: inc/config/cs-widgets-config.php:34

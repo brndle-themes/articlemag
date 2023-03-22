@@ -236,11 +236,10 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 			if ( cs_get_option( 'bp_notifications' ) ) {
 				if ( class_exists( 'BuddyPress' ) && is_user_logged_in() && bp_is_active( 'notifications' ) ) {
-					global $bp;
 
 					$output .= '<li class="cs-depth-0 cs-notification cs-bp_notifications">';
 					$output .= '<div class = "user-notifications cs-link cs-sticky-item">';
-					$output .= '<a class="bp-icon-wrap" href ="#" title = "' . esc_html( esc_attr( 'Notifications' ), 'articlemag' ) . '">';
+					$output .= '<a class="bp-icon-wrap" href ="#" title="' . esc_attr__( 'Notifications', 'articlemag' ) . '">';
 					$output .= '<span class="fa fa-bell"> </span>';
 
 					if ( function_exists( 'bp_notifications_get_unread_notification_count' ) ) {
@@ -250,22 +249,35 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 
 					$output .= '</a>';
 
-					$notifications = bp_notifications_get_notifications_for_user( bp_loggedin_user_id() );
-					if ( $notifications ) {
+					if ( bp_has_notifications(
+						array(
+							'user_id'  => bp_loggedin_user_id(),
+							'per_page' => 5,
+							'max'      => 5,
+						)
+					) ) {
+
 						$output .= '<ul id="bp-notify" class="sub-menu">';
-						rsort( $notifications );
-						foreach ( $notifications as $notification ) {
-							$output .= '<li>' . $notification . '</li>';
+
+						while ( bp_the_notifications() ) {
+							bp_the_notification();
+
+							$output .= '<li>';
+							$output .= '<div class="dropdown-item-title notification">' . bp_get_the_notification_description() . '</div>';
+							$output .= '</li>';
 						}
+
 						$output .= '<li class="bp-view-all">';
-						$output .= '<a href="' . esc_url( bp_loggedin_user_domain() . $bp->notifications->slug ) . '"> ' . esc_attr( 'View all notifications', 'articlemag' ) . '</a>';
+						$output .= '<a href="' . esc_url( bp_loggedin_user_domain() . bp_get_notifications_slug() ) . '"> ' . esc_html__( 'View all notifications', 'articlemag' ) . '</a>';
 						$output .= '</li>';
+
 						$output .= '</ul>';
 					} else {
 						$output .= '<ul id="bp-notify" class="sub-menu">';
-						$output .= '<li><a href="' . bp_loggedin_user_domain() . BP_NOTIFICATIONS_SLUG . ' "> ' . esc_attr( 'No new notifications', 'articlemag' ) . '</a></li>';
+						$output .= '<li><a href="' . esc_url( trailingslashit( bp_loggedin_user_domain() . bp_get_notifications_slug() . '/unread' ) ) . '"> ' . esc_html__( 'No new notifications', 'articlemag' ) . '</a></li>';
 						$output .= '</ul>';
 					}
+
 					$output .= '</div>';
 
 					$output .= '</li>';
