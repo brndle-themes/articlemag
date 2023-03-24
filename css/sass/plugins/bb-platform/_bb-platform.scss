@@ -9,6 +9,7 @@
 # Sidebar Widegts
 # Forums
 # Documents
+# Photos
 # Extra Plugins Support
 --------------------------------------------------------------*/
 
@@ -802,6 +803,15 @@ ul.bbp-stats h4 {
 
 #media-stream.document-parent #media-folder-document-data-table .media-folder_items {
     margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Photos
+--------------------------------------------------------------*/
+.directory.media .media-options,
+.directory.document .document-options,
+.directory.video .video-options {
+  position: static;
 }
 
 /*--------------------------------------------------------------
