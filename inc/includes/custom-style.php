@@ -1084,12 +1084,14 @@ function cs_get_woocoomerce_style() {
 		return <<<CSS
 
   .woocommerce .button,
-  .woocommerce-page .button{
+  .woocommerce-page .button,
+  .woocommerce-Reviews .form-submit input[type=submit]{
     background-color: {$accent};
   }
 
   .woocommerce .button:hover,
-  .woocommerce-page .button:hover{
+  .woocommerce-page .button:hover,
+  .woocommerce-Reviews .form-submit input[type=submit]:hover{
     background-color: {$accent_brightness};
   }
 

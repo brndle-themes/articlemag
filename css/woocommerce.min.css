@@ -167,7 +167,8 @@
 .woocommerce .button,
 .woocommerce .button,
 .woocommerce-page .button,
-.woocommerce-page .button {
+.woocommerce-page .button,
+.woocommerce-Reviews .form-submit input[type=submit] {
   display: inline-block;
   margin: 0;
   text-decoration: none;
@@ -188,19 +189,19 @@
   transition: all 0.2s ease-in-out;
   border-radius: 0.2em;
 }
-
 .woocommerce .button:hover,
 .woocommerce .button:hover,
 .woocommerce-page .button:hover,
-.woocommerce-page .button:hover {
+.woocommerce-page .button:hover,
+.woocommerce-Reviews .form-submit input[type=submit]:hover {
   color: #fff;
   text-decoration: none;
 }
-
 .woocommerce .button:focus,
 .woocommerce .button:focus,
 .woocommerce-page .button:focus,
-.woocommerce-page .button:focus {
+.woocommerce-page .button:focus,
+.woocommerce-Reviews .form-submit input[type=submit]:focus {
   outline: none;
 }
 
@@ -2286,5 +2287,25 @@ aside.dokan-store-widget {
 }
 
 /* Dokan Plugin CSS :: End */
+/* Store Notice */
+.woocommerce-store-notice, p.demo_store {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 1em;
+  padding: 1em 0;
+  text-align: center;
+  background-color: #7f54b3;
+  color: #fff;
+  z-index: 99998;
+  box-shadow: 0 1px 1em rgba(0, 0, 0, 0.2);
+}
+
+.admin-bar p.demo_store {
+  top: 32px;
+}
 
 /*# sourceMappingURL=woocommerce.min.css.map */

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-10 12:07:08+00:00\n"
+"POT-Creation-Date: 2024-07-10 12:43:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2552,6 +2552,10 @@ msgstr ""
 msgid "Quantity"
 msgstr ""
 
+#: woocommerce/global/quantity-input.php:46
+msgid "Product quantity"
+msgstr ""
+
 #. Template Name of the plugin/theme
 msgid "Full-width, no sidebar"
 msgstr ""
@@ -2604,9 +2608,4 @@ msgstr ""
 #: inc/plugins/woocommerce/woocommerce-config.php:274
 msgctxt "placeholder"
 msgid "Search Products&hellip;"
-msgstr ""
-
-#: woocommerce/global/quantity-input.php:46
-msgctxt "Product quantity input tooltip"
-msgid "Qty"
 msgstr ""

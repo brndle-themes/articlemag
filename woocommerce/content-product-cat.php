@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
  * @version 4.7.0
  */
 
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div <?php wc_product_cat_class( cs_get_bootstrap( apply_filters( 'loop_shop_columns', 4 ) ), $category ); ?>>
-  <?php
+	<?php
 	/**
 	 * Hook : woocommerce_before_subcategory hook.
 	 *

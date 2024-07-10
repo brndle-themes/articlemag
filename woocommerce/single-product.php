@@ -10,9 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @author WooThemes
- * @package WooCommerce/Templates
+ * @see         https://woocommerce.com/document/template-structure/
+ * @package     WooCommerce\Templates
  * @version 10.0.0
  */
 
@@ -36,47 +35,47 @@ if ( cs_get_option( 'woo_product_sidebar' ) ) {
 ?>
 
 <section class="main-content md-padding page-layout-<?php echo esc_attr( $cs_page_layout ); ?>">
-  <div class="container">
-	<div class="row cs-row-wrap">
+	<div class="container">
+		<div class="row cs-row-wrap">
 
-	  <?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
+			<?php cs_page_sidebar( 'left', $cs_page_layout ); ?>
 
-	  <div class="cs-content-wrapper col-md-<?php echo esc_attr( $cs_page_column ); ?>">
-		<div class="page-content">
-		  <?php
-			/**
-			 * Hook : woocommerce_before_main_content hook
-			 *
-			 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-			 * @hooked woocommerce_breadcrumb - 20
-			 */
-			do_action( 'woocommerce_before_main_content' );
-			?>
+			<div class="cs-content-wrapper col-md-<?php echo esc_attr( $cs_page_column ); ?>">
+				<div class="page-content">
+					<?php
+					/**
+					 * Hook : woocommerce_before_main_content hook
+					 *
+					 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+					 * @hooked woocommerce_breadcrumb - 20
+					 */
+					do_action( 'woocommerce_before_main_content' );
+					?>
 
-			<?php
-			while ( have_posts() ) :
-				the_post();
-				?>
+					<?php
+					while ( have_posts() ) :
+						the_post();
+						?>
 
-				<?php wc_get_template_part( 'content', 'single-product' ); ?>
+						<?php wc_get_template_part( 'content', 'single-product' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+					<?php endwhile; // end of the loop. ?>
 
-		  <?php
-			/**
-			 * Hook : woocommerce_after_main_content hook
-			 *
-			 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-			 */
-			do_action( 'woocommerce_after_main_content' );
-			?>
+					<?php
+					/**
+					 * Hook : woocommerce_after_main_content hook
+					 *
+					 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+					 */
+					do_action( 'woocommerce_after_main_content' );
+					?>
 
-		</div><!-- /page-content -->
-	  </div><!-- /colmd -->
+				</div><!-- /page-content -->
+			</div><!-- /colmd -->
 
-	  <?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
+			<?php cs_page_sidebar( 'right', $cs_page_layout ); ?>
 
+		</div>
 	</div>
-  </div>
 </section>
 <?php get_footer( 'shop' ); ?>

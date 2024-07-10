@@ -10,8 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
+ * @see     https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
  * @version 10.0.0
  */
 
@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 <div <?php wc_product_class( cs_get_bootstrap( $columns ) ); ?>>
-  <?php
+	<?php
 	/**
 	 * Hook : woocommerce_before_shop_loop_item hook.
 	 *
@@ -66,5 +66,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-  <div class="clear"></div>
+	<div class="clear"></div>
 </div>

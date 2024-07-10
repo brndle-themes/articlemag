@@ -10,9 +10,8 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
- * @author WooThemes
- * @package WooCommerce/Templates
+ * @see     https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
  * @version 3.8.0
  */
 
@@ -55,6 +54,8 @@ if ( ! empty( $product_tabs ) ) : ?>
 				</div>
 			<?php endforeach; ?>
 		</div>
+
+		<?php do_action( 'woocommerce_product_after_tabs' ); ?>
 	</div>
 
 <?php endif; ?>
