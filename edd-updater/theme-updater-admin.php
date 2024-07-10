@@ -13,11 +13,13 @@ class EDD_Articlemag_Theme_Updater_Admin {
 	 * @type string
 	 */
 	protected $remote_api_url = null;
+	protected $item_name      = null;
 	protected $theme_slug     = null;
 	protected $version        = null;
 	protected $author         = null;
 	protected $download_id    = null;
 	protected $renew_url      = null;
+	protected $beta           = null;
 	protected $strings        = null;
 
 	/**

@@ -11,11 +11,12 @@ class EDD_Theme_Updater {
 	private $request_data;
 	private $response_key;
 	private $theme_slug;
+	private $item_name;
 	private $license_key;
 	private $version;
 	private $author;
+	private $beta;
 	protected $strings = null;
-
 
 	/**
 	 * Initiate the Theme updater
