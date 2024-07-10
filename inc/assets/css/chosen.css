@@ -415,7 +415,7 @@
 
 /* @end */
 /* @group Retina compatibility */
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
+/* @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 144dpi) {
   .chosen-rtl .chosen-search input[type="text"],
   .chosen-container-single .chosen-single abbr,
   .chosen-container-single .chosen-single div b,
@@ -427,5 +427,10 @@
     background-size: 52px 37px !important;
     background-repeat: no-repeat !important;
   }
-}
+} */
 /* @end */
+
+.csf-field-group.csf-field-group .csf-cloneable-header-icon {
+  position: static;
+  margin: 0;
+}
