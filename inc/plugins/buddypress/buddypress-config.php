@@ -1,4 +1,32 @@
 <?php
+/*
+ * Separate BuddyPress Templates for bb platform
+ *
+ */
+if ( ! function_exists( 'articlemag_bp_get_template_stack' ) ) {
+
+	function articlemag_bp_get_template_stack( $stack ) {
+		if ( function_exists( 'bp_get_theme_package_id' ) ) {
+			$theme_package_id = bp_get_theme_package_id();
+		}
+		if ( 'nouveau' === $theme_package_id ) {
+			if ( function_exists( 'buddypress' ) && isset( buddypress()->buddyboss ) ) {
+				$index = array_search( get_stylesheet_directory() . '/buddypress', $stack );
+				if ( false !== $index ) {
+					$stack[ $index ] = get_stylesheet_directory() . '/bb-buddypress';
+				}
+				$index = array_search( get_template_directory() . '/buddypress', $stack );
+				if ( false !== $index ) {
+					$stack[ $index ] = get_template_directory() . '/bb-buddypress';
+				}
+			}
+		}
+		return $stack;
+	}
+}
+
+add_filter( 'bp_get_template_stack', 'articlemag_bp_get_template_stack', 10, 1 );
+
 /**
  * Bp get activity css first class
  */

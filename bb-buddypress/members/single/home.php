@@ -1,11 +1,12 @@
 <?php
 /**
- * BuddyPress - Members Home
+ * The template for members home
  *
- * @since   1.0.0
- * @version 3.0.0
+ * This template can be overridden by copying it to yourtheme/bb-buddypress/members/single/home.php.
+ *
+ * @since   BuddyPress 1.0.0
+ * @version 1.0.0
  */
-
 ?>
 
 <?php bp_nouveau_member_hook( 'before', 'home_content' ); ?>

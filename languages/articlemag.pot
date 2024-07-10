@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-10 12:43:41+00:00\n"
+"POT-Creation-Date: 2024-07-10 13:42:47+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,80 +56,150 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: bbpress/form-search.php:13 header.php:63
-#: inc/config/cs-front-end-functions.php:140
-msgid "Search"
+#: bb-buddypress/activity/entry.php:33
+msgid "%s's Post"
 msgstr ""
 
+#: bb-buddypress/activity/entry.php:42
+msgid "Pinned Post"
+msgstr ""
+
+#: bb-buddypress/activity/entry.php:49
+msgid "Turned off notifications"
+msgstr ""
+
+#: bb-buddypress/groups/groups-loop.php:86
+#: bb-buddypress/groups/single/cover-image-header.php:143
 #: buddypress/groups/groups-loop.php:53
-#: buddypress/groups/single/cover-image-header.php:119
+#: buddypress/groups/single/cover-image-header.php:39
 #. translators: %s = last activity timestamp (e.g. "active 1 hour ago")
-msgid "active %s"
+#. translators: %s: last activity timestamp (e.g. "Active 1 hour ago")
+msgid "Active %s"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:54
-#: buddypress/members/single/cover-image-header.php:62
-msgid "Change Cover Photo"
+#: bb-buddypress/groups/groups-loop.php:123
+#: bb-buddypress/groups/single/cover-image-header.php:225
+msgid "Leave Group"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:69
-#: buddypress/members/single/cover-image-header.php:76
-msgid "Reposition Cover Photo"
+#: bb-buddypress/groups/groups-loop.php:129
+#: bb-buddypress/groups/single/cover-image-header.php:231
+msgid "Are you sure you want to leave "
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:73
-#: buddypress/members/single/cover-image-header.php:80
+#: bb-buddypress/groups/groups-loop.php:132
+#: bb-buddypress/groups/single/cover-image-header.php:65
+#: bb-buddypress/groups/single/cover-image-header.php:234
+#: bb-buddypress/groups/single/members-loop.php:244
+#: bb-buddypress/members/members-loop.php:281
+#: bb-buddypress/members/single/cover-image-header.php:101
+#: bb-buddypress/members/single/cover-image-header.php:285
 #: inc/config/merlin-config.php:47
 #: inc/cs-framework/classes/comment-options.class.php:202
 #: inc/cs-framework/classes/metabox-options.class.php:279
 msgid "Cancel"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:74
-#: buddypress/members/single/cover-image-header.php:81
+#: bb-buddypress/groups/groups-loop.php:133
+#: bb-buddypress/groups/single/cover-image-header.php:235
+#: bb-buddypress/groups/single/members-loop.php:245
+#: bb-buddypress/members/members-loop.php:282
+#: bb-buddypress/members/single/cover-image-header.php:286
+msgid "Confirm"
+msgstr ""
+
+#: bb-buddypress/groups/single/cover-image-header.php:53
+#: bb-buddypress/members/single/cover-image-header.php:90
+msgid "Change Cover Photo"
+msgstr ""
+
+#: bb-buddypress/groups/single/cover-image-header.php:61
+#: bb-buddypress/members/single/cover-image-header.php:97
+msgid "Reposition Cover Photo"
+msgstr ""
+
+#: bb-buddypress/groups/single/cover-image-header.php:66
+#: bb-buddypress/members/single/cover-image-header.php:102
 msgid "Save Changes"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:75
-#: buddypress/members/single/cover-image-header.php:82
+#: bb-buddypress/groups/single/cover-image-header.php:67
+#: bb-buddypress/members/single/cover-image-header.php:103
 msgid "Drag to move cover photo"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:76
-#: buddypress/members/single/cover-image-header.php:83
+#: bb-buddypress/groups/single/cover-image-header.php:68
+#: bb-buddypress/members/single/cover-image-header.php:104
 msgid "Cover photo"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:92
+#: bb-buddypress/groups/single/cover-image-header.php:83
 msgid "Change Group Photo"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:135
-msgid "Group Types"
+#: bb-buddypress/groups/single/cover-image-header.php:204
+msgid "Group Description"
 msgstr ""
 
-#: buddypress/groups/single/cover-image-header.php:136
-msgid "Group Type"
+#: bb-buddypress/groups/single/members-loop.php:227
+#: bb-buddypress/members/members-loop.php:264
+#: bb-buddypress/members/single/cover-image-header.php:268
+msgid "Remove Connection"
 msgstr ""
 
-#: buddypress/members/single/cover-image-header.php:98
+#: bb-buddypress/groups/single/members-loop.php:237
+#: bb-buddypress/members/members-loop.php:274
+#: bb-buddypress/members/single/cover-image-header.php:278
+#. translators: %s: The member name with HTML tags
+#. translators: %s: The member name with HTML tags
+#. translators: %s: The member name with HTML tags.
+msgid "Are you sure you want to remove %s from your connections?"
+msgstr ""
+
+#: bb-buddypress/members/members-loop.php:228
+msgid "More Options"
+msgstr ""
+
+#: bb-buddypress/members/single/cover-image-header.php:128
 msgid "Change Profile Photo"
 msgstr ""
 
-#: buddypress/members/single/cover-image-header.php:145
-msgid "Member Types"
+#: bb-buddypress/members/single/friends/requests.php:12
+msgid "Requests to Connect"
 msgstr ""
 
-#: buddypress/members/single/cover-image-header.php:146
-msgid "Member Type"
-msgstr ""
-
-#: buddypress/members/single/groups/invites.php:11
+#: bb-buddypress/members/single/groups/invites.php:12
+#: buddypress/members/single/groups/invites.php:10
 msgid "Group Invites"
 msgstr ""
 
+#: bb-buddypress/members/single/groups/invites.php:47
+msgid "Invited by %1$s &middot; %2$s."
+msgstr ""
+
+#: bbpress/form-search.php:13 header.php:63
+#: inc/config/cs-front-end-functions.php:140
+msgid "Search"
+msgstr ""
+
+#: buddypress/groups/single/cover-image-header.php:54
+msgid "Group Types"
+msgstr ""
+
+#: buddypress/groups/single/cover-image-header.php:55
+msgid "Group Type"
+msgstr ""
+
+#: buddypress/members/single/cover-image-header.php:46
+msgid "Member Types"
+msgstr ""
+
+#: buddypress/members/single/cover-image-header.php:47
+msgid "Member Type"
+msgstr ""
+
 #: buddypress/members/single/groups/invites.php:42
-#. translators: %s = number of members
+#. translators: %s is the number of Group members
 msgid "%s member"
 msgid_plural "%s members"
 msgstr[0] ""
@@ -481,17 +551,17 @@ msgid ""
 msgstr ""
 
 #: inc/config/cs-front-end-functions.php:996
-#: inc/includes/walker_nav_menu.php:242
+#: inc/includes/walker_nav_menu.php:246
 msgid "Notifications"
 msgstr ""
 
 #: inc/config/cs-front-end-functions.php:1025
-#: inc/includes/walker_nav_menu.php:271
+#: inc/includes/walker_nav_menu.php:275
 msgid "View all notifications"
 msgstr ""
 
 #: inc/config/cs-front-end-functions.php:1031
-#: inc/includes/walker_nav_menu.php:277
+#: inc/includes/walker_nav_menu.php:281
 msgid "No new notifications"
 msgstr ""
 
@@ -2483,45 +2553,45 @@ msgstr ""
 msgid "%s Complete"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:88
+#: inc/widgets/bp-profile-completion-widget.php:92
 msgid "Complete"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:187
-#: inc/widgets/bp-profile-completion-widget.php:428
+#: inc/widgets/bp-profile-completion-widget.php:191
+#: inc/widgets/bp-profile-completion-widget.php:432
 msgid "Profile Photo"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:207
-#: inc/widgets/bp-profile-completion-widget.php:431
+#: inc/widgets/bp-profile-completion-widget.php:211
+#: inc/widgets/bp-profile-completion-widget.php:435
 msgid "Cover Photo"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:288
+#: inc/widgets/bp-profile-completion-widget.php:292
 msgid "Profile Fields"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:403
+#: inc/widgets/bp-profile-completion-widget.php:407
 msgid "Complete Your Profile"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:437
+#: inc/widgets/bp-profile-completion-widget.php:441
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:441
+#: inc/widgets/bp-profile-completion-widget.php:445
 msgid "Profile field sets:"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:465
+#: inc/widgets/bp-profile-completion-widget.php:469
 msgid "Profile photos:"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:482
+#: inc/widgets/bp-profile-completion-widget.php:486
 msgid "Hide widget once progress hits 100%"
 msgstr ""
 
-#: inc/widgets/bp-profile-completion-widget.php:488
+#: inc/widgets/bp-profile-completion-widget.php:492
 msgid "Note: This widget is only displayed if a member is logged in."
 msgstr ""
 

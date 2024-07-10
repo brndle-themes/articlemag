@@ -185,7 +185,11 @@ if ( ! class_exists( 'Walker_Nav_Menu_Custom' ) ) {
 					$current_user = wp_get_current_user();
 
 					if ( ( $current_user instanceof WP_User ) ) {
-						$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
+						if ( function_exists( 'buddypress' ) && version_compare( buddypress()->version, '12.0', '>=' ) ) {
+							$user_link = function_exists( 'bp_members_get_user_url' ) ? bp_members_get_user_url( get_current_user_id() ) : '#';
+						} else {
+							$user_link = function_exists( 'bp_core_get_user_domain' ) ? bp_core_get_user_domain( get_current_user_id() ) : '#';
+						}
 						$output   .= '<div class="cs-user-link-wrap sf-with-ul cs-sticky-item">';
 						$output   .= '<a class="cs-user-link" href="' . $user_link . '">';
 						$output   .= $current_user->display_name;

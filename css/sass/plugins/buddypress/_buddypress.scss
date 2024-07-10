@@ -468,6 +468,13 @@ body .buddypress-wrap form.bp-messages-search-form input[type="search"],
 /*--------------------------------------------------------------
 # rtMedia Specific
 --------------------------------------------------------------*/
+.bp-nouveau .activity-update-form.activity-update-form #aw-whats-new-reset {
+    margin-top: 0;
+    background: transparent;
+    color: inherit;
+    border: 0;
+}
+
 #rtSelectPrivacy {
     width: auto;
 }
@@ -1962,6 +1969,24 @@ body.buddypress.single-item.groups #page-header {
     padding-left: 0;
 }
 
+@media screen and (min-width: 46.8em) {
+
+    #buddypress.buddypress-wrap .bp-navs.vertical ul.bp-priority-object-nav-nav-items {
+        display: block;
+    }
+
+    #buddypress.buddypress-wrap .bp-navs.vertical ul.bp-priority-object-nav-nav-items li a,
+    #buddypress.buddypress-wrap .bp-navs.vertical ul.bp-priority-object-nav-nav-items li span {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 46.8em) {
+    #buddypress.buddypress-wrap .bp-navs.vertical ul.bp-priority-object-nav-nav-items>li {
+        display: inline-block;
+    }
+}
+
 /* Profile Tab */
 .buddypress-wrap .bp-tables-user tr.alt td,
 .buddypress-wrap table.wp-profile-fields tr.alt td,
@@ -2932,6 +2957,27 @@ body .articlemag_widget {
 
 body.buddypress .buddypress-wrap .articlemag_widget .widget-title h4 {
     margin-top: 0;
+}
+
+.bp-dynamic-block-container .item-options>a {
+    font-size: initial;
+}
+
+.bp-dynamic-block-container .item-options>span.bp-separator {
+    margin: 0 5px;
+    opacity: 0;
+}
+
+.bp-block-members .member-content .item-header-avatar img.avatar {
+    max-width: 50px;
+}
+
+.bp-block-members.avatar-full .item-header-avatar {
+    width: 70px;
+}
+
+.widget_bp_core_recently_active_widget .avatar-block img {
+    margin: .4em;
 }
 
 /*--------------------------------------------------------------
