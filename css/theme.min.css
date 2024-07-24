@@ -2668,6 +2668,14 @@
   margin-top: -40px;
 }
 
+.articlemag_widget.widget_block .wp-block-heading {
+  margin-bottom: 10px;
+}
+
+.wp-block-button a:hover {
+  text-decoration: none;
+}
+
 /*
  *
  *
