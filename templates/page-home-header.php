@@ -33,8 +33,10 @@ if ( is_home() ) {
 					<?php foreach ( $slider_posts as $slider_post ) : ?>
 						<?php $slider_image = wp_get_attachment_image_src( get_post_thumbnail_id( $slider_post->ID ), $size ); ?>			
 						<div class="header-hero-post">
-							<div class="header-post-img">
-								<img src="<?php echo esc_url( isset( $slider_image[0] ) ? $slider_image[0] : '' ); ?>" alt="<?php echo esc_attr( $slider_post->post_title ); ?>" />
+							<div class="header-post-img sf">
+							<?php if ( ! empty( $slider_image ) && ! empty( $slider_image[0] ) ) { ?>
+								<img src="<?php echo esc_url( $slider_image[0] ); ?>" alt="<?php echo esc_attr( $slider_post->post_title ); ?>" />
+							<?php } ?>
 							</div>
 							<div class="header-post-title">
 								<a href="<?php echo esc_url( get_permalink( $slider_post->ID ) ); ?>" ><?php echo esc_html( $slider_post->post_title ); ?></a>
